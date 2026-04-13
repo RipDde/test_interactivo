@@ -26,9 +26,304 @@
 
     const preguntasFH = [
       {
-        enunciado: "¿Qué propiedad activa un contenedor Grid en CSS?",
-        opciones: ["display: block", "display: inline", "display: grid", "display: table"],
+        enunciado: "¿Cuál de las siguientes afirmaciones sobre los discos NVMe es correcta?",
+        opciones: [
+          "Utilizan la interfaz SATA III pero con menor latencia",
+          "Se comunican directamente con la CPU mediante el bus PCIe",
+          "Requieren controladores IDE específicos para funcionar",
+          "Usan el mismo protocolo que los discos SAS"
+        ],
+        correcta: 1,
+      },
+      {
+        enunciado: "El tipo de zócalo (socket) que tiene los pines en el propio zócalo y que es el más utilizado en ordenadores de sobre mesa en la actualidad, se llama:",
+        opciones: [
+          "PGA",
+          "LGA",
+          "BGA",
+          "ZIF"
+        ],
+        correcta: 1,
+      },
+      {
+        enunciado: "¿Qué componentes forman la unidad central de proceso (CPU)?",
+        opciones: [
+          "Unidad de control, ALU, registros de memoria principal y reloj",
+          "Unidad de computación, unidad aritmeticológica (ALU), registros internos y pila",
+          "Unidad de control, unidad aritmeticológica (ALU), registros internos y reloj",
+          "Unidad de control, unidad de computación, registros internos y reloj"
+        ],
         correcta: 2,
+      },
+      {
+        enunciado: "¿Cuáles son los cuatro pilares fundamentales que actúan como subsistemas interconectados de la arquitectura Von Newman?",
+        opciones: [
+          "Unidad central de procesamiento (CPU), tarjeta gráfica (GPU), memoria secundaria, subsistema de Entrada/Salida",
+          "Unidad central de procesamiento (CPU), memoria principal, subsistema de Entrada/Salida, Buses",
+          "Unidad central de procesamiento (CPU), tarjeta gráfica (GPU), subsistema de Entrada/Salida, Buses",
+          "Unidad central de procesamiento (CPU), tarjeta gráfica (GPU), memoria principal, Buses"
+        ],
+        correcta: 1,
+      },
+      {
+        enunciado: "¿En qué tipo de memoria no volátil se almacena la BIOS/UEFI?",
+        opciones: [
+          "DDR",
+          "SRAM",
+          "CMOS",
+          "SDRAM"
+        ],
+        correcta: 2,
+      },
+      {
+        enunciado: "La memoria caché y los registros internos de la CPU utilizan un tipo de memoria, que no necesita refresco, ¿cuál es?",
+        opciones: [
+          "Dynamic RAM (DRAM)",
+          "Synchronous Dynamic RAM (SDRAM)",
+          "Static RAM (SRAM)",
+          "Double Data Rate Synchronous Dynamic RAM (DDR SDRAM)"
+        ],
+        correcta: 2,
+      },
+      {
+        enunciado: "En la arquitectura Von Neumann, en la memoria principal albergan:",
+        opciones: [
+          "Direcciones e instrucciones",
+          "Datos e instrucciones",
+          "Datos y direcciones",
+          "Direcciones"
+        ],
+        correcta: 1,
+      },
+      {
+        enunciado: "¿Qué tipos de buses existen en un ordenador?",
+        opciones: [
+          "Bus de datos, instrucciones y control",
+          "Bus de datos, direcciones y control",
+          "Bus de datos, direcciones y reloj",
+          "Bus de instrucciones, direcciones y control"
+        ],
+        correcta: 1,
+      },
+      {
+        enunciado: "Se le llama Arquitectura de Memoria Unificada a una configuración en la que:",
+        opciones: [
+          "Ajusta automáticamente la frecuencia, los voltajes y las latencias para que la memoria funcione a su máximo rendimiento",
+          "La RAM y VRAM se comunican por un canal PCIexpress",
+          "Una memoria que lee 2 veces en un mismo ciclo de reloj",
+          "Tanto la CPU como la GPU acceden a la misma memoria física con la misma prioridad y velocidad"
+        ],
+        correcta: 3,
+      },
+      {
+        enunciado: "En la arquitectura de memoria de un sistema moderno, la caché L3 se caracteriza por:",
+        opciones: [
+          "Ser exclusiva de la GPU",
+          "La más rápida de todas",
+          "Solo se usa en discos SSD",
+          "Compartida entre núcleos de CPU y más lenta que L1 y L2"
+        ],
+        correcta: 3,
+      },
+      {
+        enunciado: "El paso del montaje que comprueba la funcionalidad de la configuración es:",
+        opciones: [
+          "Ordenación de cables",
+          "Cierre de caja",
+          "Procedimiento POST",
+          "Instalar la tarjeta gráfica"
+        ],
+        correcta: 2,
+      },
+      {
+        enunciado: "¿Qué software nos permite consultar las temperaturas y los voltajes de los diferentes componentes de nuestro equipo?",
+        opciones: [
+          "HWiNFO",
+          "Speccy",
+          "CPU-Z",
+          "Chocolatey"
+        ],
+        correcta: 0,
+      },
+      {
+        enunciado: "La Jerarquía de memoria de mayor a menor velocidad de lectura se ordenarían en:",
+        opciones: [
+          "Discos duros, registros internos de memoria, cache, RAM",
+          "Registros internos de memoria, cache, RAM, discos duros",
+          "Discos duros, RAM, registros internos de memoria, cache",
+          "Discos duros, RAM, cache, registros internos de memoria"
+        ],
+        correcta: 1,
+      },
+      {
+        enunciado: "¿Qué software propietario se puede probar gratuitamente por un período limitado antes de comprarlo?",
+        opciones: [
+          "Shareware",
+          "Freeware",
+          "Ransomware",
+          "FOSS"
+        ],
+        correcta: 0,
+      },
+      {
+        enunciado: "El proceso por el que la CPU decodifica la instrucción para entender qué operación debe realizar se llama:",
+        opciones: [
+          "FETCH",
+          "DECODE",
+          "EXECUTE",
+          "STORE"
+        ],
+        correcta: 1,
+      },
+      {
+        enunciado: "La arquitectura que tiene un conjunto de instrucciones muy pequeño y simple y que se utiliza mayoritariamente en smartphones y tablets es:",
+        opciones: [
+          "Von Neumann",
+          "Harvard",
+          "CISC",
+          "RISC"
+        ],
+        correcta: 3,
+      },
+      {
+        enunciado: "Conector de alta velocidad para almacenamiento secundario:",
+        opciones: [
+          "M.2",
+          "Sata",
+          "DIMM slots",
+          "IDE"
+        ],
+        correcta: 0,
+      },
+      {
+        enunciado: "El conector de ATX 24 pines de la fuente de alimentación es para:",
+        opciones: [
+          "CPU",
+          "Ventiladores",
+          "GPU",
+          "Placa base"
+        ],
+        correcta: 3,
+      },
+      {
+        enunciado: "¿En qué orden suele ser común introducir la memoria RAM en las diferentes ranuras (ATX 4 ranuras) para activar el DUAL Channel?",
+        opciones: [
+          "1 y 2",
+          "3 y 4",
+          "1 y 4",
+          "1 y 3 o 2 y 4"
+        ],
+        correcta: 3,
+      },
+      {
+        enunciado: "¿Cómo se llama al conjunto de programas que actúan como intermediarios entre el hardware y el software de aplicación?",
+        opciones: [
+          "Controladores",
+          "Drivers",
+          "Firmware",
+          "Sistema operativo"
+        ],
+        correcta: 3,
+      },
+      {
+        enunciado: "Para el correcto montaje de la fuente de alimentación:",
+        opciones: [
+          "Hay que atornillarla siguiendo el patrón de las agujas del reloj para los 4 tornillos",
+          "Colocar el ventilador según la entrada de aire de la caja",
+          "Solo hay que tener en cuenta que los cables de la alimentación lleguen a todos los componentes",
+          "No es necesario mirar ningún manual del fabricante"
+        ],
+        correcta: 1,
+      },
+      {
+        enunciado: "Al proceso de chequeo inicial para verificar que el hardware crítico (CPU, RAM, tarjeta gráfica, teclado), se le llama:",
+        opciones: [
+          "Firmware",
+          "POST",
+          "BIOS",
+          "UEFI"
+        ],
+        correcta: 1,
+      },
+      {
+        enunciado: "Preparar la placa base fuera de la caja, incluye las siguientes operaciones:",
+        opciones: [
+          "Instalar CPU, pasta térmica, disipador, RAM",
+          "Instalar CPU, ventilador, disipador, RAM",
+          "Instalar CPU, pasta térmica, ventilador, RAM",
+          "Instalar CPU, pasta térmica, disipador, discos duros"
+        ],
+        correcta: 0,
+      },
+      {
+        enunciado: "Preparar la placa y el chasis, incluye la siguiente secuencia de pasos correcta:",
+        opciones: [
+          "Instalar primero el I/O shield y presentar la placa, comprobando que cada orificio coincide con los agujeros de la caja, y atornilla sin exceso de par",
+          "Colocar los standoffs, instalar primero el I/O shield y presentar la placa, comprobando que cada orificio coincide con un standoff, y atornilla sin exceso de par",
+          "Montar la fuente de alimentación orientando el ventilador según la entrada de aire de la caja y presentar la placa, comprobando que cada orificio coincide con los agujeros de la caja, y atornillar",
+          "Presentar la placa, comprobando que cada orificio coincide con los agujeros de la caja, y atornillar. Conectar la alimentación de todos los componentes con la fuente de alimentación"
+        ],
+        correcta: 1,
+      },
+      {
+        enunciado: "La placa base (motherboard) tiene entre sus funciones:",
+        opciones: [
+          "Sirve de soporte físico",
+          "Distribuir la energía",
+          "Distribuir los datos",
+          "Todas las respuestas son correctas"
+        ],
+        correcta: 3,
+      },
+      {
+        enunciado: "El rendimiento de un equipo depende de:",
+        opciones: [
+          "Únicamente de la frecuencia del reloj",
+          "Solo la velocidad de lectura de memoria principal",
+          "Del equilibrio entre todos los subsistemas, no de un solo componente",
+          "La velocidad de procesamiento de la unidad aritmético lógica"
+        ],
+        correcta: 2,
+      },
+      {
+        enunciado: "El centro de control de tráfico de la placa base, que gestiona el flujo de datos entre la CPU, la memoria, las ranuras de expansión y los periféricos:",
+        opciones: [
+          "Factor de forma",
+          "Zócalo",
+          "Placa de circuito impreso",
+          "Chipset"
+        ],
+        correcta: 3,
+      },
+      {
+        enunciado: "El factor de forma estándar para ordenadores de sobre mesa se llama:",
+        opciones: [
+          "ATX",
+          "Mini-ATX",
+          "Micro-ATX",
+          "E-ATX"
+        ],
+        correcta: 0,
+      },
+      {
+        enunciado: "Al mezclar módulos de RAM de diferentes marcas, velocidades o latencias:",
+        opciones: [
+          "El sistema completo funcionará a la velocidad y latencia del módulo más rápido de todos",
+          "Puede causar inestabilidad, pantallazos azules o que el ordenador directamente no arranque",
+          "No pasa nada si son de la misma generación (DDR3, DDR4 o DDR5)",
+          "El sistema completo funcionará a la velocidad y latencia de la media de los módulos"
+        ],
+        correcta: 1,
+      },
+      {
+        enunciado: "¿Cuál de las siguientes opciones describe correctamente la diferencia entre BIOS y UEFI?",
+        opciones: [
+          "UEFI reemplaza la BIOS, permite interfaz gráfica y arranque en GPT que mejora MBR y su limitación de 2,2 TB",
+          "UEFI solo funciona con procesadores ARM",
+          "La BIOS solo admite discos de más de 2,2 TB",
+          "BIOS es más rápida y moderna que UEFI"
+        ],
+        correcta: 0,
       }
     ];
 
@@ -38,6 +333,9 @@
         opciones: ["display: block", "display: inline", "display: grid", "display: table"],
         correcta: 2,
       }
+
+
+
     ];
 
     const preguntasLM = [
@@ -608,9 +906,9 @@
     function mezclarArray(array) {
       return [...array].sort(() => Math.random() - 0.5);
     }
-
+ 
     function TestInteractivo() {
-      const [asignatura, setAsignatura] = React.useState("LM");
+      const [asignatura, setAsignatura] = React.useState("FH");
 
       let preguntasActuales;
 
@@ -620,8 +918,7 @@
         preguntasActuales = preguntasISO;
       } else if (asignatura === "LM") {
         preguntasActuales = preguntasLM;
-      }
-      else if (asignatura === "PAR") {
+      } else if (asignatura === "PAR") {
         preguntasActuales = preguntasPAR;
       }
 
@@ -672,34 +969,34 @@
                 <h1 className="logo">TEST INTERACTIVO AUTOCORREGIBLE</h1>
 
                 <div className="nav-asignaturas">
-  <button
-    className={`nav-btn ${asignatura === "FH" ? "nav-btn-active" : ""}`}
-    onClick={() => setAsignatura("FH")}
-  >
-    FH
-  </button>
+                  <button
+                    className={`nav-btn ${asignatura === "FH" ? "nav-btn-active" : ""}`}
+                    onClick={() => setAsignatura("FH")}
+                  >
+                    FH
+                  </button>
 
-  <button
-    className={`nav-btn ${asignatura === "ISO" ? "nav-btn-active" : ""}`}
-    onClick={() => setAsignatura("ISO")}
-  >
-    ISO
-  </button>
+                  <button
+                    className={`nav-btn ${asignatura === "ISO" ? "nav-btn-active" : ""}`}
+                    onClick={() => setAsignatura("ISO")}
+                  >
+                    ISO
+                  </button>
 
-  <button
-    className={`nav-btn ${asignatura === "LM" ? "nav-btn-active" : ""}`}
-    onClick={() => setAsignatura("LM")}
-  >
-    LM
-  </button>
+                  <button
+                    className={`nav-btn ${asignatura === "LM" ? "nav-btn-active" : ""}`}
+                    onClick={() => setAsignatura("LM")}
+                  >
+                    LM
+                  </button>
 
-  <button
-    className={`nav-btn ${asignatura === "Redes" ? "nav-btn-active" : ""}`}
-    onClick={() => setAsignatura("Redes")}
-  >
-    Redes
-  </button>
-</div>
+                  <button
+                    className={`nav-btn ${asignatura === "PAR" ? "nav-btn-active" : ""}`}
+                    onClick={() => setAsignatura("PAR")}
+                  >
+                    PAR
+                  </button>
+                </div>
               </div>
             </div>
           </div>
