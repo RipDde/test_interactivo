@@ -173,7 +173,7 @@ button:hover {
 /* BOTÓN CORREGIR */
 .btn-correct {
   position: fixed;
-  bottom: 20px;
+  bottom: 70px;
   right: 20px;
   z-index: 1000;
 
@@ -308,3 +308,23 @@ html {
   scrollbar-color: #0f2f1f #ffffff;
   scrollbar-width: thin;
 }
+
+.btn-info-preguntas {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+
+  width: auto;
+  display: inline-block;
+  padding: 12px 18px;
+
+  background: linear-gradient(to right, #627468, #627468);
+  color: white;
+  border: none;
+  border-radius: 25px;
+
+  font-weight: bold;
+  cursor: default;
+}
+
