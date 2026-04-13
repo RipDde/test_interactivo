@@ -6,7 +6,7 @@ body {
 
 /* BARRA SUPERIOR */
 .topbar {
-  background: linear-gradient(90deg, #0f2f1f, #1f4f3a);
+  background: linear-gradient(90deg, #000000, #1f4f3a);
   color: white;
   padding: 14px 0 16px;
   border-bottom: 3px solid black;
