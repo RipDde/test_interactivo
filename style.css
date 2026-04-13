@@ -249,19 +249,29 @@ footer {
 .nav-btn {
   all: unset;
   display: inline-block;
-  padding: 8px 14px;
-  border: 1px solid black;
-  border-radius: 8px;
-  background: white;
-  color: black;
+  padding: 9px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  color: white;
   cursor: pointer;
   white-space: nowrap;
   text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s ease;
 }
 
 .nav-btn:hover {
-  background: #4d8342;
-  color: white;
+  background: rgba(255, 255, 255, 0.24);
+  transform: translateY(-1px);
+}
+
+.nav-btn-active {
+  background: white;
+  color: #163321;
+  border-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
 }
 
 .nav-asignaturas button {
@@ -271,4 +281,30 @@ footer {
   text-align: center !important;
   padding: 8px 14px;
   white-space: nowrap;
+}
+
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #8fa58a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a5922;
+  border-radius: 10px;
+  border: 2px solid #8fa58a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1f4319;
+}
+
+/* Firefox */
+html {
+  scrollbar-color: #0f2f1f #ffffff;
+  scrollbar-width: thin;
 }

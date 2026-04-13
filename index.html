@@ -597,7 +597,7 @@
       }
     ];
 
-    const preguntasRedes = [
+    const preguntasPAR = [
       {
         enunciado: "¿Qué propiedad activa un contenedor Grid en CSS?",
         opciones: ["display: block", "display: inline", "display: grid", "display: table"],
@@ -621,8 +621,8 @@
       } else if (asignatura === "LM") {
         preguntasActuales = preguntasLM;
       }
-      else if (asignatura === "Redes") {
-        preguntasActuales = preguntasRedes;
+      else if (asignatura === "PAR") {
+        preguntasActuales = preguntasPAR;
       }
 
       const [preguntasMezcladas, setPreguntasMezcladas] = React.useState([]);
@@ -672,11 +672,34 @@
                 <h1 className="logo">TEST INTERACTIVO AUTOCORREGIBLE</h1>
 
                 <div className="nav-asignaturas">
-                  <button className="nav-btn" onClick={() => setAsignatura("FH")}>FH</button>
-                  <button className="nav-btn" onClick={() => setAsignatura("ISO")}>ISO</button>
-                  <button className="nav-btn" onClick={() => setAsignatura("LM")}>LM</button>
-                  <button className="nav-btn" onClick={() => setAsignatura("Redes")}>Redes</button>
-                </div>
+  <button
+    className={`nav-btn ${asignatura === "FH" ? "nav-btn-active" : ""}`}
+    onClick={() => setAsignatura("FH")}
+  >
+    FH
+  </button>
+
+  <button
+    className={`nav-btn ${asignatura === "ISO" ? "nav-btn-active" : ""}`}
+    onClick={() => setAsignatura("ISO")}
+  >
+    ISO
+  </button>
+
+  <button
+    className={`nav-btn ${asignatura === "LM" ? "nav-btn-active" : ""}`}
+    onClick={() => setAsignatura("LM")}
+  >
+    LM
+  </button>
+
+  <button
+    className={`nav-btn ${asignatura === "Redes" ? "nav-btn-active" : ""}`}
+    onClick={() => setAsignatura("Redes")}
+  >
+    Redes
+  </button>
+</div>
               </div>
             </div>
           </div>
