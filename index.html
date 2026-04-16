@@ -3805,7 +3805,7 @@
 
       const [preguntasMezcladas, setPreguntasMezcladas] = React.useState([]);
       React.useEffect(() => {
-        const nuevas = mezclarArray(preguntasActuales).slice(0, 300);
+        const nuevas = mezclarArray(preguntasActuales).slice(0, 30);
         setPreguntasMezcladas(nuevas);
         setRespuestas(Array(nuevas.length).fill(null));
         setCorregido(false);
