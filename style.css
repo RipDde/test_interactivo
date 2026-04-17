@@ -91,8 +91,8 @@ button:hover {
 
 /* CONTENEDOR PRINCIPAL */
 .test-container {
-  max-width: 800px;
-  margin: 30px auto 0 auto;
+  width: 800px;
+  margin-top: 30px;
 }
 
 
@@ -328,3 +328,96 @@ html {
   cursor: default;
 }
 
+.contenido-principal {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+}
+
+.test-container {
+  width: 800px;
+  margin-top: 30px;
+  flex-shrink: 0;
+}
+
+.columna-mapa {
+  width: 320px;          /* ancho fijo de la columna derecha */
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+   align-items: flex-start;
+  flex-shrink: 0;
+}
+
+.mapa-preguntas {
+  width: 220px;
+  background: rgba(255, 255, 255, 0.25);
+  padding: 16px;
+  border-radius: 12px;
+  position: sticky;
+  top: 120px;
+}
+
+.mapa-preguntas h3 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.grid-mapa {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+}
+
+.item-mapa {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: white;
+  border: 2px solid #ccc;
+  font-weight: bold;
+}
+
+.item-mapa.respondida {
+  background: #d9ead3;
+  border-color: #6aa84f;
+}
+
+.item-mapa.en-blanco {
+  background: white;
+  border-color: #ccc;
+}
+
+.item-mapa.acertada {
+  background: #b6d7a8;
+  border-color: green;
+}
+
+.item-mapa.erronea {
+  background: #f4cccc;
+  border-color: red;
+}
+
+@media (max-width: 1200px) {
+  .contenido-principal {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .columna-mapa {
+    flex: none;
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .mapa-preguntas {
+    position: static;
+    transform: none;
+    margin-bottom: 20px;
+  }
+}
