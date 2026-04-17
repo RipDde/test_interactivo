@@ -17,24 +17,11 @@
 
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Privacy-friendly analytics by Plausible -->
-<script async src="https://plausible.io/js/pa-Y4gU2J2uT8dXjL8OG0dLj.js"></script>
-<script>
-  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
-  plausible.init()
-</script>
-
-  
 
 
 </head>
 
 <body>
-
-  <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P2WZ225Q"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 
   <div id="root"></div>
 
@@ -1899,6 +1886,1030 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       }
 
     ];
+
+
+const preguntasIPE = [
+  {
+    enunciado: "La siniestralidad laboral es un elemento muy importante a tener en cuenta de cara a proteger la salud de la población. ¿Sabrías decir cuántos accidentes de trabajo hay, aproximadamente, al año?",
+    opciones: [
+      "Más de un millón.",
+      "Medio millón.",
+      "Doscientos cincuenta mil.",
+      "Trescientos Mil."
+    ],
+    correcta: 0,
+  },
+  {
+    enunciado: "Marcos Urrutia, que es diseñador gráfico, ha tenido un corte en la muñeca derivado de realizar trabajos de carpintería. ¿Tendría la consideración de accidente o enfermedad profesional?",
+    opciones: [
+      "Sería un accidente laboral.",
+      "Sería una enfermedad profesional.",
+      "Se trataría de una enfermedad profesional o de un accidente laboral dependiendo de si se ha producido de forma repentina o de si se ha generado de forma prolongada en el tiempo.",
+      "No sería ni enfermedad profesional ni accidente laboral."
+    ],
+    correcta: 3,
+  },
+  {
+    enunciado: "Cuál es la norma de mayor rango que recoge la protección de los trabajadores como algo fundamental",
+    opciones: [
+      "La Constitución.",
+      "El Estatuto de los Trabajadores.",
+      "La Ley de Prevención de Riesgos Laborales.",
+      "La Biblia."
+    ],
+    correcta: 0,
+  },
+  {
+    enunciado: "¿Cuál de las siguientes NO tendría la condición de accidente de trabajo?",
+    opciones: [
+      "Loli, se rompe el codo como consecuencia de una caída a distinto nivel cuando subía las escaleras de la oficina.",
+      "Gloria, tiene un accidente de coche cuando iba a casa desde el trabajo.",
+      "Mar, le detectan una enfermedad derivada de la exposición a sustancias químicas en su trabajo.",
+      "León, profesor de profesión. Un alumno le hace un mataleón (es una llave de esas que te ponen a dormir con los angelitos)."
+    ],
+    correcta: 2,
+  },
+  {
+    enunciado: "En quién recae la responsabilidad de velar por la protección de la salud de los trabajadores y evitar accidentes",
+    opciones: [
+      "Exclusivamente en el empresario.",
+      "Tanto en el empresario como en los trabajadores.",
+      "Exclusivamente a los trabajadores.",
+      "Exclusivamente a los representantes de los trabajadores."
+    ],
+    correcta: 1,
+  },
+  {
+    enunciado: "¿Cuál de las siguientes NO tiene la condición de enfermedad laboral?",
+    opciones: [
+      "C Tangana, es carpintero. Desarrolla una alergia incurable al pino.",
+      "Mercedes, desarrolla síndrome del túnel carpiano como consecuencia de coser 12 horas al día en un taller de ropa.",
+      "Luck, desarrolla lumbalgia crónica tras 15 años trabajando como jornalero recogiendo cebollas.",
+      "Javi, enfermero, se lesiona el hombro entrenando cuando va a mover un paciente."
+    ],
+    correcta: 3,
+  },
+  {
+    enunciado: "Cuál de los siguientes NO es un derecho de los trabajadores en materia preventiva",
+    opciones: [
+      "Recibir formación en materia preventiva.",
+      "Formular propuestas al empresario.",
+      "Vigilancia de su salud.",
+      "Usar adecuadamente los equipos de trabajo."
+    ],
+    correcta: 3,
+  },
+  {
+    enunciado: "A qué hay que dar prioridad a la hora de diseñar la prevención de riesgos laborales en una empresa",
+    opciones: [
+      "Eliminar los riesgos de raíz.",
+      "Comprar equipos de protección adecuados.",
+      "Instruir a los trabajadores adecuadamente.",
+      "Contratar un seguro médico que sea barato y a la vez bueno."
+    ],
+    correcta: 0,
+  },
+  {
+    enunciado: "¿Qué significan las siglas OIT?",
+    opciones: [
+      "Organización independiente de trabajadores.",
+      "Organización para el tránsito internacional de trabajadores.",
+      "Organización Internacional del Trabajo.",
+      "Organización del trabajo obrero internacional."
+    ],
+    correcta: 2,
+  },
+  {
+    enunciado: "¿De qué Organismo internacional forma parte la OIT?",
+    opciones: [
+      "Unión Europea.",
+      "Unión de Pequeños Agricultores.",
+      "Organización de las Naciones Unidas.",
+      "Organización del Tratado del Atlántico Norte (OTAN)."
+    ],
+    correcta: 2,
+  },
+  {
+    enunciado: "¿Cuál de los siguientes organismos tiene capacidad punitiva (es decir, puede poner sanciones que hacen mucha pupa al bolsillo)?",
+    opciones: [
+      "La Inspección de Trabajo.",
+      "La Organización Mundial de la Salud.",
+      "La Fundación Europea para la Mejora de las Condiciones de Vida y de Trabajo.",
+      "La Agencia Europea para la Seguridad y Salud en el Trabajo."
+    ],
+    correcta: 0,
+  },
+  {
+    enunciado: "¿Cuál de las siguientes medidas preventivas no pertenece al ámbito de la seguridad en el trabajo?",
+    opciones: [
+      "Control de exposición.",
+      "Protecciones en maquinaria.",
+      "Señalización.",
+      "Formación en seguridad."
+    ],
+    correcta: 0,
+  },
+  {
+    enunciado: "Un inspector de trabajo observa que, analizando las bajas laborales que hay en tu empresa, el 90 por ciento son derivadas de la insatisfacción laboral, desmotivación de los trabajadores, depresiones y acoso laboral. ¿Qué técnica de prevención debería aplicarse para prevenir dichas patologías?",
+    opciones: [
+      "Seguridad en el trabajo.",
+      "Higiene industrial.",
+      "Ergonomía.",
+      "Psicosociología."
+    ],
+    correcta: 3,
+  },
+  {
+    enunciado: "Las medidas de protección se clasificarían de la siguiente forma:",
+    opciones: [
+      "Individuales y colectivas.",
+      "Generales y concretas.",
+      "Abstractas y generales.",
+      "Singulares y plurales."
+    ],
+    correcta: 0,
+  },
+  {
+    enunciado: "En la empresa Good Mercancías, SLU, se almacenan bienes que se organizan utilizando vehículos de carga. ¿Qué medida no sería idónea para evitar atropellos que espachurren a trabajadores?",
+    opciones: [
+      "Instalación de semáforos.",
+      "Delimitar las zonas de tráfico.",
+      "Controlar la velocidad de los vehículos.",
+      "Equipos individuales de protección."
+    ],
+    correcta: 3,
+  },
+  {
+    enunciado: "Los riesgos derivados de las condiciones ambientales (o medioambientales) de la empresa se clasifican en:",
+    opciones: [
+      "Físicos, biológicos y químicos.",
+      "Mecánicos, ambientales y psicológicos.",
+      "Generales, particulares y concretos.",
+      "Abstractos y concretos."
+    ],
+    correcta: 0,
+  },
+  {
+    enunciado: "La evaluación de riesgos se centra en:",
+    opciones: [
+      "Verificar si el riesgo se puede producir, al menos una vez cada mes.",
+      "Comprobar la gravedad y la probabilidad de que ocurra un riesgo.",
+      "Tener en cuenta la evolución de la técnica.",
+      "Evitar los riesgos en su origen."
+    ],
+    correcta: 1,
+  },
+  {
+    enunciado: "¿Qué técnica de prevención se debería utilizar para ayudar a una persona que tiene problemas de hombro derivados del uso continuado del ratón?",
+    opciones: [
+      "Seguridad en el trabajo.",
+      "Higiene industrial.",
+      "Ergonomía.",
+      "Psicosociología."
+    ],
+    correcta: 2,
+  },
+  {
+    enunciado: "Según la Agencia Europea para la Seguridad y Salud en el trabajo, ¿qué porcentaje de trabajadores se enfrentan a factores relacionados con el trabajo que puede afectar a su salud mental?",
+    opciones: [
+      "20 por ciento.",
+      "45 por ciento.",
+      "15 por ciento.",
+      "10 por ciento."
+    ],
+    correcta: 1,
+  },
+  {
+    enunciado: "Cómo se denomina a la manifestación de agotamiento emocional, despersonalización y baja realización personal en el trabajo",
+    opciones: [
+      "Estrés laboral.",
+      "Mobbing.",
+      "Carga mental excesiva.",
+      "Bournout."
+    ],
+    correcta: 3,
+  },
+  {
+    enunciado: "En materia de prevención de riesgos laborales, siempre se debe priorizar",
+    opciones: [
+      "Las medidas individuales de protección frente a las colectivas.",
+      "Las medidas de protección colectivas frente a las individuales.",
+      "Las medidas de protección frente a la evitación de los riesgos.",
+      "Las medidas de protección basadas en EPIs (equipos de protección individual)."
+    ],
+    correcta: 1,
+  },
+  {
+    enunciado: "¿Cuál de los siguientes NO es un objetivo de los simulacros que deben efectuarse en todo plan de evacuación?",
+    opciones: [
+      "Evaluar la efectividad del plan.",
+      "Formar y concienciar al personal.",
+      "Identificar y corregir deficiencias.",
+      "Aplicar las medidas disciplinarias correspondientes a aquellos trabajadores que no efectúen el simulacro de forma satisfactoria."
+    ],
+    correcta: 3,
+  },
+  {
+    enunciado: "¿Cuál de los siguientes NO es un medio de protección frente a emergencias?",
+    opciones: [
+      "Equipos de detección.",
+      "Alarma contra incendios.",
+      "Extintores.",
+      "Simulacros."
+    ],
+    correcta: 3,
+  },
+  {
+    enunciado: "La persona encargada de dirigir y supervisar la actuación que debe llevarse a cabo en una emergencia se denomina:",
+    opciones: [
+      "Jefe de servicio.",
+      "Jefe de intervención.",
+      "Jefe de planta.",
+      "Jefazo."
+    ],
+    correcta: 1,
+  },
+  {
+    enunciado: "Las señales que advierten de algún peligro tendrán una forma y color",
+    opciones: [
+      "Triangular de color amarillo.",
+      "Redonda con borde rojo.",
+      "Redonda de color azul.",
+      "Cuadrada de color verde."
+    ],
+    correcta: 0,
+  },
+  {
+    enunciado: "La actualización de las señales de advertencia conforme a la nomenclatura actual es una actuación que debería llevarse a cabo:",
+    opciones: [
+      "Antes de emergencia.",
+      "Durante la emergencia.",
+      "Después de la emergencia.",
+      "Todas las respuestas son correctas."
+    ],
+    correcta: 0,
+  },
+  {
+    enunciado: "El mantenimiento de las instalaciones presentes en una empresa es una actuación que se debe llevar a cabo",
+    opciones: [
+      "Antes de la emergencia",
+      "Durante la emergencia",
+      "Después de la emergencia",
+      "En cualquier momento, incluso durante la propia emergencia"
+    ],
+    correcta: 0,
+  },
+  {
+    enunciado: "¿Cuál es el primer paso en la regla PAS?",
+    opciones: [
+      "Socorrer a la víctima.",
+      "Avisar a los servicios de emergencia.",
+      "Proteger al accidentado.",
+      "Realizar una evaluación médica."
+    ],
+    correcta: 2,
+  },
+  {
+    enunciado: "¿Qué significa la \"A\" en la regla PAS?",
+    opciones: [
+      "Asistir a la víctima.",
+      "Alertar a los servicios de emergencia especializados.",
+      "Analizar la situación.",
+      "Ayudar a los testigos."
+    ],
+    correcta: 1,
+  },
+  {
+    enunciado: "¿Qué es el triaje?",
+    opciones: [
+      "Un método para transportar heridos.",
+      "Un método para prevenir accidentes.",
+      "Un método para categorizar heridos en situaciones donde el número es desconocido.",
+      "Un método para identificar enfermedades."
+    ],
+    correcta: 2,
+  },
+  {
+    enunciado: "¿Qué se debe hacer con una persona inconsciente que respira?",
+    opciones: [
+      "No hacer nada.",
+      "Colocarla en posición lateral de seguridad.",
+      "Administrar RCP.",
+      "Moverla a un lugar seguro."
+    ],
+    correcta: 1,
+  },
+  {
+    enunciado: "¿Cuántas compresiones por minuto se deben realizar en la RCP?",
+    opciones: [
+      "60-80.",
+      "80-100.",
+      "100-120.",
+      "120-140."
+    ],
+    correcta: 2,
+  },
+  {
+    enunciado: "¿Qué tipo de quemadura afecta solo la capa superficial de la piel?",
+    opciones: [
+      "Tercer grado.",
+      "Segundo grado.",
+      "Primer grado.",
+      "Cuarto grado."
+    ],
+    correcta: 2,
+  },
+  {
+    enunciado: "¿Qué maniobra se usa en un atragantamiento?",
+    opciones: [
+      "Maniobra de Heimlich.",
+      "Maniobra de Valsalva.",
+      "Maniobra de Epley.",
+      "Maniobra de Miller."
+    ],
+    correcta: 0,
+  },
+  {
+    enunciado: "¿Cuál es la postura ante hemorragia nasal?",
+    opciones: [
+      "Acostado boca abajo.",
+      "Sentado cabeza hacia adelante.",
+      "De pie.",
+      "Acostado boca arriba."
+    ],
+    correcta: 1,
+  },
+  {
+    enunciado: "Adulto inconsciente y no respira. ¿Qué haces?",
+    opciones: [
+      "Dar agua.",
+      "Llamar al 112, abrir las vías aéreas y RCP.",
+      "Esperar especialistas.",
+      "Intentar despertarle."
+    ],
+    correcta: 1,
+  },
+  {
+    enunciado: "Prioridad en múltiples víctimas:",
+    opciones: [
+      "Quien grita más.",
+      "Heridas visibles.",
+      "Quien lo pida.",
+      "Peligro inmediato de muerte."
+    ],
+    correcta: 3,
+  },
+  {
+    enunciado: "Como actuarías en una herida con sangrado abundante:",
+    opciones: [
+      "Limpiar con jabón.",
+      "Antiséptico.",
+      "Presión directa.",
+      "Esperar a que baje."
+    ],
+    correcta: 2,
+  },
+  {
+    enunciado: "Una persona tragó un objeto y tose fuerte. ¿Qué hacemos?",
+    opciones: [
+      "Dejar toser.",
+      "Golpes espalda.",
+      "Heimlich.",
+      "Dar agua."
+    ],
+    correcta: 0,
+  },
+  {
+    enunciado: "¿En qué caso se debe usar PLS?",
+    opciones: [
+      "Inconsciente que respira.",
+      "Inconsciente que no respira.",
+      "Fracturas.",
+      "Quemaduras."
+    ],
+    correcta: 0,
+  },
+  {
+    enunciado: "Cuál es la secuencia correcta RCP adulto:",
+    opciones: [
+      "2 ventilaciones / 15 compresiones.",
+      "30 compresiones / 2 ventilaciones.",
+      "15 compresiones / 2 ventilaciones.",
+      "2 ventilaciones y 30 compresiones."
+    ],
+    correcta: 1,
+  },
+  {
+    enunciado: "Qué actuación forma parte de la Evaluación primaria:",
+    opciones: [
+      "Verificar fracturas craneales",
+      "Comprobar si la persona presenta sangrado",
+      "Comprobar la consciencia, respiración y pulso.",
+      "Comprobar si la persona tiene dolor."
+    ],
+    correcta: 2,
+  },
+  {
+    enunciado: "Cuál es el número de emergencias en España:",
+    opciones: [
+      "911.",
+      "112.",
+      "999.",
+      "000."
+    ],
+    correcta: 1,
+  },
+  {
+    enunciado: "¿Quiénes pueden firmar un contrato de trabajo según el Estatuto de los Trabajadores?",
+    opciones: [
+      "Mayores de 16 años con permiso paterno.",
+      "Únicamente las personas que tengan 18 años.",
+      "Únicamente las personas que estén emancipadas.",
+      "Extranjeros residentes, únicamente."
+    ],
+    correcta: 0,
+  },
+  {
+    enunciado: "Leopoldo ha conseguido la nacionalidad española, por lo que decide dejar su puesto de trabajo actual en una empresa que lo tenía contratado sin papeles y con condiciones mucho peores a las que indica el contrato de trabajo. Su jefe actual le avisa que, de no renovar el actual contrato, tendrá que dar aviso a las autoridades de la situación ilegal de la mujer de Leopoldo. Este decide firmar el contrato. ¿Sería dicho contrato válido?",
+    opciones: [
+      "No, ya que le faltaría una causa válida.",
+      "No, ya que carece de objeto.",
+      "No, ya que carece de consentimiento.",
+      "Sí, ya que Leopoldo venía prestando servicios en la empresa referida."
+    ],
+    correcta: 2,
+  },
+  {
+    enunciado: "¿Qué tipo de contrato puede celebrarse verbalmente?",
+    opciones: [
+      "Contrato a tiempo parcial.",
+      "Contrato indefinido ordinario a jornada completa.",
+      "Contrato formativo.",
+      "Ninguno."
+    ],
+    correcta: 1,
+  },
+  {
+    enunciado: "Clara es hija de un bibliotecario. Ha conseguido un trabajo temporal para cubrir una baja de maternidad, por una duración de 16 semanas. Su jefe, que es un poco descuidado no ha formalizado con ella el contrato por escrito. ¿Qué naturaleza tendría dicho contrato?",
+    opciones: [
+      "Se considera nulo.",
+      "Se presume indefinido.",
+      "Pierde validez legal.",
+      "Ninguna de las anteriores."
+    ],
+    correcta: 1,
+  },
+  {
+    enunciado: "¿Qué información NO es obligatoria en un contrato de trabajo?",
+    opciones: [
+      "Duración.",
+      "Retribuciones.",
+      "Convenio colectivo de aplicación.",
+      "Indemnización en caso de despido."
+    ],
+    correcta: 3,
+  },
+  {
+    enunciado: "Un contrato de trabajo, genera:",
+    opciones: [
+      "Derechos únicamente para el empleador.",
+      "Obligaciones para el trabajador.",
+      "Obligaciones mutuas.",
+      "Ninguna de las anteriores."
+    ],
+    correcta: 2,
+  },
+  {
+    enunciado: "¿Cuál de los siguientes NO es un elemento necesario para que un contrato se considere válido?",
+    opciones: [
+      "Consentimiento.",
+      "Objeto.",
+      "Causa.",
+      "Objeción."
+    ],
+    correcta: 3,
+  },
+  {
+    enunciado: "¿Cuál de las siguientes NO es una características del objeto de los contratos?",
+    opciones: [
+      "Debe ser lícito.",
+      "Deben ser posibles.",
+      "Deben ser determinados.",
+      "Deben ser indeterminados."
+    ],
+    correcta: 3,
+  },
+  {
+    enunciado: "Leopolda ha firmado un contrato en la empresa de un amigo para cotizar lo suficiente para cobrar el paro. Sin embargo no tiene intención de ir a trabajar. ¿Estaríamos ante un contrato válido?",
+    opciones: [
+      "No, ya que le faltaría una causa válida.",
+      "No, ya que carecería de objeto.",
+      "No, ya que carecería de consentimiento.",
+      "No, ya que no es por escrito."
+    ],
+    correcta: 0,
+  },
+  {
+    enunciado: "A Lucía le han contratado para vender bolsitas de marihuana a la gente que pase a la tienda en la que está de dependienta. ¿Estaríamos ante un contrato válido?",
+    opciones: [
+      "Sí, siempre que ella estuviera de acuerdo.",
+      "No, porque carece de un objeto válido.",
+      "Sí, ya que se dan los tres elementos: Consentimiento, causa y voluntariedad."
+    ],
+    correcta: 1,
+  },
+  {
+    enunciado: "¿Qué define esencialmente a un contrato de trabajo?",
+    opciones: [
+      "La prestación de servicios voluntarios a cambio de salario.",
+      "La realización de un trabajo ocasional.",
+      "La colaboración entre empresas.",
+      "La cesión de trabajadores."
+    ],
+    correcta: 0,
+  },
+  {
+    enunciado: "¿Cuál NO es un elemento esencial del contrato de trabajo?",
+    opciones: [
+      "Consentimiento.",
+      "Objeto.",
+      "Causa.",
+      "Forma escrita."
+    ],
+    correcta: 3,
+  },
+  {
+    enunciado: "El consentimiento en el contrato de trabajo debe ser:",
+    opciones: [
+      "Presunto y tácito.",
+      "Libre y sin vicios.",
+      "Verbal obligatoriamente.",
+      "Revocable unilateralmente."
+    ],
+    correcta: 1,
+  },
+  {
+    enunciado: "La causa del contrato de trabajo consiste en:",
+    opciones: [
+      "La prestación laboral.",
+      "La finalidad económica de la empresa.",
+      "El intercambio de trabajo por salario.",
+      "La duración del contrato."
+    ],
+    correcta: 2,
+  },
+  {
+    enunciado: "¿Quién puede actuar como empresario en un contrato de trabajo?",
+    opciones: [
+      "Solo personas físicas.",
+      "Solo empresas mercantiles.",
+      "Personas físicas, jurídicas o comunidades de bienes.",
+      "Solo autónomos."
+    ],
+    correcta: 2,
+  },
+  {
+    enunciado: "Un contrato verbal es válido cuando:",
+    opciones: [
+      "Nunca es válido.",
+      "Siempre que dure menos de un año.",
+      "Siempre que dure menos de 6 meses.",
+      "En contratos indefinidos."
+    ],
+    correcta: 3,
+  },
+  {
+    enunciado: "¿Cuál es contenido mínimo obligatorio de un contrato?",
+    opciones: [
+      "Salario y vacaciones.",
+      "Duración y jornada.",
+      "Datos de las partes y tipo de contrato.",
+      "Todas las anteriores."
+    ],
+    correcta: 3,
+  },
+  {
+    enunciado: "¿Qué modalidad contractual es indefinida?",
+    opciones: [
+      "Contrato por circunstancias de la producción.",
+      "Contrato de sustitución.",
+      "Contrato fijo discontinuo.",
+      "Contrato de relevo."
+    ],
+    correcta: 2,
+  },
+  {
+    enunciado: "El contrato fijo discontinuo se utiliza principalmente para:",
+    opciones: [
+      "Trabajos permanentes continuos.",
+      "Trabajos estacionales o intermitentes.",
+      "Trabajos de sustitución.",
+      "Trabajos formativos."
+    ],
+    correcta: 1,
+  },
+  {
+    enunciado: "El contrato fijo discontinuo debe formalizarse:",
+    opciones: [
+      "De forma verbal.",
+      "De forma escrita.",
+      "Solo si dura más de un año.",
+      "Ante la autoridad laboral."
+    ],
+    correcta: 1,
+  },
+  {
+    enunciado: "¿Qué contrato se utiliza para incrementos ocasionales e imprevisibles de actividad?",
+    opciones: [
+      "Contrato de relevo.",
+      "Contrato de sustitución.",
+      "Contrato por circunstancias de la producción.",
+      "Contrato formativo."
+    ],
+    correcta: 2,
+  },
+  {
+    enunciado: "La duración máxima del contrato por circunstancias imprevisibles es:",
+    opciones: [
+      "3 meses.",
+      "6 meses ampliables por convenio.",
+      "Hasta 2 años.",
+      "90 días al año."
+    ],
+    correcta: 1,
+  },
+  {
+    enunciado: "¿Qué indemnización corresponde al finalizar un contrato temporal por producción?",
+    opciones: [
+      "No tiene indemnización.",
+      "8 días por año.",
+      "12 días por año trabajado.",
+      "20 días por año trabajado."
+    ],
+    correcta: 2,
+  },
+  {
+    enunciado: "El contrato por circunstancias previsibles puede celebrarse como máximo:",
+    opciones: [
+      "60 días al año.",
+      "90 días al año.",
+      "120 días continuados.",
+      "6 meses."
+    ],
+    correcta: 1,
+  },
+  {
+    enunciado: "¿Cuál es una característica del contrato por sustitución?",
+    opciones: [
+      "Genera indemnización al finalizar.",
+      "Siempre es a tiempo parcial.",
+      "Puede iniciar 15 días antes del comienzo de la sustitución.",
+      "Solo puede durar 6 meses."
+    ],
+    correcta: 2,
+  },
+  {
+    enunciado: "En el contrato de sustitución es obligatorio indicar:",
+    opciones: [
+      "El salario del sustituido.",
+      "El trabajador sustituido y la causa.",
+      "La duración exacta del contrato.",
+      "El convenio colectivo."
+    ],
+    correcta: 1,
+  },
+  {
+    enunciado: "El contrato de relevo se celebra para:",
+    opciones: [
+      "Sustituir bajas médicas.",
+      "Cubrir jubilación parcial.",
+      "Incrementos de producción.",
+      "Formación profesional."
+    ],
+    correcta: 1,
+  },
+  {
+    enunciado: "El trabajador relevista debe ser:",
+    opciones: [
+      "Trabajador indefinido de la empresa.",
+      "Autónomo colaborador.",
+      "Trabajador sin experiencia pero con título habilitante.",
+      "Trabajador en situación de desempleo."
+    ],
+    correcta: 3,
+  },
+  {
+    enunciado: "En el contrato de relevo ordinario, la duración mínima es:",
+    opciones: [
+      "6 meses.",
+      "1 año.",
+      "Hasta jubilación total.",
+      "Sin duración mínima."
+    ],
+    correcta: 1,
+  },
+  {
+    enunciado: "¿Qué caracteriza al contrato de formación en alternancia?",
+    opciones: [
+      "Compatibiliza trabajo y formación reglada.",
+      "Solo puede durar 6 meses.",
+      "Exige titulación previa.",
+      "Es siempre a tiempo parcial."
+    ],
+    correcta: 0,
+  },
+  {
+    enunciado: "La duración del contrato de formación en alternancia es:",
+    opciones: [
+      "Entre 6 meses y 1 año.",
+      "Sin límite.",
+      "Máximo 1 año.",
+      "Entre 3 meses y 2 años."
+    ],
+    correcta: 3,
+  },
+  {
+    enunciado: "La retribución del contrato de formación en alternancia el primer año será como mínimo:",
+    opciones: [
+      "50% del salario.",
+      "60% del salario fijado en convenio.",
+      "75% del salario mínimo.",
+      "El SMI íntegro."
+    ],
+    correcta: 1,
+  },
+  {
+    enunciado: "¿Qué requisito NO es necesario para el contrato de formación en alternancia?",
+    opciones: [
+      "Plan formativo individual.",
+      "Formalización escrita.",
+      "Titulación previa.",
+      "Alternancia real trabajo-formación."
+    ],
+    correcta: 2,
+  },
+  {
+    enunciado: "El contrato para la obtención de la práctica profesional requiere:",
+    opciones: [
+      "Estar desempleado.",
+      "Poseer una titulación reciente.",
+      "No haber trabajado nunca.",
+      "Ser menor de 25 años."
+    ],
+    correcta: 1,
+  },
+  {
+    enunciado: "La duración del contrato de práctica profesional es:",
+    opciones: [
+      "Entre 6 meses y 1 año.",
+      "Entre 3 meses y 2 años.",
+      "Siempre 1 año.",
+      "Sin límite."
+    ],
+    correcta: 0,
+  },
+  {
+    enunciado: "La retribución del contrato de práctica profesional:",
+    opciones: [
+      "Puede ser inferior al SMI.",
+      "Es la fijada en convenio y nunca inferior al contrato en alternancia.",
+      "Es siempre el SMI.",
+      "Es libremente pactada."
+    ],
+    correcta: 1,
+  },
+  {
+    enunciado: "Un contrato a tiempo parcial se caracteriza por:",
+    opciones: [
+      "Jornada inferior a la de un trabajador comparable a tiempo completo.",
+      "Prohibición de horas complementarias.",
+      "Ser siempre indefinido.",
+      "No poder ser escrito."
+    ],
+    correcta: 0,
+  },
+  {
+    enunciado: "Las horas complementarias pactadas solo pueden realizarse en:",
+    opciones: [
+      "No pueden realizarse en ningún caso.",
+      "Contratos a tiempo parcial indefinidos.",
+      "Todos los contratos.",
+      "Solo contratos formativos."
+    ],
+    correcta: 1,
+  },
+  {
+    enunciado: "Las Empresas de Trabajo Temporal (ETT):",
+    opciones: [
+      "Ceden trabajadores sin contrato.",
+      "No aplican convenios colectivos.",
+      "Sustituyen a la empresa usuaria.",
+      "Contratan y ceden trabajadores a empresas usuarias."
+    ],
+    correcta: 3,
+  },
+  {
+    enunciado: "La movilidad funcional es:",
+    opciones: [
+      "Un cambio en tus funciones que se manifiesta en que debes llevar a cabo las de un grupo superior, exclusivamente.",
+      "Un cambio en tus funciones que se manifiesta en que debes llevar a cabo las de un grupo inferior, exclusivamente.",
+      "Un cambio en tus funciones que se manifiesta en que debes llevar a cabo las de un grupo equivalente, exclusivamente.",
+      "Un cambio en tus funciones que se manifiesta en que debes llevar a cabo las de un grupo superior, equivalente o inferior."
+    ],
+    correcta: 3,
+  },
+  {
+    enunciado: "Lucas ha sido objeto de una movilidad funcional. Le han ordenado que lleve a cabo tareas de una categoría inferior a la que él desempeña. ¿Durante cuánto tiempo podrán mantenerle en esas funciones?",
+    opciones: [
+      "El tiempo indispensable.",
+      "El tiempo suficiente.",
+      "El tiempo que sea necesario a juicio del empresario.",
+      "El tiempo que permanezca la necesidad."
+    ],
+    correcta: 0,
+  },
+  {
+    enunciado: "Luis ha estado desempeñando funciones de una categoría superior a la suya y le ha cogido gusto al puesto. Te pregunta si podría quedarse haciendo esas funciones, ya que le gustan más que lo que venía haciendo.",
+    opciones: [
+      "Sí, siempre que haya permanecido en ese puesto 8 meses en un plazo de 24 meses.",
+      "Sí, siempre que permanezca en ese puesto 6 meses en un plazo de 24 meses.",
+      "Sí, siempre que permanezca en ese puesto al menos seis meses, en un plazo de 48 meses.",
+      "Sí, 20 días por año trabajado con un máximo de 12 mensualidades."
+    ],
+    correcta: 0,
+  },
+  {
+    enunciado: "Leopoldo ha sido llamado por el jefe. Tiene una buena noticia para él. Le han concedido un traslado a la provincia de Jaén. Nuestro amigo Leocadio vive en Zaragoza y no tiene ninguna intención de aceptar el cambio. ¿Podría irse de la empresa?",
+    opciones: [
+      "Sí, con una indemnización de 20 días por cada año trabajado con un máximo de 20 mensualidades.",
+      "Sí, con una indemnización de 20 días por cada año trabajado con un máximo de 9 mensualidades.",
+      "Sí, con una indemnización de 33 días por cada año trabajado con un máximo de 20 mensualidades.",
+      "Sí, con una indemnización de 20 días por cada año trabajado con un máximo de 12 mensualidades."
+    ],
+    correcta: 3,
+  },
+  {
+    enunciado: "¿Podría Leopoldo irse directamente del trabajo cuando le den la noticia?",
+    opciones: [
+      "Sí, siempre que avise con 20 días de antelación al jefe.",
+      "Sí, siempre que avise con 15 días de antelación al jefe.",
+      "No, ya que debe acudir primero al juzgado para que su contrato sea resuelto por el juez.",
+      "No, primero tiene que pegarle una paliza al jefe."
+    ],
+    correcta: 2,
+  },
+  {
+    enunciado: "Si Leopoldo decidiera impugnar la decisión por la que se le quiere trasladar, ¿en qué plazo debería hacerlo?",
+    opciones: [
+      "20 días.",
+      "15 días.",
+      "10 días.",
+      "5 días."
+    ],
+    correcta: 0,
+  },
+  {
+    enunciado: "En la empresa de Luis está habiendo muchos cambios… ¿Cuál de los siguientes NO le daría derecho a poner fin a su contrato de trabajo?",
+    opciones: [
+      "Jornada de trabajo.",
+      "Régimen de trabajo a turnos.",
+      "Horario.",
+      "Sistema de rendimiento."
+    ],
+    correcta: 3,
+  },
+  {
+    enunciado: "Si Luis decidiera irse de la empresa fruto de las modificaciones sustanciales del contrato de trabajo referidas en la pregunta anterior ¿tendría derecho a alguna indemnización?",
+    opciones: [
+      "Sí, 20 días por año trabajado con un máximo de 9 mensualidades.",
+      "Sí, 33 días por año trabajado con un máximo de 24 mensualidades.",
+      "Sí, 15 días por año trabajado con un máximo de 20 mensualidades.",
+      "No le corresponde ninguna indemnización."
+    ],
+    correcta: 0,
+  },
+  {
+    enunciado: "Luis ha descubierto que su jefe le ha modificado las condiciones sustanciales de su contrato de trabajo para afectar a su dignidad, ya que le tiene manía. ¿Qué indemnización le correspondería en tal caso?",
+    opciones: [
+      "Ninguna, fastídiate, Luis.",
+      "50.000 euros.",
+      "270 días de sueldo, en todo caso.",
+      "33 días por año trabajado con un máximo de 24 mensualidades (o 720 días)."
+    ],
+    correcta: 3,
+  },
+  {
+    enunciado: "¿La suspensión del contrato de trabajo implica la extinción del contrato?",
+    opciones: [
+      "Sí.",
+      "No.",
+      "A veces.",
+      "En ocasiones."
+    ],
+    correcta: 1,
+  },
+  {
+    enunciado: "Señala la respuesta INCORRECTA con relación a la excedencia forzosa por ejercicio de cargo público.",
+    opciones: [
+      "Su duración puede ser, como máximo, de cuatro años.",
+      "La antigüedad computa.",
+      "Se conserva el mismo puesto de trabajo.",
+      "El trabajador debe reincorporarse en el plazo de un mes desde que finaliza la causa por la que debe permanecer en excedencia forzosa."
+    ],
+    correcta: 0,
+  },
+  {
+    enunciado: "Lupecio se ha ido a Australia con su nueva novia aborigen. Para ello tiene que solicitar una excedencia voluntaria. A los 7 meses rompen su relación porque él no se adapta a la cultura local. Tras unos meses se vuelve a enamorar. Esta vez de una norcoreana. ¿Podría disfrutar Lupecio de una excedencia voluntaria de nuevo?",
+    opciones: [
+      "Sí, cuando transcurran 3 años desde el final de la anterior excedencia.",
+      "Sí, cuando transcurran 2 años desde el final de la anterior excedencia.",
+      "Sí, siempre que sea amor verdadero.",
+      "Sí, siempre que transcurran cuatro años desde el final de la anterior excedencia."
+    ],
+    correcta: 3,
+  },
+  {
+    enunciado: "Leandro ha tenido un hijo, está muy feliz, aunque duerme menos que un búho. ¿Cuál será el plazo máximo de la excedencia que puede coger?",
+    opciones: [
+      "1 año.",
+      "2 años.",
+      "3 años.",
+      "4 años."
+    ],
+    correcta: 2,
+  },
+  {
+    enunciado: "Leandro está preocupado, confunde todos los tipos de excedencias que hay. Señala la respuesta INCORRECTA respecto a la excedencia por cuidado de hijo.",
+    opciones: [
+      "Puede solicitarla tanto el padre como la madre.",
+      "Durante el primer año se reserva el puesto de trabajo.",
+      "Computa la antigüedad.",
+      "Hasta que no transcurren cuatro años no se puede disfrutar de otra excedencia por cuidado de hijos."
+    ],
+    correcta: 3,
+  },
+  {
+    enunciado: "Liberto tiene una ferretería desde los 15 años. Ahora, con 95 años ha decidido jubilarse. Sus tres trabajadores se preguntan si les correspondería algún tipo de abono por parte del jefe.",
+    opciones: [
+      "Sí, un mes de salario.",
+      "Sí 22 días por año trabajado.",
+      "Sí, 35 días por año trabajado.",
+      "Sí, 100 días por año trabajado."
+    ],
+    correcta: 0,
+  },
+  {
+    enunciado: "Liborio tiene un jefe un poco olvidadizo. Lleva varios meses sin cobrar. ¿Tendría derecho a que se pusiera fin a su contrato de trabajo?",
+    opciones: [
+      "Sí, siempre que haya dejado de cobrar durante tres meses aunque no sean consecutivos.",
+      "No, ya que únicamente se permite poner fin al contrato de trabajo en caso de retrasos.",
+      "Sí, siempre que haya dejado de cobrar durante un mes.",
+      "Sí, siempre que haya dejado de cobrar durante dos meses consecutivos."
+    ],
+    correcta: 0,
+  },
+  {
+    enunciado: "Laura tiene miedo de quedarse sin ahorros, ya que el jefe ha comenzado a retrasarse en los pagos del salario. En caso de superar el límite de retrasos, ¿podría Laura poner fin a su contrato de trabajo percibiendo además una indemnización?",
+    opciones: [
+      "Sí, siempre que lo comunique al jefe con 15 días de antelación.",
+      "Sí, de 33 días de salario por cada año trabajado con un máximo de 24 mensualidades.",
+      "Sí, de 20 años de salario.",
+      "Sí, siempre y cuando se conforme con una indemnización de 12 días por cada año trabajado con un máximo de una anualidad de salario."
+    ],
+    correcta: 1,
+  },
+  {
+    enunciado: "Tras una discusión con su jefe, Marcos es despedido. Una vez tramitado todo el procedimiento, se acuerda por el juez la improcedencia del despido. ¿Cuál sería el siguiente paso?",
+    opciones: [
+      "El empresario deberá decidir en un plazo de cinco días, si lo readmite o si le indemniza.",
+      "El empresario deberá readmitir al trabajador en todo caso.",
+      "El empresario deberá indemnizar al trabajador en todo caso.",
+      "El trabajador decidirá, en un plazo de cinco días, si es readmitido o indemnizado."
+    ],
+    correcta: 0,
+  },
+  {
+    enunciado: "Lola es nombrada por su jefe empleada del mes y del año. En la alegría de celebración Lola dice que está embarazada. Todos sonríen menos su jefa. Al día siguiente, la trabajadora recibe una carta de despido por transgresión de la buena fe y pérdida de confianza. ¿Cómo debería calificar el juez ese despido?",
+    opciones: [
+      "Procedente, con cero euros de indemnización.",
+      "Improcedente, acordando la readmisión de la trabajadora.",
+      "Improcedente, acordando indemnizar a la trabajadora a razón de 33 días por año trabajado, con un máximo de 24 mensualidades.",
+      "Nulo, debiendo ser readmitida la trabajadora, con el abono de los salarios de tramitación."
+    ],
+    correcta: 3,
+  },
+  {
+    enunciado: "Construcciones Matías lleva varios trimestres con pérdidas económicas. Por lo que decide despedir a Laureano de forma objetiva. ¿Qué trámite debe llevar a cabo el jefe de D. Laureano?",
+    opciones: [
+      "Entregarle una carta de despido donde se recojan esas causas y poner a su disposición una indemnización de 20 días por cada año trabajado con un máximo de 12 mensualidades.",
+      "Dar 15 días de sueldo como compensación por el despido sufrido.",
+      "Dar 20 días de sueldo por compensación por el despido sufrido.",
+      "Dar 33 días de sueldo como compensación por los daños morales sufridos."
+    ],
+    correcta: 0,
+  }
+];
+
 
     const preguntasLM = [
       {
@@ -3813,6 +4824,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         preguntasActuales = preguntasFH;
       } else if (asignatura === "ISO") {
         preguntasActuales = preguntasISO;
+        } else if (asignatura === "IPE") {
+        preguntasActuales = preguntasIPE;
       } else if (asignatura === "LM") {
         preguntasActuales = preguntasLM;
       } else if (asignatura === "PAR") {
@@ -3878,6 +4891,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     onClick={() => setAsignatura("ISO")}
                   >
                     ISO
+                  </button>
+
+                  <button
+                    className={`nav-btn ${asignatura === "IPE" ? "nav-btn-active" : ""}`}
+                    onClick={() => setAsignatura("IPE")}
+                  >
+                    IPE
                   </button>
 
                   <button
