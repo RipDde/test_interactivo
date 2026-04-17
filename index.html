@@ -5165,169 +5165,159 @@
       const [mostrarResultado, setMostrarResultado] = React.useState(false);
 
       return (
-        <>
-          <div className="topbar">
-            <div className="topbar-content">
-              <div className="topbar-left">
-                <h1 className="logo">TEST INTERACTIVO AUTOCORREGIBLE</h1>
+  <>
+    <div className="topbar">
+      <div className="topbar-content">
+        <div className="topbar-left">
+          <h1 className="logo">TEST INTERACTIVO AUTOCORREGIBLE</h1>
 
-                <div className="nav-asignaturas">
-                  <button
-                    className={`nav-btn ${asignatura === "FH" ? "nav-btn-active" : ""}`}
-                    onClick={() => setAsignatura("FH")}
-                  >
-                    FH
-                  </button>
-
-                  <button
-                    className={`nav-btn ${asignatura === "ISO" ? "nav-btn-active" : ""}`}
-                    onClick={() => setAsignatura("ISO")}
-                  >
-                    ISO
-                  </button>
-
-                  <button
-                    className={`nav-btn ${asignatura === "IPE" ? "nav-btn-active" : ""}`}
-                    onClick={() => setAsignatura("IPE")}
-                  >
-                    IPE
-                  </button>
-
-                  <button
-                    className={`nav-btn ${asignatura === "LM" ? "nav-btn-active" : ""}`}
-                    onClick={() => setAsignatura("LM")}
-                  >
-                    LM
-                  </button>
-
-                  <button
-                    className={`nav-btn ${asignatura === "PAR" ? "nav-btn-active" : ""}`}
-                    onClick={() => setAsignatura("PAR")}
-                  >
-                    PAR
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="contenido-principal">
-            <div className="test-container">
-              {preguntasMezcladas.map((p, i) => (
-                <div key={i} className="card">
-                  <h2 className="question-title">
-                    {i + 1}. {p.enunciado}
-                  </h2>
-
-                  {p.opciones.map((op, j) => {
-                    const seleccionado = respuestas[i] === j;
-                    const esCorrecta = p.correcta === j;
-
-                    let clases = "answer-btn";
-                    if (seleccionado) clases += " answer-selected";
-                    if (corregido && seleccionado && !esCorrecta) clases += " answer-wrong";
-                    if (corregido && esCorrecta) clases += " answer-correct";
-
-                    return (
-                      <button key={j} onClick={() => seleccionar(i, j)} className={clases}>
-                        {op}
-                      </button>
-                    );
-                  })}
-                </div>
-              ))}
-            </div>
-
-            <div className="columna-mapa">
-              <div className="mapa-preguntas">
-              <h3>Mapa de preguntas</h3>
-
-              <div className="grid-mapa">
-                {preguntasMezcladas.map((_, i) => {
-                  let claseMapa = "item-mapa";
-
-                  if (respuestas[i] !== null) {
-                    claseMapa += " respondida";
-                  }
-
-                  if (corregido) {
-                    if (respuestas[i] === null) {
-                      claseMapa += " en-blanco";
-                    } else if (respuestas[i] === preguntasMezcladas[i].correcta) {
-                      claseMapa += " acertada";
-                    } else {
-                      claseMapa += " erronea";
-                    }
-                  }
-
-                  return (
-                    <div key={i} className={claseMapa}>
-                      {i + 1}
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-            </div>
-          </div>
-
-          <div className="test-container">
-
-            {preguntasMezcladas.map((p, i) => (
-              <div key={i} className="card">
-                <h2 className="question-title">
-                  {i + 1}. {p.enunciado}
-                </h2>
-
-                {p.opciones.map((op, j) => {
-                  const seleccionado = respuestas[i] === j;
-                  const esCorrecta = p.correcta === j;
-
-                  let clases = "answer-btn";
-                  if (seleccionado) clases += " answer-selected";
-                  if (corregido && seleccionado && !esCorrecta) clases += " answer-wrong";
-                  if (corregido && esCorrecta) clases += " answer-correct";
-
-                  return (
-                    <button key={j} onClick={() => seleccionar(i, j)} className={clases}>
-                      {op}
-                    </button>
-                  );
-                })}
-              </div>
-            ))}
-
-            <button className="btn-info-preguntas">
-              {preguntasActuales.length} preguntas disponibles
+          <div className="nav-asignaturas">
+            <button
+              className={`nav-btn ${asignatura === "FH" ? "nav-btn-active" : ""}`}
+              onClick={() => setAsignatura("FH")}
+            >
+              FH
             </button>
 
-            <div className="result-section">
-              <button className="btn-correct" onClick={() => {
-                setCorregido(true);
-                setMostrarResultado(true);
-              }}>
-                Finalizar
-              </button>
+            <button
+              className={`nav-btn ${asignatura === "ISO" ? "nav-btn-active" : ""}`}
+              onClick={() => setAsignatura("ISO")}
+            >
+              ISO
+            </button>
 
-              {mostrarResultado && (
-                <div className="modal-overlay" onClick={() => setMostrarResultado(false)}>
-                  <div className="modal" onClick={(e) => e.stopPropagation()}>
-                    <h2>Resultado final</h2>
-                    <p><strong>Nota:</strong> {puntaje.toFixed(2)} / 10</p>
-                    <p><strong>Acertadas:</strong> {aciertos}</p>
-                    <p><strong>Erróneas:</strong> {fallos}</p>
-                    <p><strong>En blanco:</strong> {noRespondidas}</p>
+            <button
+              className={`nav-btn ${asignatura === "IPE" ? "nav-btn-active" : ""}`}
+              onClick={() => setAsignatura("IPE")}
+            >
+              IPE
+            </button>
 
-                    <button className="btn-close-modal" onClick={() => setMostrarResultado(false)}>
-                      Cerrar
-                    </button>
-                  </div>
-                </div>
-              )}
-            </div>
+            <button
+              className={`nav-btn ${asignatura === "LM" ? "nav-btn-active" : ""}`}
+              onClick={() => setAsignatura("LM")}
+            >
+              LM
+            </button>
+
+            <button
+              className={`nav-btn ${asignatura === "PAR" ? "nav-btn-active" : ""}`}
+              onClick={() => setAsignatura("PAR")}
+            >
+              PAR
+            </button>
           </div>
-        </>
-      );
+        </div>
+      </div>
+    </div>
+
+    <div className="contenido-principal">
+      {/* PREGUNTAS */}
+      <div className="test-container">
+        {preguntasMezcladas.map((p, i) => (
+          <div key={i} className="card">
+            <h2 className="question-title">
+              {i + 1}. {p.enunciado}
+            </h2>
+
+            {p.opciones.map((op, j) => {
+              const seleccionado = respuestas[i] === j;
+              const esCorrecta = p.correcta === j;
+
+              let clases = "answer-btn";
+              if (seleccionado) clases += " answer-selected";
+              if (corregido && seleccionado && !esCorrecta) clases += " answer-wrong";
+              if (corregido && esCorrecta) clases += " answer-correct";
+
+              return (
+                <button
+                  key={j}
+                  onClick={() => seleccionar(i, j)}
+                  className={clases}
+                >
+                  {op}
+                </button>
+              );
+            })}
+          </div>
+        ))}
+      </div>
+
+      {/* MAPA */}
+      <div className="columna-mapa">
+        <div className="mapa-preguntas">
+          <h3>Mapa de preguntas</h3>
+
+          <div className="grid-mapa">
+            {preguntasMezcladas.map((_, i) => {
+              let claseMapa = "item-mapa";
+
+              if (respuestas[i] !== null) {
+                claseMapa += " respondida";
+              }
+
+              if (corregido) {
+                if (respuestas[i] === null) {
+                  claseMapa += " en-blanco";
+                } else if (respuestas[i] === preguntasMezcladas[i].correcta) {
+                  claseMapa += " acertada";
+                } else {
+                  claseMapa += " erronea";
+                }
+              }
+
+              return (
+                <div key={i} className={claseMapa}>
+                  {i + 1}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/* BOTÓN INFO */}
+    <button className="btn-info-preguntas">
+      {preguntasActuales.length} preguntas disponibles
+    </button>
+
+    {/* FINALIZAR */}
+    <div className="result-section">
+      <button
+        className="btn-correct"
+        onClick={() => {
+          setCorregido(true);
+          setMostrarResultado(true);
+        }}
+      >
+        Finalizar
+      </button>
+
+      {mostrarResultado && (
+        <div
+          className="modal-overlay"
+          onClick={() => setMostrarResultado(false)}
+        >
+          <div className="modal" onClick={(e) => e.stopPropagation()}>
+            <h2>Resultado final</h2>
+            <p><strong>Nota:</strong> {puntaje.toFixed(2)} / 10</p>
+            <p><strong>Acertadas:</strong> {aciertos}</p>
+            <p><strong>Erróneas:</strong> {fallos}</p>
+            <p><strong>En blanco:</strong> {noRespondidas}</p>
+
+            <button
+              className="btn-close-modal"
+              onClick={() => setMostrarResultado(false)}
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      )}
+    </div>
+  </>
+);
     }
 
 
