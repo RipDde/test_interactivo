@@ -396,6 +396,32 @@ html {
   border-color: red;
 }
 
+.item-mapa {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: white;
+  border: 2px solid #ccc;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.item-mapa:hover {
+  background: #d0d1cf;
+  border-color: #b3b9af;
+  box-shadow: 0 0 10px rgba(176, 178, 175, 0.35);
+  transform: translateY(-1px);
+}
+
+.item-mapa:active {
+  transform: translateY(1px) scale(0.97);
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.18);
+}
+
 @media (max-width: 900px) {
   .contenido-principal {
     flex-direction: column;
@@ -413,4 +439,5 @@ html {
     transform: none;
     margin-bottom: 20px;
   }
+
 }
