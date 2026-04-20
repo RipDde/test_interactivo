@@ -820,12 +820,7 @@ const preguntasPAR = [
         correcta: 1,
         explicacion: " La correcta es UDP 1812/1813 porque RADIUS usa normalmente UDP 1812 para autenticación y UDP 1813 para accounting. TCP 1812/1813 no es la opción clásica; y el puerto 49, en TCP, se asocia a TACACS+."
     },
-    {
-        enunciado: "TACACS+ utiliza por defecto (fuera temario):",
-        opciones: ["UDP 49", "TCP 49", "UDP 1812", "TCP 1812"],
-        correcta: 1,
-        explicacion: " La correcta es TCP 49 porque TACACS+ utiliza ese puerto por defecto. UDP 49 no es la opción estándar; y UDP/TCP 1812 se asocian a RADIUS, no a TACACS+."
-    },
+    
     {
         enunciado: "¿Qué instrucción habilita Port Security en un puerto?",
         opciones: ["switchport port-security", "port-security enable", "security port on", "switchport secure"],
@@ -1497,9 +1492,14 @@ const preguntasPAR = [
 
 
     /* FUERA DE TEMARIO:
-    
     {
-            enunciado: "QinQ (802.1ad) permite:",
+        enunciado: "TACACS+ utiliza por defecto (fuera temario):",
+        opciones: ["UDP 49", "TCP 49", "UDP 1812", "TCP 1812"],
+        correcta: 1,
+        explicacion: " La correcta es TCP 49 porque TACACS+ utiliza ese puerto por defecto. UDP 49 no es la opción estándar; y UDP/TCP 1812 se asocian a RADIUS, no a TACACS+."
+    },
+    {
+            enunciado: "QinQ (802.1ad) permite (fuera temario:",
             opciones: ["Encapsular una VLAN dentro de otra", "Cifrar VLANs", "Enrutar entre VLANs", "Eliminar la VLAN nativa"],
             correcta: 0,
             explicacion: " La correcta es Encapsular una VLAN dentro de otra porque QinQ añade una segunda etiqueta VLAN para transportar VLANs de cliente sobre una VLAN de proveedor. No cifra VLANs; no enruta entre VLANs, porque sigue siendo capa 2; y no elimina la VLAN nativa."
@@ -1547,69 +1547,69 @@ const preguntasPAR = [
             explicacion: " La correcta es standby 1 priority 110 porque en HSRP la prioridad del grupo se ajusta con esa sintaxis para influir en qué router será el activo. hsrp priority 110 no es la forma clásica en ese contexto; standby group 1 weight 110 no es el comando esperado; y glbp 1 priority 110 pertenece a GLBP, no a HSRP."
         },
         {
-            enunciado: "¿Qué método de acceso al medio describía Ethernet clásico?",
+            enunciado: "¿Qué método de acceso al medio describía Ethernet clásico? (fuera temario):",
             opciones: ["CSMA/CA", "Token Passing", "CSMA/CD", "TDMA"],
             correcta: 2,
             explicacion: " La correcta es CSMA/CD (Carrier Sense Multiple Access with Collision Detection) porque Ethernet clásico en medios compartidos detectaba colisiones y retransmitía. CSMA/CA se usa sobre todo en Wi-Fi; Token Passing pertenece a otras tecnologías; y TDMA reparte tiempos, no es el método clásico de Ethernet."
         },
     {
-            enunciado: "¿Qué protocolo de agregación de enlaces es estándar?",
+            enunciado: "¿Qué protocolo de agregación de enlaces es estándar? (fuera temario):",
             opciones: ["PAgP", "LACP", "DTP", "VTP"],
             correcta: 1,
             explicacion: " La correcta es LACP porque LACP (Link Aggregation Control Protocol) es el protocolo estándar para EtherChannel o agregación de enlaces. PAgP es propietario de Cisco; DTP negocia troncales; y VTP distribuye información de VLAN, no agrega enlaces."
         },
-    {
-            enunciado: "LACP opera en los modos:",
+        {
+                enunciado: "LACP opera en los modos (fuera temario):",
             opciones: ["on/off", "active/passive", "desirable/auto", "root/backup"],
             correcta: 1,
             explicacion: " La correcta es active/passive porque esos son los modos de negociación propios de LACP. desirable/auto pertenece a PAgP; on/off no es la pareja clásica de LACP; y root/backup no corresponde a este protocolo."
         }
     {
-        enunciado: "PAgP opera en los modos:",
+        enunciado: "PAgP opera en los modos (fuera temario):",
         opciones: ["active/passive", "desirable/auto", "on/off", "forward/block"],
         correcta: 1,
         explicacion: " La correcta es desirable/auto porque esos son los modos habituales de PAgP, el protocolo propietario de Cisco para agregación de enlaces. active/passive pertenece a LACP; on/off no es la respuesta típica de negociación PAgP; y forward/block son conceptos de STP, no de EtherChannel."
     },
     {
-        enunciado: "DTP es un protocolo para:",
+        enunciado: "DTP es un protocolo para (fuera temario):",
         opciones: ["Negociar troncales en Cisco", "Autenticación 802.1X", "QoS en Wi-Fi", "Agregación de enlaces estándar"],
         correcta: 0,
         explicacion: " La correcta es Negociar troncales en Cisco porque DTP (Dynamic Trunking Protocol) sirve para decidir automáticamente si un puerto funcionará como trunk o access. No se usa para autenticación 802.1X; no tiene relación con QoS en Wi-Fi; y tampoco es el protocolo estándar de agregación de enlaces, que sería LACP."
     },
     {
-        enunciado: "Mejor práctica respecto a DTP en puertos trunk:",
+        enunciado: "Mejor práctica respecto a DTP en puertos trunk (fuera temario):",
         opciones: ["Dejar en dynamic desirable", "Forzar trunk o access y desactivar DTP", "Usar auto en ambos extremos", "Habilitar DTP en servidores"],
         correcta: 1,
         explicacion: " La correcta es Forzar trunk o access y desactivar DTP porque así se evita negociación innecesaria y se mejora el control y la seguridad del puerto. Dejar dynamic desirable o auto puede provocar negociaciones no deseadas; y habilitar DTP en servidores no es una práctica recomendada, ya que normalmente no deben negociar troncales."
     },
 
     {
-        enunciado: "¿Qué protocolo se usa típicamente para sincronizar la hora en red?",
+        enunciado: "¿Qué protocolo se usa típicamente para sincronizar la hora en red? (fuera temario):",
         opciones: ["NTP", "SMTP", "TFTP", "RDP"],
         correcta: 0,
         explicacion: " La correcta es NTP porque NTP (Network Time Protocol) se usa para sincronizar la hora entre equipos de una red. SMTP (Simple Mail Transfer Protocol) es correo; TFTP (Trivial File Transfer Protocol) es transferencia simple de archivos; y RDP (Remote Desktop Protocol) se usa para acceso remoto."
     },
     {
-        enunciado: "¿Qué estándar de PoE permite ~30W por puerto?",
+        enunciado: "¿Qué estándar de PoE permite ~30W por puerto? (fuera temario):",
         opciones: ["802.3af", "802.3at (PoE+)", "802.3bt Tipo 3", "802.3bt Tipo 4"],
         correcta: 1,
         explicacion: " La correcta es 802.3at (PoE+) porque ese estándar permite aproximadamente 30 W por puerto. 802.3af ofrece menos potencia; y 802.3bt Tipo 3 y Tipo 4 permiten más, por lo que no encajan con ese valor aproximado."
     },
     {
-        enunciado: "¿Qué estándar define LLDP?",
+        enunciado: "¿Qué estándar define LLDP? (fuera temario):",
         opciones: ["IEEE 802.1AB", "IEEE 802.3ad", "IEEE 802.1Q", "IEEE 802.11i"],
         correcta: 0,
         explicacion: " La correcta es IEEE 802.1AB porque ese estándar define LLDP (Link Layer Discovery Protocol), usado para que los dispositivos anuncien su identidad e información básica a equipos vecinos. IEEE 802.3ad está relacionado con agregación de enlaces; IEEE 802.1Q con VLAN etiquetadas; e IEEE 802.11i con seguridad en redes Wi-Fi."
     },
     {
-        enunciado: "Un mensaje ICMP 'Redirect' indica:",
+        enunciado: "Un mensaje ICMP 'Redirect' indica (fuera temario):",
         opciones: ["Que hay una mejor ruta por otro gateway", "Que el MTU es pequeño", "Que el DNS cambió", "Que el AP está lejos"],
         correcta: 0,
         explicacion: " La correcta es Que hay una mejor ruta por otro gateway porque ICMP Redirect informa a un host de que debería usar otra puerta de enlace para llegar mejor a un destino. No significa que el MTU (Maximum Transmission Unit) sea pequeño; no tiene relación con un cambio de DNS; y tampoco con la distancia a un AP (Access Point)."
     },
 
     {
-        enunciado: "¿Qué comando habilita LLDP globalmente en un switch Cisco?",
+        enunciado: "¿Qué comando habilita LLDP globalmente en un switch Cisco? (fuera temario):",
         opciones: ["lldp run", "cdp enable", "enable lldp", "lldp discovery enable"],
         correcta: 0,
         explicacion: " La correcta es lldp run porque ese comando activa LLDP (Link Layer Discovery Protocol) de forma global en el switch Cisco. cdp enable corresponde a CDP; y enable lldp y lldp discovery enable no son los comandos estándar correctos para habilitar LLDP globalmente."
