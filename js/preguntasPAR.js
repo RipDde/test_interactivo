@@ -18,7 +18,7 @@ const preguntasPAR = [
         explicacion: " La correcta es ARP (Address Resolution Protocol) porque sirve para averiguar qué dirección MAC corresponde a una IP dentro de una red local. ICMP (Internet Control Message Protocol) se usa para errores y diagnóstico; DNS (Domain Name System) traduce nombres a IP; y DHCP (Dynamic Host Configuration Protocol) asigna parámetros de red."
     },
     {
-        enunciado: "¿Qué campo de una trama Ethernet se usa para detectar errores?",
+        enunciado: "¿Qué campo de una trama Ethernet se usa para detectar errores?", /*rebuscada*/
         opciones: ["Tipo/Longitud", "Preamble", "FCS (CRC)", "Dirección MAC origen"],
         correcta: 2,
         explicacion: " La correcta es FCS (Frame Check Sequence), calculado con CRC (Cyclic Redundancy Check), porque sirve para comprobar si la trama llegó con errores. Tipo/Longitud indica el protocolo o tamaño; el Preamble sincroniza la transmisión; y la MAC origen solo identifica al emisor, no detecta fallos."
@@ -46,12 +46,7 @@ const preguntasPAR = [
         correcta: 1,
         explicacion: " La correcta es IEEE 802.3 porque ese estándar define Ethernet. IEEE 802.11 corresponde a redes Wi-Fi; IEEE 802.1Q define el etiquetado de VLAN; e IEEE 802.1D se asocia al STP (Spanning Tree Protocol), no a Ethernet en sí."
     },
-    {
-        enunciado: "¿Qué método de acceso al medio describía Ethernet clásico?",
-        opciones: ["CSMA/CA", "Token Passing", "CSMA/CD", "TDMA"],
-        correcta: 2,
-        explicacion: " La correcta es CSMA/CD (Carrier Sense Multiple Access with Collision Detection) porque Ethernet clásico en medios compartidos detectaba colisiones y retransmitía. CSMA/CA se usa sobre todo en Wi-Fi; Token Passing pertenece a otras tecnologías; y TDMA reparte tiempos, no es el método clásico de Ethernet."
-    },
+
     {
         enunciado: "¿Qué cable usarías para conectar un PC a un switch en redes actuales?",
         opciones: ["Cruzado (cross-over)", "Directo (straight-through)", "Serial DCE", "Coaxial"],
@@ -256,12 +251,7 @@ const preguntasPAR = [
         correcta: 1,
         explicacion: " La correcta es Designated Port porque es el puerto elegido para reenviar tráfico hacia y desde un segmento de red concreto. Root Port es el mejor camino hacia el Root Bridge; Blocked Port no reenvía tráfico normal; y Alternate Port es una ruta de respaldo en variantes como RSTP (Rapid Spanning Tree Protocol)."
     },
-    {
-        enunciado: "¿Qué versión proporciona convergencia más rápida que STP clásico?",
-        opciones: ["PVST+ (802.1D)", "RSTP (802.1w)", "MSTP (802.1s)", "VTP v3"],
-        correcta: 1,
-        explicacion: " La correcta es RSTP (802.1w) porque Rapid Spanning Tree Protocol mejora la velocidad de convergencia frente a STP clásico. PVST+ sigue basado en STP por VLAN; MSTP (Multiple Spanning Tree Protocol) también mejora escalabilidad, pero la respuesta típica sobre convergencia rápida es RSTP; y VTP v3 no es una versión de STP."
-    },
+    ,
     {
         enunciado: "¿Para qué sirve VTP?",
         opciones: ["Propagar rutas entre switches", "Centralizar gestión de VLANs entre switches Cisco", "Balancear carga por enlaces", "Evitar bucles de capa 2"],
@@ -467,7 +457,7 @@ const preguntasPAR = [
         explicacion: " La correcta es SOA y NS porque SOA (Start of Authority) define la autoridad inicial y parámetros de la zona, y NS (Name Server) indica los servidores autoritativos. TXT guarda texto informativo; PTR se usa en resolución inversa; y SRV anuncia servicios, no la autoridad de la zona."
     },
     {
-        enunciado: "El dominio inverso para IPv4 se gestiona bajo:",
+        enunciado: "El dominio inverso para IPv4 se gestiona bajo:", /*rebuscado*/
         opciones: ["in-addr.arpa", "ip6.arpa", "arpa.in-addr", "reverse.dns"],
         correcta: 0,
         explicacion: " La correcta es in-addr.arpa porque ese dominio se usa para la resolución inversa de direcciones IPv4 en DNS (Domain Name System). ip6.arpa es para IPv6; arpa.in-addr no es la forma correcta; y reverse.dns no es el dominio estándar usado para este fin."
@@ -796,12 +786,7 @@ const preguntasPAR = [
         correcta: 0,
         explicacion: " La correcta es logging buffered 4096 porque ese comando activa el almacenamiento de logs en el buffer del dispositivo e indica su tamaño. log buffer on no es el comando estándar; service timestamps log añade marcas de tiempo; y logging console envía mensajes a la consola, no al buffer."
     },
-    {
-        enunciado: "¿Qué protocolo se usa típicamente para sincronizar la hora en red?",
-        opciones: ["NTP", "SMTP", "TFTP", "RDP"],
-        correcta: 0,
-        explicacion: " La correcta es NTP porque NTP (Network Time Protocol) se usa para sincronizar la hora entre equipos de una red. SMTP (Simple Mail Transfer Protocol) es correo; TFTP (Trivial File Transfer Protocol) es transferencia simple de archivos; y RDP (Remote Desktop Protocol) se usa para acceso remoto."
-    },
+
     {
         enunciado: "NTP utiliza por defecto el puerto:",
         opciones: ["UDP 123", "TCP 123", "UDP 514", "TCP 514"],
@@ -826,12 +811,7 @@ const preguntasPAR = [
         correcta: 0,
         explicacion: " La correcta es Actuar como relay DHCP porque ip helper-address reenvía peticiones de broadcast, como las de DHCP, hacia un servidor situado en otra red. No habilita NAT (Network Address Translation); no activa LLDP; y no inicia OSPF (Open Shortest Path First)."
     },
-    {
-        enunciado: "¿Qué estándar de PoE permite ~30W por puerto?",
-        opciones: ["802.3af", "802.3at (PoE+)", "802.3bt Tipo 3", "802.3bt Tipo 4"],
-        correcta: 1,
-        explicacion: " La correcta es 802.3at (PoE+) porque ese estándar permite aproximadamente 30 W por puerto. 802.3af ofrece menos potencia; y 802.3bt Tipo 3 y Tipo 4 permiten más, por lo que no encajan con ese valor aproximado."
-    },
+
     {
         enunciado: "¿En qué capa OSI opera 802.1X?",
         opciones: ["Física", "Enlace de datos", "Red", "Transporte"],
@@ -1130,13 +1110,13 @@ const preguntasPAR = [
         explicacion: " La correcta es Inicio de autoridad y parámetros de la zona porque SOA (Start of Authority) incluye datos clave como el servidor principal, número de serie y temporizadores de la zona. No contiene listas generales de IP públicas; tampoco define cifrado TLS; ni guarda reglas de BGP."
     },
     {
-        enunciado: "La resolución inversa en IPv4 usa el dominio:",
+        enunciado: "La resolución inversa en IPv4 usa el dominio:", /*rebuscada*/
         opciones: ["ip6.arpa", "in-addr.arpa", "reverse.dns", "arpa.ipv4"],
         correcta: 1,
         explicacion: " La correcta es in-addr.arpa porque ese dominio se usa para convertir direcciones IPv4 en nombres mediante resolución inversa. ip6.arpa se usa para IPv6; reverse.dns no es el dominio estándar; y arpa.ipv4 tampoco es la forma correcta."
     },
     {
-        enunciado: "La resolución inversa en IPv6 usa el dominio:",
+        enunciado: "La resolución inversa en IPv6 usa el dominio:", /*rebuscada*/
         opciones: ["in-addr.arpa", "ip6.arpa", "rev6.arpa", "root-ipv6.arpa"],
         correcta: 1,
         explicacion: " La correcta es ip6.arpa porque ese es el dominio usado en la resolución inversa de direcciones IPv6. in-addr.arpa es para IPv4; y las otras dos opciones no son los dominios estándar definidos para este propósito."
@@ -1171,24 +1151,8 @@ const preguntasPAR = [
         correcta: 2,
         explicacion: " La correcta es 1006–4094 porque ese es el rango de VLAN extendidas en Cisco. Las VLAN normales suelen llegar hasta la 1005; 1002–1005 están reservadas en muchos contextos; y 4095 tampoco es una VLAN utilizable normal."
     },
-    {
-        enunciado: "¿Qué protocolo de agregación de enlaces es estándar?",
-        opciones: ["PAgP", "LACP", "DTP", "VTP"],
-        correcta: 1,
-        explicacion: " La correcta es LACP porque LACP (Link Aggregation Control Protocol) es el protocolo estándar para EtherChannel o agregación de enlaces. PAgP es propietario de Cisco; DTP negocia troncales; y VTP distribuye información de VLAN, no agrega enlaces."
-    },
-    {
-        enunciado: "LACP opera en los modos:",
-        opciones: ["on/off", "active/passive", "desirable/auto", "root/backup"],
-        correcta: 1,
-        explicacion: " La correcta es active/passive porque esos son los modos de negociación propios de LACP. desirable/auto pertenece a PAgP; on/off no es la pareja clásica de LACP; y root/backup no corresponde a este protocolo."
-    },
-    {
-        enunciado: "PAgP opera en los modos:",
-        opciones: ["active/passive", "desirable/auto", "on/off", "forward/block"],
-        correcta: 1,
-        explicacion: " La correcta es desirable/auto porque esos son los modos habituales de PAgP, el protocolo propietario de Cisco para agregación de enlaces. active/passive pertenece a LACP; on/off no es la respuesta típica de negociación PAgP; y forward/block son conceptos de STP, no de EtherChannel."
-    },
+
+
     {
         enunciado: "Comando para ver el método de balanceo de EtherChannel:",
         opciones: ["show etherchannel summary", "show etherchannel load-balance", "show lacp neighbors", "show pagp neighbor"],
@@ -1328,24 +1292,9 @@ const preguntasPAR = [
         correcta: 1,
         explicacion: " La correcta es 1, 6, 11 porque son los canales típicos no solapados más usados en 2.4 GHz para minimizar interferencias. Las otras combinaciones se pisan entre sí en muchos casos y por eso no son la referencia clásica."
     },
-    {
-        enunciado: "WMM está relacionado con:",
-        opciones: ["QoS en Wi-Fi", "Cifrado WPA3", "Canales DFS", "Roaming 802.11r"],
-        correcta: 0,
-        explicacion: " La correcta es QoS en Wi-Fi porque WMM (Wi-Fi Multimedia) prioriza distintos tipos de tráfico inalámbrico, como voz, vídeo o datos. No es un sistema de cifrado WPA3; no define canales DFS; y no es el estándar de roaming 802.11r."
-    },
-    {
-        enunciado: "El roaming rápido en Wi-Fi se asocia a:",
-        opciones: ["802.11k/v/r", "802.11i", "802.11ax", "802.11be"],
-        correcta: 0,
-        explicacion: " La correcta es 802.11k/v/r porque esas extensiones se relacionan con optimización del roaming y transición más eficiente entre puntos de acceso. 802.11i se centra en seguridad; 802.11ax es Wi-Fi 6; y 802.11be es Wi-Fi 7."
-    },
-    {
-        enunciado: "El BSSID corresponde a:",
-        opciones: ["Nombre de red", "MAC de la radio/SSID", "Canal del AP", "Clave PSK"],
-        correcta: 1,
-        explicacion: " La correcta es MAC de la radio/SSID porque el BSSID identifica la interfaz inalámbrica concreta del punto de acceso y suele coincidir con una dirección MAC. No es el nombre de red, que sería el SSID; no es el canal; y tampoco la clave PSK."
-    },
+
+
+
     {
         enunciado: "TFTP usa por defecto:",
         opciones: ["69/UDP", "69/TCP", "20/TCP", "445/TCP"],
@@ -1394,18 +1343,7 @@ const preguntasPAR = [
         correcta: 1,
         explicacion: " La correcta es Limitar broadcast/multicast/unknown unicast porque Storm Control ayuda a evitar tormentas de tráfico de capa 2 que pueden saturar la red. No prioriza voz, porque eso se relaciona más con QoS; no marca DSCP (Differentiated Services Code Point); y no acelera STP (Spanning Tree Protocol)."
     },
-    {
-        enunciado: "DTP es un protocolo para:",
-        opciones: ["Negociar troncales en Cisco", "Autenticación 802.1X", "QoS en Wi-Fi", "Agregación de enlaces estándar"],
-        correcta: 0,
-        explicacion: " La correcta es Negociar troncales en Cisco porque DTP (Dynamic Trunking Protocol) sirve para decidir automáticamente si un puerto funcionará como trunk o access. No se usa para autenticación 802.1X; no tiene relación con QoS en Wi-Fi; y tampoco es el protocolo estándar de agregación de enlaces, que sería LACP."
-    },
-    {
-        enunciado: "Mejor práctica respecto a DTP en puertos trunk:",
-        opciones: ["Dejar en dynamic desirable", "Forzar trunk o access y desactivar DTP", "Usar auto en ambos extremos", "Habilitar DTP en servidores"],
-        correcta: 1,
-        explicacion: " La correcta es Forzar trunk o access y desactivar DTP porque así se evita negociación innecesaria y se mejora el control y la seguridad del puerto. Dejar dynamic desirable o auto puede provocar negociaciones no deseadas; y habilitar DTP en servidores no es una práctica recomendada, ya que normalmente no deben negociar troncales."
-    },
+
     {
         enunciado: "¿Cómo se posiciona WiMAX frente a Wi-Fi?",
         opciones: ["WiMAX sustituye a Wi-Fi en interiores", "WiMAX es para acceso metropolitano/rural; Wi-Fi para LAN locales", "Ambos son idénticos", "Wi-Fi reemplaza a WiMAX en backhaul"],
@@ -1514,18 +1452,8 @@ const preguntasPAR = [
         correcta: 1,
         explicacion: " La correcta es Loopback porque ::1 en IPv6 equivale a 127.0.0.1 en IPv4 y representa al propio equipo. Link-local usa normalmente el prefijo fe80::/10; multicast empieza por ff00::/8; y anycast no se representa así."
     },
-    {
-        enunciado: "NAT64 traduce:",
-        opciones: ["IPv4 público a privado", "IPv6 a IPv4", "IPv4 a IPv6 y viceversa sin estado", "MAC a IP"],
-        correcta: 1,
-        explicacion: " La correcta es IPv6 a IPv4 porque NAT64 permite que clientes IPv6 accedan a servicios IPv4 mediante traducción entre ambos mundos. No se limita a pasar de IPv4 público a privado; la traducción sin estado bidireccional no define NAT64 aquí; y MAC a IP sería otra función, no NAT."
-    },
-    {
-        enunciado: "NPTv6 realiza:",
-        opciones: ["Port Address Translation", "Traducción de prefijos IPv6 (1:1)", "Traducción de IPv6 a IPv4", "SLAAC"],
-        correcta: 1,
-        explicacion: " La correcta es Traducción de prefijos IPv6 (1:1) porque NPTv6 modifica el prefijo IPv6 manteniendo una relación uno a uno entre direcciones. Port Address Translation corresponde a PAT; traducir IPv6 a IPv4 sería NAT64; y SLAAC es autoconfiguración, no traducción."
-    },
+
+
     {
         enunciado: "Comando para ver traducciones NAT activas:",
         opciones: ["show ip nat translations", "show nat table", "show ip route nat", "show access-lists nat"],
@@ -1551,7 +1479,7 @@ const preguntasPAR = [
         explicacion: " La correcta es wr mem porque es el alias clásico de write memory, usado para guardar la configuración en NVRAM. copy tftp flash se usa para copiar imágenes o ficheros; write erase borra configuración; y config-register 0x2102 ajusta el registro de arranque, no guarda la configuración."
     },
     {
-        enunciado: "El sufijo 'k9' en una imagen de IOS indica:",
+        enunciado: "El sufijo 'k9' en una imagen de IOS indica:", /*rebuscada*/
         opciones: ["Soporte criptográfico", "Kernel 9", "Versión 9 de IOS", "Compatibilidad con Catalyst 9k"],
         correcta: 0,
         explicacion: " La correcta es Soporte criptográfico porque el sufijo k9 suele indicar que la imagen de IOS incluye capacidades de cifrado o funciones criptográficas. No significa Kernel 9; tampoco Versión 9 de IOS; y no se refiere a compatibilidad con Catalyst 9k."
@@ -1575,21 +1503,114 @@ const preguntasPAR = [
         explicacion: " La correcta es ISL porque Inter-Switch Link fue un encapsulado de VLAN propietario de Cisco y hoy ha quedado obsoleto frente a 802.1Q. QinQ es otro mecanismo de etiquetado; MPLS es una tecnología distinta; y L2TP es un protocolo de túnel, no un encapsulado VLAN de ese tipo."
     },
     {
-        enunciado: "QinQ (802.1ad) permite:",
-        opciones: ["Encapsular una VLAN dentro de otra", "Cifrar VLANs", "Enrutar entre VLANs", "Eliminar la VLAN nativa"],
-        correcta: 0,
-        explicacion: " La correcta es Encapsular una VLAN dentro de otra porque QinQ añade una segunda etiqueta VLAN para transportar VLANs de cliente sobre una VLAN de proveedor. No cifra VLANs; no enruta entre VLANs, porque sigue siendo capa 2; y no elimina la VLAN nativa."
-    },
-    {
-        enunciado: "Comando para dar preferencia a un router como activo en HSRP (no examen):",
-        opciones: ["standby 1 priority 110", "hsrp priority 110", "standby group 1 weight 110", "glbp 1 priority 110"],
-        correcta: 0,
-        explicacion: " La correcta es standby 1 priority 110 porque en HSRP la prioridad del grupo se ajusta con esa sintaxis para influir en qué router será el activo. hsrp priority 110 no es la forma clásica en ese contexto; standby group 1 weight 110 no es el comando esperado; y glbp 1 priority 110 pertenece a GLBP, no a HSRP."
-    },
-    {
-        enunciado: "En HSRP, 'preempt' implica (no examen):",
-        opciones: ["Evitar que el switch sea root", "Permitir tomar el rol activo si tiene mayor prioridad", "Bloquear el grupo", "Reiniciar HSRP"],
+        enunciado: "¿Qué versión proporciona convergencia más rápida que STP clásico?", /*rebuscada*/
+        opciones: ["PVST+ (802.1D)", "RSTP (802.1w)", "MSTP (802.1s)", "VTP v3"],
         correcta: 1,
-        explicacion: " La correcta es Permitir tomar el rol activo si tiene mayor prioridad porque preempt deja que un router que vuelve a estar disponible recupere el papel activo si su prioridad es superior. No tiene relación con el root bridge de STP; no bloquea el grupo; y tampoco reinicia HSRP por sí mismo."
+        explicacion: " La correcta es RSTP (802.1w) porque Rapid Spanning Tree Protocol mejora la velocidad de convergencia frente a STP clásico. PVST+ sigue basado en STP por VLAN; MSTP (Multiple Spanning Tree Protocol) también mejora escalabilidad, pero la respuesta típica sobre convergencia rápida es RSTP; y VTP v3 no es una versión de STP."
+    }
+
+
+
+
+    /* FUERA DE TEMARIO:
+    
+    {
+            enunciado: "QinQ (802.1ad) permite:",
+            opciones: ["Encapsular una VLAN dentro de otra", "Cifrar VLANs", "Enrutar entre VLANs", "Eliminar la VLAN nativa"],
+            correcta: 0,
+            explicacion: " La correcta es Encapsular una VLAN dentro de otra porque QinQ añade una segunda etiqueta VLAN para transportar VLANs de cliente sobre una VLAN de proveedor. No cifra VLANs; no enruta entre VLANs, porque sigue siendo capa 2; y no elimina la VLAN nativa."
+        },
+    {
+            enunciado: "NPTv6 realiza (fuera temario):",
+            opciones: ["Port Address Translation", "Traducción de prefijos IPv6 (1:1)", "Traducción de IPv6 a IPv4", "SLAAC"],
+            correcta: 1,
+            explicacion: " La correcta es Traducción de prefijos IPv6 (1:1) porque NPTv6 modifica el prefijo IPv6 manteniendo una relación uno a uno entre direcciones. Port Address Translation corresponde a PAT; traducir IPv6 a IPv4 sería NAT64; y SLAAC es autoconfiguración, no traducción."
+        },
+        {
+            enunciado: "NAT64 traduce (fuera temario):",
+            opciones: ["IPv4 público a privado", "IPv6 a IPv4", "IPv4 a IPv6 y viceversa sin estado", "MAC a IP"],
+            correcta: 1,
+            explicacion: " La correcta es IPv6 a IPv4 porque NAT64 permite que clientes IPv6 accedan a servicios IPv4 mediante traducción entre ambos mundos. No se limita a pasar de IPv4 público a privado; la traducción sin estado bidireccional no define NAT64 aquí; y MAC a IP sería otra función, no NAT."
+        },
+        {
+            enunciado: "El BSSID corresponde a (fuera temario):",
+            opciones: ["Nombre de red", "MAC de la radio/SSID", "Canal del AP", "Clave PSK"],
+            correcta: 1,
+            explicacion: " La correcta es MAC de la radio/SSID porque el BSSID identifica la interfaz inalámbrica concreta del punto de acceso y suele coincidir con una dirección MAC. No es el nombre de red, que sería el SSID; no es el canal; y tampoco la clave PSK."
+        },
+        {
+            enunciado: "El roaming rápido en Wi-Fi se asocia a (fuera temario):",
+            opciones: ["802.11k/v/r", "802.11i", "802.11ax", "802.11be"],
+            correcta: 0,
+            explicacion: " La correcta es 802.11k/v/r porque esas extensiones se relacionan con optimización del roaming y transición más eficiente entre puntos de acceso. 802.11i se centra en seguridad; 802.11ax es Wi-Fi 6; y 802.11be es Wi-Fi 7."
+        },
+        {
+            enunciado: "WMM está relacionado con (fuera temario):",
+            opciones: ["QoS en Wi-Fi", "Cifrado WPA3", "Canales DFS", "Roaming 802.11r"],
+            correcta: 0,
+            explicacion: " La correcta es QoS en Wi-Fi porque WMM (Wi-Fi Multimedia) prioriza distintos tipos de tráfico inalámbrico, como voz, vídeo o datos. No es un sistema de cifrado WPA3; no define canales DFS; y no es el estándar de roaming 802.11r."
+        },
+        {
+            enunciado: "En HSRP, 'preempt' implica (fuera temario):",
+            opciones: ["Evitar que el switch sea root", "Permitir tomar el rol activo si tiene mayor prioridad", "Bloquear el grupo", "Reiniciar HSRP"],
+            correcta: 1,
+            explicacion: " La correcta es Permitir tomar el rol activo si tiene mayor prioridad porque preempt deja que un router que vuelve a estar disponible recupere el papel activo si su prioridad es superior. No tiene relación con el root bridge de STP; no bloquea el grupo; y tampoco reinicia HSRP por sí mismo."
+        },
+        {
+            enunciado: "Comando para dar preferencia a un router como activo en HSRP (fuera temario):",
+            opciones: ["standby 1 priority 110", "hsrp priority 110", "standby group 1 weight 110", "glbp 1 priority 110"],
+            correcta: 0,
+            explicacion: " La correcta es standby 1 priority 110 porque en HSRP la prioridad del grupo se ajusta con esa sintaxis para influir en qué router será el activo. hsrp priority 110 no es la forma clásica en ese contexto; standby group 1 weight 110 no es el comando esperado; y glbp 1 priority 110 pertenece a GLBP, no a HSRP."
+        },
+        {
+            enunciado: "¿Qué método de acceso al medio describía Ethernet clásico?",
+            opciones: ["CSMA/CA", "Token Passing", "CSMA/CD", "TDMA"],
+            correcta: 2,
+            explicacion: " La correcta es CSMA/CD (Carrier Sense Multiple Access with Collision Detection) porque Ethernet clásico en medios compartidos detectaba colisiones y retransmitía. CSMA/CA se usa sobre todo en Wi-Fi; Token Passing pertenece a otras tecnologías; y TDMA reparte tiempos, no es el método clásico de Ethernet."
+        },
+    {
+            enunciado: "¿Qué protocolo de agregación de enlaces es estándar?",
+            opciones: ["PAgP", "LACP", "DTP", "VTP"],
+            correcta: 1,
+            explicacion: " La correcta es LACP porque LACP (Link Aggregation Control Protocol) es el protocolo estándar para EtherChannel o agregación de enlaces. PAgP es propietario de Cisco; DTP negocia troncales; y VTP distribuye información de VLAN, no agrega enlaces."
+        },
+    {
+            enunciado: "LACP opera en los modos:",
+            opciones: ["on/off", "active/passive", "desirable/auto", "root/backup"],
+            correcta: 1,
+            explicacion: " La correcta es active/passive porque esos son los modos de negociación propios de LACP. desirable/auto pertenece a PAgP; on/off no es la pareja clásica de LACP; y root/backup no corresponde a este protocolo."
+        }
+    {
+        enunciado: "PAgP opera en los modos:",
+        opciones: ["active/passive", "desirable/auto", "on/off", "forward/block"],
+        correcta: 1,
+        explicacion: " La correcta es desirable/auto porque esos son los modos habituales de PAgP, el protocolo propietario de Cisco para agregación de enlaces. active/passive pertenece a LACP; on/off no es la respuesta típica de negociación PAgP; y forward/block son conceptos de STP, no de EtherChannel."
     },
+    {
+        enunciado: "DTP es un protocolo para:",
+        opciones: ["Negociar troncales en Cisco", "Autenticación 802.1X", "QoS en Wi-Fi", "Agregación de enlaces estándar"],
+        correcta: 0,
+        explicacion: " La correcta es Negociar troncales en Cisco porque DTP (Dynamic Trunking Protocol) sirve para decidir automáticamente si un puerto funcionará como trunk o access. No se usa para autenticación 802.1X; no tiene relación con QoS en Wi-Fi; y tampoco es el protocolo estándar de agregación de enlaces, que sería LACP."
+    },
+    {
+        enunciado: "Mejor práctica respecto a DTP en puertos trunk:",
+        opciones: ["Dejar en dynamic desirable", "Forzar trunk o access y desactivar DTP", "Usar auto en ambos extremos", "Habilitar DTP en servidores"],
+        correcta: 1,
+        explicacion: " La correcta es Forzar trunk o access y desactivar DTP porque así se evita negociación innecesaria y se mejora el control y la seguridad del puerto. Dejar dynamic desirable o auto puede provocar negociaciones no deseadas; y habilitar DTP en servidores no es una práctica recomendada, ya que normalmente no deben negociar troncales."
+    },
+
+    {
+        enunciado: "¿Qué protocolo se usa típicamente para sincronizar la hora en red?",
+        opciones: ["NTP", "SMTP", "TFTP", "RDP"],
+        correcta: 0,
+        explicacion: " La correcta es NTP porque NTP (Network Time Protocol) se usa para sincronizar la hora entre equipos de una red. SMTP (Simple Mail Transfer Protocol) es correo; TFTP (Trivial File Transfer Protocol) es transferencia simple de archivos; y RDP (Remote Desktop Protocol) se usa para acceso remoto."
+    },
+    {
+        enunciado: "¿Qué estándar de PoE permite ~30W por puerto?",
+        opciones: ["802.3af", "802.3at (PoE+)", "802.3bt Tipo 3", "802.3bt Tipo 4"],
+        correcta: 1,
+        explicacion: " La correcta es 802.3at (PoE+) porque ese estándar permite aproximadamente 30 W por puerto. 802.3af ofrece menos potencia; y 802.3bt Tipo 3 y Tipo 4 permiten más, por lo que no encajan con ese valor aproximado."
+    },
+    */
+
 ];
