@@ -1023,6 +1023,12 @@ const preguntasPAR = [
         explicacion: " La correcta es No pagado entre pares para intercambio local porque el peering suele basarse en un acuerdo entre redes similares para intercambiar tráfico directamente. No es siempre de pago, porque eso sería más propio del tránsito; no ocurre solo con Tier 1; y no es exclusivo de IPv6."
     },
     {
+        enunciado: "Un mensaje ICMP 'Redirect' indica:",
+        opciones: ["Que hay una mejor ruta por otro gateway", "Que el MTU es pequeño", "Que el DNS cambió", "Que el AP está lejos"],
+        correcta: 0,
+        explicacion: " La correcta es Que hay una mejor ruta por otro gateway porque ICMP Redirect informa a un host de que debería usar otra puerta de enlace para llegar mejor a un destino. No significa que el MTU (Maximum Transmission Unit) sea pequeño; no tiene relación con un cambio de DNS; y tampoco con la distancia a un AP (Access Point)."
+    },
+    {
         enunciado: "Un PoP (Point of Presence) es:",
         opciones: ["Un router doméstico", "Un punto de interconexión de un ISP", "Un servidor DNS raíz", "Un firewall"],
         correcta: 1,
@@ -1242,24 +1248,14 @@ const preguntasPAR = [
         correcta: 2,
         explicacion: " La correcta es WEIGHT porque es un atributo local de Cisco y no se propaga a otros routers BGP. LOCAL_PREF sí se usa dentro del AS; MED puede anunciarse a vecinos externos; y AS-PATH refleja el camino por sistemas autónomos."
     },
-    {
-        enunciado: "¿Qué FHRP es propietario de Cisco?",
-        opciones: ["VRRP", "GLBP", "HSRP", "CARP"],
-        correcta: 2,
-        explicacion: " La correcta es HSRP porque HSRP (Hot Standby Router Protocol) es un FHRP propietario de Cisco. VRRP es estándar; CARP no es el protocolo Cisco clásico en este contexto; y aunque GLBP también es de Cisco, la respuesta típica esperada cuando se pregunta por el FHRP propietario más conocido es HSRP."
-    },
+    
     {
         enunciado: "HSRP envía hellos a:",
         opciones: ["224.0.0.18 UDP 1985", "224.0.0.2 UDP 1985", "224.0.0.102 UDP 3222", "224.0.0.5 IP 89"],
         correcta: 1,
         explicacion: " La correcta es 224.0.0.2 UDP 1985 porque ese es el multicast y puerto típicos de HSRP versión 1. 224.0.0.18 se asocia a VRRP; 224.0.0.102 UDP 3222 a GLBP; y 224.0.0.5 IP 89 pertenece a OSPF."
     },
-    {
-        enunciado: "VRRP es un estándar definido por:",
-        opciones: ["IEEE", "IETF", "ISO", "ETSI"],
-        correcta: 1,
-        explicacion: " La correcta es IETF porque VRRP está definido mediante RFC del IETF. IEEE define muchos estándares de capa 2 y Wi-Fi; ISO tiene otros marcos de estandarización; y ETSI no es quien define VRRP."
-    },
+    
     {
         enunciado: "GLBP permite:",
         opciones: ["Solo activo/pasivo", "Balanceo de carga de gateway", "Solo redundancia sin balanceo", "Enrutamiento dinámico"],
@@ -1601,12 +1597,7 @@ const preguntasPAR = [
         correcta: 0,
         explicacion: " La correcta es IEEE 802.1AB porque ese estándar define LLDP (Link Layer Discovery Protocol), usado para que los dispositivos anuncien su identidad e información básica a equipos vecinos. IEEE 802.3ad está relacionado con agregación de enlaces; IEEE 802.1Q con VLAN etiquetadas; e IEEE 802.11i con seguridad en redes Wi-Fi."
     },
-    {
-        enunciado: "Un mensaje ICMP 'Redirect' indica (fuera temario):",
-        opciones: ["Que hay una mejor ruta por otro gateway", "Que el MTU es pequeño", "Que el DNS cambió", "Que el AP está lejos"],
-        correcta: 0,
-        explicacion: " La correcta es Que hay una mejor ruta por otro gateway porque ICMP Redirect informa a un host de que debería usar otra puerta de enlace para llegar mejor a un destino. No significa que el MTU (Maximum Transmission Unit) sea pequeño; no tiene relación con un cambio de DNS; y tampoco con la distancia a un AP (Access Point)."
-    },
+    
 
     {
         enunciado: "¿Qué comando habilita LLDP globalmente en un switch Cisco? (fuera temario):",
@@ -1614,7 +1605,21 @@ const preguntasPAR = [
         correcta: 0,
         explicacion: " La correcta es lldp run porque ese comando activa LLDP (Link Layer Discovery Protocol) de forma global en el switch Cisco. cdp enable corresponde a CDP; y enable lldp y lldp discovery enable no son los comandos estándar correctos para habilitar LLDP globalmente."
     },
+
+    {
+        enunciado: "VRRP es un estándar definido por (fuera temario):",
+        opciones: ["IEEE", "IETF", "ISO", "ETSI"],
+        correcta: 1,
+        explicacion: " La correcta es IETF porque VRRP está definido mediante RFC del IETF. IEEE define muchos estándares de capa 2 y Wi-Fi; ISO tiene otros marcos de estandarización; y ETSI no es quien define VRRP."
+    },
     
+    {
+        enunciado: "¿Qué FHRP es propietario de Cisco?",
+        opciones: ["VRRP", "GLBP", "HSRP", "CARP"],
+        correcta: 2,
+        explicacion: " La correcta es HSRP porque HSRP (Hot Standby Router Protocol) es un FHRP propietario de Cisco. VRRP es estándar; CARP no es el protocolo Cisco clásico en este contexto; y aunque GLBP también es de Cisco, la respuesta típica esperada cuando se pregunta por el FHRP propietario más conocido es HSRP."
+    },
+
     */
 
 ];
