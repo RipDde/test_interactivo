@@ -750,18 +750,8 @@ const preguntasPAR = [
         correcta: 0,
         explicacion: " La correcta es show cdp neighbors porque ese comando muestra los dispositivos vecinos detectados mediante CDP (Cisco Discovery Protocol). show lldp neighbors se usa para LLDP; show arp enseña asociaciones IP-MAC; y show mac address-table muestra la tabla MAC del switch, no los vecinos CDP."
     },
-    {
-        enunciado: "¿Qué estándar define LLDP?",
-        opciones: ["IEEE 802.1AB", "IEEE 802.3ad", "IEEE 802.1Q", "IEEE 802.11i"],
-        correcta: 0,
-        explicacion: " La correcta es IEEE 802.1AB porque ese estándar define LLDP (Link Layer Discovery Protocol), usado para que los dispositivos anuncien su identidad e información básica a equipos vecinos. IEEE 802.3ad está relacionado con agregación de enlaces; IEEE 802.1Q con VLAN etiquetadas; e IEEE 802.11i con seguridad en redes Wi-Fi."
-    },
-    {
-        enunciado: "¿Qué comando habilita LLDP globalmente en un switch Cisco?",
-        opciones: ["lldp run", "cdp enable", "enable lldp", "lldp discovery enable"],
-        correcta: 0,
-        explicacion: " La correcta es lldp run porque ese comando activa LLDP (Link Layer Discovery Protocol) de forma global en el switch Cisco. cdp enable corresponde a CDP; y enable lldp y lldp discovery enable no son los comandos estándar correctos para habilitar LLDP globalmente."
-    },
+    
+    
     {
         enunciado: "El puerto por defecto para consultas SNMP es:",
         opciones: ["UDP 161", "TCP 161", "UDP 162", "TCP 162"],
@@ -944,12 +934,7 @@ const preguntasPAR = [
         correcta: 3,
         explicacion: " La correcta es No está diseñado para aplicaciones porque ICMP (Internet Control Message Protocol) fue creado para control, error y diagnóstico de red, no para transportar datos de usuario. Que no tenga puertos o no sea orientado a conexión puede describirlo, pero no es la razón principal de diseño; y decir solo que no es fiable se queda corto frente a su función real."
     },
-    {
-        enunciado: "Un mensaje ICMP 'Redirect' indica:",
-        opciones: ["Que hay una mejor ruta por otro gateway", "Que el MTU es pequeño", "Que el DNS cambió", "Que el AP está lejos"],
-        correcta: 0,
-        explicacion: " La correcta es Que hay una mejor ruta por otro gateway porque ICMP Redirect informa a un host de que debería usar otra puerta de enlace para llegar mejor a un destino. No significa que el MTU (Maximum Transmission Unit) sea pequeño; no tiene relación con un cambio de DNS; y tampoco con la distancia a un AP (Access Point)."
-    },
+    
 
     {
         enunciado: "¿Cuál es la función de ARP?",
@@ -1453,7 +1438,6 @@ const preguntasPAR = [
         explicacion: " La correcta es Loopback porque ::1 en IPv6 equivale a 127.0.0.1 en IPv4 y representa al propio equipo. Link-local usa normalmente el prefijo fe80::/10; multicast empieza por ff00::/8; y anycast no se representa así."
     },
 
-
     {
         enunciado: "Comando para ver traducciones NAT activas:",
         opciones: ["show ip nat translations", "show nat table", "show ip route nat", "show access-lists nat"],
@@ -1611,6 +1595,26 @@ const preguntasPAR = [
         correcta: 1,
         explicacion: " La correcta es 802.3at (PoE+) porque ese estándar permite aproximadamente 30 W por puerto. 802.3af ofrece menos potencia; y 802.3bt Tipo 3 y Tipo 4 permiten más, por lo que no encajan con ese valor aproximado."
     },
+    {
+        enunciado: "¿Qué estándar define LLDP?",
+        opciones: ["IEEE 802.1AB", "IEEE 802.3ad", "IEEE 802.1Q", "IEEE 802.11i"],
+        correcta: 0,
+        explicacion: " La correcta es IEEE 802.1AB porque ese estándar define LLDP (Link Layer Discovery Protocol), usado para que los dispositivos anuncien su identidad e información básica a equipos vecinos. IEEE 802.3ad está relacionado con agregación de enlaces; IEEE 802.1Q con VLAN etiquetadas; e IEEE 802.11i con seguridad en redes Wi-Fi."
+    },
+    {
+        enunciado: "Un mensaje ICMP 'Redirect' indica:",
+        opciones: ["Que hay una mejor ruta por otro gateway", "Que el MTU es pequeño", "Que el DNS cambió", "Que el AP está lejos"],
+        correcta: 0,
+        explicacion: " La correcta es Que hay una mejor ruta por otro gateway porque ICMP Redirect informa a un host de que debería usar otra puerta de enlace para llegar mejor a un destino. No significa que el MTU (Maximum Transmission Unit) sea pequeño; no tiene relación con un cambio de DNS; y tampoco con la distancia a un AP (Access Point)."
+    },
+
+    {
+        enunciado: "¿Qué comando habilita LLDP globalmente en un switch Cisco?",
+        opciones: ["lldp run", "cdp enable", "enable lldp", "lldp discovery enable"],
+        correcta: 0,
+        explicacion: " La correcta es lldp run porque ese comando activa LLDP (Link Layer Discovery Protocol) de forma global en el switch Cisco. cdp enable corresponde a CDP; y enable lldp y lldp discovery enable no son los comandos estándar correctos para habilitar LLDP globalmente."
+    },
+    
     */
 
 ];
