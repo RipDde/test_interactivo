@@ -775,12 +775,6 @@ const preguntasPAR = [
         explicacion: " La correcta es UDP 123 porque ese es el puerto por defecto de NTP (Network Time Protocol). TCP 123 no es el puerto habitual de este protocolo; y UDP/TCP 514 se asocian a Syslog, no a NTP."
     },
     {
-        enunciado: "En DHCP, la opción que entrega la puerta de enlace por defecto es:",
-        opciones: ["Opción 3", "Opción 6", "Opción 15", "Opción 43"],
-        correcta: 0,
-        explicacion: " La correcta es Opción 3 porque en DHCP (Dynamic Host Configuration Protocol) esa opción entrega la puerta de enlace por defecto al cliente. La opción 6 suele indicar servidores DNS (Domain Name System); la 15 el sufijo de dominio; y la 43 se usa para información específica de fabricante."
-    },
-    {
         enunciado: "La opción 82 de DHCP está asociada a:",
         opciones: ["Relay agent information", "DNS primario", "Sufijo de dominio", "Tiempo de concesión"],
         correcta: 0,
@@ -1931,7 +1925,6 @@ const preguntasPAR = [
         correcta: 1,
         explicacion: " La correcta es Forzar trunk o access y desactivar DTP porque así se evita negociación innecesaria y se mejora el control y la seguridad del puerto. Dejar dynamic desirable o auto puede provocar negociaciones no deseadas; y habilitar DTP en servidores no es una práctica recomendada, ya que normalmente no deben negociar troncales."
     },
-
     {
         enunciado: "¿Qué protocolo se usa típicamente para sincronizar la hora en red? (fuera temario):",
         opciones: ["NTP", "SMTP", "TFTP", "RDP"],
@@ -1945,29 +1938,24 @@ const preguntasPAR = [
         correcta: 0,
         explicacion: " La correcta es IEEE 802.1AB porque ese estándar define LLDP (Link Layer Discovery Protocol), usado para que los dispositivos anuncien su identidad e información básica a equipos vecinos. IEEE 802.3ad está relacionado con agregación de enlaces; IEEE 802.1Q con VLAN etiquetadas; e IEEE 802.11i con seguridad en redes Wi-Fi."
     },
-    
-
     {
         enunciado: "¿Qué comando habilita LLDP globalmente en un switch Cisco? (fuera temario):",
         opciones: ["lldp run", "cdp enable", "enable lldp", "lldp discovery enable"],
         correcta: 0,
         explicacion: " La correcta es lldp run porque ese comando activa LLDP (Link Layer Discovery Protocol) de forma global en el switch Cisco. cdp enable corresponde a CDP; y enable lldp y lldp discovery enable no son los comandos estándar correctos para habilitar LLDP globalmente."
     },
-
     {
         enunciado: "VRRP es un estándar definido por (fuera temario):",
         opciones: ["IEEE", "IETF", "ISO", "ETSI"],
         correcta: 1,
         explicacion: " La correcta es IETF porque VRRP está definido mediante RFC del IETF. IEEE define muchos estándares de capa 2 y Wi-Fi; ISO tiene otros marcos de estandarización; y ETSI no es quien define VRRP."
-    },
-    
+    }, 
     {
         enunciado: "¿Qué FHRP es propietario de Cisco?",
         opciones: ["VRRP", "GLBP", "HSRP", "CARP"],
         correcta: 2,
         explicacion: " La correcta es HSRP porque HSRP (Hot Standby Router Protocol) es un FHRP propietario de Cisco. VRRP es estándar; CARP no es el protocolo Cisco clásico en este contexto; y aunque GLBP también es de Cisco, la respuesta típica esperada cuando se pregunta por el FHRP propietario más conocido es HSRP."
     },
-
     {
         enunciado: "¿Qué versión de SNMP incorpora autenticación y cifrado?",
         opciones: ["SNMPv1", "SNMPv2c", "SNMPv3", "Todas"],
@@ -1986,7 +1974,12 @@ const preguntasPAR = [
         correcta: 1,
         explicacion: " La correcta es 802.3at (PoE+) porque ese estándar permite aproximadamente 30 W por puerto. 802.3af ofrece menos potencia; y 802.3bt Tipo 3 y Tipo 4 permiten más, por lo que no encajan con ese valor aproximado."
     },
-
+    {
+        enunciado: "En DHCP, la opción que entrega la puerta de enlace por defecto es (fuera temario):",
+        opciones: ["Opción 3", "Opción 6", "Opción 15", "Opción 43"],
+        correcta: 0,
+        explicacion: " La correcta es Opción 3 porque en DHCP (Dynamic Host Configuration Protocol) esa opción entrega la puerta de enlace por defecto al cliente. La opción 6 suele indicar servidores DNS (Domain Name System); la 15 el sufijo de dominio; y la 43 se usa para información específica de fabricante."
+    },
     */
 
 ];
