@@ -685,7 +685,7 @@ const preguntasPAR = [
         explicacion: " La correcta es show ip interface brief porque resume de forma rápida las interfaces con su IP y su estado. show interfaces da mucho más detalle y es menos resumido; show cdp neighbors muestra vecinos CDP (Cisco Discovery Protocol); y show controllers se centra en datos de hardware."
     },
     {
-        enunciado: "¿Qué indica ‘Gateway of last resort’ en la tabla de rutas?",
+        enunciado: "¿Qué indica ‘Gateway of last resort’ en la tabla de rutas?", /*rebuscada*/
         opciones: ["No hay default route", "Existe una ruta por defecto configurada/aprendida", "Se usa solo para estáticas flotantes", "Es una ruta conectada"],
         correcta: 1,
         explicacion: " La correcta es Existe una ruta por defecto configurada/aprendida porque esa frase indica que el router tiene una salida por defecto para destinos desconocidos. No significa que no exista default route; tampoco que sea solo para rutas estáticas flotantes; y no implica que se trate de una red conectada directamente."
@@ -750,19 +750,11 @@ const preguntasPAR = [
         correcta: 0,
         explicacion: " La correcta es show cdp neighbors porque ese comando muestra los dispositivos vecinos detectados mediante CDP (Cisco Discovery Protocol). show lldp neighbors se usa para LLDP; show arp enseña asociaciones IP-MAC; y show mac address-table muestra la tabla MAC del switch, no los vecinos CDP."
     },
-    
-    
     {
         enunciado: "El puerto por defecto para consultas SNMP es:",
         opciones: ["UDP 161", "TCP 161", "UDP 162", "TCP 162"],
         correcta: 0,
         explicacion: " La correcta es UDP 161 porque ese es el puerto usado por SNMP (Simple Network Management Protocol) para consultas normales entre gestor y dispositivo. UDP 162 se usa habitualmente para traps o notificaciones; y las opciones con TCP no son las usadas por defecto en SNMP clásico."
-    },
-    {
-        enunciado: "¿Qué versión de SNMP incorpora autenticación y cifrado?",
-        opciones: ["SNMPv1", "SNMPv2c", "SNMPv3", "Todas"],
-        correcta: 2,
-        explicacion: " La correcta es SNMPv3 porque es la versión que añade autenticación y cifrado, mejorando la seguridad respecto a SNMPv1 y SNMPv2c. SNMPv1 y SNMPv2c usan comunidades y no aportan ese nivel de protección; y no todas las versiones lo incorporan."
     },
     {
         enunciado: "En Syslog, ¿qué nivel corresponde a 'emergencies'?",
@@ -776,7 +768,6 @@ const preguntasPAR = [
         correcta: 0,
         explicacion: " La correcta es logging buffered 4096 porque ese comando activa el almacenamiento de logs en el buffer del dispositivo e indica su tamaño. log buffer on no es el comando estándar; service timestamps log añade marcas de tiempo; y logging console envía mensajes a la consola, no al buffer."
     },
-
     {
         enunciado: "NTP utiliza por defecto el puerto:",
         opciones: ["UDP 123", "TCP 123", "UDP 514", "TCP 514"],
@@ -820,7 +811,7 @@ const preguntasPAR = [
         correcta: 1,
         explicacion: " La correcta es UDP 1812/1813 porque RADIUS usa normalmente UDP 1812 para autenticación y UDP 1813 para accounting. TCP 1812/1813 no es la opción clásica; y el puerto 49, en TCP, se asocia a TACACS+."
     },
-    
+
     {
         enunciado: "¿Qué instrucción habilita Port Security en un puerto?",
         opciones: ["switchport port-security", "port-security enable", "security port on", "switchport secure"],
@@ -852,7 +843,7 @@ const preguntasPAR = [
         explicacion: " La correcta es 1280 porque IPv6 exige que los enlaces soporten al menos ese MTU mínimo. 576 es un valor clásico relacionado con IPv4; 1500 es la MTU típica de Ethernet, pero no el mínimo exigido por IPv6; y 9000 corresponde a jumbo frames."
     },
     {
-        enunciado: "En IPv6, la resolución de vecinos se realiza con:",
+        enunciado: "En IPv6, la resolución de vecinos se realiza con (no examen):",
         opciones: ["ARP", "NDP (ICMPv6)", "RARP", "LLDP"],
         correcta: 1,
         explicacion: " La correcta es NDP (ICMPv6) porque en IPv6 la resolución de vecinos y descubrimiento relacionado se hace con Neighbor Discovery Protocol sobre ICMPv6. ARP no se usa en IPv6; RARP es un protocolo antiguo con otro propósito; y LLDP sirve para descubrimiento de dispositivos vecinos, no para resolver vecinos IPv6 a ese nivel."
@@ -869,12 +860,7 @@ const preguntasPAR = [
         correcta: 1,
         explicacion: " La correcta es IP, prefijo y gateway a partir de RA porque SLAAC (Stateless Address Autoconfiguration) permite que un equipo IPv6 se autoconfigure usando anuncios RA (Router Advertisement) enviados por el router. No obtiene solo DNS, porque eso puede requerir otros mecanismos; tampoco solo gateway ni solo prefijo, ya que la autoconfiguración abarca más datos básicos de conectividad."
     },
-    {
-        enunciado: "En IPv6 RA, el flag 'M' indica:",
-        opciones: ["Usar DHCPv6 para todo (managed)", "No hay IPv6", "Usar SLAAC exclusivamente", "Gateway no disponible"],
-        correcta: 0,
-        explicacion: " La correcta es Usar DHCPv6 para todo (managed) porque el flag M de un RA (Router Advertisement) indica modo administrado y señala que la dirección debe obtenerse mediante DHCPv6. No significa que no haya IPv6; tampoco obliga a usar solo SLAAC; y no indica ausencia de gateway, ya que el router sigue anunciándose en el RA."
-    },
+
     {
         enunciado: "ICMP se utiliza principalmente para:",
         opciones: ["Transferencia de archivos", "Mensajes de error y diagnóstico", "Cifrado de datos", "Autenticación de usuarios"],
@@ -929,7 +915,7 @@ const preguntasPAR = [
         correcta: 3,
         explicacion: " La correcta es No está diseñado para aplicaciones porque ICMP (Internet Control Message Protocol) fue creado para control, error y diagnóstico de red, no para transportar datos de usuario. Que no tenga puertos o no sea orientado a conexión puede describirlo, pero no es la razón principal de diseño; y decir solo que no es fiable se queda corto frente a su función real."
     },
-    
+
 
     {
         enunciado: "¿Cuál es la función de ARP?",
@@ -1248,14 +1234,14 @@ const preguntasPAR = [
         correcta: 2,
         explicacion: " La correcta es WEIGHT porque es un atributo local de Cisco y no se propaga a otros routers BGP. LOCAL_PREF sí se usa dentro del AS; MED puede anunciarse a vecinos externos; y AS-PATH refleja el camino por sistemas autónomos."
     },
-    
+
     {
         enunciado: "HSRP envía hellos a:",
         opciones: ["224.0.0.18 UDP 1985", "224.0.0.2 UDP 1985", "224.0.0.102 UDP 3222", "224.0.0.5 IP 89"],
         correcta: 1,
         explicacion: " La correcta es 224.0.0.2 UDP 1985 porque ese es el multicast y puerto típicos de HSRP versión 1. 224.0.0.18 se asocia a VRRP; 224.0.0.102 UDP 3222 a GLBP; y 224.0.0.5 IP 89 pertenece a OSPF."
     },
-    
+
     {
         enunciado: "GLBP permite:",
         opciones: ["Solo activo/pasivo", "Balanceo de carga de gateway", "Solo redundancia sin balanceo", "Enrutamiento dinámico"],
@@ -1482,6 +1468,373 @@ const preguntasPAR = [
         opciones: ["PVST+ (802.1D)", "RSTP (802.1w)", "MSTP (802.1s)", "VTP v3"],
         correcta: 1,
         explicacion: " La correcta es RSTP (802.1w) porque Rapid Spanning Tree Protocol mejora la velocidad de convergencia frente a STP clásico. PVST+ sigue basado en STP por VLAN; MSTP (Multiple Spanning Tree Protocol) también mejora escalabilidad, pero la respuesta típica sobre convergencia rápida es RSTP; y VTP v3 no es una versión de STP."
+    },
+
+    /*PREGUNTAS REPASO PRIMER TRIMESTRE*/
+    {
+        enunciado: "¿Cuántos bits tiene un Byte?",
+        opciones: ["4", "8", "16", "32"],
+        correcta: 1,
+        explicacion: " La correcta es 8 porque un byte está formado por 8 bits. 4 bits sería medio byte, 16 bits serían 2 bytes y 32 bits equivalen a 4 bytes."
+    },
+    {
+        enunciado: "¿Cuál es la equivalencia correcta de 1 KB en sistema binario?",
+        opciones: ["1000 bytes", "8000 bits", "1024 bytes", "8192 bytes"],
+        correcta: 2,
+        explicacion: " La correcta es 1024 bytes porque en sistema binario 1 KB se toma como 2^10 bytes. 1000 bytes corresponde al sistema decimal, 8000 bits no es la equivalencia pedida y 8192 bytes equivalen a 8 KB binarios."
+    },
+    {
+        enunciado: "¿Qué sistema de numeración utiliza potencias de 2?",
+        opciones: ["Decimal", "Hexadecimal", "Octal", "Binario"],
+        correcta: 3,
+        explicacion: " La correcta es Binario porque trabaja en base 2 y usa potencias de 2. Decimal usa base 10, hexadecimal base 16 y octal base 8."
+    },
+    {
+        enunciado: "El número binario 10101₂ equivale en decimal a:",
+        opciones: ["19", "20", "21", "22"],
+        correcta: 2,
+        explicacion: " La correcta es 21 porque 10101₂ = 1·16 + 0·8 + 1·4 + 0·2 + 1·1 = 21. Las otras opciones no coinciden con esa suma."
+    },
+    {
+        enunciado: "¿Cuál de los siguientes valores es mayor?",
+        opciones: ["1 MB decimal", "1 MB binario", "Son iguales", "Depende del sistema operativo"],
+        correcta: 1,
+        explicacion: " La correcta es 1 MB binario porque 1 MB binario equivale a 1.048.576 bytes, mientras que 1 MB decimal son 1.000.000 bytes. Por eso no son iguales ni depende del sistema operativo en la comparación matemática."
+    },
+    {
+        enunciado: "¿Qué base utiliza el sistema hexadecimal?",
+        opciones: ["2", "8", "10", "16"],
+        correcta: 3,
+        explicacion: " La correcta es 16 porque el sistema hexadecimal usa 16 símbolos: del 0 al 9 y de la A a la F. Las demás bases corresponden a otros sistemas."
+    },
+    {
+        enunciado: "¿Cuántas capas tiene el modelo OSI?",
+        opciones: ["4", "5", "6", "7"],
+        correcta: 3,
+        explicacion: " La correcta es 7 porque el modelo OSI está formado por 7 capas. Las otras cantidades no coinciden con su estructura estándar."
+    },
+    {
+        enunciado: "¿Qué capa del modelo OSI se encarga del direccionamiento lógico?",
+        opciones: ["Enlace", "Transporte", "Red", "Sesión"],
+        correcta: 2,
+        explicacion: " La correcta es Red porque esa capa trabaja con direcciones lógicas como las IP. Enlace usa direcciones físicas, Transporte gestiona la comunicación extremo a extremo y Sesión controla el diálogo entre aplicaciones."
+    },
+    {
+        enunciado: "¿En qué capa OSI se sitúa Ethernet?",
+        opciones: ["Física", "Enlace", "Red", "Transporte"],
+        correcta: 1,
+        explicacion: " La correcta es Enlace porque Ethernet se asocia normalmente a la capa 2 del modelo OSI. Aunque también tiene parte física, en este tipo de test se considera como protocolo de capa de enlace."
+    },
+    {
+        enunciado: "¿Qué capa del modelo OSI se encarga del control de errores extremo a extremo?",
+        opciones: ["Enlace", "Red", "Transporte", "Aplicación"],
+        correcta: 2,
+        explicacion: " La correcta es Transporte porque el control de errores extremo a extremo se hace entre origen y destino final. Enlace controla errores dentro del enlace local, no de extremo a extremo."
+    },
+    {
+        enunciado: "¿Qué modelo es realmente utilizado en Internet?",
+        opciones: ["OSI", "TCP/IP", "IEEE", "ISO"],
+        correcta: 1,
+        explicacion: " La correcta es TCP/IP porque es el modelo práctico usado en Internet. OSI es un modelo de referencia teórico, e IEEE e ISO son organismos o estándares, no el modelo principal de Internet."
+    },
+    {
+        enunciado: "¿Cuántas capas tiene el modelo TCP/IP?",
+        opciones: ["3", "4", "5", "7"],
+        correcta: 1,
+        explicacion: " La correcta es 4 porque el modelo TCP/IP se suele explicar con 4 capas. Las otras cifras no corresponden al modelo estándar más habitual."
+    },
+    {
+        enunciado: "¿Qué unidad de datos maneja la capa de red?",
+        opciones: ["Trama", "Segmento", "Paquete", "Bit"],
+        correcta: 2,
+        explicacion: " La correcta es Paquete porque la capa de red trabaja con paquetes. Trama corresponde a enlace, segmento a transporte y bit a física."
+    },
+    {
+        enunciado: "El protocolo IP es:",
+        opciones: ["Orientado a conexión", "No orientado a conexión", "Orientado a sesión", "Orientado a flujo"],
+        correcta: 1,
+        explicacion: " La correcta es No orientado a conexión porque IP envía datagramas sin establecer conexión previa. Las demás opciones no describen el funcionamiento básico de IP."
+    },
+    {
+        enunciado: "¿Qué característica NO es propia del protocolo IP?",
+        opciones: ["Usa datagramas", "Garantiza entrega", "No tiene QoS", "No controla errores"],
+        correcta: 1,
+        explicacion: " La correcta es Garantiza entrega porque IP no asegura ni la entrega ni el orden de los paquetes. Sí usa datagramas, no controla errores de extremo a extremo y no ofrece QoS por defecto en su funcionamiento básico."
+    },
+    {
+        enunciado: "¿Qué versión de IP utiliza direcciones de 32 bits?",
+        opciones: ["IPv3", "IPv4", "IPv5", "IPv6"],
+        correcta: 1,
+        explicacion: " La correcta es IPv4 porque usa direcciones de 32 bits. IPv6 usa 128 bits y las otras versiones no son las utilizadas de forma estándar."
+    },
+    {
+        enunciado: "¿Qué versión de IP utiliza direcciones de 128 bits?",
+        opciones: ["IPv4", "IPv5", "IPv6", "IPv7"],
+        correcta: 2,
+        explicacion: " La correcta es IPv6 porque usa direcciones de 128 bits. IPv4 usa 32 bits y las otras opciones no son la respuesta correcta."
+    },
+    {
+        enunciado: "¿Cuántos octetos tiene una dirección IPv4?",
+        opciones: ["2", "3", "4", "8"],
+        correcta: 2,
+        explicacion: " La correcta es 4 porque una dirección IPv4 tiene 32 bits repartidos en 4 octetos de 8 bits. Las demás opciones no encajan con esa estructura."
+    },
+    {
+        enunciado: "¿Qué rango identifica a las direcciones de clase A?",
+        opciones: ["0–127", "128–191", "192–223", "224–239"],
+        correcta: 0,
+        explicacion: " La correcta según la plantilla es 0–127 porque así aparece en la clasificación clásica por primer octeto. Aun así, esta pregunta es dudosa, porque muchas veces se matiza como 1–126, ya que 0 está reservado y 127 se usa para loopback."
+    },
+    {
+        enunciado: "Una dirección que empieza por 10 pertenece a la clase:",
+        opciones: ["A", "B", "C", "D"],
+        correcta: 0,
+        explicacion: " La correcta es A porque una dirección que empieza por 10 cae dentro del rango clásico de la clase A. Las demás clases empiezan en otros intervalos."
+    },
+    {
+        enunciado: "¿Qué clase IPv4 tiene por defecto la máscara 255.255.255.0?",
+        opciones: ["A", "B", "C", "D"],
+        correcta: 2,
+        explicacion: " La correcta es C porque la máscara por defecto de una red de clase C es 255.255.255.0. Clase A usa 255.0.0.0 y clase B 255.255.0.0."
+    },
+    {
+        enunciado: "¿Cuál es el número máximo de hosts en una red de clase C?",
+        opciones: ["256", "255", "254", "253"],
+        correcta: 2,
+        explicacion: " La correcta es 254 porque en una red clase C hay 256 direcciones totales, pero se restan 2: una para red y otra para broadcast. Por eso no son 256, 255 ni 253."
+    },
+    {
+        enunciado: "¿Qué clase IPv4 está reservada para multicast?",
+        opciones: ["C", "D", "E", "A"],
+        correcta: 1,
+        explicacion: " La correcta es D porque la clase D está reservada para multicast. Las demás clases tienen otros usos."
+    },
+    {
+        enunciado: "¿Cuál de estas direcciones es privada?",
+        opciones: ["8.8.4.4", "172.20.10.5", "100.64.0.1", "1.1.1.1"],
+        correcta: 1,
+        explicacion: " La correcta es 172.20.10.5 porque pertenece al rango privado 172.16.0.0–172.31.255.255. 8.8.4.4 y 1.1.1.1 son públicas, y 100.64.0.1 pertenece a CGNAT, no al rango privado clásico RFC 1918."
+    },
+    {
+        enunciado: "¿Qué dirección representa “este host”?",
+        opciones: ["127.0.0.1", "255.255.255.255", "0.0.0.0", "192.168.1.1"],
+        correcta: 0, // POSIBLE ERROR: normalmente “este host” se asocia mejor con 0.0.0.0; 127.0.0.1 es loopback/localhost
+        explicacion: " La correcta según la plantilla es 127.0.0.1, pero esta respuesta parece dudosa. Normalmente 127.0.0.1 se usa para loopback o localhost, mientras que 0.0.0.0 se asocia más con “este host” o dirección no especificada según el contexto."
+    },
+    {
+        enunciado: "¿Qué dirección se usa para broadcast limitado?",
+        opciones: ["127.0.0.1", "0.0.0.0", "192.168.1.255", "255.255.255.255"],
+        correcta: 3,
+        explicacion: " La correcta es 255.255.255.255 porque esa es la dirección de broadcast limitado. 192.168.1.255 sería broadcast dirigido de una red concreta, no limitado."
+    },
+    {
+        enunciado: "¿Para qué se usa la dirección 127.0.0.1?",
+        opciones: ["Multicast", "Red privada", "Loopback", "Broadcast"],
+        correcta: 2,
+        explicacion: " La correcta es Loopback porque 127.0.0.1 apunta al propio equipo. No es multicast, ni broadcast, ni una red privada de uso general."
+    },
+    {
+        enunciado: "¿Cuál es la función principal de la máscara de red?",
+        opciones: ["Asignar IP", "Separar red y host", "Enrutar paquetes", "Cifrar tráfico"],
+        correcta: 1,
+        explicacion: " La correcta es Separar red y host porque la máscara indica qué parte de la IP identifica la red y qué parte identifica el host. No asigna IP, no cifra y no enruta por sí sola."
+    },
+    {
+        enunciado: "¿Qué operación lógica se usa para obtener la dirección de red?",
+        opciones: ["OR", "XOR", "NOT", "AND"],
+        correcta: 3,
+        explicacion: " La correcta es AND porque la dirección de red se obtiene haciendo AND entre la IP y la máscara. Las demás operaciones no se usan para ese cálculo."
+    },
+    {
+        enunciado: "¿Cuántos bits tiene la máscara /16?",
+        opciones: ["8", "16", "24", "32"],
+        correcta: 1,
+        explicacion: " La correcta es 16 porque el prefijo /16 indica 16 bits a 1 en la máscara. Las otras opciones representarían otros prefijos."
+    },
+    {
+        enunciado: "¿Cuántos hosts útiles tiene una red /24?",
+        opciones: ["256", "255", "254", "252"],
+        correcta: 2,
+        explicacion: " La correcta es 254 porque en /24 hay 8 bits para hosts, es decir 256 direcciones, menos 2 por red y broadcast. Por eso no son 256 ni 255."
+    },
+    {
+        enunciado: "¿Qué representa la última dirección de una red?",
+        opciones: ["Gateway", "Red", "Host válido", "Broadcast"],
+        correcta: 3,
+        explicacion: " La correcta es Broadcast porque la última dirección de una red se reserva para difusión. No es la dirección de red, ni un host válido, ni tiene por qué ser el gateway."
+    },
+    {
+        enunciado: "Subnetear consiste en:",
+        opciones: ["Unir redes", "Dividir una red en varias", "Cambiar de protocolo", "Convertir IP a binario"],
+        correcta: 1,
+        explicacion: " La correcta es Dividir una red en varias porque subnetear crea subredes más pequeñas dentro de una red mayor. No une redes ni cambia de protocolo."
+    },
+    {
+        enunciado: "¿Qué parte se “toma prestada” al crear subredes?",
+        opciones: ["Bits de red", "Bits de host", "Octetos completos", "Bits de máscara"],
+        correcta: 1,
+        explicacion: " La correcta es Bits de host porque al subnetear se toman bits de la parte host para convertirlos en parte de subred. No se toman bits de red ya definidos."
+    },
+    {
+        enunciado: "¿Qué máscara permite 14 hosts por subred?",
+        opciones: ["/24", "/26", "/28", "/30"],
+        correcta: 2,
+        explicacion: " La correcta es /28 porque deja 4 bits para host: 2^4 = 16 direcciones, menos 2 = 14 hosts útiles. Las otras máscaras dan cantidades distintas."
+    },
+    {
+        enunciado: "¿Cuántos bits son necesarios para obtener al menos 8 subredes?",
+        opciones: ["2", "3", "4", "5"],
+        correcta: 1,
+        explicacion: " La correcta es 3 porque con 3 bits se obtienen 2^3 = 8 subredes. Con 2 bits solo serían 4."
+    },
+    {
+        enunciado: "¿Qué valor se resta normalmente al calcular hosts por subred?",
+        opciones: ["1", "2", "4", "8"],
+        correcta: 1,
+        explicacion: " La correcta es 2 porque se restan la dirección de red y la de broadcast. No se resta 1, 4 ni 8 en el cálculo estándar."
+    },
+    {
+        enunciado: "¿Por qué se restan direcciones al calcular hosts?",
+        opciones: ["Por la máscara", "Por eficiencia", "Por red y broadcast", "Por el router"],
+        correcta: 2,
+        explicacion: " La correcta es Por red y broadcast porque esas dos direcciones no pueden asignarse a hosts. No es por eficiencia ni por el router."
+    },
+    {
+        enunciado: "¿Qué problema principal resuelve IPv6?",
+        opciones: ["Seguridad", "Velocidad", "Falta de direcciones", "Compatibilidad"],
+        correcta: 2,
+        explicacion: " La correcta es Falta de direcciones porque IPv6 amplía muchísimo el espacio de direcciones. No nació principalmente por velocidad o compatibilidad."
+    },
+    {
+        enunciado: "¿Cómo se representan las direcciones IPv6?",
+        opciones: ["Decimal con puntos", "Binario", "Hexadecimal con dos puntos", "Octal"],
+        correcta: 2,
+        explicacion: " La correcta es Hexadecimal con dos puntos porque las direcciones IPv6 se escriben en grupos hexadecimales separados por dos puntos. No se expresan en decimal con puntos como IPv4."
+    },
+    {
+        enunciado: "¿Cuántos grupos tiene una IPv6 completa?",
+        opciones: ["4", "6", "8", "16"],
+        correcta: 2,
+        explicacion: " La correcta es 8 porque una IPv6 completa tiene 8 grupos de 16 bits. Las otras cantidades no corresponden a su formato estándar."
+    },
+    {
+        enunciado: "¿Cuántas veces puede usarse “::” en una IPv6 abreviada?",
+        opciones: ["Ninguna", "Una", "Dos", "Ilimitadas"],
+        correcta: 1,
+        explicacion: " La correcta es Una porque si se usara más de una vez no se podría reconstruir la dirección completa sin ambigüedad. Por eso no pueden ser dos ni ilimitadas."
+    },
+    {
+        enunciado: "¿Qué tipo de dirección IPv6 empieza por FE80::?",
+        opciones: ["Multicast", "Global", "Local en enlace", "Anycast"],
+        correcta: 2,
+        explicacion: " La correcta es Local en enlace porque FE80::/10 identifica direcciones link-local. No son globales ni multicast."
+    },
+    {
+        enunciado: "¿Qué tipo de dirección IPv6 empieza por FF00::?",
+        opciones: ["Unicast", "Anycast", "Multicast", "Link-local"],
+        correcta: 2,
+        explicacion: " La correcta es Multicast porque FF00::/8 está reservado para multicast en IPv6. No corresponde a unicast, anycast ni link-local."
+    },
+    {
+        enunciado: "Ethernet es un estándar:",
+        opciones: ["ISO", "IEEE 802.3", "IEEE 802.11", "TCP/IP"],
+        correcta: 1,
+        explicacion: " La correcta es IEEE 802.3 porque ese es el estándar de Ethernet. IEEE 802.11 corresponde a Wi-Fi y TCP/IP no es el estándar Ethernet."
+    },
+    {
+        enunciado: "¿Qué tipo de efecto se crea en cables Ethernet enrollados?",
+        opciones: [
+            "Efecto Joule, que provoca un aumento de temperatura por el paso de corriente",
+            "Efecto bobina (inductivo), que genera interferencias electromagnéticas",
+            "Efecto fotoeléctrico, debido a la exposición a la luz",
+            "Efecto capacitivo, que mejora la transmisión de datos"
+        ],
+        correcta: 1,
+        explicacion: " La correcta es Efecto bobina (inductivo), que genera interferencias electromagnéticas porque al enrollar el cable se favorecen efectos inductivos no deseados. Las otras opciones no describen el problema típico en este contexto."
+    },
+    {
+        enunciado: "¿Cuál es cable Ethernet que soporta mayor cantidad de interferencias?",
+        opciones: ["UTP (Unshielded Twisted Pair)", "FTP (Foiled Twisted Pair)", "STP (Shielded Twisted Pair)", "SFTP (Shielded Foiled Twisted Pair)"],
+        correcta: 3,
+        explicacion: " La correcta es SFTP (Shielded Foiled Twisted Pair) porque es el que ofrece mayor apantallamiento frente a interferencias. UTP es el menos protegido, y FTP y STP ofrecen protección intermedia."
+    },
+    {
+        enunciado: "¿Qué tipo de cable se usa para PC → Switch?",
+        opciones: ["Cruzado", "Directo", "Coaxial", "Fibra"],
+        correcta: 1,
+        explicacion: " La correcta es Directo porque tradicionalmente entre dispositivos distintos, como PC y switch, se usa cable directo. Cruzado se asociaba más a dispositivos del mismo tipo."
+    },
+    {
+        enunciado: "¿Qué categoría de UTP soporta hasta 10 Gbps a 55 m?",
+        opciones: ["Cat 5", "Cat 5e", "Cat 6", "Cat 7"],
+        correcta: 2,
+        explicacion: " La correcta es Cat 6 porque puede soportar 10 Gbps hasta unos 55 metros en condiciones típicas. Cat 5 y 5e no llegan así, y Cat 7 no es la respuesta clásica que suele pedirse aquí."
+    },
+    {
+        enunciado: "¿Qué ventaja principal tiene el cable STP frente al UTP?",
+        opciones: ["Más barato", "Más flexible", "Menos interferencias", "Más velocidad"],
+        correcta: 2,
+        explicacion: " La correcta es Menos interferencias porque el apantallamiento del STP reduce el ruido electromagnético. No suele ser más barato ni más flexible."
+    },
+    {
+        enunciado: "¿Qué medio utiliza pulsos de luz?",
+        opciones: ["UTP", "STP", "Coaxial", "Fibra óptica"],
+        correcta: 3,
+        explicacion: " La correcta es Fibra óptica porque transmite la información mediante luz. Los otros medios son eléctricos."
+    },
+    {
+        enunciado: "¿Qué tipo de fibra se usa para largas distancias (km)?",
+        opciones: ["Multimodo", "Monomodo", "UTP", "STP"],
+        correcta: 1,
+        explicacion: " La correcta es Monomodo porque está pensada para largas distancias y menor dispersión de la señal. Multimodo se usa más en distancias cortas."
+    },
+    {
+        enunciado: "¿Qué topología usa un switch central?",
+        opciones: ["Bus", "Anillo", "Estrella", "Malla"],
+        correcta: 2,
+        explicacion: " La correcta es Estrella porque en esa topología todos los equipos se conectan a un dispositivo central, normalmente un switch. Las demás topologías tienen otra estructura."
+    },
+    {
+        enunciado: "¿Qué topología cae completamente si se rompe el cable principal?",
+        opciones: ["Estrella", "Bus", "Malla", "Árbol"],
+        correcta: 1,
+        explicacion: " La correcta es Bus porque depende de un cable principal compartido. Si ese cable falla, la red deja de funcionar."
+    },
+    {
+        enunciado: "¿Qué topología ofrece mayor redundancia?",
+        opciones: ["Bus", "Estrella", "Árbol", "Malla"],
+        correcta: 3,
+        explicacion: " La correcta es Malla porque ofrece múltiples caminos alternativos entre nodos. Las demás tienen menos redundancia."
+    },
+    {
+        enunciado: "¿Qué topología es más común en LAN modernas?",
+        opciones: ["Anillo", "Bus", "Estrella", "Malla"],
+        correcta: 2,
+        explicacion: " La correcta es Estrella porque es la topología más usada en redes LAN actuales, normalmente con switch central."
+    },
+    {
+        enunciado: "¿Qué dispositivo trabaja principalmente en capa 2?",
+        opciones: ["Router", "Switch", "Firewall", "Servidor"],
+        correcta: 1,
+        explicacion: " La correcta es Switch porque trabaja principalmente en la capa de enlace y usa direcciones MAC. Router trabaja en capa 3."
+    },
+    {
+        enunciado: "¿Qué dispositivo separa redes distintas?",
+        opciones: ["Hub", "Switch", "Router", "Repetidor"],
+        correcta: 2,
+        explicacion: " La correcta es Router porque separa redes distintas y enruta tráfico entre ellas. Hub y repetidor no separan redes, y switch normalmente trabaja dentro de la misma red capa 2."
+    },
+    {
+        enunciado: "¿Qué significa QoS?",
+        opciones: ["Calidad de Servicio", "Control de Red", "Protocolo de Seguridad", "Tipo de cable"],
+        correcta: 0,
+        explicacion: " La correcta es Calidad de Servicio porque QoS significa Quality of Service. Las demás opciones no corresponden a esas siglas."
+    },
+    {
+        enunciado: "¿Qué tráfico suele priorizar QoS?",
+        opciones: ["Descargas", "Copias de seguridad", "Videollamadas", "Correos electrónicos"],
+        correcta: 2,
+        explicacion: " La correcta es Videollamadas porque el tráfico en tiempo real suele ser el que más se beneficia de la priorización. Descargas y copias pueden esperar más, y el correo no suele requerir tanta prioridad."
     }
 
 
@@ -1585,12 +1938,7 @@ const preguntasPAR = [
         correcta: 0,
         explicacion: " La correcta es NTP porque NTP (Network Time Protocol) se usa para sincronizar la hora entre equipos de una red. SMTP (Simple Mail Transfer Protocol) es correo; TFTP (Trivial File Transfer Protocol) es transferencia simple de archivos; y RDP (Remote Desktop Protocol) se usa para acceso remoto."
     },
-    {
-        enunciado: "¿Qué estándar de PoE permite ~30W por puerto? (fuera temario):",
-        opciones: ["802.3af", "802.3at (PoE+)", "802.3bt Tipo 3", "802.3bt Tipo 4"],
-        correcta: 1,
-        explicacion: " La correcta es 802.3at (PoE+) porque ese estándar permite aproximadamente 30 W por puerto. 802.3af ofrece menos potencia; y 802.3bt Tipo 3 y Tipo 4 permiten más, por lo que no encajan con ese valor aproximado."
-    },
+    
     {
         enunciado: "¿Qué estándar define LLDP? (fuera temario):",
         opciones: ["IEEE 802.1AB", "IEEE 802.3ad", "IEEE 802.1Q", "IEEE 802.11i"],
@@ -1618,6 +1966,25 @@ const preguntasPAR = [
         opciones: ["VRRP", "GLBP", "HSRP", "CARP"],
         correcta: 2,
         explicacion: " La correcta es HSRP porque HSRP (Hot Standby Router Protocol) es un FHRP propietario de Cisco. VRRP es estándar; CARP no es el protocolo Cisco clásico en este contexto; y aunque GLBP también es de Cisco, la respuesta típica esperada cuando se pregunta por el FHRP propietario más conocido es HSRP."
+    },
+
+    {
+        enunciado: "¿Qué versión de SNMP incorpora autenticación y cifrado?",
+        opciones: ["SNMPv1", "SNMPv2c", "SNMPv3", "Todas"],
+        correcta: 2,
+        explicacion: " La correcta es SNMPv3 porque es la versión que añade autenticación y cifrado, mejorando la seguridad respecto a SNMPv1 y SNMPv2c. SNMPv1 y SNMPv2c usan comunidades y no aportan ese nivel de protección; y no todas las versiones lo incorporan."
+    },
+    {
+        enunciado: "En IPv6 RA, el flag 'M' indica:",
+        opciones: ["Usar DHCPv6 para todo (managed)", "No hay IPv6", "Usar SLAAC exclusivamente", "Gateway no disponible"],
+        correcta: 0,
+        explicacion: " La correcta es Usar DHCPv6 para todo (managed) porque el flag M de un RA (Router Advertisement) indica modo administrado y señala que la dirección debe obtenerse mediante DHCPv6. No significa que no haya IPv6; tampoco obliga a usar solo SLAAC; y no indica ausencia de gateway, ya que el router sigue anunciándose en el RA."
+    },
+    {
+        enunciado: "¿Qué estándar de PoE permite ~30W por puerto? (fuera temario):",
+        opciones: ["802.3af", "802.3at (PoE+)", "802.3bt Tipo 3", "802.3bt Tipo 4"],
+        correcta: 1,
+        explicacion: " La correcta es 802.3at (PoE+) porque ese estándar permite aproximadamente 30 W por puerto. 802.3af ofrece menos potencia; y 802.3bt Tipo 3 y Tipo 4 permiten más, por lo que no encajan con ese valor aproximado."
     },
 
     */
