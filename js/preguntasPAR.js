@@ -672,12 +672,7 @@ const preguntasPAR = [
         correcta: 1,
         explicacion: " La correcta es UTP cruzado porque tradicionalmente se utilizaba para conectar dispositivos del mismo tipo, como router a router o switch a switch. UTP directo se asociaba a dispositivos distintos; coaxial pertenece a otras tecnologías; y USB-C no es el cable clásico Ethernet de ese escenario."
     },
-    {
-        enunciado: "¿Qué herramienta valida continuidad y mapa de pares en campo?",
-        opciones: ["Certificador (Fluke)", "Tester básico", "Analizador de espectro", "OTDR obligatoriamente"],
-        correcta: 1,
-        explicacion: " La correcta es Tester básico porque es la herramienta habitual para comprobar continuidad y mapa de pares en instalaciones de cobre. Un certificador como Fluke hace pruebas más avanzadas y completas; un analizador de espectro tiene otro uso; y un OTDR (Optical Time Domain Reflectometer) se emplea en fibra óptica, no obligatoriamente aquí."
-    },
+    
     {
         enunciado: "¿Qué comando muestra direcciones IP y estado up/down de interfaces rápidamente?",
         opciones: ["show ip interface brief", "show interfaces", "show cdp neighbors", "show controllers"],
@@ -805,7 +800,6 @@ const preguntasPAR = [
         correcta: 1,
         explicacion: " La correcta es UDP 1812/1813 porque RADIUS usa normalmente UDP 1812 para autenticación y UDP 1813 para accounting. TCP 1812/1813 no es la opción clásica; y el puerto 49, en TCP, se asocia a TACACS+."
     },
-
     {
         enunciado: "¿Qué instrucción habilita Port Security en un puerto?",
         opciones: ["switchport port-security", "port-security enable", "security port on", "switchport secure"],
@@ -1243,7 +1237,7 @@ const preguntasPAR = [
         explicacion: " La correcta es Balanceo de carga de gateway porque GLBP reparte el uso del gateway virtual entre varios routers además de aportar redundancia. No se limita a activo/pasivo como otros enfoques; no ofrece solo redundancia sin balanceo; y no es un protocolo de enrutamiento dinámico."
     },
     {
-        enunciado: "Canales no solapados típicos en 2.4 GHz (ETSI/US):",
+        enunciado: "Canales no solapados típicos en 2.4 GHz (ETSI/US):", /*rebuscada*/
         opciones: ["1, 5, 9", "1, 6, 11", "2, 7, 12", "3, 8, 13"],
         correcta: 1,
         explicacion: " La correcta es 1, 6, 11 porque son los canales típicos no solapados más usados en 2.4 GHz para minimizar interferencias. Las otras combinaciones se pisan entre sí en muchos casos y por eso no son la referencia clásica."
@@ -1979,6 +1973,12 @@ const preguntasPAR = [
         opciones: ["Opción 3", "Opción 6", "Opción 15", "Opción 43"],
         correcta: 0,
         explicacion: " La correcta es Opción 3 porque en DHCP (Dynamic Host Configuration Protocol) esa opción entrega la puerta de enlace por defecto al cliente. La opción 6 suele indicar servidores DNS (Domain Name System); la 15 el sufijo de dominio; y la 43 se usa para información específica de fabricante."
+    },
+    {
+        enunciado: "¿Qué herramienta valida continuidad y mapa de pares en campo? (fuera temario):", 
+        opciones: ["Certificador (Fluke)", "Tester básico", "Analizador de espectro", "OTDR obligatoriamente"],
+        correcta: 1,
+        explicacion: " La correcta es Tester básico porque es la herramienta habitual para comprobar continuidad y mapa de pares en instalaciones de cobre. Un certificador como Fluke hace pruebas más avanzadas y completas; un analizador de espectro tiene otro uso; y un OTDR (Optical Time Domain Reflectometer) se emplea en fibra óptica, no obligatoriamente aquí."
     },
     */
 
