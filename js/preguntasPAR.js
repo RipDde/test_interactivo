@@ -757,12 +757,7 @@ const preguntasPAR = [
         correcta: 0,
         explicacion: " La correcta es 0 porque en Syslog el nivel 0 corresponde a emergencies, el más crítico de la escala. El nivel 3 corresponde a errores; el 5 a notificaciones; y el 7 a depuración, que es mucho menos grave."
     },
-    {
-        enunciado: "¿Qué comando guarda logs en buffer en IOS?",
-        opciones: ["logging buffered 4096", "log buffer on", "service timestamps log", "logging console"],
-        correcta: 0,
-        explicacion: " La correcta es logging buffered 4096 porque ese comando activa el almacenamiento de logs en el buffer del dispositivo e indica su tamaño. log buffer on no es el comando estándar; service timestamps log añade marcas de tiempo; y logging console envía mensajes a la consola, no al buffer."
-    },
+    
     {
         enunciado: "NTP utiliza por defecto el puerto:",
         opciones: ["UDP 123", "TCP 123", "UDP 514", "TCP 514"],
@@ -1156,18 +1151,7 @@ const preguntasPAR = [
         correcta: 1,
         explicacion: " La correcta es Mayor IP de loopback porque, si no se configura manualmente el router-id, OSPF suele elegir primero la IP más alta de una loopback y, si no existe, la más alta de las interfaces activas. No usa la menor MAC, ni la menor IP activa, ni lo elige al azar."
     },
-    {
-        enunciado: "En OSPF, ¿qué LSA anuncia redes externas?",
-        opciones: ["Tipo 1", "Tipo 3", "Tipo 5", "Tipo 7"],
-        correcta: 2,
-        explicacion: " La correcta es Tipo 5 porque las LSA de tipo 5 se usan para anunciar rutas externas en OSPF. Las tipo 1 describen routers dentro del área; las tipo 3 resumen redes entre áreas; y las tipo 7 se usan en NSSA antes de su traducción."
-    },
-    {
-        enunciado: "¿Qué área OSPF permite LSAs tipo 7?",
-        opciones: ["Backbone", "Stub", "NSSA", "Totally stubby"],
-        correcta: 2,
-        explicacion: " La correcta es NSSA porque en un área NSSA (Not-So-Stubby Area) se utilizan LSA de tipo 7 para introducir rutas externas antes de convertirlas en tipo 5. Backbone, Stub y Totally Stubby no usan ese comportamiento como rasgo definitorio."
-    },
+    
     {
         enunciado: "RIPv2 envía actualizaciones a la dirección multicast:",
         opciones: ["224.0.0.9", "224.0.0.5", "224.0.0.10", "239.255.255.250"],
@@ -1826,8 +1810,6 @@ const preguntasPAR = [
     }
 
 
-
-
     /* FUERA DE TEMARIO:
     {
         enunciado: "TACACS+ utiliza por defecto (fuera temario):",
@@ -1979,6 +1961,24 @@ const preguntasPAR = [
         opciones: ["Certificador (Fluke)", "Tester básico", "Analizador de espectro", "OTDR obligatoriamente"],
         correcta: 1,
         explicacion: " La correcta es Tester básico porque es la herramienta habitual para comprobar continuidad y mapa de pares en instalaciones de cobre. Un certificador como Fluke hace pruebas más avanzadas y completas; un analizador de espectro tiene otro uso; y un OTDR (Optical Time Domain Reflectometer) se emplea en fibra óptica, no obligatoriamente aquí."
+    },
+    {
+        enunciado: "En OSPF, ¿qué LSA anuncia redes externas? (fuera temario)",
+        opciones: ["Tipo 1", "Tipo 3", "Tipo 5", "Tipo 7"],
+        correcta: 2,
+        explicacion: " La correcta es Tipo 5 porque las LSA de tipo 5 se usan para anunciar rutas externas en OSPF. Las tipo 1 describen routers dentro del área; las tipo 3 resumen redes entre áreas; y las tipo 7 se usan en NSSA antes de su traducción."
+    },
+    {
+        enunciado: "¿Qué área OSPF permite LSAs tipo 7? (fuera temario)",
+        opciones: ["Backbone", "Stub", "NSSA", "Totally stubby"],
+        correcta: 2,
+        explicacion: " La correcta es NSSA porque en un área NSSA (Not-So-Stubby Area) se utilizan LSA de tipo 7 para introducir rutas externas antes de convertirlas en tipo 5. Backbone, Stub y Totally Stubby no usan ese comportamiento como rasgo definitorio."
+    },
+    {
+        enunciado: "¿Qué comando guarda logs en buffer en IOS? (fuera temario)",
+        opciones: ["logging buffered 4096", "log buffer on", "service timestamps log", "logging console"],
+        correcta: 0,
+        explicacion: " La correcta es logging buffered 4096 porque ese comando activa el almacenamiento de logs en el buffer del dispositivo e indica su tamaño. log buffer on no es el comando estándar; service timestamps log añade marcas de tiempo; y logging console envía mensajes a la consola, no al buffer."
     },
     */
 

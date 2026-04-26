@@ -393,12 +393,7 @@ const preguntasLM = [
     },
     {
         enunciado: "¿Cuál es la función principal de CSS?",
-        opciones: [
-            "Estructurar el contenido",
-            "Programar interactividad",
-            "Definir el diseño y estilo visual",
-            "Gestionar bases de datos"
-        ],
+        opciones: ["Estructurar el contenido", "Programar interactividad", "Definir el diseño y estilo visual", "Gestionar bases de datos"],
         correcta: 2,
         explicacion: " La correcta es Definir el diseño y estilo visual porque CSS se usa para colores, tamaños, márgenes, disposición y apariencia general de una web. Estructurar el contenido es tarea principal de HTML; programar interactividad corresponde sobre todo a JavaScript; y gestionar bases de datos no tiene relación con CSS."
     },
@@ -1265,7 +1260,7 @@ const preguntasLM = [
         explicacion: " La correcta es Dinámico porque JavaScript permite tipado dinámico y no obliga a declarar tipos fijos como otros lenguajes estáticos. No es solo backend, ya que se usa muchísimo en frontend; y aunque hoy pueda compilarse o transpilarse en algunos contextos, no se clasifica aquí simplemente como compilado."
     },
     {
-        enunciado: "¿Cómo se escribe una función básica?",
+        enunciado: "¿Cómo se escribe una función básica? (rebuscada)",
         opciones: ["function miFuncion() {}", "func miFuncion()", "def miFuncion()", "run miFuncion()"],
         correcta: 0,
         explicacion: " La correcta es function miFuncion() {} porque esa es la sintaxis básica clásica para declarar una función en JavaScript. func se usa en otros lenguajes; def es propio de Python; y run miFuncion() no es una declaración válida de función."
@@ -1289,19 +1284,19 @@ const preguntasLM = [
         explicacion: " La correcta es string porque ese es uno de los tipos de dato de JavaScript. cadena describe el concepto en español, pero no es el nombre del tipo en JS; y text o word no son tipos de dato estándar del lenguaje."
     },
     {
-        enunciado: "¿Cómo se escribe un array?",
+        enunciado: "¿Cómo se escribe un array? (no temario)",
         opciones: ["{}", "[]", "<>", "()"],
         correcta: 1,
         explicacion: " La correcta es [] porque en JavaScript los arrays se escriben entre corchetes. {} se usa para objetos; () para agrupación o parámetros; y <> no es la sintaxis de array."
     },
     {
-        enunciado: "¿Qué método cuenta elementos de un array?",
+        enunciado: "¿Qué método cuenta elementos de un array? (no temario)",
         opciones: [".size", ".count", ".length", ".items"],
         correcta: 2,
         explicacion: " La correcta es .length porque esa propiedad indica cuántos elementos tiene un array en JavaScript. .size, .count y .items no son la propiedad estándar del array para este fin."
     },
     {
-        enunciado: "¿Cómo se convierte un número a string?",
+        enunciado: "¿Cómo se convierte un número a string? (rebuscada)",
         opciones: ["toString()", "toStr()", "string()", "makeString()"],
         correcta: 0,
         explicacion: " La correcta es toString() porque ese método convierte un valor numérico en una cadena en JavaScript. toStr() y makeString() no son métodos estándar; y string() no es la forma habitual correcta en este contexto."
@@ -1319,7 +1314,7 @@ const preguntasLM = [
         explicacion: " La correcta es {} porque en JavaScript un objeto literal se crea entre llaves. [] corresponde a arrays; () se usa para agrupación o llamadas; y <> no es una sintaxis válida de objeto."
     },
     {
-        enunciado: "¿Cuál método añade un elemento al final de un array?",
+        enunciado: "¿Qué método añade un elemento al final de un array? (no temario)",
         opciones: ["push()", "add()", "insert()", "append()"],
         correcta: 0,
         explicacion: " La correcta es push() porque ese método añade uno o más elementos al final de un array en JavaScript. add(), insert() y append() no son el método estándar del array para esta tarea."
@@ -1331,13 +1326,13 @@ const preguntasLM = [
         explicacion: " La correcta es 22 porque en JavaScript el operador + con una cadena provoca concatenación, convirtiendo el número a texto. No devuelve 4 porque no hace una suma numérica pura aquí; tampoco NaN; y no genera error."
     },
     {
-        enunciado: "¿Qué palabra clave detiene un bucle?",
+        enunciado: "¿Qué palabra clave detiene un bucle? (no temario)", /*aparece en el temario pero la profesora dice que de JavaScript solo cae hasta las sumas, por lo tanto esta no entra*/
         opciones: ["break", "stop", "end", "halt"],
         correcta: 0,
         explicacion: " La correcta es break porque esa palabra clave interrumpe la ejecución de un bucle en JavaScript. stop, end y halt no son las palabras clave estándar para detenerlo."
     },
     {
-        enunciado: "¿Qué estructura usa if?",
+        enunciado: "¿Qué estructura usa if? (no temario)", /*aparece en el temario pero la profesora dice que de JavaScript solo cae hasta las sumas, por lo tanto esta no entra*/
         opciones: ["if () {}", "if {}", "if [] {}", "if <> {}"],
         correcta: 0,
         explicacion: " La correcta es if () {} porque esa es la forma básica de una condición if en JavaScript: condición entre paréntesis y bloque entre llaves. Las otras formas no usan la sintaxis estándar correcta."
