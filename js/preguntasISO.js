@@ -22,7 +22,7 @@ const preguntasISO = [
       "kernel --show"
     ],
     correcta: 1,
-    explicacion: " La correcta es uname -r porque ese comando muestra la versión del kernel cargado en el sistema Linux. ping sirve para probar conectividad de red; sysinfo no es el comando estándar esperado aquí; y kernel --show no es una orden habitual válida en Linux para este propósito."
+    explicacion: " La correcta es uname -r porque ese comando muestra la versión del kernel cargado en el sistema Linux; ping sirve para probar conectividad de red; sysinfo no es el comando estándar esperado aquí; y kernel --show no es una orden habitual válida en Linux para este propósito."
   },
   {
     enunciado: "¿Qué utilidad muestra mensajes del arranque relacionados con el kernel?",
