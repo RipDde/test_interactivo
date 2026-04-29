@@ -174,7 +174,7 @@ button {
 }
 
 .answer-selected {
-  background: #474747 !important;
+  background: #656565;
   border: 1px solid #7b7b7b !important;
   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.04);
   font-weight: 600;
