@@ -172,8 +172,8 @@
 
                   {corregido && (
                     <div className="explicacion">
-                      <strong> Explicación:</strong>
-                      {p.explicacion}
+                      <strong>Explicación</strong>
+                      <p>{p.explicacion}</p>
                     </div>
                   )}
                 </div>
@@ -227,12 +227,12 @@
           </div >
 
           {/* BOTÓN INFO */}
-          < button className="btn-info-preguntas" >
+          <button className="btn-info-preguntas" >
             {preguntasActuales.length} preguntas disponibles
           </button >
 
           {/* FINALIZAR */}
-          < div className="result-section" >
+          <div className="result-section" >
             <button
               className="btn-correct"
               onClick={() => {

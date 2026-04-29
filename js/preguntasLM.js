@@ -100,6 +100,30 @@ const preguntasLM = [
         explicacion: " La correcta es Transformar XML porque XSL, y en concreto XSLT, se usa para transformar documentos XML a otros formatos como HTML, texto u otro XML. No se usa para validar, eso sería más propio de DTD o XSD; y tampoco para crear bases de datos o comprimir archivos."
     },
     {
+        enunciado: "¿Qué propiedad define el color de fondo de un elemento?",
+        opciones: ["background-color", "color", "bg-color", "background"],
+        correcta: 0,
+        explicacion: " La correcta es background-color porque esa propiedad define el color de fondo del elemento. color cambia el color del texto; bg-color no es una propiedad CSS válida; y background es una propiedad abreviada más amplia, pero la específica para color de fondo es background-color."
+    },
+    {
+        enunciado: "¿Qué propiedad define una imagen de fondo?",
+        opciones: ["background-img", "background-image", "background-src", "image-background"],
+        correcta: 1,
+        explicacion: " La correcta es background-image porque esa propiedad se usa para establecer una imagen de fondo en CSS. background-img, background-src e image-background no son propiedades estándar válidas."
+    },
+    {
+        enunciado: "¿Qué valor evita que la imagen de fondo se repita?",
+        opciones: ["repeat: none", "background-repeat: 0", "background-repeat: no-repeat", "background-image: single"],
+        correcta: 2,
+        explicacion: " La correcta es background-repeat: no-repeat porque esa es la sintaxis válida para impedir que la imagen de fondo se repita. repeat: none no es una declaración correcta; background-repeat: 0 tampoco; y background-image: single no existe como valor estándar."
+    },
+    {
+        enunciado: "¿Qué propiedad controla la posición de la imagen de fondo?",
+        opciones: ["background-align", "background-position", "background-place", "background-origin"],
+        correcta: 1,
+        explicacion: " La correcta es background-position porque esa propiedad define dónde se coloca la imagen de fondo dentro del elemento. background-align y background-place no son propiedades estándar; y background-origin define desde qué caja empieza a dibujarse el fondo, no su posición visual exacta."
+    },
+    {
         enunciado: "align-items en Flexbox",
         opciones: ["ordenar", "alinear vertical", "cambiar dirección", "ocultar"],
         correcta: 1,
@@ -171,6 +195,8 @@ const preguntasLM = [
         correcta: 2,
         explicacion: " La correcta es Que el documento sigue el estándar HTML5 porque <!DOCTYPE html> indica al navegador que debe interpretar la página en modo estándar HTML5. No dice nada sobre la versión del navegador; no significa que el documento use XHTML; y tampoco garantiza que haya etiquetas semánticas dentro."
     },
+    /*VISTO HASTA AQUÍ*/
+    
     {
         enunciado: "¿Cuál es la función principal del elemento <main>?",
         opciones: [
@@ -463,30 +489,7 @@ const preguntasLM = [
         correcta: 2,
         explicacion: " La correcta es :hover porque esa pseudoclase se aplica cuando el puntero del ratón está sobre el elemento. :active se usa durante la activación o clic; :focus cuando el elemento recibe foco; y :visited en enlaces ya visitados."
     },
-    {
-        enunciado: "¿Qué propiedad define el color de fondo de un elemento?",
-        opciones: ["background-color", "color", "bg-color", "background"],
-        correcta: 0,
-        explicacion: " La correcta es background-color porque esa propiedad define el color de fondo del elemento. color cambia el color del texto; bg-color no es una propiedad CSS válida; y background es una propiedad abreviada más amplia, pero la específica para color de fondo es background-color."
-    },
-    {
-        enunciado: "¿Qué propiedad define una imagen de fondo?",
-        opciones: ["background-img", "background-image", "background-src", "image-background"],
-        correcta: 1,
-        explicacion: " La correcta es background-image porque esa propiedad se usa para establecer una imagen de fondo en CSS. background-img, background-src e image-background no son propiedades estándar válidas."
-    },
-    {
-        enunciado: "¿Qué valor evita que la imagen de fondo se repita?",
-        opciones: ["repeat: none", "background-repeat: 0", "background-repeat: no-repeat", "background-image: single"],
-        correcta: 2,
-        explicacion: " La correcta es background-repeat: no-repeat porque esa es la sintaxis válida para impedir que la imagen de fondo se repita. repeat: none no es una declaración correcta; background-repeat: 0 tampoco; y background-image: single no existe como valor estándar."
-    },
-    {
-        enunciado: "¿Qué propiedad controla la posición de la imagen de fondo?",
-        opciones: ["background-align", "background-position", "background-place", "background-origin"],
-        correcta: 1,
-        explicacion: " La correcta es background-position porque esa propiedad define dónde se coloca la imagen de fondo dentro del elemento. background-align y background-place no son propiedades estándar; y background-origin define desde qué caja empieza a dibujarse el fondo, no su posición visual exacta."
-    },
+    
     {
         enunciado: "¿Qué valor centra una imagen de fondo horizontal y verticalmente?",
         opciones: ["center", "50%", "center center", "middle middle"],
