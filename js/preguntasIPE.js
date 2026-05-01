@@ -1310,5 +1310,150 @@
         ],
         correcta: 2,
       },
+      {
+        enunciado: "¿Cuál es la norma básica que regula las relaciones laborales en España?",
+        opciones: ["Código Civil", "Ley General Tributaria", "Estatuto de los Trabajadores", "Estatuto Básico del Empleado Público"],
+        correcta: 2
+    },
+    {
+        enunciado: "El Derecho del Trabajo regula:",
+        opciones: ["Solo las relaciones entre empresas", "Las relaciones entre empresarios y trabajadores", "Las relaciones entre consumidores y empresas", "Solo las relaciones con la Administración"],
+        correcta: 1
+    },
+    {
+        enunciado: "Para que exista relación laboral deben darse ciertos elementos. ¿Cuál de los siguientes es uno de ellos?",
+        opciones: ["Competencia empresarial", "Independencia", "Voluntariedad", "Autonomía"],
+        correcta: 2
+    },
+    {
+        enunciado: "Un trabajador presta sus servicios libremente sin imposición. ¿Qué elemento de la relación laboral se cumple?",
+        opciones: ["Dependencia", "Voluntariedad", "Remuneración", "Ajeneidad"],
+        correcta: 1
+    },
+    {
+        enunciado: "Cuando el trabajador está sometido a la organización del empresario se habla de:",
+        opciones: ["Remuneración", "Jerarquía normativa", "Ajenidad", "Dependencia"],
+        correcta: 3
+    },
+    {
+        enunciado: "Cuando los beneficios y riesgos del negocio pertenecen al empresario hablamos de:",
+        opciones: ["Ajenidad", "Dependencia", "Personalidad", "Subordinación jurídica"],
+        correcta: 0
+    },
+    {
+        enunciado: "¿Cuál de las siguientes situaciones no se considera relación laboral?",
+        opciones: ["Empleado administrativo en una empresa", "Trabajo voluntario en una ONG sin salario", "Dependiente en una tienda", "Trabajador contratado en una empresa"],
+        correcta: 1
+    },
+    {
+        enunciado: "¿Cuál de los siguientes colectivos tiene una relación laboral excluida?",
+        opciones: ["Personal del hogar", "Alta dirección", "Funcionarios públicos", "Deportistas profesionales"],
+        correcta: 2
+    },
+    {
+        enunciado: "¿Cuál de los siguientes casos se considera relación laboral especial?",
+        opciones: ["Funcionarios", "Deportistas profesionales", "Trabajo por amistad", "Trabajo familiar hasta segundo grado"],
+        correcta: 1
+    },
+    {
+        enunciado: "Los trabajos realizados por amistad o buena vecindad se consideran:",
+        opciones: ["Relación laboral común", "Relación laboral especial", "Relación laboral excluida", "Relación funcional"],
+        correcta: 2
+    },
+    {
+        enunciado: "Un administrador de una sociedad mercantil normalmente tiene una relación:",
+        opciones: ["Laboral común", "Laboral especial", "Excluida del ámbito laboral", "Funcionarial"],
+        correcta: 2
+    },
+    {
+        enunciado: "Dentro de la jerarquía normativa laboral, ¿qué norma tiene mayor rango?",
+        opciones: ["Constitución", "Reglamento", "Contrato de trabajo", "Convenio colectivo"],
+        correcta: 0
+    },
+    {
+        enunciado: "¿Cuál de las siguientes normas tiene rango de ley?",
+        opciones: ["Circular administrativa", "Real Decreto-ley", "Orden ministerial", "Instrucción"],
+        correcta: 1
+    },
+    {
+        enunciado: "El Estatuto de los Trabajadores es un ejemplo de:",
+        opciones: ["Norma con rango de ley", "Reglamento", "Tratado Internacional", "Uso y costumbre"],
+        correcta: 0
+    },
+    {
+        enunciado: "Los convenios colectivos forman parte de:",
+        opciones: ["Jurisprudencia", "Autonomía colectiva", "Reglamentos", "Derecho internacional"],
+        correcta: 1
+    },
+    {
+        enunciado: "Los usos y costumbres laborales se aplican cuando:",
+        opciones: ["Lo decide el empresario", "La ley no regula una situación", "El trabajador lo solicita", "Lo establece el contrato"],
+        correcta: 1
+    },
+    {
+        enunciado: "La jurisprudencia laboral está formada por:",
+        opciones: ["Convenios colectivos", "Reglamentos", "Sentencias del Tribunal Supremo", "Órdenes ministeriales"],
+        correcta: 2
+    },
+    {
+        enunciado: "Las normas de la Unión Europea forman parte de:",
+        opciones: ["Fuentes externas del derecho laboral", "Autonomía colectiva", "Usos y costumbres", "Fuentes internas"],
+        correcta: 0
+    },
+    {
+        enunciado: "¿Cuál de los siguientes no es un principio de aplicación de las normas laborales?",
+        opciones: ["Norma mínima", "Norma más favorable", "Principio de productividad", "In dubio pro operario"],
+        correcta: 2
+    },
+    {
+        enunciado: "El principio de norma mínima significa que:",
+        opciones: ["Solo se puede mejorar lo establecido en normas superiores", "Se aplican siempre las normas más antiguas", "La empresa decide qué norma aplicar", "Las normas pueden empeorar la ley"],
+        correcta: 0
+    },
+    {
+        enunciado: "El principio de norma más favorable se aplica cuando:",
+        opciones: ["La empresa quiere modificar el contrato", "Hay dos normas aplicables al mismo caso", "El trabajador cambia de empresa", "Hay dudas en una norma"],
+        correcta: 1
+    },
+    {
+        enunciado: "El principio in dubio pro operario significa que:",
+        opciones: ["Se interpreta la norma a favor del trabajador cuando hay duda", "Decide el empresario", "Se aplica siempre el convenio colectivo", "Se aplica la norma más antigua"],
+        correcta: 0
+    },
+    {
+        enunciado: "El principio de irrenunciabilidad de derechos implica que:",
+        opciones: ["El trabajador puede renuncia al salario mínimo", "El trabajador no puede renunciar a derechos reconocidos por la ley", "La empresa puede eliminar derechos si el trabajador acepta", "El trabajador puede renunciar a vacaciones"],
+        correcta: 1
+    },
+    {
+        enunciado: "Una empresa ofrece 35 días de vacaciones aunque el convenio establece 30. ¿Qué principio se aplica?",
+        opciones: ["Jerarquía normativa", "Norma mínima", "Condición más beneficiosa", "Usos y costumbres"],
+        correcta: 2
+    },
+    {
+        enunciado: "Si un trabajador tiene dos convenios aplicables y uno establece mejores condiciones salariales:",
+        opciones: ["Se aplica el más favorable al trabajador", "Se aplica el más antiguo", "Decide la empresa", "Se aplica el de menor rango"],
+        correcta: 0
+    },
+    {
+        enunciado: "Si una norma puede interpretarse de dos formas y una beneficia más al trabajador:",
+        opciones: ["Se aplica la más restrictiva", "Decide el empresario", "Se aplica la interpretación más favorable al trabajador", "Se aplica el convenio colectivo"],
+        correcta: 2
+    },
+    {
+        enunciado: "Un trabajador firma un documento renunciando a sus vacaciones anuales. Según el derecho laboral:",
+        opciones: ["Es válido si lo firma voluntariamente", "No es válido por el principio de irrenunciabilidad", "Es válido si lo permite la empresa", "Es válido si lo autoriza el convenio"],
+        correcta: 1
+    },
+    {
+        enunciado: "Un hijo trabaja ocasionalmente en el negocio familiar conviviendo con los padres. Se considera:",
+        opciones: ["Relación laboral excluida", "Relación laboral común", "Relación laboral especial", "Relación funcionarial"],
+        correcta: 0
+    },
+    {
+        enunciado: "Una persona vende productos para una empresa pero asume el riesgo económico de la operación. Se considera:",
+        opciones: ["Relación laboral común", "Relación laboral especial", "Relación laboral excluida", "Relación funcional"],
+        correcta: 2
+    }
 
     ];

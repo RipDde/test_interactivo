@@ -345,10 +345,6 @@ const preguntasLM = [
         correcta: 2,
         explicacion: " La correcta es <figcaption> porque esa etiqueta aporta el texto descriptivo o pie de una <figure>. <caption> se usa en tablas; <description> no es una etiqueta HTML estándar; y <legend> se usa en formularios con <fieldset>."
     },
-
-    /*VISTO HASTA AQUÍ*/
-
-
     {
         enunciado: "¿Qué atributo mejora la accesibilidad indicando la finalidad de un enlace?",
         opciones: ["href", "target", "aria-label", "rel"],
@@ -633,12 +629,7 @@ const preguntasLM = [
     },
     {
         enunciado: "¿Qué requisito es imprescindible en un XML bien formado?",
-        opciones: [
-            "Un único elemento raíz",
-            "Comentarios en cada sección",
-            "Doctype obligatorio",
-            "CDATA en todo texto"
-        ],
+        opciones: ["Un único elemento raíz", "Comentarios en cada sección", "Doctype obligatorio", "CDATA en todo texto"],
         correcta: 0,
         explicacion: " La correcta es Un único elemento raíz porque un XML bien formado debe tener un solo elemento principal que contenga todo lo demás. No es obligatorio poner comentarios en cada sección; el doctype no es imprescindible para que esté bien formado; y tampoco hace falta usar CDATA en todo el texto."
     },
@@ -684,6 +675,9 @@ const preguntasLM = [
         correcta: 3,
         explicacion: " La correcta es flex-direction porque esa propiedad define si los elementos flex se colocan en fila, columna o en orden inverso. align-content y align-items sirven para alineación; y justify-items no es la propiedad estándar que se usa aquí en Flexbox."
     },
+    /*VISTO HASTA AQUÍ*/
+
+    
     {
         enunciado: "Breakpoint de Bootstrap que empieza en ~768 px",
         opciones: ["xxl", "md", "lg", "xl"],
