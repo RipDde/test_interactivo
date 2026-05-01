@@ -390,12 +390,7 @@ const preguntasPAR = [
         correcta: 1,
         explicacion: " La correcta es TCP 179 porque BGP (Border Gateway Protocol) establece sus sesiones mediante ese puerto TCP. UDP 520 corresponde a RIP; TCP 22 se usa para SSH (Secure Shell); y UDP 67/68 pertenece a DHCP (Dynamic Host Configuration Protocol)."
     },
-    {
-        enunciado: "¿Cuál NO es un atributo típico de BGP?",
-        opciones: ["AS-PATH", "LOCAL_PREF", "MED", "Hop Count"],
-        correcta: 3,
-        explicacion: " La correcta es Hop Count porque ese no es un atributo típico de BGP (Border Gateway Protocol). AS-PATH sí se usa para ver por qué sistemas autónomos pasa una ruta; LOCAL_PREF sirve para preferencia interna; y MED (Multi-Exit Discriminator) influye en la elección entre varios puntos de entrada. Hop Count es más propio de protocolos como RIP."
-    },
+    
     {
         enunciado: "¿Qué comando muestra la tabla de rutas en un router Cisco?",
         opciones: ["show interfaces", "show ip route", "show ip protocols", "show arp"],
@@ -1980,6 +1975,12 @@ const preguntasPAR = [
         opciones: ["90", "110", "170", "200"],
         correcta: 3,
         explicacion: " La correcta es 200 porque iBGP tiene por defecto una distancia administrativa mayor que eBGP en Cisco. 20 corresponde a eBGP; 110 a OSPF; y 90 a EIGRP interno."
+    },
+    {
+        enunciado: "¿Cuál NO es un atributo típico de BGP? (la profesora dice que no hace falta sabérselos)",
+        opciones: ["AS-PATH", "LOCAL_PREF", "MED", "Hop Count"],
+        correcta: 3,
+        explicacion: " La correcta es Hop Count porque ese no es un atributo típico de BGP (Border Gateway Protocol). AS-PATH sí se usa para ver por qué sistemas autónomos pasa una ruta; LOCAL_PREF sirve para preferencia interna; y MED (Multi-Exit Discriminator) influye en la elección entre varios puntos de entrada. Hop Count es más propio de protocolos como RIP."
     },
     */
 
