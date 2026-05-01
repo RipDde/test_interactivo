@@ -1164,18 +1164,7 @@ const preguntasPAR = [
         correcta: 2,
         explicacion: " La correcta es 110 porque esa es la distancia administrativa por defecto de OSPF en Cisco. 90 se asocia a EIGRP interno; 120 a RIP; y 100 no es la cifra estándar por defecto para OSPF."
     },
-    {
-        enunciado: "Distancia administrativa de eBGP por defecto:",
-        opciones: ["20", "90", "110", "200"],
-        correcta: 0,
-        explicacion: " La correcta es 20 porque eBGP tiene una distancia administrativa muy baja por defecto en Cisco, de modo que suele preferirse frente a muchas otras rutas. 200 es la de iBGP; 110 la de OSPF; y 90 la de EIGRP interno."
-    },
-    {
-        enunciado: "Distancia administrativa de iBGP:",
-        opciones: ["90", "110", "170", "200"],
-        correcta: 3,
-        explicacion: " La correcta es 200 porque iBGP tiene por defecto una distancia administrativa mayor que eBGP en Cisco. 20 corresponde a eBGP; 110 a OSPF; y 90 a EIGRP interno."
-    },
+    
     {
         enunciado: "La métrica por defecto de EIGRP considera:",
         opciones: ["Ancho de banda y retardo", "Saltos", "Costo genérico", "Latencia y jitter"],
@@ -1200,13 +1189,7 @@ const preguntasPAR = [
         correcta: 0,
         explicacion: " La correcta es network X mask Y porque ese es el comando usado en BGP para anunciar una red concreta, siempre que exista en la tabla de rutas. ip route X Y crea rutas estáticas; redistribute connected hace otra técnica distinta; y router-id X solo define el identificador del proceso."
     },
-    {
-        enunciado: "¿Qué atributo BGP es local y específico de Cisco?",
-        opciones: ["LOCAL_PREF", "MED", "WEIGHT", "AS-PATH"],
-        correcta: 2,
-        explicacion: " La correcta es WEIGHT porque es un atributo local de Cisco y no se propaga a otros routers BGP. LOCAL_PREF sí se usa dentro del AS; MED puede anunciarse a vecinos externos; y AS-PATH refleja el camino por sistemas autónomos."
-    },
-
+    
     {
         enunciado: "HSRP envía hellos a:",
         opciones: ["224.0.0.18 UDP 1985", "224.0.0.2 UDP 1985", "224.0.0.102 UDP 3222", "224.0.0.5 IP 89"],
@@ -1979,6 +1962,24 @@ const preguntasPAR = [
         opciones: ["logging buffered 4096", "log buffer on", "service timestamps log", "logging console"],
         correcta: 0,
         explicacion: " La correcta es logging buffered 4096 porque ese comando activa el almacenamiento de logs en el buffer del dispositivo e indica su tamaño. log buffer on no es el comando estándar; service timestamps log añade marcas de tiempo; y logging console envía mensajes a la consola, no al buffer."
+    },
+    {
+        enunciado: "¿Qué atributo BGP es local y específico de Cisco? (fuera temario)",
+        opciones: ["LOCAL_PREF", "MED", "WEIGHT", "AS-PATH"],
+        correcta: 2,
+        explicacion: " La correcta es WEIGHT porque es un atributo local de Cisco y no se propaga a otros routers BGP. LOCAL_PREF sí se usa dentro del AS; MED puede anunciarse a vecinos externos; y AS-PATH refleja el camino por sistemas autónomos."
+    },
+{
+        enunciado: "Distancia administrativa de eBGP por defecto (fuera temario):",
+        opciones: ["20", "90", "110", "200"],
+        correcta: 0,
+        explicacion: " La correcta es 20 porque eBGP tiene una distancia administrativa muy baja por defecto en Cisco, de modo que suele preferirse frente a muchas otras rutas. 200 es la de iBGP; 110 la de OSPF; y 90 la de EIGRP interno."
+    },
+    {
+        enunciado: "Distancia administrativa de iBGP (fuera temario):",
+        opciones: ["90", "110", "170", "200"],
+        correcta: 3,
+        explicacion: " La correcta es 200 porque iBGP tiene por defecto una distancia administrativa mayor que eBGP en Cisco. 20 corresponde a eBGP; 110 a OSPF; y 90 a EIGRP interno."
     },
     */
 
