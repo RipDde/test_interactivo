@@ -195,8 +195,6 @@ const preguntasLM = [
         correcta: 2,
         explicacion: " La correcta es Que el documento sigue el estándar HTML5 porque <!DOCTYPE html> indica al navegador que debe interpretar la página en modo estándar HTML5. No dice nada sobre la versión del navegador; no significa que el documento use XHTML; y tampoco garantiza que haya etiquetas semánticas dentro."
     },
-    /*VISTO HASTA AQUÍ*/
-    
     {
         enunciado: "¿Cuál es la función principal del elemento <main>?",
         opciones: [
@@ -347,6 +345,10 @@ const preguntasLM = [
         correcta: 2,
         explicacion: " La correcta es <figcaption> porque esa etiqueta aporta el texto descriptivo o pie de una <figure>. <caption> se usa en tablas; <description> no es una etiqueta HTML estándar; y <legend> se usa en formularios con <fieldset>."
     },
+
+    /*VISTO HASTA AQUÍ*/
+
+
     {
         enunciado: "¿Qué atributo mejora la accesibilidad indicando la finalidad de un enlace?",
         opciones: ["href", "target", "aria-label", "rel"],
@@ -489,7 +491,7 @@ const preguntasLM = [
         correcta: 2,
         explicacion: " La correcta es :hover porque esa pseudoclase se aplica cuando el puntero del ratón está sobre el elemento. :active se usa durante la activación o clic; :focus cuando el elemento recibe foco; y :visited en enlaces ya visitados."
     },
-    
+
     {
         enunciado: "¿Qué valor centra una imagen de fondo horizontal y verticalmente?",
         opciones: ["center", "50%", "center center", "middle middle"],
@@ -1328,22 +1330,31 @@ const preguntasLM = [
         correcta: 1,
         explicacion: " La correcta es 22 porque en JavaScript el operador + con una cadena provoca concatenación, convirtiendo el número a texto. No devuelve 4 porque no hace una suma numérica pura aquí; tampoco NaN; y no genera error."
     },
-    {
-        enunciado: "¿Qué palabra clave detiene un bucle? (no temario)", /*aparece en el temario pero la profesora dice que de JavaScript solo cae hasta las sumas, por lo tanto esta no entra*/
-        opciones: ["break", "stop", "end", "halt"],
-        correcta: 0,
-        explicacion: " La correcta es break porque esa palabra clave interrumpe la ejecución de un bucle en JavaScript. stop, end y halt no son las palabras clave estándar para detenerlo."
-    },
-    {
-        enunciado: "¿Qué estructura usa if? (no temario)", /*aparece en el temario pero la profesora dice que de JavaScript solo cae hasta las sumas, por lo tanto esta no entra*/
-        opciones: ["if () {}", "if {}", "if [] {}", "if <> {}"],
-        correcta: 0,
-        explicacion: " La correcta es if () {} porque esa es la forma básica de una condición if en JavaScript: condición entre paréntesis y bloque entre llaves. Las otras formas no usan la sintaxis estándar correcta."
-    },
+
     {
         enunciado: "¿Cómo se escribe un comentario de varias líneas?",
         opciones: ["// comentario //", "<!-- comentario -->", "/* comentario */", "** comentario **"],
         correcta: 2,
         explicacion: " La correcta es /* comentario */ porque esa es la sintaxis estándar de comentarios multilínea en JavaScript. // comentario // es para una línea; <!-- --> es de HTML/XML; y ** comentario ** no es una sintaxis válida."
     },
+
+    /* JavaScriipt --> aparece en el temario pero la profesora dice que de JavaScript solo cae hasta las sumas, por lo tanto esta no entra
+    
+    
+    {
+         enunciado: "¿Qué palabra clave detiene un bucle? (no temario)",
+         opciones: ["break", "stop", "end", "halt"],
+         correcta: 0,
+         explicacion: " La correcta es break porque esa palabra clave interrumpe la ejecución de un bucle en JavaScript. stop, end y halt no son las palabras clave estándar para detenerlo."
+     },
+     {
+         enunciado: "¿Qué estructura usa if? (no temario)",
+         opciones: ["if () {}", "if {}", "if [] {}", "if <> {}"],
+         correcta: 0,
+         explicacion: " La correcta es if () {} porque esa es la forma básica de una condición if en JavaScript: condición entre paréntesis y bloque entre llaves. Las otras formas no usan la sintaxis estándar correcta."
+     },
+    
+    
+    
+    */
 ];
