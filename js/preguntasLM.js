@@ -675,9 +675,6 @@ const preguntasLM = [
         correcta: 3,
         explicacion: " La correcta es flex-direction porque esa propiedad define si los elementos flex se colocan en fila, columna o en orden inverso. align-content y align-items sirven para alineación; y justify-items no es la propiedad estándar que se usa aquí en Flexbox."
     },
-    /*VISTO HASTA AQUÍ*/
-
-    
     {
         enunciado: "Breakpoint de Bootstrap que empieza en ~768 px",
         opciones: ["xxl", "md", "lg", "xl"],
@@ -783,7 +780,6 @@ const preguntasLM = [
         correcta: 1,
         explicacion: " La correcta es aria-label porque permite dar una etiqueta accesible a elementos que no muestran texto visible. role define el tipo de elemento para accesibilidad; aria-hidden lo oculta a tecnologías de asistencia; y tabindex controla la navegación por teclado."
     },
-
     {
         enunciado: "¿Cuál es la unidad fraccionaria en Grid?",
         opciones: ["px", "%", "fr", "em"],
@@ -823,9 +819,9 @@ const preguntasLM = [
     },
     {
         enunciado: "Significado de XSLT",
-        opciones: ["XML Standard", "X Stylesheet Transformations", "Extensible Language Transformations", "X-Mark Template"],
+        opciones: ["XML Standard", "X Stylesheet Transformations", "Extensible Stylesheet Language Transformations", "X-Mark Template"],
         correcta: 2,
-        explicacion: " La correcta es Extensible Language Transformations porque, entre las opciones dadas, es la que más se aproxima al significado esperado en clase de XSLT; aunque el nombre exacto completo es Extensible Stylesheet Language Transformations. Las otras opciones son claramente incorrectas o están demasiado incompletas."
+        explicacion: " La correcta es Extensible Stylesheet Language Transformations porque, entre las opciones dadas, es la que más se aproxima al significado esperado en clase de XSLT; aunque el nombre exacto completo es Extensible Stylesheet Language Transformations. Las otras opciones son claramente incorrectas o están demasiado incompletas."
     },
     {
         enunciado: "Clase fila en BS5",
@@ -839,14 +835,12 @@ const preguntasLM = [
         correcta: 1,
         explicacion: " La correcta es col- porque ese es el prefijo de Bootstrap 5 para definir columnas, como col-6 o col-md-4. row- corresponde a filas en otros usos, y grid- o bs- no son el prefijo estándar para las columnas del sistema grid."
     },
-
     {
         enunciado: "Versión indicada de Bootstrap",
         opciones: ["3", "4", "5", "2"],
         correcta: 2,
         explicacion: " La correcta es 5 porque, entre esas opciones, es la versión de Bootstrap indicada en este temario. 3 y 4 son versiones anteriores; y 2 es todavía más antigua. La pregunta no pide la versión más reciente absoluta, sino la versión indicada o trabajada aquí."
     },
-
     {
         enunciado: "Etiqueta XSLT value-of",
         opciones: ["xsl:read", "xsl:choose", "xsl:value-of", "xsl:select"],
@@ -909,6 +903,10 @@ const preguntasLM = [
         correcta: 1,
         explicacion: " La correcta es <!-- --> porque esa es la sintaxis estándar de comentarios en XML. // se usa en otros lenguajes; ## no es sintaxis válida; y /**/ es típico de comentarios en lenguajes como CSS o JavaScript, no de XML."
     },
+
+    /*VISTO HASTA AQUÍ*/   
+    
+    
     {
         enunciado: "Lenguaje para transformar XML",
         opciones: ["XQuery", "HTML", "XSLT", "JSON"],

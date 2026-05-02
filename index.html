@@ -18,9 +18,11 @@
   <link rel="stylesheet" href="style.css" />
 
   <script src="js/preguntasFH.js"></script>
+  <script src="js/preguntasBD.js"></script>
   <script src="js/preguntasISO.js"></script>
   <script src="js/preguntasIPE.js"></script>
   <script src="js/preguntasLM.js"></script>
+  <script src="js/preguntasMPO.js"></script>
   <script src="js/preguntasPAR.js"></script>
 
 
@@ -45,12 +47,16 @@
 
       if (asignatura === "FH") {
         preguntasActuales = preguntasFH;
+      } else if (asignatura === "BD") {
+        preguntasActuales = preguntasBD;
       } else if (asignatura === "ISO") {
         preguntasActuales = preguntasISO;
       } else if (asignatura === "IPE") {
         preguntasActuales = preguntasIPE;
       } else if (asignatura === "LM") {
         preguntasActuales = preguntasLM;
+      } else if (asignatura === "MPO") {
+        preguntasActuales = preguntasMPO;
       } else if (asignatura === "PAR") {
         preguntasActuales = preguntasPAR;
       }
@@ -110,6 +116,13 @@
                   </button>
 
                   <button
+                    className={`nav-btn ${asignatura === "BD" ? "nav-btn-active" : ""}`}
+                    onClick={() => setAsignatura("BD")}
+                  >
+                    BD
+                  </button>
+
+                  <button
                     className={`nav-btn ${asignatura === "ISO" ? "nav-btn-active" : ""}`}
                     onClick={() => setAsignatura("ISO")}
                   >
@@ -128,6 +141,13 @@
                     onClick={() => setAsignatura("LM")}
                   >
                     LM
+                  </button>
+
+                  <button
+                    className={`nav-btn ${asignatura === "MPO" ? "nav-btn-active" : ""}`}
+                    onClick={() => setAsignatura("MPO")}
+                  >
+                    MPO
                   </button>
 
                   <button
