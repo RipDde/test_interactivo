@@ -17,8 +17,8 @@
 
   <link rel="stylesheet" href="style.css" />
 
-  <script src="js/preguntasFH.js"></script>
   <script src="js/preguntasBD.js"></script>
+  <script src="js/preguntasFH.js"></script>
   <script src="js/preguntasISO.js"></script>
   <script src="js/preguntasIPE.js"></script>
   <script src="js/preguntasLM.js"></script>
@@ -45,10 +45,10 @@
 
       let preguntasActuales;
 
-      if (asignatura === "FH") {
-        preguntasActuales = preguntasFH;
-      } else if (asignatura === "BD") {
+      if (asignatura === "BD") {
         preguntasActuales = preguntasBD;
+      } else if (asignatura === "FH") {
+        preguntasActuales = preguntasFH;
       } else if (asignatura === "ISO") {
         preguntasActuales = preguntasISO;
       } else if (asignatura === "IPE") {
@@ -109,17 +109,17 @@
 
                 <div className="nav-asignaturas">
                   <button
-                    className={`nav-btn ${asignatura === "FH" ? "nav-btn-active" : ""}`}
-                    onClick={() => setAsignatura("FH")}
-                  >
-                    FH
-                  </button>
-
-                  <button
                     className={`nav-btn ${asignatura === "BD" ? "nav-btn-active" : ""}`}
                     onClick={() => setAsignatura("BD")}
                   >
                     BD
+                  </button>
+
+                  <button
+                    className={`nav-btn ${asignatura === "FD" ? "nav-btn-active" : ""}`}
+                    onClick={() => setAsignatura("FH")}
+                  >
+                    FH
                   </button>
 
                   <button

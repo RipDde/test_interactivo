@@ -903,10 +903,6 @@ const preguntasLM = [
         correcta: 1,
         explicacion: " La correcta es <!-- --> porque esa es la sintaxis estándar de comentarios en XML. // se usa en otros lenguajes; ## no es sintaxis válida; y /**/ es típico de comentarios en lenguajes como CSS o JavaScript, no de XML."
     },
-
-    /*VISTO HASTA AQUÍ*/   
-    
-    
     {
         enunciado: "Lenguaje para transformar XML",
         opciones: ["XQuery", "HTML", "XSLT", "JSON"],
@@ -944,7 +940,7 @@ const preguntasLM = [
         explicacion: " La correcta es center porque, en el contexto típico de alineación vertical en Flexbox con align-items, center centra los ítems en el eje cruzado. start los lleva al inicio; stretch los estira; y baseline los alinea por la línea base del texto."
     },
     {
-        enunciado: "Documento validar XML",
+        enunciado: "Documento validar XML (rebuscada)",
         opciones: ["HTML-Schema", "XML-Schema", "JSON-Schema", "XLS-Schema"],
         correcta: 1,
         explicacion: " La correcta es XML-Schema porque XML Schema, también conocido como XSD, se usa para validar la estructura y tipos de datos de un XML. HTML-Schema y XLS-Schema no son estándares correctos aquí; y JSON-Schema es para JSON, no para XML."
@@ -981,7 +977,7 @@ const preguntasLM = [
     },
     {
         enunciado: "flex-wrap permite",
-        opciones: ["no-wrap y wrap", "fold y no-fold", "overflow y overflow-auto", "wrapping y no-wrapping"],
+        opciones: ["nowrap y wrap", "fold y no-fold", "overflow y overflow-auto", "wrapping y no-wrapping"],
         correcta: 0,
         explicacion: " La correcta es no-wrap y wrap porque flex-wrap controla si los ítems flex saltan a otra línea o no. fold y no-fold no son valores CSS válidos; overflow y overflow-auto pertenecen a otra propiedad; y wrapping/no-wrapping tampoco son los valores estándar."
     },
@@ -1059,7 +1055,7 @@ const preguntasLM = [
         explicacion: " La correcta es flex-shrink porque controla cuánto puede encogerse un ítem flex si falta espacio. flex-grow controla crecimiento; flex-flow combina direction y wrap; y flex-size no es una propiedad estándar de Flexbox."
     },
     {
-        enunciado: "align-content espacio vertical",
+        enunciado: "align-content espacio vertical (pregunta no bien planteada)",
         opciones: ["stretch", "center", "space-between", "flex-end"],
         correcta: 2,
         explicacion: " La correcta es space-between porque, entre esos valores, reparte el espacio disponible entre líneas en el eje cruzado dejando separación interna. stretch estira; center centra; y flex-end lleva el contenido al final. Aquí se pregunta por el valor que reparte espacio vertical."
@@ -1088,6 +1084,12 @@ const preguntasLM = [
         correcta: 1,
         explicacion: " La correcta es xsl:apply-template porque, tal como está planteada la pregunta, esa es la opción que intenta representar la instrucción usada para aplicar plantillas en XSLT; la forma exacta estándar es xsl:apply-templates. xsl:templates no es la etiqueta correcta; xsl:tem plates-apply no existe; y xsl:template-call tampoco es la instrucción estándar de XSLT."
     },
+
+    /*VISTO HASTA AQUÍ*/
+
+
+
+
     {
         enunciado: "DTD interno",
         opciones: ["DTD", "DOCTYPE", "definition", "XML-DTD"],
@@ -1233,7 +1235,7 @@ const preguntasLM = [
         explicacion: " La correcta es console.log() porque esa es la forma habitual en JavaScript de escribir mensajes en la consola del navegador. print() no es la función estándar para eso; log() sola no funciona así en este contexto; y alert() muestra una ventana emergente, no escribe en consola."
     },
     {
-        enunciado: "¿Cuál es el símbolo para comentarios de una línea?",
+        enunciado: "¿Cuál es el símbolo para comentarios de una línea en JavaScript?",
         opciones: ["<!-- -->", "//", "/* */", "##"],
         correcta: 1,
         explicacion: " La correcta es // porque en JavaScript ese símbolo se usa para comentarios de una sola línea. <!-- --> es sintaxis de comentarios HTML/XML; /* */ sirve para varias líneas; y ## no es la sintaxis estándar en JavaScript."
@@ -1293,7 +1295,7 @@ const preguntasLM = [
         explicacion: " La correcta es .length porque esa propiedad indica cuántos elementos tiene un array en JavaScript. .size, .count y .items no son la propiedad estándar del array para este fin."
     },
     {
-        enunciado: "¿Cómo se convierte un número a string? (rebuscada)",
+        enunciado: "¿Cómo se convierte un número a string?",
         opciones: ["toString()", "toStr()", "string()", "makeString()"],
         correcta: 0,
         explicacion: " La correcta es toString() porque ese método convierte un valor numérico en una cadena en JavaScript. toStr() y makeString() no son métodos estándar; y string() no es la forma habitual correcta en este contexto."
