@@ -18,7 +18,7 @@ const preguntasPAR = [
         explicacion: " La correcta es ARP (Address Resolution Protocol) porque sirve para averiguar qué dirección MAC corresponde a una IP dentro de una red local. ICMP (Internet Control Message Protocol) se usa para errores y diagnóstico; DNS (Domain Name System) traduce nombres a IP; y DHCP (Dynamic Host Configuration Protocol) asigna parámetros de red."
     },
     {
-        enunciado: "¿Qué campo de una trama Ethernet se usa para detectar errores?", /*rebuscada*/
+        enunciado: "¿Qué campo de una trama Ethernet se usa para detectar errores? (rebuscada)",
         opciones: ["Tipo/Longitud", "Preamble", "FCS (CRC)", "Dirección MAC origen"],
         correcta: 2,
         explicacion: " La correcta es FCS (Frame Check Sequence), calculado con CRC (Cyclic Redundancy Check), porque sirve para comprobar si la trama llegó con errores. Tipo/Longitud indica el protocolo o tamaño; el Preamble sincroniza la transmisión; y la MAC origen solo identifica al emisor, no detecta fallos."
@@ -89,6 +89,11 @@ const preguntasPAR = [
         correcta: 3,
         explicacion: " La correcta es Malla porque ofrece varios caminos alternativos entre nodos, lo que mejora mucho la tolerancia a fallos. Bus tiene un único medio compartido; Anillo depende más del recorrido circular; y Árbol es jerárquica, pero no tan redundante como una malla."
     },
+
+    
+    /*VISTO HASTA AQUÍ*/
+
+
     {
         enunciado: "¿Qué dispositivo reduce dominios de colisión creando uno por puerto?",
         opciones: ["Hub", "Switch", "Repetidor", "Punto de acceso (AP)"],
@@ -390,7 +395,7 @@ const preguntasPAR = [
         correcta: 1,
         explicacion: " La correcta es TCP 179 porque BGP (Border Gateway Protocol) establece sus sesiones mediante ese puerto TCP. UDP 520 corresponde a RIP; TCP 22 se usa para SSH (Secure Shell); y UDP 67/68 pertenece a DHCP (Dynamic Host Configuration Protocol)."
     },
-    
+
     {
         enunciado: "¿Qué comando muestra la tabla de rutas en un router Cisco?",
         opciones: ["show interfaces", "show ip route", "show ip protocols", "show arp"],
@@ -667,7 +672,7 @@ const preguntasPAR = [
         correcta: 1,
         explicacion: " La correcta es UTP cruzado porque tradicionalmente se utilizaba para conectar dispositivos del mismo tipo, como router a router o switch a switch. UTP directo se asociaba a dispositivos distintos; coaxial pertenece a otras tecnologías; y USB-C no es el cable clásico Ethernet de ese escenario."
     },
-    
+
     {
         enunciado: "¿Qué comando muestra direcciones IP y estado up/down de interfaces rápidamente?",
         opciones: ["show ip interface brief", "show interfaces", "show cdp neighbors", "show controllers"],
@@ -752,7 +757,7 @@ const preguntasPAR = [
         correcta: 0,
         explicacion: " La correcta es 0 porque en Syslog el nivel 0 corresponde a emergencies, el más crítico de la escala. El nivel 3 corresponde a errores; el 5 a notificaciones; y el 7 a depuración, que es mucho menos grave."
     },
-    
+
     {
         enunciado: "NTP utiliza por defecto el puerto:",
         opciones: ["UDP 123", "TCP 123", "UDP 514", "TCP 514"],
@@ -1146,7 +1151,7 @@ const preguntasPAR = [
         correcta: 1,
         explicacion: " La correcta es Mayor IP de loopback porque, si no se configura manualmente el router-id, OSPF suele elegir primero la IP más alta de una loopback y, si no existe, la más alta de las interfaces activas. No usa la menor MAC, ni la menor IP activa, ni lo elige al azar."
     },
-    
+
     {
         enunciado: "RIPv2 envía actualizaciones a la dirección multicast:",
         opciones: ["224.0.0.9", "224.0.0.5", "224.0.0.10", "239.255.255.250"],
@@ -1159,7 +1164,7 @@ const preguntasPAR = [
         correcta: 2,
         explicacion: " La correcta es 110 porque esa es la distancia administrativa por defecto de OSPF en Cisco. 90 se asocia a EIGRP interno; 120 a RIP; y 100 no es la cifra estándar por defecto para OSPF."
     },
-    
+
     {
         enunciado: "La métrica por defecto de EIGRP considera:",
         opciones: ["Ancho de banda y retardo", "Saltos", "Costo genérico", "Latencia y jitter"],
@@ -1184,7 +1189,7 @@ const preguntasPAR = [
         correcta: 0,
         explicacion: " La correcta es network X mask Y porque ese es el comando usado en BGP para anunciar una red concreta, siempre que exista en la tabla de rutas. ip route X Y crea rutas estáticas; redistribute connected hace otra técnica distinta; y router-id X solo define el identificador del proceso."
     },
-    
+
     {
         enunciado: "HSRP envía hellos a:",
         opciones: ["224.0.0.18 UDP 1985", "224.0.0.2 UDP 1985", "224.0.0.102 UDP 3222", "224.0.0.5 IP 89"],

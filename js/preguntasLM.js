@@ -1085,11 +1085,6 @@ const preguntasLM = [
         explicacion: " La correcta es xsl:apply-template porque, tal como está planteada la pregunta, esa es la opción que intenta representar la instrucción usada para aplicar plantillas en XSLT; la forma exacta estándar es xsl:apply-templates. xsl:templates no es la etiqueta correcta; xsl:tem plates-apply no existe; y xsl:template-call tampoco es la instrucción estándar de XSLT."
     },
 
-    /*VISTO HASTA AQUÍ*/
-
-
-
-
     {
         enunciado: "DTD interno",
         opciones: ["DTD", "DOCTYPE", "definition", "XML-DTD"],
