@@ -89,11 +89,6 @@ const preguntasPAR = [
         correcta: 3,
         explicacion: " La correcta es Malla porque ofrece varios caminos alternativos entre nodos, lo que mejora mucho la tolerancia a fallos. Bus tiene un único medio compartido; Anillo depende más del recorrido circular; y Árbol es jerárquica, pero no tan redundante como una malla."
     },
-
-    
-    /*VISTO HASTA AQUÍ*/
-
-
     {
         enunciado: "¿Qué dispositivo reduce dominios de colisión creando uno por puerto?",
         opciones: ["Hub", "Switch", "Repetidor", "Punto de acceso (AP)"],
@@ -256,7 +251,6 @@ const preguntasPAR = [
         correcta: 1,
         explicacion: " La correcta es Designated Port porque es el puerto elegido para reenviar tráfico hacia y desde un segmento de red concreto. Root Port es el mejor camino hacia el Root Bridge; Blocked Port no reenvía tráfico normal; y Alternate Port es una ruta de respaldo en variantes como RSTP (Rapid Spanning Tree Protocol)."
     },
-    ,
     {
         enunciado: "¿Para qué sirve VTP?",
         opciones: ["Propagar rutas entre switches", "Centralizar gestión de VLANs entre switches Cisco", "Balancear carga por enlaces", "Evitar bucles de capa 2"],
@@ -395,7 +389,6 @@ const preguntasPAR = [
         correcta: 1,
         explicacion: " La correcta es TCP 179 porque BGP (Border Gateway Protocol) establece sus sesiones mediante ese puerto TCP. UDP 520 corresponde a RIP; TCP 22 se usa para SSH (Secure Shell); y UDP 67/68 pertenece a DHCP (Dynamic Host Configuration Protocol)."
     },
-
     {
         enunciado: "¿Qué comando muestra la tabla de rutas en un router Cisco?",
         opciones: ["show interfaces", "show ip route", "show ip protocols", "show arp"],
@@ -643,7 +636,7 @@ const preguntasPAR = [
         explicacion: " La correcta es 80 porque HTTP usa ese puerto TCP por defecto. 21 corresponde a FTP (File Transfer Protocol); 23 a Telnet; y 443 a HTTPS (Hypertext Transfer Protocol Secure), que no es HTTP sin cifrar."
     },
     {
-        enunciado: "En Cisco, las ACL estándar suelen numerarse en el rango:",
+        enunciado: "En Cisco, las ACL estándar suelen numerarse en el rango (fuera temario):",
         opciones: ["1–99 y 1300–1999", "100–199", "2000–2699", "300–399"],
         correcta: 0,
         explicacion: " La correcta es 1–99 y 1300–1999 porque esos son los rangos tradicionales de numeración para ACL estándar en Cisco. 100–199 y 2000–2699 se asocian a ACL extendidas; y 300–399 no es el rango clásico correcto para ACL IP estándar."
@@ -661,7 +654,7 @@ const preguntasPAR = [
         explicacion: " La correcta es enable secret y mezcla de tipos de caracteres porque mejora la seguridad del acceso administrativo en Cisco IOS. Usar menos de 8 caracteres debilita la contraseña; reutilizar la misma en todos los equipos aumenta el riesgo; y usar solo números la hace mucho más predecible."
     },
     {
-        enunciado: "En Packet Tracer, el cable ‘Console’ conecta:",
+        enunciado: "En Cisco Packet Tracer, el cable ‘Console’ conecta (rebuscada):",
         opciones: ["PC a interfaz de consola del equipo", "Switch a switch", "Router a AP", "PC a puerto WAN del router"],
         correcta: 0,
         explicacion: " La correcta es PC a interfaz de consola del equipo porque el cable Console se usa para administrar el dispositivo localmente desde un ordenador. No se emplea como enlace normal entre switches; tampoco entre router y AP; y no se conecta al puerto WAN para dar conectividad de red."
@@ -680,7 +673,7 @@ const preguntasPAR = [
         explicacion: " La correcta es show ip interface brief porque resume de forma rápida las interfaces con su IP y su estado. show interfaces da mucho más detalle y es menos resumido; show cdp neighbors muestra vecinos CDP (Cisco Discovery Protocol); y show controllers se centra en datos de hardware."
     },
     {
-        enunciado: "¿Qué indica ‘Gateway of last resort’ en la tabla de rutas?", /*rebuscada*/
+        enunciado: "¿Qué indica ‘Gateway of last resort’ en la tabla de rutas?"(rebuscada),
         opciones: ["No hay default route", "Existe una ruta por defecto configurada/aprendida", "Se usa solo para estáticas flotantes", "Es una ruta conectada"],
         correcta: 1,
         explicacion: " La correcta es Existe una ruta por defecto configurada/aprendida porque esa frase indica que el router tiene una salida por defecto para destinos desconocidos. No significa que no exista default route; tampoco que sea solo para rutas estáticas flotantes; y no implica que se trate de una red conectada directamente."
@@ -734,7 +727,7 @@ const preguntasPAR = [
         explicacion: " La correcta es Los switches aíslan dominios de colisión y operan full-duplex porque cada puerto funciona como un dominio de colisión independiente y, además, el full-duplex elimina la necesidad de competir por el medio. Siempre hay half-duplex es falso; CSMA/CA se usa sobre todo en Wi-Fi; y deshabilitar el FCS (Frame Check Sequence) no tiene relación con evitar colisiones."
     },
     {
-        enunciado: "¿Qué protocolo de descubrimiento de dispositivos es propietario de Cisco?",
+        enunciado: "¿Qué protocolo de descubrimiento de dispositivos es propietario de Cisco? (dudosa)",
         opciones: ["LLDP", "CDP", "EDP", "STP"],
         correcta: 1,
         explicacion: " La correcta es CDP porque Cisco Discovery Protocol es el protocolo propietario de Cisco para descubrir dispositivos vecinos. LLDP (Link Layer Discovery Protocol) es un estándar abierto; EDP no es la respuesta habitual en este contexto Cisco; y STP (Spanning Tree Protocol) sirve para evitar bucles, no para descubrimiento de vecinos."
@@ -745,38 +738,6 @@ const preguntasPAR = [
         correcta: 0,
         explicacion: " La correcta es show cdp neighbors porque ese comando muestra los dispositivos vecinos detectados mediante CDP (Cisco Discovery Protocol). show lldp neighbors se usa para LLDP; show arp enseña asociaciones IP-MAC; y show mac address-table muestra la tabla MAC del switch, no los vecinos CDP."
     },
-    {
-        enunciado: "El puerto por defecto para consultas SNMP es:",
-        opciones: ["UDP 161", "TCP 161", "UDP 162", "TCP 162"],
-        correcta: 0,
-        explicacion: " La correcta es UDP 161 porque ese es el puerto usado por SNMP (Simple Network Management Protocol) para consultas normales entre gestor y dispositivo. UDP 162 se usa habitualmente para traps o notificaciones; y las opciones con TCP no son las usadas por defecto en SNMP clásico."
-    },
-    {
-        enunciado: "En Syslog, ¿qué nivel corresponde a 'emergencies'?",
-        opciones: ["0", "3", "5", "7"],
-        correcta: 0,
-        explicacion: " La correcta es 0 porque en Syslog el nivel 0 corresponde a emergencies, el más crítico de la escala. El nivel 3 corresponde a errores; el 5 a notificaciones; y el 7 a depuración, que es mucho menos grave."
-    },
-
-    {
-        enunciado: "NTP utiliza por defecto el puerto:",
-        opciones: ["UDP 123", "TCP 123", "UDP 514", "TCP 514"],
-        correcta: 0,
-        explicacion: " La correcta es UDP 123 porque ese es el puerto por defecto de NTP (Network Time Protocol). TCP 123 no es el puerto habitual de este protocolo; y UDP/TCP 514 se asocian a Syslog, no a NTP."
-    },
-    {
-        enunciado: "La opción 82 de DHCP está asociada a:",
-        opciones: ["Relay agent information", "DNS primario", "Sufijo de dominio", "Tiempo de concesión"],
-        correcta: 0,
-        explicacion: " La correcta es Relay agent information porque la opción 82 añade datos del relay DHCP sobre el circuito o puerto por el que llegó la petición. No define el DNS primario; no indica el sufijo de dominio; y tampoco representa el tiempo de concesión."
-    },
-    {
-        enunciado: "El comando 'ip helper-address' sirve para:",
-        opciones: ["Actuar como relay DHCP", "Habilitar NAT", "Activar LLDP", "Iniciar OSPF"],
-        correcta: 0,
-        explicacion: " La correcta es Actuar como relay DHCP porque ip helper-address reenvía peticiones de broadcast, como las de DHCP, hacia un servidor situado en otra red. No habilita NAT (Network Address Translation); no activa LLDP; y no inicia OSPF (Open Shortest Path First)."
-    },
-
     {
         enunciado: "¿En qué capa OSI opera 802.1X?",
         opciones: ["Física", "Enlace de datos", "Red", "Transporte"],
@@ -795,36 +756,16 @@ const preguntasPAR = [
         correcta: 1,
         explicacion: " La correcta es UDP 1812/1813 porque RADIUS usa normalmente UDP 1812 para autenticación y UDP 1813 para accounting. TCP 1812/1813 no es la opción clásica; y el puerto 49, en TCP, se asocia a TACACS+."
     },
-    {
-        enunciado: "¿Qué instrucción habilita Port Security en un puerto?",
-        opciones: ["switchport port-security", "port-security enable", "security port on", "switchport secure"],
-        correcta: 0,
-        explicacion: " La correcta es switchport port-security porque esa es la sintaxis estándar de Cisco para activar Port Security en un puerto switch. Las otras opciones no corresponden al comando correcto en IOS."
-    },
-    {
-        enunciado: "¿Qué modo de violación en Port Security apaga el puerto?",
-        opciones: ["protect", "restrict", "shutdown", "monitor"],
-        correcta: 2,
-        explicacion: " La correcta es shutdown porque ese modo pone el puerto en estado err-disabled cuando se produce una violación de seguridad. protect y restrict reaccionan de forma menos severa; y monitor no es la respuesta estándar esperada en este contexto."
-    },
-    {
-        enunciado: "La característica 'sticky MAC' en Port Security:",
-        opciones: ["Aprende MACs y las convierte en estáticas", "Borra todas las MAC", "Duplica VLANs", "Apaga el puerto al ver MACs"],
-        correcta: 0,
-        explicacion: " La correcta es Aprende MACs y las convierte en estáticas porque sticky MAC permite aprender dinámicamente direcciones MAC seguras y conservarlas en la configuración. No borra todas las MAC; no duplica VLANs; y no apaga el puerto por el simple hecho de ver MACs válidas."
-    },
-    {
-        enunciado: "MTU típica de Ethernet (sin jumbo frames) es:",
-        opciones: ["1200", "1500", "9000", "576"],
-        correcta: 1,
-        explicacion: " La correcta es 1500 porque esa es la MTU (Maximum Transmission Unit) típica de Ethernet sin usar jumbo frames. 9000 suele asociarse a jumbo frames; 576 fue un valor clásico muy citado en IPv4; y 1200 no es el tamaño estándar Ethernet habitual."
-    },
-    {
-        enunciado: "¿Cuál es el MTU mínimo requerido por IPv6? (no examen)",
-        opciones: ["576", "1280", "1500", "9000"],
-        correcta: 1,
-        explicacion: " La correcta es 1280 porque IPv6 exige que los enlaces soporten al menos ese MTU mínimo. 576 es un valor clásico relacionado con IPv4; 1500 es la MTU típica de Ethernet, pero no el mínimo exigido por IPv6; y 9000 corresponde a jumbo frames."
-    },
+
+    
+    /*VISTO HASTA AQUÍ*/
+
+
+
+
+
+
+    
     {
         enunciado: "En IPv6, la resolución de vecinos se realiza con (no examen):",
         opciones: ["ARP", "NDP (ICMPv6)", "RARP", "LLDP"],
@@ -1510,6 +1451,9 @@ const preguntasPAR = [
         correcta: 1,
         explicacion: " La correcta es No orientado a conexión porque IP envía datagramas sin establecer conexión previa. Las demás opciones no describen el funcionamiento básico de IP."
     },
+
+
+    /*visto*/
     {
         enunciado: "¿Qué característica NO es propia del protocolo IP?",
         opciones: ["Usa datagramas", "Garantiza entrega", "No tiene QoS", "No controla errores"],
@@ -1646,7 +1590,7 @@ const preguntasPAR = [
         enunciado: "¿Qué valor se resta normalmente al calcular hosts por subred?",
         opciones: ["1", "2", "4", "8"],
         correcta: 1,
-        explicacion: " La correcta es 2 porque se restan la dirección de red y la de broadcast. No se resta 1, 4 ni 8 en el cálculo estándar."
+        explicacion: " La correcta es 2 porque se restan la dirección de red y la de broadcast (2^n - 2). No se resta 1, 4 ni 8 en el cálculo estándar."
     },
     {
         enunciado: "¿Por qué se restan direcciones al calcular hosts?",
@@ -1794,6 +1738,7 @@ const preguntasPAR = [
 
 
     /* FUERA DE TEMARIO:
+
     {
         enunciado: "TACACS+ utiliza por defecto (fuera temario):",
         opciones: ["UDP 49", "TCP 49", "UDP 1812", "TCP 1812"],
@@ -1890,7 +1835,6 @@ const preguntasPAR = [
         correcta: 0,
         explicacion: " La correcta es NTP porque NTP (Network Time Protocol) se usa para sincronizar la hora entre equipos de una red. SMTP (Simple Mail Transfer Protocol) es correo; TFTP (Trivial File Transfer Protocol) es transferencia simple de archivos; y RDP (Remote Desktop Protocol) se usa para acceso remoto."
     },
-    
     {
         enunciado: "¿Qué estándar define LLDP? (fuera temario):",
         opciones: ["IEEE 802.1AB", "IEEE 802.3ad", "IEEE 802.1Q", "IEEE 802.11i"],
@@ -1986,6 +1930,66 @@ const preguntasPAR = [
         opciones: ["AS-PATH", "LOCAL_PREF", "MED", "Hop Count"],
         correcta: 3,
         explicacion: " La correcta es Hop Count porque ese no es un atributo típico de BGP (Border Gateway Protocol). AS-PATH sí se usa para ver por qué sistemas autónomos pasa una ruta; LOCAL_PREF sirve para preferencia interna; y MED (Multi-Exit Discriminator) influye en la elección entre varios puntos de entrada. Hop Count es más propio de protocolos como RIP."
+    },
+    {
+        enunciado: "El puerto por defecto para consultas SNMP es (fuera temario):",
+        opciones: ["UDP 161", "TCP 161", "UDP 162", "TCP 162"],
+        correcta: 0,
+        explicacion: " La correcta es UDP 161 porque ese es el puerto usado por SNMP (Simple Network Management Protocol) para consultas normales entre gestor y dispositivo. UDP 162 se usa habitualmente para traps o notificaciones; y las opciones con TCP no son las usadas por defecto en SNMP clásico."
+    },
+    {
+        enunciado: "En Syslog, ¿qué nivel corresponde a 'emergencies' ? (fuera temario)",
+        opciones: ["0", "3", "5", "7"],
+        correcta: 0,
+        explicacion: " La correcta es 0 porque en Syslog el nivel 0 corresponde a emergencies, el más crítico de la escala. El nivel 3 corresponde a errores; el 5 a notificaciones; y el 7 a depuración, que es mucho menos grave."
+    },
+    {
+        enunciado: "NTP utiliza por defecto el puerto (fuera temario):",
+        opciones: ["UDP 123", "TCP 123", "UDP 514", "TCP 514"],
+        correcta: 0,
+        explicacion: " La correcta es UDP 123 porque ese es el puerto por defecto de NTP (Network Time Protocol). TCP 123 no es el puerto habitual de este protocolo; y UDP/TCP 514 se asocian a Syslog, no a NTP."
+    },
+    {
+        enunciado: "La opción 82 de DHCP está asociada a (fuera temario):",
+        opciones: ["Relay agent information", "DNS primario", "Sufijo de dominio", "Tiempo de concesión"],
+        correcta: 0,
+        explicacion: " La correcta es Relay agent information porque la opción 82 añade datos del relay DHCP sobre el circuito o puerto por el que llegó la petición. No define el DNS primario; no indica el sufijo de dominio; y tampoco representa el tiempo de concesión."
+    },
+    {
+        enunciado: "El comando 'ip helper-address' sirve para (fuera temario):",
+        opciones: ["Actuar como relay DHCP", "Habilitar NAT", "Activar LLDP", "Iniciar OSPF"],
+        correcta: 0,
+        explicacion: " La correcta es Actuar como relay DHCP porque ip helper-address reenvía peticiones de broadcast, como las de DHCP, hacia un servidor situado en otra red. No habilita NAT (Network Address Translation); no activa LLDP; y no inicia OSPF (Open Shortest Path First)."
+    },
+    {
+        enunciado: "¿Qué instrucción habilita Port Security en un puerto? ",
+        opciones: ["switchport port-security", "port-security enable", "security port on", "switchport secure"],
+        correcta: 0,
+        explicacion: " La correcta es switchport port-security porque esa es la sintaxis estándar de Cisco para activar Port Security en un puerto switch. Las otras opciones no corresponden al comando correcto en IOS."
+    },
+    {
+        enunciado: "¿Qué modo de violación en Port Security apaga el puerto? (fuera temario)",
+        opciones: ["protect", "restrict", "shutdown", "monitor"],
+        correcta: 2,
+        explicacion: " La correcta es shutdown porque ese modo pone el puerto en estado err-disabled cuando se produce una violación de seguridad. protect y restrict reaccionan de forma menos severa; y monitor no es la respuesta estándar esperada en este contexto."
+    },
+    {
+        enunciado: "La característica 'sticky MAC' en Port Security (fuera temario): ",
+        opciones: ["Aprende MACs y las convierte en estáticas", "Borra todas las MAC", "Duplica VLANs", "Apaga el puerto al ver MACs"],
+        correcta: 0,
+        explicacion: " La correcta es Aprende MACs y las convierte en estáticas porque sticky MAC permite aprender dinámicamente direcciones MAC seguras y conservarlas en la configuración. No borra todas las MAC; no duplica VLANs; y no apaga el puerto por el simple hecho de ver MACs válidas."
+    },
+    {
+        enunciado: "MTU típica de Ethernet (sin jumbo frames) es (fuera temario):",
+        opciones: ["1200", "1500", "9000", "576"],
+        correcta: 1,
+        explicacion: " La correcta es 1500 porque esa es la MTU (Maximum Transmission Unit) típica de Ethernet sin usar jumbo frames. 9000 suele asociarse a jumbo frames; 576 fue un valor clásico muy citado en IPv4; y 1200 no es el tamaño estándar Ethernet habitual."
+    },
+    {
+        enunciado: "¿Cuál es el MTU mínimo requerido por IPv6? (fuera temario)",
+        opciones: ["576", "1280", "1500", "9000"],
+        correcta: 1,
+        explicacion: " La correcta es 1280 porque IPv6 exige que los enlaces soporten al menos ese MTU mínimo. 576 es un valor clásico relacionado con IPv4; 1500 es la MTU típica de Ethernet, pero no el mínimo exigido por IPv6; y 9000 corresponde a jumbo frames."
     },
     */
 
