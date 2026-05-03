@@ -1518,6 +1518,197 @@ const preguntasMPO = [
   ],
   correcta: 2,
   explicacion: " La correcta es El horizontal añade más instancias y el vertical aumenta la potencia de una instancia porque son dos formas distintas de aumentar capacidad."
+},
+
+
+/* SERVICIOS VISTOS */
+
+{
+  enunciado: "¿Qué significa AWS Pricing Calculator?",
+  opciones: [
+    "Un servicio para crear usuarios y permisos",
+    "Una herramienta para calcular el coste estimado de servicios AWS antes de implementarlos",
+    "Un servicio para ejecutar contenedores",
+    "Una base de datos NoSQL gestionada"
+  ],
+  correcta: 1,
+  explicacion: " La correcta es Una herramienta para calcular el coste estimado de servicios AWS antes de implementarlos porque AWS Pricing Calculator permite estimar cuánto costará una infraestructura antes de crearla."
+},
+{
+  enunciado: "¿Qué significa AWS IAM?",
+  opciones: [
+    "El servicio de AWS para gestionar usuarios, roles y permisos",
+    "Un servicio de almacenamiento de objetos",
+    "Una herramienta para distribuir contenido por CDN",
+    "Un servicio de bases de datos relacionales"
+  ],
+  correcta: 0,
+  explicacion: " La correcta es El servicio de AWS para gestionar usuarios, roles y permisos porque IAM define quién puede hacer qué sobre los recursos de una cuenta AWS."
+},
+{
+  enunciado: "¿Qué significa Amazon VPC?",
+  opciones: [
+    "Un servicio para calcular costes",
+    "Un sistema de monitorización de logs",
+    "Un servicio para crear una red privada virtual en AWS",
+    "Una imagen para lanzar instancias EC2"
+  ],
+  correcta: 2,
+  explicacion: " La correcta es Un servicio para crear una red privada virtual en AWS porque VPC permite controlar IPs, subredes, rutas y reglas de seguridad dentro de una red en la nube."
+},
+{
+  enunciado: "¿Qué significa AWS Route 53?",
+  opciones: [
+    "Un servicio para ejecutar código sin servidores",
+    "Un volumen de disco para EC2",
+    "Un servicio para repartir tráfico entre instancias",
+    "El servicio DNS de AWS para gestionar dominios y traducir nombres en direcciones IP"
+  ],
+  correcta: 3,
+  explicacion: " La correcta es El servicio DNS de AWS para gestionar dominios y traducir nombres en direcciones IP porque Route 53 permite dirigir nombres de dominio hacia webs, servidores o aplicaciones."
+},
+{
+  enunciado: "¿Qué significa AWS CloudFront?",
+  opciones: [
+    "Una CDN de AWS para distribuir contenido con baja latencia",
+    "Un servicio para crear redes privadas",
+    "Una base de datos relacional gestionada",
+    "Un sistema para crear usuarios IAM"
+  ],
+  correcta: 0,
+  explicacion: " La correcta es Una CDN de AWS para distribuir contenido con baja latencia porque CloudFront acerca contenido como webs, imágenes, vídeos o APIs a usuarios de todo el mundo."
+},
+{
+  enunciado: "¿Qué significa AWS EC2?",
+  opciones: [
+    "Un servicio de almacenamiento de objetos",
+    "Un servicio de servidores virtuales en la nube",
+    "Un servicio DNS para dominios",
+    "Una herramienta de cálculo de precios"
+  ],
+  correcta: 1,
+  explicacion: " La correcta es Un servicio de servidores virtuales en la nube porque EC2 permite crear máquinas virtuales donde instalar aplicaciones, servidores web, bases de datos o APIs."
+},
+{
+  enunciado: "¿Qué significa AWS EBS?",
+  opciones: [
+    "Un servicio para ejecutar Kubernetes",
+    "Un servicio de CDN global",
+    "Un almacenamiento en bloque que funciona como disco duro virtual para EC2",
+    "Una herramienta para monitorizar logs"
+  ],
+  correcta: 2,
+  explicacion: " La correcta es Un almacenamiento en bloque que funciona como disco duro virtual para EC2 porque EBS se conecta a instancias EC2 para guardar sistemas, aplicaciones o datos."
+},
+{
+  enunciado: "¿Qué significa Amazon S3?",
+  opciones: [
+    "Un servicio para balancear tráfico",
+    "Un servicio para crear roles y permisos",
+    "Un servicio de base de datos NoSQL",
+    "Un servicio de almacenamiento de objetos para guardar archivos en buckets"
+  ],
+  correcta: 3,
+  explicacion: " La correcta es Un servicio de almacenamiento de objetos para guardar archivos en buckets porque S3 permite almacenar imágenes, vídeos, documentos, backups, logs y otros objetos."
+},
+{
+  enunciado: "¿Qué significa Amazon RDS?",
+  opciones: [
+    "Un servicio de bases de datos relacionales gestionadas",
+    "Un servicio de almacenamiento en bloque",
+    "Un servicio para crear una red privada virtual",
+    "Una herramienta para calcular costes"
+  ],
+  correcta: 0,
+  explicacion: " La correcta es Un servicio de bases de datos relacionales gestionadas porque RDS permite usar bases de datos como servicio sin administrar manualmente toda la infraestructura."
+},
+{
+  enunciado: "¿Qué significa AWS Lambda?",
+  opciones: [
+    "Un servicio para guardar objetos en buckets",
+    "Un servicio serverless para ejecutar código cuando ocurre un evento",
+    "Un servicio DNS para dominios",
+    "Un servicio para crear discos virtuales"
+  ],
+  correcta: 1,
+  explicacion: " La correcta es Un servicio serverless para ejecutar código cuando ocurre un evento porque Lambda permite ejecutar funciones sin crear ni administrar servidores."
+},
+{
+  enunciado: "¿Qué significa AWS CloudWatch?",
+  opciones: [
+    "Un servicio para crear instancias EC2",
+    "Un servicio para desplegar Kubernetes",
+    "Un servicio de monitorización que recoge métricas, logs y alarmas",
+    "Un servicio para registrar dominios"
+  ],
+  correcta: 2,
+  explicacion: " La correcta es Un servicio de monitorización que recoge métricas, logs y alarmas porque CloudWatch sirve para vigilar recursos y aplicaciones en AWS."
+},
+{
+  enunciado: "¿Qué significa AWS Elastic Beanstalk?",
+  opciones: [
+    "Un servicio para crear buckets de almacenamiento",
+    "Un servicio para traducir dominios en IPs",
+    "Un servicio de base de datos NoSQL",
+    "Un servicio para desplegar aplicaciones web mientras AWS prepara la infraestructura necesaria"
+  ],
+  correcta: 3,
+  explicacion: " La correcta es Un servicio para desplegar aplicaciones web mientras AWS prepara la infraestructura necesaria porque Elastic Beanstalk puede gestionar EC2, balanceadores, Auto Scaling y monitorización."
+},
+{
+  enunciado: "¿Qué significa Amazon DynamoDB?",
+  opciones: [
+    "Un servicio de base de datos NoSQL gestionada, rápida y escalable",
+    "Un servicio de servidores virtuales",
+    "Un servicio de almacenamiento en bloque",
+    "Una herramienta para estimar costes"
+  ],
+  correcta: 0,
+  explicacion: " La correcta es Un servicio de base de datos NoSQL gestionada, rápida y escalable porque DynamoDB permite guardar y consultar datos sin administrar servidores de base de datos."
+},
+{
+  enunciado: "¿Qué significa Amazon Elastic Load Balancing?",
+  opciones: [
+    "Un servicio para crear usuarios IAM",
+    "Un servicio para repartir tráfico entre varias instancias, contenedores o servidores",
+    "Un servicio para almacenar objetos",
+    "Un servicio para ejecutar funciones serverless"
+  ],
+  correcta: 1,
+  explicacion: " La correcta es Un servicio para repartir tráfico entre varias instancias, contenedores o servidores porque Elastic Load Balancing evita que una sola máquina reciba todas las peticiones."
+},
+{
+  enunciado: "¿Qué significa Amazon Auto Scaling?",
+  opciones: [
+    "Un servicio para comprar dominios",
+    "Un servicio para guardar imágenes y vídeos",
+    "Un servicio para aumentar o reducir automáticamente el número de instancias según la demanda",
+    "Un servicio para conectarse por RDP"
+  ],
+  correcta: 2,
+  explicacion: " La correcta es Un servicio para aumentar o reducir automáticamente el número de instancias según la demanda porque Auto Scaling ajusta la capacidad de EC2 de forma automática."
+},
+{
+  enunciado: "¿Qué significa Amazon ECS?",
+  opciones: [
+    "Un servicio DNS para dirigir dominios",
+    "Un servicio de base de datos relacional",
+    "Un servicio de monitorización",
+    "Un servicio para ejecutar y gestionar contenedores, normalmente con Docker"
+  ],
+  correcta: 3,
+  explicacion: " La correcta es Un servicio para ejecutar y gestionar contenedores, normalmente con Docker porque ECS permite desplegar aplicaciones empaquetadas en contenedores sin montar todo el sistema manualmente."
+},
+{
+  enunciado: "¿Qué significa Amazon EKS?",
+  opciones: [
+    "Un servicio de AWS para ejecutar Kubernetes y gestionar aplicaciones en contenedores",
+    "Un servicio para calcular precios de infraestructura",
+    "Un volumen de almacenamiento para EC2",
+    "Una CDN para distribuir contenido"
+  ],
+  correcta: 0,
+  explicacion: " La correcta es Un servicio de AWS para ejecutar Kubernetes y gestionar aplicaciones en contenedores porque EKS permite organizar, escalar y controlar contenedores usando Kubernetes."
 }
 
 ];
