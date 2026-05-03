@@ -1050,45 +1050,8 @@ const preguntasPAR = [
         correcta: 1,
         explicacion: " La correcta es 20/TCP porque en FTP activo el servidor utiliza ese puerto para el canal de datos, mientras que el 21/TCP se usa para control. 69/UDP corresponde a TFTP; y 445/TCP a SMB, no a FTP."
     },
-
-    /*VISTO HASTA AQUÍ*/
-
-
-
-
-
     {
-        enunciado: "El comando 'service password-encryption' en IOS:",
-        opciones: ["Cifra todas las contraseñas con AES", "Ofusca contraseñas tipo 7", "No hace nada", "Deshabilita Telnet"],
-        correcta: 1,
-        explicacion: " La correcta es Ofusca contraseñas tipo 7 porque ese comando en IOS no aplica un cifrado fuerte, sino una ofuscación reversible de las contraseñas que estaban en texto claro. No cifra con AES, así que la primera es falsa; no es correcto decir que no hace nada, porque sí modifica cómo se guardan; y tampoco deshabilita Telnet, ya que eso se configura por otros comandos."
-    },
-    {
-        enunciado: "¿Cómo se almacena 'enable secret'?",
-        opciones: ["MD5/hashed", "Tipo 7 reversible", "AES-256", "Base64"],
-        correcta: 0,
-        explicacion: " La correcta es MD5/hashed porque enable secret se almacena como hash, a diferencia de las contraseñas tipo 7, que solo están ofuscadas y son reversibles. No se guarda como tipo 7; tampoco como AES-256 en este contexto clásico; y Base64 no es un mecanismo de protección real, solo una codificación."
-    },
-    {
-        enunciado: "¿Qué hace 'login block-for' en IOS?",
-        opciones: ["Bloquea logins tras intentos fallidos", "Cierra VTY por inactividad", "Restringe Telnet", "Deshabilita SSH"],
-        correcta: 0,
-        explicacion: " La correcta es Bloquea logins tras intentos fallidos porque ese comando protege el acceso al equipo limitando intentos repetidos de autenticación. No cierra líneas VTY (Virtual Teletype) por inactividad, ya que eso se relaciona con exec-timeout; tampoco restringe Telnet por sí mismo; ni deshabilita SSH."
-    },
-    {
-        enunciado: "La tabla CAM de un switch almacena:",
-        opciones: ["Rutas IP", "MACs y puertos asociados", "Usuarios autenticados", "Direcciones IPv6"],
-        correcta: 1,
-        explicacion: " La correcta es MACs y puertos asociados porque la tabla CAM (Content Addressable Memory) permite al switch saber por qué puerto debe reenviar una trama según la MAC destino. No almacena rutas IP, porque eso sería función de una tabla de routing; no guarda usuarios autenticados; y tampoco se centra en direcciones IPv6 como tal, sino en MAC."
-    },
-    {
-        enunciado: "El temporizador típico de envejecimiento de entradas CAM es:",
-        opciones: ["5 s", "300 s", "3600 s", "24 h"],
-        correcta: 1,
-        explicacion: " La correcta es 300 s porque ese suele ser el valor típico de aging de entradas CAM en muchos switches Cisco. 5 segundos es demasiado poco; 3600 segundos y 24 horas serían valores mucho más largos de lo habitual para esa tabla de aprendizaje de MAC."
-    },
-    {
-        enunciado: "Storm Control sirve para:",
+        enunciado: "Storm Control sirve para (fuera temario):",
         opciones: ["Priorizar voz", "Limitar broadcast/multicast/unknown unicast", "Marcar DSCP", "Acelerar STP"],
         correcta: 1,
         explicacion: " La correcta es Limitar broadcast/multicast/unknown unicast porque Storm Control ayuda a evitar tormentas de tráfico de capa 2 que pueden saturar la red. No prioriza voz, porque eso se relaciona más con QoS; no marca DSCP (Differentiated Services Code Point); y no acelera STP (Spanning Tree Protocol)."
@@ -1100,13 +1063,7 @@ const preguntasPAR = [
         explicacion: " La correcta es WiMAX es para acceso metropolitano/rural; Wi-Fi para LAN locales porque son tecnologías pensadas para escenarios diferentes. WiMAX se orienta más a cobertura amplia o acceso de última milla; Wi-Fi se usa sobre todo en redes locales. No son idénticos, WiMAX no sustituye a Wi-Fi en interiores, y Wi-Fi no reemplaza por definición a WiMAX en backhaul."
     },
     {
-        enunciado: "La VLAN nativa por defecto en Cisco es:",
-        opciones: ["0", "1", "100", "4094"],
-        correcta: 1,
-        explicacion: " La correcta es 1 porque en muchos dispositivos Cisco la VLAN nativa por defecto es la VLAN 1. La VLAN 0 no se usa como VLAN nativa normal; 100 no es el valor por defecto habitual; y 4094 puede usarse en ciertos contextos, pero no es la VLAN nativa predeterminada clásica."
-    },
-    {
-        enunciado: "Un 'native VLAN mismatch' puede provocar:",
+        enunciado: "Un 'native VLAN mismatch' puede provocar (fuera temario):",
         opciones: ["Cifrado débil", "Tráfico sin etiquetar en VLAN distinta", "Bucle de capa 3", "Pérdida de ARP"],
         correcta: 1,
         explicacion: " La correcta es Tráfico sin etiquetar en VLAN distinta porque, si los dos extremos del trunk no tienen la misma VLAN nativa, las tramas sin etiqueta pueden acabar entrando en VLAN diferentes. Cifrado débil no tiene relación con este problema; bucle de capa 3 no es el efecto típico aquí; y pérdida de ARP puede ser una consecuencia indirecta de una mala conectividad, pero no define el fallo principal."
@@ -1116,12 +1073,6 @@ const preguntasPAR = [
         opciones: ["spanning-tree vlan 1 priority 4096", "stp root primary", "spanning-tree mode rapid-pvst", "spanning-tree vlan 1 cost 0"],
         correcta: 0,
         explicacion: " La correcta es spanning-tree vlan 1 priority 4096 porque en STP una prioridad más baja aumenta la probabilidad de que ese switch sea elegido como root bridge para esa VLAN. stp root primary no es la sintaxis normal de IOS en este caso; spanning-tree mode rapid-pvst cambia el modo de STP, no la prioridad; y spanning-tree vlan 1 cost 0 afecta al coste de un puerto, no a la elección del root."
-    },
-    {
-        enunciado: "RSTP define estados de puerto:",
-        opciones: ["Blocking/Listening/Learning/Forwarding", "Discarding/Learning/Forwarding", "Disabled/Listening/Forwarding", "Alternate/Backup/Designated/Root"],
-        correcta: 1,
-        explicacion: " La correcta es Discarding/Learning/Forwarding porque RSTP (Rapid Spanning Tree Protocol) simplifica los estados clásicos de STP a esos tres. Blocking/Listening/Learning/Forwarding corresponde al STP clásico; Disabled/Listening/Forwarding no es la lista correcta de RSTP; y Alternate/Backup/Designated/Root son roles de puerto, no estados."
     },
     {
         enunciado: "Comando para ver el detalle STP de una interfaz concreta:",
@@ -1136,7 +1087,7 @@ const preguntasPAR = [
         explicacion: " La correcta es vtp mode off porque en VTP versión 3 existe ese modo para dejar el protocolo completamente desactivado. no vtp run, vtp disable y vtp shutdown no son la sintaxis estándar correcta en Cisco IOS para ese objetivo."
     },
     {
-        enunciado: "¿Qué riesgo implica el número de revisión de VTP?",
+        enunciado: "¿Qué riesgo implica el número de revisión de VTP? (fuera temario)",
         opciones: ["Debe ser 0 siempre", "Un switch con revisión mayor puede borrar/alterar VLANs", "No afecta", "Solo cambia el dominio"],
         correcta: 1,
         explicacion: " La correcta es Un switch con revisión mayor puede borrar/alterar VLANs porque VTP usa el número de revisión para decidir qué información considera más reciente y válida. No tiene que ser 0 siempre; no es verdad que no afecte; y no solo cambia el dominio, ya que puede modificar la base de datos de VLANs."
@@ -1148,19 +1099,13 @@ const preguntasPAR = [
         explicacion: " La correcta es PTR porque ese registro se utiliza en DNS (Domain Name System) para resolver una dirección IP hacia un nombre en una consulta inversa. A hace lo contrario, de nombre a IPv4; NS indica servidores autoritativos; y TXT almacena texto o verificaciones, no mapeos inversos."
     },
     {
-        enunciado: "Registro DNS que anuncia servicios (_sip._tcp, etc.):",
-        opciones: ["SRV", "MX", "CNAME", "SOA"],
-        correcta: 0,
-        explicacion: " La correcta es SRV porque ese registro indica la localización de un servicio concreto, como SIP, incluyendo host y puerto. MX se usa para correo; CNAME crea alias; y SOA define datos de autoridad de la zona, no la publicación de servicios."
-    },
-    {
         enunciado: "En IPv4, el campo TTL indica:",
         opciones: ["Control de congestión", "Número de saltos máximo", "Prioridad de paquete", "Tamaño de ventana"],
         correcta: 1,
         explicacion: " La correcta es Número de saltos máximo porque el TTL (Time To Live) se decrementa en cada router y limita cuánto puede vivir un paquete antes de descartarse. No controla la congestión; no marca prioridad del paquete; y tamaño de ventana es un concepto de TCP, no del encabezado IPv4."
     },
     {
-        enunciado: "Path MTU Discovery depende de recibir:",
+        enunciado: "Path MTU Discovery depende de recibir (fuera temario):",
         opciones: ["ICMP 'Fragmentation needed'", "ARP Reply", "DNS Response", "SNMP Trap"],
         correcta: 0,
         explicacion: " La correcta es ICMP 'Fragmentation needed' porque Path MTU Discovery usa ese mensaje para descubrir el mayor tamaño de paquete que puede atravesar el camino sin fragmentarse. ARP Reply resuelve MACs; DNS Response resuelve nombres; y SNMP Trap es una notificación de monitorización, no interviene en este proceso."
@@ -1177,6 +1122,13 @@ const preguntasPAR = [
         correcta: 0,
         explicacion: " La correcta es no auto-summary porque esa es la sintaxis de Cisco IOS para desactivar el resumen automático en EIGRP clásico. no autosummary está mal escrito; eigrp no-summary no es el comando correcto; y summary disable tampoco es la sintaxis válida."
     },
+    /*VISTO HASTA AQUÍ*/
+
+
+
+    
+    
+    
     {
         enunciado: "Multicast de OSPF para 'all routers' es:",
         opciones: ["224.0.0.5", "224.0.0.6", "224.0.0.9", "224.0.0.10"],
@@ -1344,7 +1296,14 @@ const preguntasPAR = [
     },
 
 
+
+
+
     /*visto*/
+
+
+
+
 
     {
         enunciado: "¿Qué característica NO es propia del protocolo IP?",
@@ -1973,6 +1932,54 @@ const preguntasPAR = [
         correcta: 0,
         explicacion: " La correcta es 69/UDP porque TFTP (Trivial File Transfer Protocol) utiliza UDP en ese puerto por defecto. 69/TCP no es su transporte habitual; 20/TCP se asocia al canal de datos de FTP activo; y 445/TCP es típico de SMB."
     }
+        {
+        enunciado: "El comando 'service password-encryption' en IOS (fuera temario):",
+        opciones: ["Cifra todas las contraseñas con AES", "Ofusca contraseñas tipo 7", "No hace nada", "Deshabilita Telnet"],
+        correcta: 1,
+        explicacion: " La correcta es Ofusca contraseñas tipo 7 porque ese comando en IOS no aplica un cifrado fuerte, sino una ofuscación reversible de las contraseñas que estaban en texto claro. No cifra con AES, así que la primera es falsa; no es correcto decir que no hace nada, porque sí modifica cómo se guardan; y tampoco deshabilita Telnet, ya que eso se configura por otros comandos."
+    },
+    {
+        enunciado: "¿Cómo se almacena 'enable secret' (fuera temario)?",
+        opciones: ["MD5/hashed", "Tipo 7 reversible", "AES-256", "Base64"],
+        correcta: 0,
+        explicacion: " La correcta es MD5/hashed porque enable secret se almacena como hash, a diferencia de las contraseñas tipo 7, que solo están ofuscadas y son reversibles. No se guarda como tipo 7; tampoco como AES-256 en este contexto clásico; y Base64 no es un mecanismo de protección real, solo una codificación."
+    },
+    {
+        enunciado: "¿Qué hace 'login block-for' en IOS? (fuera temario)",
+        opciones: ["Bloquea logins tras intentos fallidos", "Cierra VTY por inactividad", "Restringe Telnet", "Deshabilita SSH"],
+        correcta: 0,
+        explicacion: " La correcta es Bloquea logins tras intentos fallidos porque ese comando protege el acceso al equipo limitando intentos repetidos de autenticación. No cierra líneas VTY (Virtual Teletype) por inactividad, ya que eso se relaciona con exec-timeout; tampoco restringe Telnet por sí mismo; ni deshabilita SSH."
+    },
+    {
+        enunciado: "La tabla CAM de un switch almacena (fuera temario):",
+        opciones: ["Rutas IP", "MACs y puertos asociados", "Usuarios autenticados", "Direcciones IPv6"],
+        correcta: 1,
+        explicacion: " La correcta es MACs y puertos asociados porque la tabla CAM (Content Addressable Memory) permite al switch saber por qué puerto debe reenviar una trama según la MAC destino. No almacena rutas IP, porque eso sería función de una tabla de routing; no guarda usuarios autenticados; y tampoco se centra en direcciones IPv6 como tal, sino en MAC."
+    },
+    {
+        enunciado: "El temporizador típico de envejecimiento de entradas CAM es (fuera temario):",
+        opciones: ["5 s", "300 s", "3600 s", "24 h"],
+        correcta: 1,
+        explicacion: " La correcta es 300 s porque ese suele ser el valor típico de aging de entradas CAM en muchos switches Cisco. 5 segundos es demasiado poco; 3600 segundos y 24 horas serían valores mucho más largos de lo habitual para esa tabla de aprendizaje de MAC."
+    },
+    {
+        enunciado: "La VLAN nativa por defecto en Cisco es (fuera temario):",
+        opciones: ["0", "1", "100", "4094"],
+        correcta: 1,
+        explicacion: " La correcta es 1 porque en muchos dispositivos Cisco la VLAN nativa por defecto es la VLAN 1. La VLAN 0 no se usa como VLAN nativa normal; 100 no es el valor por defecto habitual; y 4094 puede usarse en ciertos contextos, pero no es la VLAN nativa predeterminada clásica."
+    },
+    {
+        enunciado: "RSTP define estados de puerto (fuera temario):",
+        opciones: ["Blocking/Listening/Learning/Forwarding", "Discarding/Learning/Forwarding", "Disabled/Listening/Forwarding", "Alternate/Backup/Designated/Root"],
+        correcta: 1,
+        explicacion: " La correcta es Discarding/Learning/Forwarding porque RSTP (Rapid Spanning Tree Protocol) simplifica los estados clásicos de STP a esos tres. Blocking/Listening/Learning/Forwarding corresponde al STP clásico; Disabled/Listening/Forwarding no es la lista correcta de RSTP; y Alternate/Backup/Designated/Root son roles de puerto, no estados."
+    },
+    {
+        enunciado: "Registro DNS que anuncia servicios (_sip._tcp, etc.) (fuera temario):",
+        opciones: ["SRV", "MX", "CNAME", "SOA"],
+        correcta: 0,
+        explicacion: " La correcta es SRV porque ese registro indica la localización de un servicio concreto, como SIP, incluyendo host y puerto. MX se usa para correo; CNAME crea alias; y SOA define datos de autoridad de la zona, no la publicación de servicios."
+    },
     */
 
 ];
