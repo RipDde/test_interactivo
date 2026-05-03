@@ -1122,21 +1122,14 @@ const preguntasPAR = [
         correcta: 0,
         explicacion: " La correcta es no auto-summary porque esa es la sintaxis de Cisco IOS para desactivar el resumen automático en EIGRP clásico. no autosummary está mal escrito; eigrp no-summary no es el comando correcto; y summary disable tampoco es la sintaxis válida."
     },
-    /*VISTO HASTA AQUÍ*/
-
-
-
-    
-    
-    
     {
-        enunciado: "Multicast de OSPF para 'all routers' es:",
+        enunciado: "Multicast de OSPF para 'all routers' es (fuera temario):",
         opciones: ["224.0.0.5", "224.0.0.6", "224.0.0.9", "224.0.0.10"],
         correcta: 0,
         explicacion: " La correcta es 224.0.0.5 porque esa es la dirección multicast que OSPF usa para 'all routers'. 224.0.0.6 se usa para DR y BDR; 224.0.0.9 corresponde a RIPv2; y 224.0.0.10 a EIGRP."
     },
     {
-        enunciado: "Multicast de OSPF para DR/BDR es:",
+        enunciado: "Multicast de OSPF para DR/BDR es (fuera temario):",
         opciones: ["224.0.0.5", "224.0.0.6", "224.0.0.9", "224.0.0.10"],
         correcta: 1,
         explicacion: " La correcta es 224.0.0.6 porque esa es la dirección multicast que OSPF usa para DR (Designated Router) y BDR (Backup Designated Router). 224.0.0.5 es para all routers; 224.0.0.9 es de RIPv2; y 224.0.0.10 pertenece a EIGRP."
@@ -1146,12 +1139,6 @@ const preguntasPAR = [
         opciones: ["ipv6 routing", "ip routing", "router ipv6", "ipv6 enable"],
         correcta: 0,
         explicacion: " La correcta es ipv6 routing porque ese comando habilita el enrutamiento IPv6 global en un switch de capa 3 Cisco. ip routing activa el routing IPv4; router ipv6 no es el comando global correcto para esto; e ipv6 enable se usa en interfaces, no para habilitar el routing global."
-    },
-    {
-        enunciado: "En IPv6, ::1 es la dirección:",
-        opciones: ["Link-local", "Loopback", "Multicast", "Anycast"],
-        correcta: 1,
-        explicacion: " La correcta es Loopback porque ::1 en IPv6 equivale a 127.0.0.1 en IPv4 y representa al propio equipo. Link-local usa normalmente el prefijo fe80::/10; multicast empieza por ff00::/8; y anycast no se representa así."
     },
     {
         enunciado: "Comando para ver traducciones NAT activas:",
@@ -1178,13 +1165,13 @@ const preguntasPAR = [
         explicacion: " La correcta es wr mem porque es el alias clásico de write memory, usado para guardar la configuración en NVRAM. copy tftp flash se usa para copiar imágenes o ficheros; write erase borra configuración; y config-register 0x2102 ajusta el registro de arranque, no guarda la configuración."
     },
     {
-        enunciado: "El sufijo 'k9' en una imagen de IOS indica:", /*rebuscada*/
+        enunciado: "El sufijo 'k9' en una imagen de IOS indica (rebuscada):",
         opciones: ["Soporte criptográfico", "Kernel 9", "Versión 9 de IOS", "Compatibilidad con Catalyst 9k"],
         correcta: 0,
         explicacion: " La correcta es Soporte criptográfico porque el sufijo k9 suele indicar que la imagen de IOS incluye capacidades de cifrado o funciones criptográficas. No significa Kernel 9; tampoco Versión 9 de IOS; y no se refiere a compatibilidad con Catalyst 9k."
     },
     {
-        enunciado: "Para permitir solo SSH en VTY se usa:",
+        enunciado: "Para permitir solo SSH en VTY se usa (rebuscada):",
         opciones: ["transport input ssh", "login local", "transport output ssh", "ip ssh version 2"],
         correcta: 0,
         explicacion: " La correcta es transport input ssh porque ese comando restringe el acceso entrante en las líneas VTY a SSH únicamente. login local define cómo se autentica; transport output ssh afecta a conexiones salientes; e ip ssh version 2 selecciona la versión de SSH, pero no limita por sí solo el acceso solo a SSH."
@@ -1196,20 +1183,11 @@ const preguntasPAR = [
         explicacion: " La correcta es show cdp neighbors detail porque ofrece información ampliada de los vecinos CDP, incluida la IP de gestión. show cdp no es el comando típico esperado para ese nivel de detalle; show neighbors es demasiado genérico; y show cdp interface enseña información por interfaz local, no el detalle completo de cada vecino."
     },
     {
-        enunciado: "¿Qué encapsulado de VLAN fue propietario de Cisco y hoy está obsoleto?",
+        enunciado: "¿Qué encapsulado de VLAN fue propietario de Cisco y hoy está obsoleto? (fuera temario)",
         opciones: ["ISL", "QinQ", "MPLS", "L2TP"],
         correcta: 0,
         explicacion: " La correcta es ISL porque Inter-Switch Link fue un encapsulado de VLAN propietario de Cisco y hoy ha quedado obsoleto frente a 802.1Q. QinQ es otro mecanismo de etiquetado; MPLS es una tecnología distinta; y L2TP es un protocolo de túnel, no un encapsulado VLAN de ese tipo."
     },
-    {
-        enunciado: "¿Qué versión proporciona convergencia más rápida que STP clásico?", /*rebuscada*/
-        opciones: ["PVST+ (802.1D)", "RSTP (802.1w)", "MSTP (802.1s)", "VTP v3"],
-        correcta: 1,
-        explicacion: " La correcta es RSTP (802.1w) porque Rapid Spanning Tree Protocol mejora la velocidad de convergencia frente a STP clásico. PVST+ sigue basado en STP por VLAN; MSTP (Multiple Spanning Tree Protocol) también mejora escalabilidad, pero la respuesta típica sobre convergencia rápida es RSTP; y VTP v3 no es una versión de STP."
-    },
-
-    /*PREGUNTAS REPASO PRIMER TRIMESTRE*/
-
     {
         enunciado: "¿Cuántos bits tiene un Byte?",
         opciones: ["4", "8", "16", "32"],
@@ -1233,6 +1211,24 @@ const preguntasPAR = [
         opciones: ["19", "20", "21", "22"],
         correcta: 2,
         explicacion: " La correcta es 21 porque 10101₂ = 1·16 + 0·8 + 1·4 + 0·2 + 1·1 = 21. Las otras opciones no coinciden con esa suma."
+    },
+    {
+        enunciado: "El número binario 11010₂ equivale en decimal a:",
+        opciones: ["24", "25", "26", "27"],
+        correcta: 2,
+        explicacion: " La correcta es 26 porque 11010₂ equivale a 16 + 8 + 2. La suma da 26 en decimal."
+    },
+    {
+        enunciado: "El número binario 10011₂ equivale en decimal a:",
+        opciones: ["17", "18", "19", "20"],
+        correcta: 2,
+        explicacion: " La correcta es 19 porque 10011₂ equivale a 16 + 2 + 1. La suma da 19 en decimal."
+    },
+    {
+        enunciado: "El número binario 11100₂ equivale en decimal a:",
+        opciones: ["26", "27", "28", "29"],
+        correcta: 2,
+        explicacion: " La correcta es 28 porque 11100₂ equivale a 16 + 8 + 4. La suma da 28 en decimal."
     },
     {
         enunciado: "¿Cuál de los siguientes valores es mayor?",
@@ -1294,17 +1290,6 @@ const preguntasPAR = [
         correcta: 1,
         explicacion: " La correcta es No orientado a conexión porque IP envía datagramas sin establecer conexión previa. Las demás opciones no describen el funcionamiento básico de IP."
     },
-
-
-
-
-
-    /*visto*/
-
-
-
-
-
     {
         enunciado: "¿Qué característica NO es propia del protocolo IP?",
         opciones: ["Usa datagramas", "Garantiza entrega", "No tiene QoS", "No controla errores"],
@@ -1979,6 +1964,18 @@ const preguntasPAR = [
         opciones: ["SRV", "MX", "CNAME", "SOA"],
         correcta: 0,
         explicacion: " La correcta es SRV porque ese registro indica la localización de un servicio concreto, como SIP, incluyendo host y puerto. MX se usa para correo; CNAME crea alias; y SOA define datos de autoridad de la zona, no la publicación de servicios."
+    },
+    {
+        enunciado: "En IPv6, ::1 es la dirección (fuera temario):",
+        opciones: ["Link-local", "Loopback", "Multicast", "Anycast"],
+        correcta: 1,
+        explicacion: " La correcta es Loopback porque ::1 en IPv6 equivale a 127.0.0.1 en IPv4 y representa al propio equipo. Link-local usa normalmente el prefijo fe80::/10; multicast empieza por ff00::/8; y anycast no se representa así."
+    },
+    {
+        enunciado: "¿Qué versión proporciona convergencia más rápida que STP clásico? (la profesora dijo que esto no hacía falta sabérselo)",
+        opciones: ["PVST+ (802.1D)", "RSTP (802.1w)", "MSTP (802.1s)", "VTP v3"],
+        correcta: 1,
+        explicacion: " La correcta es RSTP (802.1w) porque Rapid Spanning Tree Protocol mejora la velocidad de convergencia frente a STP clásico. PVST+ sigue basado en STP por VLAN; MSTP (Multiple Spanning Tree Protocol) también mejora escalabilidad, pero la respuesta típica sobre convergencia rápida es RSTP; y VTP v3 no es una versión de STP."
     },
     */
 
