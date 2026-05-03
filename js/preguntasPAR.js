@@ -673,7 +673,7 @@ const preguntasPAR = [
         explicacion: " La correcta es show ip interface brief porque resume de forma rápida las interfaces con su IP y su estado. show interfaces da mucho más detalle y es menos resumido; show cdp neighbors muestra vecinos CDP (Cisco Discovery Protocol); y show controllers se centra en datos de hardware."
     },
     {
-        enunciado: "¿Qué indica ‘Gateway of last resort’ en la tabla de rutas?"(rebuscada),
+        enunciado: "¿Qué indica ‘Gateway of last resort’ en la tabla de rutas? (rebuscada)",
         opciones: ["No hay default route", "Existe una ruta por defecto configurada/aprendida", "Se usa solo para estáticas flotantes", "Es una ruta conectada"],
         correcta: 1,
         explicacion: " La correcta es Existe una ruta por defecto configurada/aprendida porque esa frase indica que el router tiene una salida por defecto para destinos desconocidos. No significa que no exista default route; tampoco que sea solo para rutas estáticas flotantes; y no implica que se trate de una red conectada directamente."
@@ -756,35 +756,6 @@ const preguntasPAR = [
         correcta: 1,
         explicacion: " La correcta es UDP 1812/1813 porque RADIUS usa normalmente UDP 1812 para autenticación y UDP 1813 para accounting. TCP 1812/1813 no es la opción clásica; y el puerto 49, en TCP, se asocia a TACACS+."
     },
-
-    
-    /*VISTO HASTA AQUÍ*/
-
-
-
-
-
-
-    
-    {
-        enunciado: "En IPv6, la resolución de vecinos se realiza con (no examen):",
-        opciones: ["ARP", "NDP (ICMPv6)", "RARP", "LLDP"],
-        correcta: 1,
-        explicacion: " La correcta es NDP (ICMPv6) porque en IPv6 la resolución de vecinos y descubrimiento relacionado se hace con Neighbor Discovery Protocol sobre ICMPv6. ARP no se usa en IPv6; RARP es un protocolo antiguo con otro propósito; y LLDP sirve para descubrimiento de dispositivos vecinos, no para resolver vecinos IPv6 a ese nivel."
-    },
-    {
-        enunciado: "Forman parte de NDP los mensajes:",
-        opciones: ["Echo Request/Reply", "Router/Neighbor Solicitation/Advertisement", "Time Exceeded/Redirect", "Destination Unreachable/Parameter Problem"],
-        correcta: 1,
-        explicacion: " La correcta es Router/Neighbor Solicitation/Advertisement porque esos mensajes son básicos en NDP (Neighbor Discovery Protocol) para descubrir routers y vecinos, además de resolver direcciones. Echo Request/Reply se usa en ping; Time Exceeded y Redirect son otros mensajes ICMPv6; y Destination Unreachable/Parameter Problem también pertenecen a ICMPv6, pero no son la respuesta típica de NDP en esta pregunta."
-    },
-    {
-        enunciado: "SLAAC permite obtener (fuera temario):",
-        opciones: ["Solo DNS", "IP, prefijo y gateway a partir de RA", "Solo gateway", "Solo prefijo"],
-        correcta: 1,
-        explicacion: " La correcta es IP, prefijo y gateway a partir de RA porque SLAAC (Stateless Address Autoconfiguration) permite que un equipo IPv6 se autoconfigure usando anuncios RA (Router Advertisement) enviados por el router. No obtiene solo DNS, porque eso puede requerir otros mecanismos; tampoco solo gateway ni solo prefijo, ya que la autoconfiguración abarca más datos básicos de conectividad."
-    },
-
     {
         enunciado: "ICMP se utiliza principalmente para:",
         opciones: ["Transferencia de archivos", "Mensajes de error y diagnóstico", "Cifrado de datos", "Autenticación de usuarios"],
@@ -839,8 +810,6 @@ const preguntasPAR = [
         correcta: 3,
         explicacion: " La correcta es No está diseñado para aplicaciones porque ICMP (Internet Control Message Protocol) fue creado para control, error y diagnóstico de red, no para transportar datos de usuario. Que no tenga puertos o no sea orientado a conexión puede describirlo, pero no es la razón principal de diseño; y decir solo que no es fiable se queda corto frente a su función real."
     },
-
-
     {
         enunciado: "¿Cuál es la función de ARP?",
         opciones: ["Resolver nombres a IP", "Obtener MAC a partir de una IP en la LAN", "Asignar IP por DHCP", "Descubrir redes remotas"],
@@ -890,7 +859,7 @@ const preguntasPAR = [
         explicacion: " La correcta es IP ↔ MAC aprendidas recientemente porque la caché ARP almacena asociaciones vistas hace poco para evitar consultas repetidas. No guarda usuarios conectados; no contiene rutas OSPF; y tampoco almacena registros DNS, que pertenecen a otra función."
     },
     {
-        enunciado: "ARP opera en redes IPv4 principalmente porque en IPv6 lo sustituye:",
+        enunciado: "ARP opera en redes IPv4 principalmente porque en IPv6 lo sustituye (fuera temario):",
         opciones: ["DHCPv6", "NDP (ICMPv6)", "OSPFv3", "VRRP"],
         correcta: 1,
         explicacion: " La correcta es NDP (ICMPv6) porque en IPv6 la resolución de vecinos se hace mediante Neighbor Discovery Protocol sobre ICMPv6, no con ARP. DHCPv6 puede aportar configuración, pero no sustituye ARP directamente; OSPFv3 es routing; y VRRP es redundancia de gateway."
@@ -901,7 +870,6 @@ const preguntasPAR = [
         correcta: 2,
         explicacion: " La correcta es La subred/LAN local porque ARP no cruza routers y solo tiene sentido dentro del mismo dominio de broadcast. No funciona en toda Internet ni en toda la organización salvo que coincida con una misma LAN; y tampoco depende de cualquier red MPLS."
     },
-
     {
         enunciado: "Un ISP de nivel Tier 1 se caracteriza por:",
         opciones: ["No tener clientes", "Alcanzar cualquier red sin pagar tránsito", "Ser solo local", "Usar exclusivamente Wi-Fi"],
@@ -968,7 +936,6 @@ const preguntasPAR = [
         correcta: 1,
         explicacion: " La correcta es Pasar tráfico hacia/desde Internet más amplia porque el proveedor ofrece conectividad hacia redes que el cliente no alcanza directamente. No significa cortar rutas; no es solo peering local, que es otra relación distinta; y no se limita al tráfico multicast, sino al tráfico general hacia otros destinos."
     },
-
     {
         enunciado: "El propósito de DNS es:",
         opciones: ["Traducir nombres de dominio a direcciones IP", "Cifrar datos", "Asignar IP dinámicamente", "Gestionar tablas ARP"],
@@ -1030,51 +997,6 @@ const preguntasPAR = [
         explicacion: " La correcta es Un tiempo definido por el TTL porque el TTL (Time To Live) indica cuánto tiempo puede mantenerse una respuesta DNS en caché antes de volver a consultarla. No es siempre 24 horas ni siempre 5 minutos; y decir que nunca cachean es falso, porque la caché es una parte fundamental de DNS."
     },
     {
-        enunciado: "En 802.1Q, ¿qué campo contiene la prioridad 802.1p (PCP)?",
-        opciones: ["12 bits VLAN ID", "3 bits PCP", "1 bit DEI", "Ninguno"],
-        correcta: 1,
-        explicacion: " La correcta es 3 bits PCP porque en la etiqueta 802.1Q el campo PCP (Priority Code Point) ocupa 3 bits y se usa para prioridad 802.1p. Los 12 bits VLAN ID identifican la VLAN; el bit DEI indica elegibilidad de descarte; y por tanto no es cierto que no exista un campo para ello."
-    },
-    {
-        enunciado: "Cantidad de VLANs identificables con 802.1Q:",
-        opciones: ["1024", "2048", "4094", "8192"],
-        correcta: 2,
-        explicacion: " La correcta es 4094 porque el campo VLAN ID tiene 12 bits, pero algunos valores están reservados, así que el número utilizable típico es 4094. 1024 y 2048 se quedan cortos; y 8192 supera lo que permite ese campo."
-    },
-    {
-        enunciado: "El rango de VLAN extendidas en Cisco es:",
-        opciones: ["2–1001", "1002–4096", "1006–4094", "4095–8190"],
-        correcta: 2,
-        explicacion: " La correcta es 1006–4094 porque ese es el rango de VLAN extendidas en Cisco. Las VLAN normales suelen llegar hasta la 1005; 1002–1005 están reservadas en muchos contextos; y 4095 tampoco es una VLAN utilizable normal."
-    },
-
-
-    {
-        enunciado: "Comando para ver el método de balanceo de EtherChannel:",
-        opciones: ["show etherchannel summary", "show etherchannel load-balance", "show lacp neighbors", "show pagp neighbor"],
-        correcta: 1,
-        explicacion: " La correcta es show etherchannel load-balance porque ese comando muestra el método de balanceo utilizado por EtherChannel. show etherchannel summary resume grupos y estados; show lacp neighbors da información de LACP; y show pagp neighbor se centra en PAgP."
-    },
-    {
-        enunciado: "BPDU Guard:",
-        opciones: ["Evita ataques ARP", "Inhabilita el puerto que recibe BPDUs (edge)", "Evita NAT", "Habilita VLAN nativa"],
-        correcta: 1,
-        explicacion: " La correcta es Inhabilita el puerto que recibe BPDUs (edge) porque BPDU Guard protege puertos de acceso y los desactiva si reciben BPDUs inesperadas. No evita ataques ARP; no tiene relación con NAT; y no habilita la VLAN nativa."
-    },
-    {
-        enunciado: "Root Guard sirve para:",
-        opciones: ["Evitar que un puerto se convierta en root port", "Evitar que el switch pierda el rol de root", "Apagar el root bridge", "Cambiar prioridad automáticamente"],
-        correcta: 1,
-        explicacion: " La correcta es Evitar que el switch pierda el rol de root porque Root Guard impide que un switch vecino reclame ser root bridge por un puerto protegido. No apaga el root bridge; no cambia la prioridad automáticamente; y la primera opción no expresa tan bien la finalidad global del mecanismo."
-    },
-    {
-        enunciado: "PortFast debe habilitarse en:",
-        opciones: ["Enlaces troncales", "Puertos hacia hosts finales", "Enlaces WAN", "Puertos de agregado"],
-        correcta: 1,
-        explicacion: " La correcta es Puertos hacia hosts finales porque PortFast acelera el paso a forwarding en puertos de acceso conectados a dispositivos finales como PCs. No debe ponerse de forma normal en troncales; no se refiere a enlaces WAN; y tampoco a puertos de agregado entre switches."
-    },
-
-    {
         enunciado: "El algoritmo usado por OSPF para calcular rutas es:",
         opciones: ["Bellman-Ford", "DUAL", "Dijkstra (SPF)", "Floyd–Warshall"],
         correcta: 2,
@@ -1087,12 +1009,11 @@ const preguntasPAR = [
         explicacion: " La correcta es 0 porque una prioridad OSPF de 0 impide que el router participe en la elección de DR y BDR. Valores como 1, 128 o 255 sí permiten participar, variando solo el peso en esa elección."
     },
     {
-        enunciado: "Orden de elección del Router ID (RID) en OSPF:",
+        enunciado: "Orden de elección del Router ID (RID) en OSPF (fuera temario):",
         opciones: ["Menor MAC", "Mayor IP de loopback", "Menor IP activa", "Aleatorio"],
         correcta: 1,
         explicacion: " La correcta es Mayor IP de loopback porque, si no se configura manualmente el router-id, OSPF suele elegir primero la IP más alta de una loopback y, si no existe, la más alta de las interfaces activas. No usa la menor MAC, ni la menor IP activa, ni lo elige al azar."
     },
-
     {
         enunciado: "RIPv2 envía actualizaciones a la dirección multicast:",
         opciones: ["224.0.0.9", "224.0.0.5", "224.0.0.10", "239.255.255.250"],
@@ -1100,14 +1021,7 @@ const preguntasPAR = [
         explicacion: " La correcta es 224.0.0.9 porque esa es la dirección multicast utilizada por RIPv2 para enviar actualizaciones. 224.0.0.5 y 224.0.0.6 se relacionan con OSPF; 224.0.0.10 con EIGRP; y 239.255.255.250 con SSDP."
     },
     {
-        enunciado: "Distancia administrativa de OSPF en Cisco:",
-        opciones: ["90", "100", "110", "120"],
-        correcta: 2,
-        explicacion: " La correcta es 110 porque esa es la distancia administrativa por defecto de OSPF en Cisco. 90 se asocia a EIGRP interno; 120 a RIP; y 100 no es la cifra estándar por defecto para OSPF."
-    },
-
-    {
-        enunciado: "La métrica por defecto de EIGRP considera:",
+        enunciado: "La métrica por defecto de EIGRP considera (rebuscada):",
         opciones: ["Ancho de banda y retardo", "Saltos", "Costo genérico", "Latencia y jitter"],
         correcta: 0,
         explicacion: " La correcta es Ancho de banda y retardo porque esos son los valores principales que EIGRP usa por defecto para calcular su métrica. Saltos sería más propio de RIP; costo genérico encaja mejor con OSPF; y latencia y jitter no son la pareja básica por defecto en EIGRP."
@@ -1130,41 +1044,19 @@ const preguntasPAR = [
         correcta: 0,
         explicacion: " La correcta es network X mask Y porque ese es el comando usado en BGP para anunciar una red concreta, siempre que exista en la tabla de rutas. ip route X Y crea rutas estáticas; redistribute connected hace otra técnica distinta; y router-id X solo define el identificador del proceso."
     },
-
-    {
-        enunciado: "HSRP envía hellos a:",
-        opciones: ["224.0.0.18 UDP 1985", "224.0.0.2 UDP 1985", "224.0.0.102 UDP 3222", "224.0.0.5 IP 89"],
-        correcta: 1,
-        explicacion: " La correcta es 224.0.0.2 UDP 1985 porque ese es el multicast y puerto típicos de HSRP versión 1. 224.0.0.18 se asocia a VRRP; 224.0.0.102 UDP 3222 a GLBP; y 224.0.0.5 IP 89 pertenece a OSPF."
-    },
-
-    {
-        enunciado: "GLBP permite:",
-        opciones: ["Solo activo/pasivo", "Balanceo de carga de gateway", "Solo redundancia sin balanceo", "Enrutamiento dinámico"],
-        correcta: 1,
-        explicacion: " La correcta es Balanceo de carga de gateway porque GLBP reparte el uso del gateway virtual entre varios routers además de aportar redundancia. No se limita a activo/pasivo como otros enfoques; no ofrece solo redundancia sin balanceo; y no es un protocolo de enrutamiento dinámico."
-    },
-    {
-        enunciado: "Canales no solapados típicos en 2.4 GHz (ETSI/US):", /*rebuscada*/
-        opciones: ["1, 5, 9", "1, 6, 11", "2, 7, 12", "3, 8, 13"],
-        correcta: 1,
-        explicacion: " La correcta es 1, 6, 11 porque son los canales típicos no solapados más usados en 2.4 GHz para minimizar interferencias. Las otras combinaciones se pisan entre sí en muchos casos y por eso no son la referencia clásica."
-    },
-
-
-
-    {
-        enunciado: "TFTP usa por defecto:",
-        opciones: ["69/UDP", "69/TCP", "20/TCP", "445/TCP"],
-        correcta: 0,
-        explicacion: " La correcta es 69/UDP porque TFTP (Trivial File Transfer Protocol) utiliza UDP en ese puerto por defecto. 69/TCP no es su transporte habitual; 20/TCP se asocia al canal de datos de FTP activo; y 445/TCP es típico de SMB."
-    },
     {
         enunciado: "En FTP activo, el puerto de datos del servidor es:",
         opciones: ["21/TCP", "20/TCP", "69/UDP", "445/TCP"],
         correcta: 1,
         explicacion: " La correcta es 20/TCP porque en FTP activo el servidor utiliza ese puerto para el canal de datos, mientras que el 21/TCP se usa para control. 69/UDP corresponde a TFTP; y 445/TCP a SMB, no a FTP."
     },
+
+    /*VISTO HASTA AQUÍ*/
+
+
+
+
+
     {
         enunciado: "El comando 'service password-encryption' en IOS:",
         opciones: ["Cifra todas las contraseñas con AES", "Ofusca contraseñas tipo 7", "No hace nada", "Deshabilita Telnet"],
@@ -1201,7 +1093,6 @@ const preguntasPAR = [
         correcta: 1,
         explicacion: " La correcta es Limitar broadcast/multicast/unknown unicast porque Storm Control ayuda a evitar tormentas de tráfico de capa 2 que pueden saturar la red. No prioriza voz, porque eso se relaciona más con QoS; no marca DSCP (Differentiated Services Code Point); y no acelera STP (Spanning Tree Protocol)."
     },
-
     {
         enunciado: "¿Cómo se posiciona WiMAX frente a Wi-Fi?",
         opciones: ["WiMAX sustituye a Wi-Fi en interiores", "WiMAX es para acceso metropolitano/rural; Wi-Fi para LAN locales", "Ambos son idénticos", "Wi-Fi reemplaza a WiMAX en backhaul"],
@@ -1310,7 +1201,6 @@ const preguntasPAR = [
         correcta: 1,
         explicacion: " La correcta es Loopback porque ::1 en IPv6 equivale a 127.0.0.1 en IPv4 y representa al propio equipo. Link-local usa normalmente el prefijo fe80::/10; multicast empieza por ff00::/8; y anycast no se representa así."
     },
-
     {
         enunciado: "Comando para ver traducciones NAT activas:",
         opciones: ["show ip nat translations", "show nat table", "show ip route nat", "show access-lists nat"],
@@ -1367,6 +1257,7 @@ const preguntasPAR = [
     },
 
     /*PREGUNTAS REPASO PRIMER TRIMESTRE*/
+
     {
         enunciado: "¿Cuántos bits tiene un Byte?",
         opciones: ["4", "8", "16", "32"],
@@ -1454,6 +1345,7 @@ const preguntasPAR = [
 
 
     /*visto*/
+
     {
         enunciado: "¿Qué característica NO es propia del protocolo IP?",
         opciones: ["Usa datagramas", "Garantiza entrega", "No tiene QoS", "No controla errores"],
@@ -1991,6 +1883,96 @@ const preguntasPAR = [
         correcta: 1,
         explicacion: " La correcta es 1280 porque IPv6 exige que los enlaces soporten al menos ese MTU mínimo. 576 es un valor clásico relacionado con IPv4; 1500 es la MTU típica de Ethernet, pero no el mínimo exigido por IPv6; y 9000 corresponde a jumbo frames."
     },
+    {
+        enunciado: "En IPv6, la resolución de vecinos se realiza con (fuera temario):",
+        opciones: ["ARP", "NDP (ICMPv6)", "RARP", "LLDP"],
+        correcta: 1,
+        explicacion: " La correcta es NDP (ICMPv6) porque en IPv6 la resolución de vecinos y descubrimiento relacionado se hace con Neighbor Discovery Protocol sobre ICMPv6. ARP no se usa en IPv6; RARP es un protocolo antiguo con otro propósito; y LLDP sirve para descubrimiento de dispositivos vecinos, no para resolver vecinos IPv6 a ese nivel."
+    },
+    {
+        enunciado: "Forman parte de NDP los mensajes (fuera temario):",
+        opciones: ["Echo Request/Reply", "Router/Neighbor Solicitation/Advertisement", "Time Exceeded/Redirect", "Destination Unreachable/Parameter Problem"],
+        correcta: 1,
+        explicacion: " La correcta es Router/Neighbor Solicitation/Advertisement porque esos mensajes son básicos en NDP (Neighbor Discovery Protocol) para descubrir routers y vecinos, además de resolver direcciones. Echo Request/Reply se usa en ping; Time Exceeded y Redirect son otros mensajes ICMPv6; y Destination Unreachable/Parameter Problem también pertenecen a ICMPv6, pero no son la respuesta típica de NDP en esta pregunta."
+    },
+    {
+        enunciado: "SLAAC permite obtener (fuera temario):",
+        opciones: ["Solo DNS", "IP, prefijo y gateway a partir de RA", "Solo gateway", "Solo prefijo"],
+        correcta: 1,
+        explicacion: " La correcta es IP, prefijo y gateway a partir de RA porque SLAAC (Stateless Address Autoconfiguration) permite que un equipo IPv6 se autoconfigure usando anuncios RA (Router Advertisement) enviados por el router. No obtiene solo DNS, porque eso puede requerir otros mecanismos; tampoco solo gateway ni solo prefijo, ya que la autoconfiguración abarca más datos básicos de conectividad."
+    },
+    {
+        enunciado: "En 802.1Q, ¿qué campo contiene la prioridad 802.1p (PCP)? (fuera temario)",
+        opciones: ["12 bits VLAN ID", "3 bits PCP", "1 bit DEI", "Ninguno"],
+        correcta: 1,
+        explicacion: " La correcta es 3 bits PCP porque en la etiqueta 802.1Q el campo PCP (Priority Code Point) ocupa 3 bits y se usa para prioridad 802.1p. Los 12 bits VLAN ID identifican la VLAN; el bit DEI indica elegibilidad de descarte; y por tanto no es cierto que no exista un campo para ello."
+    },
+    {
+        enunciado: "Cantidad de VLANs identificables con 802.1Q (fuera temario):",
+        opciones: ["1024", "2048", "4094", "8192"],
+        correcta: 2,
+        explicacion: " La correcta es 4094 porque el campo VLAN ID tiene 12 bits, pero algunos valores están reservados, así que el número utilizable típico es 4094. 1024 y 2048 se quedan cortos; y 8192 supera lo que permite ese campo."
+    },
+    {
+        enunciado: "El rango de VLAN extendidas en Cisco es: (fuera temario)",
+        opciones: ["2–1001", "1002–4096", "1006–4094", "4095–8190"],
+        correcta: 2,
+        explicacion: " La correcta es 1006–4094 porque ese es el rango de VLAN extendidas en Cisco. Las VLAN normales suelen llegar hasta la 1005; 1002–1005 están reservadas en muchos contextos; y 4095 tampoco es una VLAN utilizable normal."
+    },
+    {
+        enunciado: "Comando para ver el método de balanceo de EtherChannel (fuera temario):",
+        opciones: ["show etherchannel summary", "show etherchannel load-balance", "show lacp neighbors", "show pagp neighbor"],
+        correcta: 1,
+        explicacion: " La correcta es show etherchannel load-balance porque ese comando muestra el método de balanceo utilizado por EtherChannel. show etherchannel summary resume grupos y estados; show lacp neighbors da información de LACP; y show pagp neighbor se centra en PAgP."
+    },
+    {
+        enunciado: "BPDU Guard (fuera temario):",
+        opciones: ["Evita ataques ARP", "Inhabilita el puerto que recibe BPDUs (edge)", "Evita NAT", "Habilita VLAN nativa"],
+        correcta: 1,
+        explicacion: " La correcta es Inhabilita el puerto que recibe BPDUs (edge) porque BPDU Guard protege puertos de acceso y los desactiva si reciben BPDUs inesperadas. No evita ataques ARP; no tiene relación con NAT; y no habilita la VLAN nativa."
+    },
+    {
+        enunciado: "Root Guard sirve para (fuera temario):",
+        opciones: ["Evitar que un puerto se convierta en root port", "Evitar que el switch pierda el rol de root", "Apagar el root bridge", "Cambiar prioridad automáticamente"],
+        correcta: 1,
+        explicacion: " La correcta es Evitar que el switch pierda el rol de root porque Root Guard impide que un switch vecino reclame ser root bridge por un puerto protegido. No apaga el root bridge; no cambia la prioridad automáticamente; y la primera opción no expresa tan bien la finalidad global del mecanismo."
+    },
+    {
+        enunciado: "PortFast debe habilitarse en (fuera temario):",
+        opciones: ["Enlaces troncales", "Puertos hacia hosts finales", "Enlaces WAN", "Puertos de agregado"],
+        correcta: 1,
+        explicacion: " La correcta es Puertos hacia hosts finales porque PortFast acelera el paso a forwarding en puertos de acceso conectados a dispositivos finales como PCs. No debe ponerse de forma normal en troncales; no se refiere a enlaces WAN; y tampoco a puertos de agregado entre switches."
+    },
+    {
+        enunciado: "Distancia administrativa de OSPF en Cisco (fuera temario):",
+        opciones: ["90", "100", "110", "120"],
+        correcta: 2,
+        explicacion: " La correcta es 110 porque esa es la distancia administrativa por defecto de OSPF en Cisco. 90 se asocia a EIGRP interno; 120 a RIP; y 100 no es la cifra estándar por defecto para OSPF."
+    },
+    {
+        enunciado: "HSRP envía hellos a (fuera temario):",
+        opciones: ["224.0.0.18 UDP 1985", "224.0.0.2 UDP 1985", "224.0.0.102 UDP 3222", "224.0.0.5 IP 89"],
+        correcta: 1,
+        explicacion: " La correcta es 224.0.0.2 UDP 1985 porque ese es el multicast y puerto típicos de HSRP versión 1. 224.0.0.18 se asocia a VRRP; 224.0.0.102 UDP 3222 a GLBP; y 224.0.0.5 IP 89 pertenece a OSPF."
+    },
+    {
+        enunciado: "GLBP permite (fuera temario):",
+        opciones: ["Solo activo/pasivo", "Balanceo de carga de gateway", "Solo redundancia sin balanceo", "Enrutamiento dinámico"],
+        correcta: 1,
+        explicacion: " La correcta es Balanceo de carga de gateway porque GLBP reparte el uso del gateway virtual entre varios routers además de aportar redundancia. No se limita a activo/pasivo como otros enfoques; no ofrece solo redundancia sin balanceo; y no es un protocolo de enrutamiento dinámico."
+    },
+    {
+        enunciado: "Canales no solapados típicos en 2.4 GHz (ETSI/US) (la profesora dijo que este tipo de cosas no preguntaría):",
+        opciones: ["1, 5, 9", "1, 6, 11", "2, 7, 12", "3, 8, 13"],
+        correcta: 1,
+        explicacion: " La correcta es 1, 6, 11 porque son los canales típicos no solapados más usados en 2.4 GHz para minimizar interferencias. Las otras combinaciones se pisan entre sí en muchos casos y por eso no son la referencia clásica."
+    },
+    {
+        enunciado: "TFTP usa por defecto (fuera temario):",
+        opciones: ["69/UDP", "69/TCP", "20/TCP", "445/TCP"],
+        correcta: 0,
+        explicacion: " La correcta es 69/UDP porque TFTP (Trivial File Transfer Protocol) utiliza UDP en ese puerto por defecto. 69/TCP no es su transporte habitual; 20/TCP se asocia al canal de datos de FTP activo; y 445/TCP es típico de SMB."
+    }
     */
 
 ];
