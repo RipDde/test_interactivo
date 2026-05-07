@@ -499,15 +499,15 @@ const preguntasMPO = [
   explicacion: " La correcta es Porque los datos pueden tener que almacenarse en una zona geográfica concreta por normativa o cumplimiento porque algunas normas exigen que la información permanezca en determinados países o zonas."
 },
 {
-  enunciado: "Además de la latencia y la normativa, ¿qué otro criterio puede influir al elegir una región de AWS?",
+  enunciado: "Además de la latencia y la normativa, ¿qué criterio técnico y económico puede influir al elegir una región de AWS?",
   opciones: [
-    "El fondo de pantalla del sistema operativo",
-    "La marca del teclado del administrador",
-    "El coste y la disponibilidad de servicios en esa región",
-    "El tamaño del monitor usado para entrar en la consola"
+    "El nombre visual de la región en la consola",
+    "La disponibilidad de servicios concretos y las diferencias de precio entre regiones",
+    "El tipo de navegador usado para acceder a AWS",
+    "La cantidad de usuarios IAM creados en la cuenta"
   ],
-  correcta: 2,
-  explicacion: " La correcta es El coste y la disponibilidad de servicios en esa región porque no todos los servicios tienen el mismo precio o están disponibles en todas las regiones."
+  correcta: 1,
+  explicacion: " La correcta es La disponibilidad de servicios concretos y las diferencias de precio entre regiones porque no todos los servicios o características están disponibles en todas las regiones y, además, los precios pueden variar según la ubicación elegida."
 },
 
 /* CLASE 7-8 */

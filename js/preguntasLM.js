@@ -1327,6 +1327,607 @@ const preguntasLM = [
         explicacion: " La correcta es /* comentario */ porque esa es la sintaxis estándar de comentarios multilínea en JavaScript. // comentario // es para una línea; <!-- --> es de HTML/XML; y ** comentario ** no es una sintaxis válida."
     },
 
+    /* REPASO ÚLTIMAS CLASES */
+
+    {
+        enunciado: "¿Qué etiqueta indica el idioma principal del documento HTML?",
+        opciones: [
+            "<body lang=\"es\">",
+            "<head lang=\"es\">",
+            "<html lang=\"es\">",
+            "<meta lang=\"es\">"
+        ],
+        correcta: 2,
+        explicacion: " La etiqueta <html> puede llevar el atributo lang para indicar el idioma principal del documento"
+    },
+    {
+        enunciado: "¿Qué etiqueta se usa para enlazar un archivo CSS externo?",
+        opciones: [
+            "<link rel=\"stylesheet\" href=\"style.css\">",
+            "<script>",
+            "<style src=\"style.css\">",
+            "<css href=\"style.css\">"
+        ],
+        correcta: 0,
+        explicacion: " La etiqueta <link> enlaza recursos externos como hojas de estilo CSS"
+    },
+    {
+        enunciado: "¿Qué atributo es obligatorio en la etiqueta <img> para accesibilidad?",
+        opciones: [
+            "title",
+            "alt",
+            "caption",
+            "srcset"
+        ],
+        correcta: 1,
+        explicacion: " El atributo alt describe la imagen para lectores de pantalla o cuando la imagen no carga"
+    },
+    {
+        enunciado: "¿Qué etiqueta representa un contenido independiente que podría distribuirse por separado, por ejemplo, un post?",
+        opciones: [
+            "<section>",
+            "<article>",
+            "<aside>",
+            "<main>"
+        ],
+        correcta: 1,
+        explicacion: " <article> representa contenido independiente, como una noticia, entrada de blog o publicación"
+    },
+    {
+        enunciado: "¿Qué etiqueta se usa para crear un salto de línea?",
+        opciones: [
+            "<p>",
+            "<br>",
+            "<hr>",
+            "<line>"
+        ],
+        correcta: 1,
+        explicacion: " <br> inserta un salto de línea dentro del texto"
+    },
+    {
+        enunciado: "¿Qué atributo de <a> indica la URL de destino?",
+        opciones: [
+            "ref",
+            "src",
+            "href",
+            "link"
+        ],
+        correcta: 2,
+        explicacion: " En los enlaces, href indica la dirección a la que llevará el enlace"
+    },
+    {
+        enunciado: "¿Qué etiqueta agrupa opciones dentro de un <select> en categorías?",
+        opciones: [
+            "<option>",
+            "<selectgroup>",
+            "<optgroup>",
+            "<fieldset>"
+        ],
+        correcta: 2,
+        explicacion: " <optgroup> permite agrupar varias opciones dentro de un desplegable <select>"
+    },
+    {
+        enunciado: "En formularios, ¿qué atributo evita que un campo se edite pero sí se envíe?",
+        opciones: [
+            "disabled",
+            "readonly",
+            "hidden",
+            "locked"
+        ],
+        correcta: 1,
+        explicacion: " readonly impide modificar el campo, pero su valor sí se envía con el formulario"
+    },
+    {
+        enunciado: "¿Qué etiqueta define el encabezado de una tabla?",
+        opciones: [
+            "<th>",
+            "<td>",
+            "<tr>",
+            "<thead>"
+        ],
+        correcta: 0,
+        explicacion: " <th> define una celda de encabezado dentro de una tabla"
+    },
+    {
+        enunciado: "¿Qué etiqueta se usa para texto con énfasis semántico, por defecto en cursiva?",
+        opciones: [
+            "<strong>",
+            "<b>",
+            "<i>",
+            "<em>"
+        ],
+        correcta: 3,
+        explicacion: " <em> indica énfasis semántico y normalmente los navegadores lo muestran en cursiva"
+    },
+    {
+        enunciado: "En Grid, ¿qué propiedad define el número y tamaño de columnas?",
+        opciones: [
+            "grid-columns",
+            "grid-template-columns",
+            "columns-template",
+            "grid-column-size"
+        ],
+        correcta: 1,
+        explicacion: " grid-template-columns define cuántas columnas tendrá la cuadrícula y qué tamaño tendrá cada una"
+    },
+    {
+        enunciado: "¿Qué función permite repetir columnas de forma compacta en Grid?",
+        opciones: [
+            "repeat()",
+            "clone()",
+            "loop()",
+            "range()"
+        ],
+        correcta: 0,
+        explicacion: " repeat() permite repetir un patrón de columnas o filas en CSS Grid"
+    },
+    {
+        enunciado: "¿Qué propiedad en Flexbox alinea elementos en el eje principal?",
+        opciones: [
+            "align-items",
+            "justify-content",
+            "align-content",
+            "place-items"
+        ],
+        correcta: 1,
+        explicacion: " justify-content distribuye los elementos en el eje principal de Flexbox"
+    },
+    {
+        enunciado: "¿Qué propiedad en Flexbox permite que los elementos salten de línea?",
+        opciones: [
+            "flex-flow: column;",
+            "flex-wrap: wrap;",
+            "flex-break: auto;",
+            "wrap: flex;"
+        ],
+        correcta: 1,
+        explicacion: " flex-wrap: wrap permite que los elementos pasen a otra línea cuando no caben"
+    },
+    {
+        enunciado: "¿Qué valor de align-items centra en el eje transversal?",
+        opciones: [
+            "center",
+            "middle",
+            "baseline",
+            "space-between"
+        ],
+        correcta: 0,
+        explicacion: " align-items: center centra los elementos en el eje transversal"
+    },
+    {
+        enunciado: "¿Qué propiedad abreviada combina flex-direction y flex-wrap?",
+        opciones: [
+            "flex",
+            "flexbox",
+            "flex-flow",
+            "flow-flex"
+        ],
+        correcta: 2,
+        explicacion: " flex-flow es la propiedad abreviada que combina flex-direction y flex-wrap"
+    },
+    {
+        enunciado: "¿Qué selector usamos en CSS cuando queremos darle estilo a un enlace que estamos pulsando?",
+        opciones: [
+            "a:active",
+            "a:hover",
+            "a:huver",
+            "a:visited"
+        ],
+        correcta: 0,
+        explicacion: " a:active se aplica mientras el enlace está siendo pulsado"
+    },
+    {
+        enunciado: "¿Qué valor de font-variant pone el texto en versalitas?",
+        opciones: [
+            "capitalize",
+            "uppercase",
+            "lowercase",
+            "small-caps"
+        ],
+        correcta: 3,
+        explicacion: " font-variant: small-caps muestra el texto en versalitas"
+    },
+    {
+        enunciado: "¿Qué valor de text-transform pone el texto en versalitas?",
+        opciones: [
+            "capitalize",
+            "uppercase",
+            "lowercase",
+            "Ninguna de las anteriores"
+        ],
+        correcta: 3,
+        explicacion: " text-transform no tiene un valor para versalitas; para eso se usa font-variant: small-caps"
+    },
+    {
+        enunciado: "¿Qué valor de display/visibility oculta un elemento en vista y espacio?",
+        opciones: [
+            "display: none;",
+            "visibility: hidden;",
+            "visibility: collapse;",
+            "visibility: invisible;"
+        ],
+        correcta: 0,
+        explicacion: " display: none oculta el elemento y también elimina el espacio que ocupaba"
+    },
+    {
+        enunciado: "¿Qué atributo es necesario mantener idéntico para crear radio buttons enlazados?",
+        opciones: [
+            "id",
+            "name",
+            "for",
+            "label"
+        ],
+        correcta: 1,
+        explicacion: " Los radio buttons pertenecen al mismo grupo cuando comparten el mismo atributo name"
+    },
+    {
+        enunciado: "¿Qué declaración suele ir al inicio de un documento XML?",
+        opciones: [
+            "<!DOCTYPE xml>",
+            "<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
+            "<xml version=\"1.0\">",
+            "<!xml encoding=\"UTF-8\">"
+        ],
+        correcta: 1,
+        explicacion: " La declaración XML suele indicar la versión y la codificación del documento"
+    },
+    {
+        enunciado: "En XML, ¿qué caracteriza a las etiquetas respecto a mayúsculas/minúsculas?",
+        opciones: [
+            "No importa, no es sensible",
+            "Solo importa en atributos",
+            "Es sensible, es decir, case-sensitive",
+            "Solo depende del navegador"
+        ],
+        correcta: 2,
+        explicacion: " XML distingue entre mayúsculas y minúsculas; <Curso> y <curso> son etiquetas distintas"
+    },
+    {
+        enunciado: "En DTD, para definir un elemento se utiliza:",
+        opciones: [
+            "<!ATTRIBUTE>",
+            "<!ELEMENT>",
+            "<!DOCTYPE>",
+            "<!ENTITY>"
+        ],
+        correcta: 1,
+        explicacion: " En DTD, <!ELEMENT> sirve para declarar un elemento y su contenido permitido"
+    },
+    {
+        enunciado: "En XSLT, ¿qué etiqueta aplica plantillas a nodos seleccionados?",
+        opciones: [
+            "xsl:apply-templates",
+            "xsl:template-match",
+            "xsl:value-of",
+            "xsl:for"
+        ],
+        correcta: 0,
+        explicacion: " xsl:apply-templates aplica las plantillas disponibles a los nodos seleccionados"
+    },
+    {
+        enunciado: "¿Qué clase de Bootstrap centra horizontalmente un elemento tipo bloque con ancho definido?",
+        opciones: [
+            ".text-center",
+            ".mx-auto",
+            ".center-block",
+            ".align-center"
+        ],
+        correcta: 1,
+        explicacion: " .mx-auto aplica márgenes automáticos a izquierda y derecha, centrando el bloque"
+    },
+    {
+        enunciado: "¿Qué clase de Bootstrap se usa para crear una fila de la rejilla?",
+        opciones: [
+            ".col",
+            ".grid",
+            ".row",
+            ".container-row"
+        ],
+        correcta: 2,
+        explicacion: " .row crea una fila dentro del sistema de rejilla de Bootstrap"
+    },
+    {
+        enunciado: "¿Qué etiqueta se usa para definir la navegación principal de una página?",
+        opciones: [
+            "<section>",
+            "<nav>",
+            "<main>",
+            "<aside>"
+        ],
+        correcta: 1,
+        explicacion: " <nav> representa una zona de navegación con enlaces principales"
+    },
+    {
+        enunciado: "¿Qué atributo de <script> permite que el script se cargue sin bloquear el parseo y se ejecute al terminar de descargar?",
+        opciones: [
+            "async",
+            "defer",
+            "preload",
+            "module"
+        ],
+        correcta: 1,
+        explicacion: " defer descarga el script sin bloquear el análisis del HTML y lo ejecuta cuando el documento ya ha sido parseado"
+    },
+    {
+        enunciado: "¿Qué etiqueta se usa para insertar un vídeo en HTML5?",
+        opciones: [
+            "<media>",
+            "<video>",
+            "<movie>",
+            "<iframe>"
+        ],
+        correcta: 1,
+        explicacion: " <video> es la etiqueta propia de HTML5 para insertar vídeos"
+    },
+    {
+        enunciado: "¿Qué atributo en un <input> obliga a que el usuario rellene el campo antes de enviar el formulario?",
+        opciones: [
+            "validate",
+            "required",
+            "mustfill",
+            "checked"
+        ],
+        correcta: 1,
+        explicacion: " required hace que el campo sea obligatorio antes de poder enviar el formulario"
+    },
+    {
+        enunciado: "¿Qué etiqueta indica una sección de contenido tangencial, como barra lateral, notas o publicidad?",
+        opciones: [
+            "<aside>",
+            "<section>",
+            "<article>",
+            "<main>"
+        ],
+        correcta: 0,
+        explicacion: " <aside> representa contenido relacionado pero secundario o tangencial"
+    },
+    {
+        enunciado: "¿Qué tipo de <input> está pensado para seleccionar un correo electrónico con validación básica?",
+        opciones: [
+            "type=\"mail\"",
+            "type=\"email\"",
+            "type=\"text-email\"",
+            "type=\"correo\""
+        ],
+        correcta: 1,
+        explicacion: " type=\"email\" activa una validación básica de formato de correo electrónico"
+    },
+    {
+        enunciado: "¿Qué etiqueta se usa para indicar el contenido principal único del documento?",
+        opciones: [
+            "<main>",
+            "<section>",
+            "<article>",
+            "<body>"
+        ],
+        correcta: 0,
+        explicacion: " <main> contiene el contenido principal y único de la página"
+    },
+    {
+        enunciado: "¿Cuál de estos formatos de color CSS es hexadecimal?",
+        opciones: [
+            "red",
+            "#ffffff",
+            "rgb(245, 6, 0)",
+            "blue"
+        ],
+        correcta: 1,
+        explicacion: " #ffffff es un color en formato hexadecimal"
+    },
+    {
+        enunciado: "¿Qué propiedad controla la transparencia de un elemento y sus hijos?",
+        opciones: [
+            "opacity",
+            "alpha",
+            "visibility",
+            "transparent"
+        ],
+        correcta: 0,
+        explicacion: " opacity controla la transparencia del elemento completo, incluyendo sus hijos"
+    },
+    {
+        enunciado: "¿Qué selector selecciona un elemento con id \"caja\"?",
+        opciones: [
+            ".caja",
+            "#caja",
+            "caja",
+            "*caja"
+        ],
+        correcta: 1,
+        explicacion: " En CSS, el símbolo # selecciona un elemento por su id"
+    },
+    {
+        enunciado: "¿Qué propiedad añade sombra a una caja o elemento?",
+        opciones: [
+            "text-shadow",
+            "box-shadow",
+            "shadow-box",
+            "border-shadow"
+        ],
+        correcta: 1,
+        explicacion: " box-shadow añade sombra alrededor de una caja o elemento"
+    },
+    {
+        enunciado: "¿Qué propiedad define el tamaño de la fuente?",
+        opciones: [
+            "font-style",
+            "font-size",
+            "text-size",
+            "width"
+        ],
+        correcta: 1,
+        explicacion: " font-size define el tamaño del texto"
+    },
+    {
+        enunciado: "¿Qué valor de box-sizing hace que el width incluya padding y border?",
+        opciones: [
+            "content-box",
+            "padding-box",
+            "border-box",
+            "inside-box"
+        ],
+        correcta: 2,
+        explicacion: " border-box hace que el ancho incluya contenido, padding y borde"
+    },
+    {
+        enunciado: "¿Qué pseudo-clase selecciona un enlace cuando ya ha sido visitado?",
+        opciones: [
+            "a:hover",
+            "a:visited",
+            "a:active",
+            "a:focus"
+        ],
+        correcta: 1,
+        explicacion: " a:visited selecciona enlaces que el usuario ya ha visitado"
+    },
+    {
+        enunciado: "¿Qué propiedad se usa para redondear las esquinas?",
+        opciones: [
+            "corner-radius",
+            "border-round",
+            "border-radius",
+            "radius-border"
+        ],
+        correcta: 2,
+        explicacion: " border-radius redondea las esquinas de una caja"
+    },
+    {
+        enunciado: "En XML, ¿qué significa que los nombres son case-sensitive?",
+        opciones: [
+            "Que los atributos van siempre en mayúsculas",
+            "Que no importa si usas mayúsculas o minúsculas",
+            "Que <Curso> y <curso> son distintos",
+            "Que solo afecta a los valores de atributos"
+        ],
+        correcta: 2,
+        explicacion: " Case-sensitive significa que XML distingue entre mayúsculas y minúsculas"
+    },
+    {
+        enunciado: "¿Cuál es una etiqueta XML correcta?",
+        opciones: [
+            "<1curso>",
+            "<_curso>",
+            "<-curso>",
+            "<.curso>"
+        ],
+        correcta: 1,
+        explicacion: " En XML, una etiqueta puede empezar por letra o guion bajo, pero no por número, punto o guion"
+    },
+    {
+        enunciado: "En DTD, ¿cómo se define que un elemento alumno contiene texto (#PCDATA)?",
+        opciones: [
+            "<!ELEMENT alumno (#PCDATA)>",
+            "<!DOCTYPE alumno (#PCDATA)>",
+            "<!ATTLIST alumno (#PCDATA)>",
+            "<!ENTITY alumno (#PCDATA)>"
+        ],
+        correcta: 0,
+        explicacion: " <!ELEMENT alumno (#PCDATA)> declara que el elemento alumno contiene texto"
+    },
+    {
+        enunciado: "En XSLT, ¿qué etiqueta se usa para recorrer un conjunto de nodos seleccionados?",
+        opciones: [
+            "xsl:loop",
+            "xsl:for-each",
+            "xsl:repeat",
+            "xsl:each"
+        ],
+        correcta: 1,
+        explicacion: " xsl:for-each recorre los nodos seleccionados en una transformación XSLT"
+    },
+    {
+        enunciado: "En XPath/XSLT, ¿cómo se selecciona un atributo llamado id?",
+        opciones: [
+            "id",
+            "#id",
+            "@id",
+            "::id"
+        ],
+        correcta: 2,
+        explicacion: " En XPath, los atributos se seleccionan con @, por ejemplo @id"
+    },
+    {
+        enunciado: "¿Cómo se escribe un comentario de una línea en JavaScript?",
+        opciones: [
+            "<!-- comentario -->",
+            "# comentario",
+            "// comentario",
+            "/* texto */"
+        ],
+        correcta: 2,
+        explicacion: " En JavaScript, // se usa para comentarios de una sola línea"
+    },
+    {
+        enunciado: "¿Qué muestra typeof \"hola\"?",
+        opciones: [
+            "text",
+            "string",
+            "String",
+            "char"
+        ],
+        correcta: 1,
+        explicacion: " typeof \"hola\" devuelve string porque el valor es una cadena de texto"
+    },
+    {
+        enunciado: "¿Qué método convierte un texto a número entero?",
+        opciones: [
+            "NumberInt()",
+            "parseInt()",
+            "toInteger()",
+            "int()"
+        ],
+        correcta: 1,
+        explicacion: " parseInt() convierte una cadena a número entero cuando es posible"
+    },
+    {
+        enunciado: "¿Qué operador compara valor y tipo en JavaScript?",
+        opciones: [
+            "==",
+            "=",
+            "===",
+            "!="
+        ],
+        correcta: 2,
+        explicacion: " === compara valor y tipo, por eso se llama comparación estricta"
+    },
+    {
+        enunciado: "¿Qué imprime console.log(2 + \"2\")?",
+        opciones: [
+            "4",
+            "\"22\"",
+            "NaN",
+            "2+2"
+        ],
+        correcta: 1,
+        explicacion: " Con +, si uno de los valores es string, JavaScript concatena y el resultado es \"22\""
+    },
+    {
+        enunciado: "¿Qué imprime console.log(2 - \"2\")?",
+        opciones: [
+            "2",
+            "\"22\"",
+            "NaN",
+            "0"
+        ],
+        correcta: 3,
+        explicacion: " Con -, JavaScript convierte \"2\" a número y calcula 2 - 2, que da 0"
+    },
+    {
+        enunciado: "¿Qué devuelve la expresión 2 - \"2\" == null + null?",
+        opciones: [
+            "true",
+            "false",
+            "undefined",
+            "null"
+        ],
+        correcta: 0,
+        explicacion: " 2 - \"2\" da 0 y null + null también da 0, por eso 0 == 0 es true"
+    },
+
+
+
+
+
     /* JavaScriipt --> aparece en el temario pero la profesora dice que de JavaScript solo cae hasta las sumas, por lo tanto esta no entra
     
     
