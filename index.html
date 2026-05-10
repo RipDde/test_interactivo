@@ -25,14 +25,11 @@
   <script src="js/preguntasMPO.js"></script>
   <script src="js/preguntasPAR.js"></script>
 
-
 </head>
 
 <body>
 
   <div id="root"></div>
-
-
 
   <script type="text/babel">
 
@@ -62,16 +59,19 @@
       }
 
       const [preguntasMezcladas, setPreguntasMezcladas] = React.useState([]);
+      const [respuestas, setRespuestas] = React.useState([]);
+      const [marcadas, setMarcadas] = React.useState([]);
+      const [corregido, setCorregido] = React.useState(false);
+      const [mostrarResultado, setMostrarResultado] = React.useState(false);
+
       React.useEffect(() => {
         const nuevas = mezclarArray(preguntasActuales).slice(0, 30);
         setPreguntasMezcladas(nuevas);
         setRespuestas(Array(nuevas.length).fill(null));
+        setMarcadas(Array(nuevas.length).fill(false));
         setCorregido(false);
+        setMostrarResultado(false);
       }, [asignatura]);
-      const [respuestas, setRespuestas] = React.useState(
-        Array(preguntasMezcladas.length).fill(null)
-      );
-      const [corregido, setCorregido] = React.useState(false);
 
       const totalPreguntas = preguntasMezcladas.length;
       const valorPregunta = 10 / totalPreguntas;
@@ -82,23 +82,26 @@
         setRespuestas(copia);
       };
 
+      const toggleMarcada = (i) => {
+        const copia = [...marcadas];
+        copia[i] = !copia[i];
+        setMarcadas(copia);
+      };
+
       const aciertos = respuestas.reduce((acc, r, i) => {
-        if (r === preguntasMezcladas[i].correcta) return acc + 1;
+        if (r === preguntasMezcladas[i]?.correcta) return acc + 1;
         return acc;
       }, 0);
 
       const fallos = respuestas.reduce((acc, r, i) => {
-        if (r !== null && r !== preguntasMezcladas[i].correcta) return acc + 1;
+        if (r !== null && r !== preguntasMezcladas[i]?.correcta) return acc + 1;
         return acc;
       }, 0);
 
       const noRespondidas = respuestas.filter(r => r === null).length;
 
       const penalizacion = Math.floor(fallos / 3) * valorPregunta;
-
       const puntaje = Math.max(0, aciertos * valorPregunta - penalizacion);
-
-      const [mostrarResultado, setMostrarResultado] = React.useState(false);
 
       return (
         <>
@@ -116,7 +119,7 @@
                   </button>
 
                   <button
-                    className={`nav-btn ${asignatura === "FD" ? "nav-btn-active" : ""}`}
+                    className={`nav-btn ${asignatura === "FH" ? "nav-btn-active" : ""}`}
                     onClick={() => setAsignatura("FH")}
                   >
                     FH
@@ -162,13 +165,22 @@
           </div>
 
           <div className="contenido-principal">
-            {/* PREGUNTAS */}
             <div className="test-container">
               {preguntasMezcladas.map((p, i) => (
                 <div key={i} id={`pregunta-${i}`} className="card">
-                  <h2 className="question-title">
-                    {i + 1}. {p.enunciado}
-                  </h2>
+                  <div className="question-header">
+                    <h2 className="question-title">
+                      {i + 1}. {p.enunciado}
+                    </h2>
+
+                    <button
+                      className={`btn-marcar ${marcadas[i] ? "btn-marcar-activa" : ""}`}
+                      onClick={() => toggleMarcada(i)}
+                      title={marcadas[i] ? "Desmarcar pregunta" : "Marcar pregunta"}
+                    >
+                      ⚑
+                    </button>
+                  </div>
 
                   {p.opciones.map((op, j) => {
                     const seleccionado = respuestas[i] === j;
@@ -190,7 +202,7 @@
                     );
                   })}
 
-                  {corregido && (
+                  {corregido && p.explicacion && (
                     <div className="explicacion">
                       <strong>Explicación</strong>
                       <p>{p.explicacion}</p>
@@ -200,7 +212,6 @@
               ))}
             </div>
 
-            {/* MAPA */}
             <div className="columna-mapa">
               <div className="mapa-preguntas">
                 <h3>Mapa de preguntas</h3>
@@ -211,6 +222,10 @@
 
                     if (respuestas[i] !== null) {
                       claseMapa += " respondida";
+                    }
+
+                    if (marcadas[i]) {
+                      claseMapa += " marcada";
                     }
 
                     if (corregido) {
@@ -244,15 +259,13 @@
                 </div>
               </div>
             </div>
-          </div >
+          </div>
 
-          {/* BOTÓN INFO */}
-          <button className="btn-info-preguntas" >
+          <button className="btn-info-preguntas">
             {preguntasActuales.length} preguntas disponibles
-          </button >
+          </button>
 
-          {/* FINALIZAR */}
-          <div className="result-section" >
+          <div className="result-section">
             <button
               className="btn-correct"
               onClick={() => {
@@ -263,43 +276,38 @@
               Finalizar
             </button>
 
-            {
-              mostrarResultado && (
-                <div
-                  className="modal-overlay"
-                  onClick={() => setMostrarResultado(false)}
-                >
-                  <div className="modal" onClick={(e) => e.stopPropagation()}>
-                    <h2>Resultado final</h2>
-                    <p><strong>Nota:</strong> {puntaje.toFixed(2)} / 10</p>
-                    <p><strong>Acertadas:</strong> {aciertos}</p>
-                    <p><strong>Erróneas:</strong> {fallos}</p>
-                    <p><strong>En blanco:</strong> {noRespondidas}</p>
+            {mostrarResultado && (
+              <div
+                className="modal-overlay"
+                onClick={() => setMostrarResultado(false)}
+              >
+                <div className="modal" onClick={(e) => e.stopPropagation()}>
+                  <h2>Resultado final</h2>
+                  <p><strong>Nota:</strong> {puntaje.toFixed(2)} / 10</p>
+                  <p><strong>Acertadas:</strong> {aciertos}</p>
+                  <p><strong>Erróneas:</strong> {fallos}</p>
+                  <p><strong>En blanco:</strong> {noRespondidas}</p>
 
-                    <button
-                      className="btn-close-modal"
-                      onClick={() => setMostrarResultado(false)}
-                    >
-                      Cerrar
-                    </button>
-                  </div>
+                  <button
+                    className="btn-close-modal"
+                    onClick={() => setMostrarResultado(false)}
+                  >
+                    Cerrar
+                  </button>
                 </div>
-              )
-            }
-          </div >
+              </div>
+            )}
+          </div>
         </>
       );
     }
 
-
     ReactDOM.createRoot(document.getElementById("root")).render(<TestInteractivo />);
   </script>
+
   <footer>
     <p>Creado por <b>E.R.</b></p>
-
   </footer>
 </body>
-
-
 
 </html>
