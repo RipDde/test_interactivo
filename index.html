@@ -272,6 +272,10 @@
               onClick={() => {
                 setCorregido(true);
                 setMostrarResultado(true);
+                window.scrollTo({
+                  top: 0,
+                  behavior: "smooth"
+                });
               }}
             >
               Finalizar
