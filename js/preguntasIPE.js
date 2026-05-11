@@ -1758,5 +1758,358 @@ const preguntasIPE = [
     ],
     correcta: 3,
     explicacion: " La correcta es Relación laboral excluida porque si la persona asume el riesgo económico de la operación no hay ajenidad, por lo que no es relación laboral común."
-  }
+  },
+  {
+    enunciado: "¿Qué decisión refleja mejor una correcta actuación preventiva?",
+    opciones: [
+      "Comprar equipos de protección individual para los trabajadores",
+      "Reducir el número de empleados en determinadas áreas",
+      "Eliminar o reducir el riesgo desde su origen en el proceso",
+      "Aplicar sanciones cuando se incumplen las normas"
+    ],
+    correcta: 2,
+    explicacion: " La correcta es eliminar o reducir el riesgo desde su origen en el proceso porque en prevención primero se intenta evitar el riesgo o combatirlo en su origen. Los equipos de protección individual se usan cuando el riesgo no puede eliminarse completamente"
+  },
+  {
+    enunciado: "¿Qué elemento es clave para prevenir riesgos de forma eficaz?",
+    opciones: [
+      "La imposición de sanciones disciplinarias a los trabajadores",
+      "La formación e información adecuada en materia preventiva",
+      "El control externo mediante inspecciones periódicas",
+      "La reducción del número de trabajadores en la empresa"
+    ],
+    correcta: 1,
+    explicacion: " La correcta es la formación e información adecuada en materia preventiva porque los trabajadores deben conocer los riesgos de su puesto y saber cómo actuar para evitarlos. Las sanciones o inspecciones pueden existir, pero no son la base principal de una prevención eficaz"
+  },
+  {
+  enunciado: "¿Cuál es el primer paso en la gestión de un riesgo laboral?",
+  opciones: [
+    "Eliminar el riesgo mediante medidas técnicas inmediatas",
+    "Evaluar el riesgo teniendo en cuenta su gravedad",
+    "Identificar el peligro que puede generar un riesgo laboral",
+    "Formar a los trabajadores sobre el riesgo detectado"
+  ],
+  correcta: 2,
+  explicacion: " La correcta es identificar el peligro que puede generar un riesgo laboral porque antes de evaluar, eliminar o formar sobre un riesgo, primero hay que detectar qué peligro existe"
+},
+{
+  enunciado: "¿Qué medida preventiva es más eficaz según los principios generales?",
+  opciones: [
+    "El uso de equipos de protección individual por parte del trabajador",
+    "La formación específica en prevención de riesgos laborales",
+    "La eliminación del riesgo directamente en su origen",
+    "La señalización del riesgo en el lugar de trabajo"
+  ],
+  correcta: 2,
+  explicacion: " La correcta es la eliminación del riesgo directamente en su origen porque, según los principios generales de prevención, lo más eficaz es evitar el riesgo o combatirlo desde su causa. Los EPIs y la señalización son medidas posteriores cuando el riesgo no puede eliminarse completamente"
+},
+{
+  enunciado: "¿Qué técnica preventiva busca evitar accidentes de trabajo?",
+  opciones: [
+    "La higiene industrial relacionada con agentes químicos",
+    "La ergonomía centrada en la adaptación del puesto",
+    "La seguridad en el trabajo enfocada a evitar accidentes",
+    "La psicosociología aplicada al entorno laboral"
+  ],
+  correcta: 2,
+  explicacion: " La correcta es la seguridad en el trabajo enfocada a evitar accidentes porque esta técnica preventiva se centra en prevenir accidentes laborales. La higiene industrial se ocupa de agentes físicos, químicos o biológicos; la ergonomía adapta el puesto a la persona; y la psicosociología estudia factores como estrés, carga mental o clima laboral"
+},
+{
+  enunciado: "¿Qué elemento forma parte de la evaluación de riesgos?",
+  opciones: [
+    "El salario del trabajador en función del puesto",
+    "La probabilidad y la gravedad del daño potencial",
+    "La antigüedad del trabajador en la empresa",
+    "El tipo de contrato firmado"
+  ],
+  correcta: 1,
+  explicacion: " La correcta es la probabilidad y la gravedad del daño potencial porque al evaluar un riesgo laboral se valora qué posibilidades hay de que ocurra y qué consecuencias tendría si sucede. El salario, la antigüedad o el tipo de contrato no son criterios principales para medir el nivel de riesgo"
+},
+{
+  enunciado: "¿Qué característica define una relación laboral frente a otras?",
+  opciones: [
+    "La existencia de un contrato por escrito firmado entre las partes, en todo caso",
+    "La prestación de servicios bajo dependencia y ajenidad",
+    "La duración indefinida del vínculo laboral",
+    "La percepción de una retribución mensual"
+  ],
+  correcta: 1,
+  explicacion: " La correcta es la prestación de servicios bajo dependencia y ajenidad porque en una relación laboral el trabajador presta servicios dentro de la organización y dirección del empresario, y los frutos o resultados del trabajo pertenecen a la empresa. No siempre es obligatorio que el contrato sea por escrito, no tiene por qué ser indefinido y la retribución no tiene que ser necesariamente mensual"
+},
+{
+  enunciado: "¿Qué implica la ajenidad en una relación laboral?",
+  opciones: [
+    "El trabajador asume los riesgos de la actividad",
+    "El trabajador participa en los beneficios empresariales",
+    "El empresario asume los riesgos y resultados de la actividad",
+    "El trabajador decide la organización del trabajo"
+  ],
+  correcta: 2,
+  explicacion: " La correcta es el empresario asume los riesgos y resultados de la actividad porque la ajenidad significa que el trabajador trabaja para otro: no asume directamente el riesgo empresarial ni se queda con los beneficios de la actividad. El trabajador recibe su salario aunque el resultado económico dependa de la empresa"
+},
+{
+  enunciado: "¿Qué ocurre si una actividad se realiza por amistad o buena voluntad?",
+  opciones: [
+    "Se genera una relación laboral temporal",
+    "Se considera una relación laboral especial",
+    "No se considera relación laboral en sentido jurídico",
+    "Se aplica automáticamente el convenio colectivo"
+  ],
+  correcta: 2,
+  explicacion: " La correcta es no se considera relación laboral en sentido jurídico porque los trabajos realizados por amistad, benevolencia o buena voluntad no cumplen los requisitos de una relación laboral ordinaria. Para que exista relación laboral debe haber dependencia, ajenidad, voluntariedad y retribución"
+},
+{
+  enunciado: "¿Cuál no es un elemento esencial del contrato?",
+  opciones: [
+    "Causa",
+    "Objeto",
+    "Consentimiento",
+    "Condición"
+  ],
+  correcta: 3,
+  explicacion: " La correcta es condición porque los elementos esenciales del contrato son consentimiento, objeto y causa. La condición puede aparecer en algunos contratos, pero no es un elemento esencial para que exista el contrato"
+},
+{
+  enunciado: "¿Qué edad mínima general permite trabajar?",
+  opciones: [
+    "14 años",
+    "15 años",
+    "16 años",
+    "18 años"
+  ],
+  correcta: 2,
+  explicacion: " La correcta es 16 años porque, con carácter general, esa es la edad mínima para poder trabajar. Los menores de 18 años pueden trabajar, pero tienen limitaciones y necesitan autorización de sus representantes legales si no están emancipados"
+},
+{
+  enunciado: "¿Qué norma regula la relación laboral en España?",
+  opciones: [
+    "Código Civil de los Trabajadores",
+    "Ley de Seguridad Social de los Trabajadores",
+    "Estatuto de los Trabajadores",
+    "Ley de Prevención de los Trabajadores"
+  ],
+  correcta: 2,
+  explicacion: " La correcta es Estatuto de los Trabajadores porque es la norma básica que regula los derechos y deberes laborales en España. El Código Civil regula relaciones civiles generales, la Seguridad Social regula prestaciones y cotizaciones, y la prevención de riesgos laborales tiene su propia normativa específica"
+},
+{
+  enunciado: "¿Qué percepciones económicas percibe una madre que disfruta de una excedencia por cuidado de hijo?",
+  opciones: [
+    "0 euros",
+    "100% de su base reguladora",
+    "60% de su base reguladora",
+    "70% de su base reguladora"
+  ],
+  correcta: 0,
+  explicacion: " La correcta es 0 euros porque la excedencia por cuidado de hijo no se cobra. El contrato queda suspendido y no se percibe salario ni prestación económica ordinaria durante ese periodo"
+},
+{
+  enunciado: "¿Qué indemnización recibirá Matías en caso de despido improcedente?",
+  opciones: [
+    "20 días por año trabajado con un máximo de 24 mensualidades con salarios de tramitación",
+    "El abono exclusivo de salarios de indemnización",
+    "El abono exclusivo de salarios de tramitación",
+    "33 días por año trabajado con un máximo de 24 mensualidades"
+  ],
+  correcta: 3,
+  explicacion: " La correcta es 33 días por año trabajado con un máximo de 24 mensualidades porque esa es la indemnización general por despido improcedente para contratos posteriores al 12 de febrero de 2012. Los 20 días por año corresponden normalmente al despido objetivo procedente, y los salarios de tramitación no son la indemnización general"
+},
+{
+  enunciado: "¿Qué diferencia una relación laboral de una actividad por cuenta propia?",
+  opciones: [
+    "El nivel de formación requerido para el puesto",
+    "La existencia de dependencia y organización empresarial",
+    "El tipo de contrato firmado entre las partes",
+    "La duración de la prestación del servicio"
+  ],
+  correcta: 1,
+  explicacion: " La correcta es la existencia de dependencia y organización empresarial porque en una relación laboral el trabajador presta servicios dentro del ámbito de dirección y organización del empresario. En una actividad por cuenta propia, la persona organiza su propio trabajo y asume su actividad con mayor autonomía"
+},
+{
+  enunciado: "¿Qué implica que la causa del contrato sea ilícita?",
+  opciones: [
+    "El contrato sigue siendo válido si hay consentimiento",
+    "El contrato puede ejecutarse parcialmente",
+    "El contrato es inválido por falta de legalidad en su finalidad",
+    "El contrato se convierte en temporal automáticamente"
+  ],
+  correcta: 2,
+  explicacion: " La correcta es el contrato es inválido por falta de legalidad en su finalidad porque la causa es uno de los elementos esenciales del contrato y debe ser lícita. Si la finalidad del contrato es contraria a la ley, el contrato no puede considerarse válido"
+},
+{
+  enunciado: "¿Qué diferencia hay entre traslado y desplazamiento?",
+  opciones: [
+    "No existe diferencia",
+    "El traslado implica cambio definitivo de residencia",
+    "El desplazamiento es siempre permanente",
+    "El traslado es temporal"
+  ],
+  correcta: 1,
+  explicacion: " La correcta es el traslado implica cambio definitivo de residencia porque el traslado supone un cambio de centro de trabajo con carácter permanente o duradero que exige cambiar de residencia. El desplazamiento, en cambio, es temporal"
+},
+{
+  enunciado: "¿Qué elemento forma parte de los devengos en una nómina?",
+  opciones: [
+    "Las cotizaciones a la Seguridad Social del trabajador",
+    "Las deducciones por impuestos aplicables",
+    "Las percepciones salariales y complementos que recibe el trabajador",
+    "Las retenciones fiscales obligatorias"
+  ],
+  correcta: 2,
+  explicacion: " La correcta es las percepciones salariales y complementos que recibe el trabajador porque los devengos son las cantidades que el trabajador genera o tiene derecho a cobrar en la nómina. Las cotizaciones, deducciones y retenciones se restan después para calcular el líquido a percibir"
+},
+{
+  enunciado: "¿Qué organismo español es responsable de la seguridad y salud laboral?",
+  opciones: [
+    "La Organización Mundial de la Salud",
+    "La Agencia Europea de Seguridad y Salud",
+    "El Instituto Nacional de Seguridad y Salud en el Trabajo",
+    "La Inspección de Trabajo"
+  ],
+  correcta: 2,
+  explicacion: " La correcta es el Instituto Nacional de Seguridad y Salud en el Trabajo porque es el organismo español especializado en seguridad y salud laboral. La OMS es internacional, la Agencia Europea actúa a nivel europeo y la Inspección de Trabajo vigila el cumplimiento de la normativa, pero no es el organismo técnico principal en esta materia"
+},
+{
+  enunciado: "¿Qué deben hacer los trabajadores ante un riesgo grave e inminente?",
+  opciones: [
+    "Esperar instrucciones del supervisor",
+    "Continuar trabajando para cumplir objetivos",
+    "Interrumpir la actividad y abandonar el lugar de trabajo",
+    "Informar al sindicato y seguir trabajando"
+  ],
+  correcta: 2,
+  explicacion: " La correcta es interrumpir la actividad y abandonar el lugar de trabajo porque ante un riesgo grave e inminente el trabajador no debe seguir exponiéndose al peligro. Primero debe proteger su seguridad, y después comunicar la situación según corresponda"
+},
+{
+  enunciado: "¿Cuál NO es una medida de protección colectiva?",
+  opciones: [
+    "Barreras de seguridad",
+    "Sistemas de ventilación localizada",
+    "Gafas de seguridad",
+    "Botones de parada de emergencia"
+  ],
+  correcta: 2,
+  explicacion: " La correcta es gafas de seguridad porque son un equipo de protección individual, no una medida de protección colectiva. Las barreras, la ventilación localizada y los botones de parada de emergencia protegen a varias personas o actúan sobre el riesgo general"
+},
+{
+  enunciado: "¿Cuál es la función del comité de seguridad y salud?",
+  opciones: [
+    "Toma de decisiones ejecutivas",
+    "Asesoramiento y consulta",
+    "Aplicación directa de normas",
+    "Formación obligatoria de empleados"
+  ],
+  correcta: 1,
+  explicacion: " La correcta es asesoramiento y consulta porque el comité de seguridad y salud es un órgano de participación destinado a consultar y debatir actuaciones preventivas en la empresa. No toma decisiones ejecutivas directamente ni sustituye la obligación empresarial de aplicar normas o formar a los trabajadores"
+},
+{
+  enunciado: "En una empresa de 501 a 1000 trabajadores, ¿cuántos delegados de prevención corresponden? (fuera temario)",
+  opciones: [
+    "2",
+    "3",
+    "4",
+    "5"
+  ],
+  correcta: 2,
+  explicacion: " La correcta es 4 porque, según la escala legal de delegados de prevención, en empresas de 501 a 1000 trabajadores corresponden 4 delegados de prevención"
+},
+{
+  enunciado: "¿Qué se debe hacer primero ante un accidentado?",
+  opciones: [
+    "Llamar a emergencias",
+    "Administrar primeros auxilios",
+    "Asegurar la seguridad de la zona",
+    "Trasladar al herido"
+  ],
+  correcta: 2,
+  explicacion: " La correcta es asegurar la seguridad de la zona porque antes de ayudar hay que comprobar que no existe peligro para el accidentado ni para quien auxilia. Después se avisa a emergencias y se prestan primeros auxilios si procede"
+},
+{
+  enunciado: "¿En qué caso es clave la maniobra de Heimlich?",
+  opciones: [
+    "Quemaduras leves",
+    "Fracturas óseas",
+    "Atragantamiento severo",
+    "Hemorragias internas"
+  ],
+  correcta: 2,
+  explicacion: " La correcta es atragantamiento severo porque la maniobra de Heimlich se utiliza cuando una persona tiene una obstrucción grave de la vía aérea y no puede respirar, toser o hablar correctamente. No se usa para quemaduras, fracturas ni hemorragias internas"
+},
+{
+  enunciado: "¿Cuál es el orden jerárquico correcto de normas laborales?",
+  opciones: [
+    "Convenio, leyes, Constitución, contratos",
+    "Contratos, convenio, leyes, Constitución",
+    "Leyes, convenio, contratos, Constitución",
+    "Constitución, leyes, normas con rango de ley, convenio, contrato, usos"
+  ],
+  correcta: 3,
+  explicacion: " La correcta es Constitución, leyes, normas con rango de ley, convenio, contrato y usos porque las normas laborales se ordenan jerárquicamente desde las normas superiores hasta las inferiores. Un contrato no puede empeorar lo establecido por una norma superior o por un convenio aplicable"
+},
+{
+  enunciado: "¿Qué es el SMAC?",
+  opciones: [
+    "Un tribunal laboral",
+    "Un sindicato",
+    "Un servicio de mediación, arbitraje y conciliación",
+    "Una organización empresarial"
+  ],
+  correcta: 2,
+  explicacion: " La correcta es un servicio de mediación, arbitraje y conciliación porque el SMAC es el organismo al que se acude antes de muchos procedimientos laborales para intentar llegar a un acuerdo entre empresa y trabajador sin ir directamente a juicio"
+},
+{
+  enunciado: "El principio de irrenunciabilidad de derechos impide que los trabajadores:",
+  opciones: [
+    "Negocien sus salarios",
+    "Renuncien a derechos básicos salvo por escrito",
+    "Renuncien a derechos básicos aunque lo hagan por escrito",
+    "Formen sindicatos"
+  ],
+  correcta: 2,
+  explicacion: " La correcta es renuncien a derechos básicos aunque lo hagan por escrito porque los trabajadores no pueden renunciar válidamente a los derechos mínimos reconocidos por la ley o el convenio. Aunque firmaran un documento aceptándolo, esa renuncia no tendría validez"
+},
+{
+  enunciado: "El principio de norma más favorable indica que se aplica:",
+  opciones: [
+    "La norma más reciente",
+    "La norma más antigua",
+    "La norma más compleja",
+    "La norma más beneficiosa para el trabajador"
+  ],
+  correcta: 3,
+  explicacion: " La correcta es la norma más beneficiosa para el trabajador porque, cuando existen varias normas aplicables a una misma situación laboral, debe aplicarse la que resulte más favorable para el trabajador en su conjunto"
+},
+{
+  enunciado: "¿Qué papel tienen los contratos en la jerarquía normativa?",
+  opciones: [
+    "Establecen la remuneración mínima",
+    "Sustituyen las leyes salvo mejora",
+    "No pueden fijar condiciones inferiores a ley o convenio",
+    "Son irrelevantes"
+  ],
+  correcta: 2,
+  explicacion: " La correcta es no pueden fijar condiciones inferiores a ley o convenio porque el contrato de trabajo puede mejorar las condiciones del trabajador, pero no puede empeorar los mínimos establecidos por normas superiores como la ley o el convenio colectivo"
+},
+{
+  enunciado: "Un funcionario que accede con estudios universitarios pertenece al grupo:",
+  opciones: [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  correcta: 0,
+  explicacion: " La correcta es A porque el grupo A corresponde a funcionarios que acceden con titulación universitaria. Normalmente se divide en A1 y A2 según el nivel de responsabilidad y la titulación exigida"
+},
+
+
+
+
+
+
+
+
+
+
+
+
 ];
