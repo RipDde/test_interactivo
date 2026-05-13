@@ -3091,7 +3091,7 @@ const preguntasFH = [
     explicacion: " La correcta es Trusted Advisor porque es el concepto que responde directamente a lo que se pregunta"
   },
   {
-    enunciado: "¿Qué es la Infraestructura como Código (IaC)?",
+    enunciado: "¿Qué es la Infraestructura como Código (IaaC)?",
     opciones: [
       "Programar el firmware de la BIOS",
       "Gestionar y dar de alta recursos de nube mediante archivos de configuración",

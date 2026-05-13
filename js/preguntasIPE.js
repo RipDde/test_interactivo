@@ -447,7 +447,7 @@ const preguntasIPE = [
       "15 compresiones / 2 ventilaciones.",
       "2 ventilaciones y 30 compresiones."
     ],
-    correcta: 0,
+    correcta: 3,
     explicacion: " La correcta es 30 compresiones / 2 ventilaciones. porque la secuencia básica de RCP en adulto es 30 compresiones y 2 ventilaciones."
   },
   {
@@ -1290,12 +1290,12 @@ const preguntasIPE = [
     enunciado: "¿Hasta qué edad puede disfrutar una persona de la pensión por orfandad?",
     opciones: [
       "19 años",
-      "25 años, siempre que esté cursando estudios",
+      "25 años, siempre que no esté cursando estudios",
       "20 años",
       "Hasta que lo necesite"
     ],
     correcta: 1,
-    explicacion: " La correcta es 25 años, siempre que esté cursando estudios porque la orfandad puede disfrutarse hasta los 25 años si se cumplen los requisitos, como continuar estudios o carecer de ingresos suficientes."
+    explicacion: " La correcta es 25 años, siempre que no esté cursando estudios porque la orfandad puede disfrutarse hasta los 25 años si se cumplen los requisitos, como continuar estudios o carecer de ingresos suficientes."
   },
   {
     enunciado: "¿Qué prestación otorga un 100% de la base reguladora más complemento por asistencia de otra persona?",
@@ -1432,13 +1432,13 @@ const preguntasIPE = [
   {
     enunciado: "¿Cuánto cobrará un trabajador de prestación por desempleo a partir de día 180?",
     opciones: [
-      "0.5",
-      "0.8",
-      "0.6",
-      "0.75"
+      "50 % de la base reguladora",
+      "80 % de la base reguladora",
+      "60 % de la base reguladora",
+      "70 % de la base reguladora"
     ],
     correcta: 2,
-    explicacion: " La correcta es 0.6 porque a partir del día 181 de prestación contributiva por desempleo se cobra el 60 % de la base reguladora."
+    explicacion: " La correcta es 60 % de la base reguladora porque a partir del día 181 de prestación contributiva por desempleo se cobra el 60 % de la base reguladora."
   },
   {
     enunciado: "¿Cuál es la norma básica que regula las relaciones laborales en España?",
@@ -2099,6 +2099,39 @@ const preguntasIPE = [
   ],
   correcta: 0,
   explicacion: " La correcta es A porque el grupo A corresponde a funcionarios que acceden con titulación universitaria. Normalmente se divide en A1 y A2 según el nivel de responsabilidad y la titulación exigida"
+},
+{
+  enunciado: "Señala cuál de los siguientes tipos de suspensión del contrato de trabajo no depende de la voluntad de las partes",
+  opciones: [
+    "Huelga",
+    "Suspensión disciplinaria",
+    "Excedencias",
+    "Servicio militar"
+  ],
+  correcta: 3,
+  explicacion: " La correcta es servicio militar porque no depende directamente de la voluntad de las partes del contrato. La huelga, la suspensión disciplinaria o las excedencias tienen relación con decisiones del trabajador, la empresa o ambas partes"
+},
+{
+  enunciado: "¿Qué duración máxima tiene la excedencia por cuidado de familiares?",
+  opciones: [
+    "2 años",
+    "1 año",
+    "3 años",
+    "5 años"
+  ],
+  correcta: 0,
+  explicacion: " La correcta es 2 años porque la excedencia por cuidado de familiares puede durar como máximo dos años, salvo que el convenio colectivo establezca otra duración"
+},
+{
+  enunciado: "¿Durante cuánto tiempo permite la empresa la reincorporación al mismo puesto en la excedencia por cuidado de hijo?",
+  opciones: [
+    "2 años",
+    "1 año",
+    "3 años",
+    "5 años"
+  ],
+  correcta: 1,
+  explicacion: " La correcta es 1 año porque durante el primer año de excedencia por cuidado de hijo se reserva el mismo puesto de trabajo. Después se conserva el derecho a un puesto del mismo grupo profesional o categoría equivalente"
 },
 
 
