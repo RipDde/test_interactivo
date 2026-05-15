@@ -1051,12 +1051,6 @@ const preguntasPAR = [
         explicacion: " La correcta es 20/TCP porque en FTP activo el servidor utiliza ese puerto para el canal de datos, mientras que el 21/TCP se usa para control. 69/UDP corresponde a TFTP; y 445/TCP a SMB, no a FTP."
     },
     {
-        enunciado: "Storm Control sirve para (fuera temario):",
-        opciones: ["Priorizar voz", "Limitar broadcast/multicast/unknown unicast", "Marcar DSCP", "Acelerar STP"],
-        correcta: 1,
-        explicacion: " La correcta es Limitar broadcast/multicast/unknown unicast porque Storm Control ayuda a evitar tormentas de tráfico de capa 2 que pueden saturar la red. No prioriza voz, porque eso se relaciona más con QoS; no marca DSCP (Differentiated Services Code Point); y no acelera STP (Spanning Tree Protocol)."
-    },
-    {
         enunciado: "¿Cómo se posiciona WiMAX frente a Wi-Fi?",
         opciones: ["WiMAX sustituye a Wi-Fi en interiores", "WiMAX es para acceso metropolitano/rural; Wi-Fi para LAN locales", "Ambos son idénticos", "Wi-Fi reemplaza a WiMAX en backhaul"],
         correcta: 1,
@@ -1153,40 +1147,10 @@ const preguntasPAR = [
         explicacion: " La correcta es Interfaz hacia la LAN porque ese lado se considera la parte interna de NAT, donde están los hosts privados. La interfaz hacia Internet suele configurarse como ip nat outside; no se aplica a cualquier loopback por norma; y tampoco solo a subinterfaces."
     },
     {
-        enunciado: "Puerto por defecto de Syslog (UDP) es:",
-        opciones: ["514", "162", "22", "25"],
-        correcta: 0,
-        explicacion: " La correcta es 514 porque Syslog usa normalmente UDP 514 por defecto para enviar mensajes de registro. 162 se asocia a traps de SNMP; 22 a SSH; y 25 a SMTP."
-    },
-    {
-        enunciado: "Alias clásico para guardar la configuración en NVRAM:",
-        opciones: ["wr mem", "copy tftp flash", "write erase", "config-register 0x2102"],
-        correcta: 0,
-        explicacion: " La correcta es wr mem porque es el alias clásico de write memory, usado para guardar la configuración en NVRAM. copy tftp flash se usa para copiar imágenes o ficheros; write erase borra configuración; y config-register 0x2102 ajusta el registro de arranque, no guarda la configuración."
-    },
-    {
-        enunciado: "El sufijo 'k9' en una imagen de IOS indica (rebuscada):",
-        opciones: ["Soporte criptográfico", "Kernel 9", "Versión 9 de IOS", "Compatibilidad con Catalyst 9k"],
-        correcta: 0,
-        explicacion: " La correcta es Soporte criptográfico porque el sufijo k9 suele indicar que la imagen de IOS incluye capacidades de cifrado o funciones criptográficas. No significa Kernel 9; tampoco Versión 9 de IOS; y no se refiere a compatibilidad con Catalyst 9k."
-    },
-    {
         enunciado: "Para permitir solo SSH en VTY se usa (rebuscada):",
         opciones: ["transport input ssh", "login local", "transport output ssh", "ip ssh version 2"],
         correcta: 0,
         explicacion: " La correcta es transport input ssh porque ese comando restringe el acceso entrante en las líneas VTY a SSH únicamente. login local define cómo se autentica; transport output ssh afecta a conexiones salientes; e ip ssh version 2 selecciona la versión de SSH, pero no limita por sí solo el acceso solo a SSH."
-    },
-    {
-        enunciado: "Comando que muestra datos detallados (incluida IP de gestión) en CDP:",
-        opciones: ["show cdp neighbors detail", "show cdp", "show neighbors", "show cdp interface"],
-        correcta: 0,
-        explicacion: " La correcta es show cdp neighbors detail porque ofrece información ampliada de los vecinos CDP, incluida la IP de gestión. show cdp no es el comando típico esperado para ese nivel de detalle; show neighbors es demasiado genérico; y show cdp interface enseña información por interfaz local, no el detalle completo de cada vecino."
-    },
-    {
-        enunciado: "¿Qué encapsulado de VLAN fue propietario de Cisco y hoy está obsoleto? (fuera temario)",
-        opciones: ["ISL", "QinQ", "MPLS", "L2TP"],
-        correcta: 0,
-        explicacion: " La correcta es ISL porque Inter-Switch Link fue un encapsulado de VLAN propietario de Cisco y hoy ha quedado obsoleto frente a 802.1Q. QinQ es otro mecanismo de etiquetado; MPLS es una tecnología distinta; y L2TP es un protocolo de túnel, no un encapsulado VLAN de ese tipo."
     },
     {
         enunciado: "¿Cuántos bits tiene un Byte?",
@@ -1570,7 +1534,25 @@ const preguntasPAR = [
         opciones: ["Descargas", "Copias de seguridad", "Videollamadas", "Correos electrónicos"],
         correcta: 2,
         explicacion: " La correcta es Videollamadas porque el tráfico en tiempo real suele ser el que más se beneficia de la priorización. Descargas y copias pueden esperar más, y el correo no suele requerir tanta prioridad."
-    }
+    },
+    {
+        enunciado: "BPDU Guard (fuera temario):",
+        opciones: ["Evita ataques ARP", "Inhabilita el puerto que recibe BPDUs (edge)", "Evita NAT", "Habilita VLAN nativa"],
+        correcta: 1,
+        explicacion: " La correcta es Inhabilita el puerto que recibe BPDUs (edge) porque BPDU Guard protege puertos de acceso y los desactiva si reciben BPDUs inesperadas. No evita ataques ARP; no tiene relación con NAT; y no habilita la VLAN nativa."
+    },
+    {
+        enunciado: "PortFast debe habilitarse en (fuera temario):",
+        opciones: ["Enlaces troncales", "Puertos hacia hosts finales", "Enlaces WAN", "Puertos de agregado"],
+        correcta: 1,
+        explicacion: " La correcta es Puertos hacia hosts finales porque PortFast acelera el paso a forwarding en puertos de acceso conectados a dispositivos finales como PCs. No debe ponerse de forma normal en troncales; no se refiere a enlaces WAN; y tampoco a puertos de agregado entre switches."
+    },
+    {
+        enunciado: "Root Guard sirve para (fuera temario):",
+        opciones: ["Evitar que un puerto se convierta en root port", "Evitar que el switch pierda el rol de root", "Apagar el root bridge", "Cambiar prioridad automáticamente"],
+        correcta: 1,
+        explicacion: " La correcta es Evitar que el switch pierda el rol de root porque Root Guard impide que un switch vecino reclame ser root bridge por un puerto protegido. No apaga el root bridge; no cambia la prioridad automáticamente; y la primera opción no expresa tan bien la finalidad global del mecanismo."
+    },
 
 
     /* FUERA DE TEMARIO:
@@ -1582,83 +1564,18 @@ const preguntasPAR = [
         explicacion: " La correcta es TCP 49 porque TACACS+ utiliza ese puerto por defecto. UDP 49 no es la opción estándar; y UDP/TCP 1812 se asocian a RADIUS, no a TACACS+."
     },
     {
-            enunciado: "QinQ (802.1ad) permite (fuera temario:",
-            opciones: ["Encapsular una VLAN dentro de otra", "Cifrar VLANs", "Enrutar entre VLANs", "Eliminar la VLAN nativa"],
-            correcta: 0,
-            explicacion: " La correcta es Encapsular una VLAN dentro de otra porque QinQ añade una segunda etiqueta VLAN para transportar VLANs de cliente sobre una VLAN de proveedor. No cifra VLANs; no enruta entre VLANs, porque sigue siendo capa 2; y no elimina la VLAN nativa."
-        },
-    {
             enunciado: "NPTv6 realiza (fuera temario):",
             opciones: ["Port Address Translation", "Traducción de prefijos IPv6 (1:1)", "Traducción de IPv6 a IPv4", "SLAAC"],
             correcta: 1,
             explicacion: " La correcta es Traducción de prefijos IPv6 (1:1) porque NPTv6 modifica el prefijo IPv6 manteniendo una relación uno a uno entre direcciones. Port Address Translation corresponde a PAT; traducir IPv6 a IPv4 sería NAT64; y SLAAC es autoconfiguración, no traducción."
         },
-        {
-            enunciado: "NAT64 traduce (fuera temario):",
-            opciones: ["IPv4 público a privado", "IPv6 a IPv4", "IPv4 a IPv6 y viceversa sin estado", "MAC a IP"],
-            correcta: 1,
-            explicacion: " La correcta es IPv6 a IPv4 porque NAT64 permite que clientes IPv6 accedan a servicios IPv4 mediante traducción entre ambos mundos. No se limita a pasar de IPv4 público a privado; la traducción sin estado bidireccional no define NAT64 aquí; y MAC a IP sería otra función, no NAT."
-        },
-        {
-            enunciado: "El BSSID corresponde a (fuera temario):",
-            opciones: ["Nombre de red", "MAC de la radio/SSID", "Canal del AP", "Clave PSK"],
-            correcta: 1,
-            explicacion: " La correcta es MAC de la radio/SSID porque el BSSID identifica la interfaz inalámbrica concreta del punto de acceso y suele coincidir con una dirección MAC. No es el nombre de red, que sería el SSID; no es el canal; y tampoco la clave PSK."
-        },
-        {
-            enunciado: "El roaming rápido en Wi-Fi se asocia a (fuera temario):",
-            opciones: ["802.11k/v/r", "802.11i", "802.11ax", "802.11be"],
-            correcta: 0,
-            explicacion: " La correcta es 802.11k/v/r porque esas extensiones se relacionan con optimización del roaming y transición más eficiente entre puntos de acceso. 802.11i se centra en seguridad; 802.11ax es Wi-Fi 6; y 802.11be es Wi-Fi 7."
-        },
-        {
-            enunciado: "WMM está relacionado con (fuera temario):",
-            opciones: ["QoS en Wi-Fi", "Cifrado WPA3", "Canales DFS", "Roaming 802.11r"],
-            correcta: 0,
-            explicacion: " La correcta es QoS en Wi-Fi porque WMM (Wi-Fi Multimedia) prioriza distintos tipos de tráfico inalámbrico, como voz, vídeo o datos. No es un sistema de cifrado WPA3; no define canales DFS; y no es el estándar de roaming 802.11r."
-        },
-        {
-            enunciado: "En HSRP, 'preempt' implica (fuera temario):",
-            opciones: ["Evitar que el switch sea root", "Permitir tomar el rol activo si tiene mayor prioridad", "Bloquear el grupo", "Reiniciar HSRP"],
-            correcta: 1,
-            explicacion: " La correcta es Permitir tomar el rol activo si tiene mayor prioridad porque preempt deja que un router que vuelve a estar disponible recupere el papel activo si su prioridad es superior. No tiene relación con el root bridge de STP; no bloquea el grupo; y tampoco reinicia HSRP por sí mismo."
-        },
-        {
-            enunciado: "Comando para dar preferencia a un router como activo en HSRP (fuera temario):",
-            opciones: ["standby 1 priority 110", "hsrp priority 110", "standby group 1 weight 110", "glbp 1 priority 110"],
-            correcta: 0,
-            explicacion: " La correcta es standby 1 priority 110 porque en HSRP la prioridad del grupo se ajusta con esa sintaxis para influir en qué router será el activo. hsrp priority 110 no es la forma clásica en ese contexto; standby group 1 weight 110 no es el comando esperado; y glbp 1 priority 110 pertenece a GLBP, no a HSRP."
-        },
+
         {
             enunciado: "¿Qué método de acceso al medio describía Ethernet clásico? (fuera temario):",
             opciones: ["CSMA/CA", "Token Passing", "CSMA/CD", "TDMA"],
             correcta: 2,
             explicacion: " La correcta es CSMA/CD (Carrier Sense Multiple Access with Collision Detection) porque Ethernet clásico en medios compartidos detectaba colisiones y retransmitía. CSMA/CA se usa sobre todo en Wi-Fi; Token Passing pertenece a otras tecnologías; y TDMA reparte tiempos, no es el método clásico de Ethernet."
         },
-    {
-            enunciado: "¿Qué protocolo de agregación de enlaces es estándar? (fuera temario):",
-            opciones: ["PAgP", "LACP", "DTP", "VTP"],
-            correcta: 1,
-            explicacion: " La correcta es LACP porque LACP (Link Aggregation Control Protocol) es el protocolo estándar para EtherChannel o agregación de enlaces. PAgP es propietario de Cisco; DTP negocia troncales; y VTP distribuye información de VLAN, no agrega enlaces."
-        },
-        {
-                enunciado: "LACP opera en los modos (fuera temario):",
-            opciones: ["on/off", "active/passive", "desirable/auto", "root/backup"],
-            correcta: 1,
-            explicacion: " La correcta es active/passive porque esos son los modos de negociación propios de LACP. desirable/auto pertenece a PAgP; on/off no es la pareja clásica de LACP; y root/backup no corresponde a este protocolo."
-        }
-    {
-        enunciado: "PAgP opera en los modos (fuera temario):",
-        opciones: ["active/passive", "desirable/auto", "on/off", "forward/block"],
-        correcta: 1,
-        explicacion: " La correcta es desirable/auto porque esos son los modos habituales de PAgP, el protocolo propietario de Cisco para agregación de enlaces. active/passive pertenece a LACP; on/off no es la respuesta típica de negociación PAgP; y forward/block son conceptos de STP, no de EtherChannel."
-    },
-    {
-        enunciado: "DTP es un protocolo para (fuera temario):",
-        opciones: ["Negociar troncales en Cisco", "Autenticación 802.1X", "QoS en Wi-Fi", "Agregación de enlaces estándar"],
-        correcta: 0,
-        explicacion: " La correcta es Negociar troncales en Cisco porque DTP (Dynamic Trunking Protocol) sirve para decidir automáticamente si un puerto funcionará como trunk o access. No se usa para autenticación 802.1X; no tiene relación con QoS en Wi-Fi; y tampoco es el protocolo estándar de agregación de enlaces, que sería LACP."
-    },
     {
         enunciado: "Mejor práctica respecto a DTP en puertos trunk (fuera temario):",
         opciones: ["Dejar en dynamic desirable", "Forzar trunk o access y desactivar DTP", "Usar auto en ambos extremos", "Habilitar DTP en servidores"],
@@ -1684,28 +1601,10 @@ const preguntasPAR = [
         explicacion: " La correcta es lldp run porque ese comando activa LLDP (Link Layer Discovery Protocol) de forma global en el switch Cisco. cdp enable corresponde a CDP; y enable lldp y lldp discovery enable no son los comandos estándar correctos para habilitar LLDP globalmente."
     },
     {
-        enunciado: "VRRP es un estándar definido por (fuera temario):",
-        opciones: ["IEEE", "IETF", "ISO", "ETSI"],
-        correcta: 1,
-        explicacion: " La correcta es IETF porque VRRP está definido mediante RFC del IETF. IEEE define muchos estándares de capa 2 y Wi-Fi; ISO tiene otros marcos de estandarización; y ETSI no es quien define VRRP."
-    }, 
-    {
-        enunciado: "¿Qué FHRP es propietario de Cisco?",
-        opciones: ["VRRP", "GLBP", "HSRP", "CARP"],
-        correcta: 2,
-        explicacion: " La correcta es HSRP porque HSRP (Hot Standby Router Protocol) es un FHRP propietario de Cisco. VRRP es estándar; CARP no es el protocolo Cisco clásico en este contexto; y aunque GLBP también es de Cisco, la respuesta típica esperada cuando se pregunta por el FHRP propietario más conocido es HSRP."
-    },
-    {
         enunciado: "¿Qué versión de SNMP incorpora autenticación y cifrado?",
         opciones: ["SNMPv1", "SNMPv2c", "SNMPv3", "Todas"],
         correcta: 2,
         explicacion: " La correcta es SNMPv3 porque es la versión que añade autenticación y cifrado, mejorando la seguridad respecto a SNMPv1 y SNMPv2c. SNMPv1 y SNMPv2c usan comunidades y no aportan ese nivel de protección; y no todas las versiones lo incorporan."
-    },
-    {
-        enunciado: "En IPv6 RA, el flag 'M' indica:",
-        opciones: ["Usar DHCPv6 para todo (managed)", "No hay IPv6", "Usar SLAAC exclusivamente", "Gateway no disponible"],
-        correcta: 0,
-        explicacion: " La correcta es Usar DHCPv6 para todo (managed) porque el flag M de un RA (Router Advertisement) indica modo administrado y señala que la dirección debe obtenerse mediante DHCPv6. No significa que no haya IPv6; tampoco obliga a usar solo SLAAC; y no indica ausencia de gateway, ya que el router sigue anunciándose en el RA."
     },
     {
         enunciado: "¿Qué estándar de PoE permite ~30W por puerto? (fuera temario):",
@@ -1742,24 +1641,6 @@ const preguntasPAR = [
         opciones: ["logging buffered 4096", "log buffer on", "service timestamps log", "logging console"],
         correcta: 0,
         explicacion: " La correcta es logging buffered 4096 porque ese comando activa el almacenamiento de logs en el buffer del dispositivo e indica su tamaño. log buffer on no es el comando estándar; service timestamps log añade marcas de tiempo; y logging console envía mensajes a la consola, no al buffer."
-    },
-    {
-        enunciado: "¿Qué atributo BGP es local y específico de Cisco? (fuera temario)",
-        opciones: ["LOCAL_PREF", "MED", "WEIGHT", "AS-PATH"],
-        correcta: 2,
-        explicacion: " La correcta es WEIGHT porque es un atributo local de Cisco y no se propaga a otros routers BGP. LOCAL_PREF sí se usa dentro del AS; MED puede anunciarse a vecinos externos; y AS-PATH refleja el camino por sistemas autónomos."
-    },
-{
-        enunciado: "Distancia administrativa de eBGP por defecto (fuera temario):",
-        opciones: ["20", "90", "110", "200"],
-        correcta: 0,
-        explicacion: " La correcta es 20 porque eBGP tiene una distancia administrativa muy baja por defecto en Cisco, de modo que suele preferirse frente a muchas otras rutas. 200 es la de iBGP; 110 la de OSPF; y 90 la de EIGRP interno."
-    },
-    {
-        enunciado: "Distancia administrativa de iBGP (fuera temario):",
-        opciones: ["90", "110", "170", "200"],
-        correcta: 3,
-        explicacion: " La correcta es 200 porque iBGP tiene por defecto una distancia administrativa mayor que eBGP en Cisco. 20 corresponde a eBGP; 110 a OSPF; y 90 a EIGRP interno."
     },
     {
         enunciado: "¿Cuál NO es un atributo típico de BGP? (la profesora dice que no hace falta sabérselos)",
@@ -1846,47 +1727,13 @@ const preguntasPAR = [
         explicacion: " La correcta es IP, prefijo y gateway a partir de RA porque SLAAC (Stateless Address Autoconfiguration) permite que un equipo IPv6 se autoconfigure usando anuncios RA (Router Advertisement) enviados por el router. No obtiene solo DNS, porque eso puede requerir otros mecanismos; tampoco solo gateway ni solo prefijo, ya que la autoconfiguración abarca más datos básicos de conectividad."
     },
     {
-        enunciado: "En 802.1Q, ¿qué campo contiene la prioridad 802.1p (PCP)? (fuera temario)",
-        opciones: ["12 bits VLAN ID", "3 bits PCP", "1 bit DEI", "Ninguno"],
-        correcta: 1,
-        explicacion: " La correcta es 3 bits PCP porque en la etiqueta 802.1Q el campo PCP (Priority Code Point) ocupa 3 bits y se usa para prioridad 802.1p. Los 12 bits VLAN ID identifican la VLAN; el bit DEI indica elegibilidad de descarte; y por tanto no es cierto que no exista un campo para ello."
-    },
-    {
         enunciado: "Cantidad de VLANs identificables con 802.1Q (fuera temario):",
         opciones: ["1024", "2048", "4094", "8192"],
         correcta: 2,
         explicacion: " La correcta es 4094 porque el campo VLAN ID tiene 12 bits, pero algunos valores están reservados, así que el número utilizable típico es 4094. 1024 y 2048 se quedan cortos; y 8192 supera lo que permite ese campo."
     },
-    {
-        enunciado: "El rango de VLAN extendidas en Cisco es: (fuera temario)",
-        opciones: ["2–1001", "1002–4096", "1006–4094", "4095–8190"],
-        correcta: 2,
-        explicacion: " La correcta es 1006–4094 porque ese es el rango de VLAN extendidas en Cisco. Las VLAN normales suelen llegar hasta la 1005; 1002–1005 están reservadas en muchos contextos; y 4095 tampoco es una VLAN utilizable normal."
-    },
-    {
-        enunciado: "Comando para ver el método de balanceo de EtherChannel (fuera temario):",
-        opciones: ["show etherchannel summary", "show etherchannel load-balance", "show lacp neighbors", "show pagp neighbor"],
-        correcta: 1,
-        explicacion: " La correcta es show etherchannel load-balance porque ese comando muestra el método de balanceo utilizado por EtherChannel. show etherchannel summary resume grupos y estados; show lacp neighbors da información de LACP; y show pagp neighbor se centra en PAgP."
-    },
-    {
-        enunciado: "BPDU Guard (fuera temario):",
-        opciones: ["Evita ataques ARP", "Inhabilita el puerto que recibe BPDUs (edge)", "Evita NAT", "Habilita VLAN nativa"],
-        correcta: 1,
-        explicacion: " La correcta es Inhabilita el puerto que recibe BPDUs (edge) porque BPDU Guard protege puertos de acceso y los desactiva si reciben BPDUs inesperadas. No evita ataques ARP; no tiene relación con NAT; y no habilita la VLAN nativa."
-    },
-    {
-        enunciado: "Root Guard sirve para (fuera temario):",
-        opciones: ["Evitar que un puerto se convierta en root port", "Evitar que el switch pierda el rol de root", "Apagar el root bridge", "Cambiar prioridad automáticamente"],
-        correcta: 1,
-        explicacion: " La correcta es Evitar que el switch pierda el rol de root porque Root Guard impide que un switch vecino reclame ser root bridge por un puerto protegido. No apaga el root bridge; no cambia la prioridad automáticamente; y la primera opción no expresa tan bien la finalidad global del mecanismo."
-    },
-    {
-        enunciado: "PortFast debe habilitarse en (fuera temario):",
-        opciones: ["Enlaces troncales", "Puertos hacia hosts finales", "Enlaces WAN", "Puertos de agregado"],
-        correcta: 1,
-        explicacion: " La correcta es Puertos hacia hosts finales porque PortFast acelera el paso a forwarding en puertos de acceso conectados a dispositivos finales como PCs. No debe ponerse de forma normal en troncales; no se refiere a enlaces WAN; y tampoco a puertos de agregado entre switches."
-    },
+
+
     {
         enunciado: "Distancia administrativa de OSPF en Cisco (fuera temario):",
         opciones: ["90", "100", "110", "120"],
@@ -1894,29 +1741,11 @@ const preguntasPAR = [
         explicacion: " La correcta es 110 porque esa es la distancia administrativa por defecto de OSPF en Cisco. 90 se asocia a EIGRP interno; 120 a RIP; y 100 no es la cifra estándar por defecto para OSPF."
     },
     {
-        enunciado: "HSRP envía hellos a (fuera temario):",
-        opciones: ["224.0.0.18 UDP 1985", "224.0.0.2 UDP 1985", "224.0.0.102 UDP 3222", "224.0.0.5 IP 89"],
-        correcta: 1,
-        explicacion: " La correcta es 224.0.0.2 UDP 1985 porque ese es el multicast y puerto típicos de HSRP versión 1. 224.0.0.18 se asocia a VRRP; 224.0.0.102 UDP 3222 a GLBP; y 224.0.0.5 IP 89 pertenece a OSPF."
-    },
-    {
-        enunciado: "GLBP permite (fuera temario):",
-        opciones: ["Solo activo/pasivo", "Balanceo de carga de gateway", "Solo redundancia sin balanceo", "Enrutamiento dinámico"],
-        correcta: 1,
-        explicacion: " La correcta es Balanceo de carga de gateway porque GLBP reparte el uso del gateway virtual entre varios routers además de aportar redundancia. No se limita a activo/pasivo como otros enfoques; no ofrece solo redundancia sin balanceo; y no es un protocolo de enrutamiento dinámico."
-    },
-    {
         enunciado: "Canales no solapados típicos en 2.4 GHz (ETSI/US) (la profesora dijo que este tipo de cosas no preguntaría):",
         opciones: ["1, 5, 9", "1, 6, 11", "2, 7, 12", "3, 8, 13"],
         correcta: 1,
         explicacion: " La correcta es 1, 6, 11 porque son los canales típicos no solapados más usados en 2.4 GHz para minimizar interferencias. Las otras combinaciones se pisan entre sí en muchos casos y por eso no son la referencia clásica."
     },
-    {
-        enunciado: "TFTP usa por defecto (fuera temario):",
-        opciones: ["69/UDP", "69/TCP", "20/TCP", "445/TCP"],
-        correcta: 0,
-        explicacion: " La correcta es 69/UDP porque TFTP (Trivial File Transfer Protocol) utiliza UDP en ese puerto por defecto. 69/TCP no es su transporte habitual; 20/TCP se asocia al canal de datos de FTP activo; y 445/TCP es típico de SMB."
-    }
         {
         enunciado: "El comando 'service password-encryption' en IOS (fuera temario):",
         opciones: ["Cifra todas las contraseñas con AES", "Ofusca contraseñas tipo 7", "No hace nada", "Deshabilita Telnet"],
@@ -1924,22 +1753,10 @@ const preguntasPAR = [
         explicacion: " La correcta es Ofusca contraseñas tipo 7 porque ese comando en IOS no aplica un cifrado fuerte, sino una ofuscación reversible de las contraseñas que estaban en texto claro. No cifra con AES, así que la primera es falsa; no es correcto decir que no hace nada, porque sí modifica cómo se guardan; y tampoco deshabilita Telnet, ya que eso se configura por otros comandos."
     },
     {
-        enunciado: "¿Cómo se almacena 'enable secret' (fuera temario)?",
-        opciones: ["MD5/hashed", "Tipo 7 reversible", "AES-256", "Base64"],
-        correcta: 0,
-        explicacion: " La correcta es MD5/hashed porque enable secret se almacena como hash, a diferencia de las contraseñas tipo 7, que solo están ofuscadas y son reversibles. No se guarda como tipo 7; tampoco como AES-256 en este contexto clásico; y Base64 no es un mecanismo de protección real, solo una codificación."
-    },
-    {
         enunciado: "¿Qué hace 'login block-for' en IOS? (fuera temario)",
         opciones: ["Bloquea logins tras intentos fallidos", "Cierra VTY por inactividad", "Restringe Telnet", "Deshabilita SSH"],
         correcta: 0,
         explicacion: " La correcta es Bloquea logins tras intentos fallidos porque ese comando protege el acceso al equipo limitando intentos repetidos de autenticación. No cierra líneas VTY (Virtual Teletype) por inactividad, ya que eso se relaciona con exec-timeout; tampoco restringe Telnet por sí mismo; ni deshabilita SSH."
-    },
-    {
-        enunciado: "La tabla CAM de un switch almacena (fuera temario):",
-        opciones: ["Rutas IP", "MACs y puertos asociados", "Usuarios autenticados", "Direcciones IPv6"],
-        correcta: 1,
-        explicacion: " La correcta es MACs y puertos asociados porque la tabla CAM (Content Addressable Memory) permite al switch saber por qué puerto debe reenviar una trama según la MAC destino. No almacena rutas IP, porque eso sería función de una tabla de routing; no guarda usuarios autenticados; y tampoco se centra en direcciones IPv6 como tal, sino en MAC."
     },
     {
         enunciado: "El temporizador típico de envejecimiento de entradas CAM es (fuera temario):",
@@ -1954,22 +1771,10 @@ const preguntasPAR = [
         explicacion: " La correcta es 1 porque en muchos dispositivos Cisco la VLAN nativa por defecto es la VLAN 1. La VLAN 0 no se usa como VLAN nativa normal; 100 no es el valor por defecto habitual; y 4094 puede usarse en ciertos contextos, pero no es la VLAN nativa predeterminada clásica."
     },
     {
-        enunciado: "RSTP define estados de puerto (fuera temario):",
-        opciones: ["Blocking/Listening/Learning/Forwarding", "Discarding/Learning/Forwarding", "Disabled/Listening/Forwarding", "Alternate/Backup/Designated/Root"],
-        correcta: 1,
-        explicacion: " La correcta es Discarding/Learning/Forwarding porque RSTP (Rapid Spanning Tree Protocol) simplifica los estados clásicos de STP a esos tres. Blocking/Listening/Learning/Forwarding corresponde al STP clásico; Disabled/Listening/Forwarding no es la lista correcta de RSTP; y Alternate/Backup/Designated/Root son roles de puerto, no estados."
-    },
-    {
         enunciado: "Registro DNS que anuncia servicios (_sip._tcp, etc.) (fuera temario):",
         opciones: ["SRV", "MX", "CNAME", "SOA"],
         correcta: 0,
         explicacion: " La correcta es SRV porque ese registro indica la localización de un servicio concreto, como SIP, incluyendo host y puerto. MX se usa para correo; CNAME crea alias; y SOA define datos de autoridad de la zona, no la publicación de servicios."
-    },
-    {
-        enunciado: "En IPv6, ::1 es la dirección (fuera temario):",
-        opciones: ["Link-local", "Loopback", "Multicast", "Anycast"],
-        correcta: 1,
-        explicacion: " La correcta es Loopback porque ::1 en IPv6 equivale a 127.0.0.1 en IPv4 y representa al propio equipo. Link-local usa normalmente el prefijo fe80::/10; multicast empieza por ff00::/8; y anycast no se representa así."
     },
     {
         enunciado: "¿Qué versión proporciona convergencia más rápida que STP clásico? (la profesora dijo que esto no hacía falta sabérselo)",
