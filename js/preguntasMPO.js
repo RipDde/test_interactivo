@@ -323,17 +323,6 @@ const preguntasMPO = [
     explicacion: " La correcta es Cada empresa o usuario debía tener sus propios equipos, servidores o programas instalados localmente porque antes era más común depender de infraestructura propia y software instalado en cada equipo."
   },
   {
-    enunciado: "¿Cuál de los siguientes es un ejemplo de uso de la nube en la vida diaria?",
-    opciones: [
-      "Conectar un monitor por HDMI",
-      "Cambiar la memoria RAM de un ordenador",
-      "Formatear un disco duro sin conexión a Internet",
-      "Guardar fotos en Google Drive o iCloud"
-    ],
-    correcta: 3,
-    explicacion: " La correcta es Guardar fotos en Google Drive o iCloud porque esos servicios almacenan archivos en servidores accesibles por Internet, no solo en el dispositivo local."
-  },
-  {
     enunciado: "¿Qué ventaja principal ofrece la nube frente a tenerlo todo instalado o guardado localmente?",
     opciones: [
       "Permite acceder a servicios y archivos desde distintos dispositivos con conexión a Internet",
@@ -356,17 +345,6 @@ const preguntasMPO = [
     explicacion: " La correcta es Todo dependía normalmente de servidores propios, discos físicos y programas instalados en local porque antes de la nube era habitual mantener la infraestructura y los datos en equipos propios."
   },
   {
-    enunciado: "¿Cuál de estos servicios representa mejor el concepto de nube?",
-    opciones: [
-      "Un pendrive conectado al ordenador",
-      "Netflix, Gmail o OneDrive",
-      "Un disco duro interno",
-      "Una impresora sin conexión"
-    ],
-    correcta: 1,
-    explicacion: " La correcta es Netflix, Gmail o OneDrive porque son servicios accesibles por Internet que funcionan usando servidores remotos."
-  },
-  {
     enunciado: "Cuando usamos la nube, ¿dónde suelen estar realmente los datos o servicios?",
     opciones: [
       "Siempre dentro del teclado",
@@ -376,17 +354,6 @@ const preguntasMPO = [
     ],
     correcta: 3,
     explicacion: " La correcta es En servidores remotos accesibles por Internet porque la nube se basa en usar recursos informáticos alojados fuera del equipo local."
-  },
-  {
-    enunciado: "¿Qué problema era más común antes de usar almacenamiento en la nube?",
-    opciones: [
-      "Depender más de discos físicos, copias locales o servidores propios",
-      "No poder usar archivos digitales",
-      "No poder instalar sistemas operativos",
-      "Tener demasiados servicios accesibles desde cualquier lugar"
-    ],
-    correcta: 0,
-    explicacion: " La correcta es Depender más de discos físicos, copias locales o servidores propios porque antes los datos solían estar más ligados a dispositivos concretos."
   },
   {
     enunciado: "¿Cuál de estas acciones es un uso cotidiano de la nube?",
@@ -1709,6 +1676,963 @@ const preguntasMPO = [
   ],
   correcta: 0,
   explicacion: " La correcta es Un servicio de AWS para ejecutar Kubernetes y gestionar aplicaciones en contenedores porque EKS permite organizar, escalar y controlar contenedores usando Kubernetes."
-}
+},
+{
+    enunciado: "a empresa quiere migrar sus servidores desde una infraestructura on-premise a la nube. ¿Cuál es la principal ventaja de este cambio?",
+    opciones: [
+      "Mantener el control del hardware y su mantenimiento",
+      "Incrementar los costes fijos asociados a la infraestructura tecnológica",
+      "Ajustar los recursos de cómputo según la demanda del negocio",
+      "Garantizar capacidad de cómputo sobredimensionada de forma permanente"
+    ],
+    correcta: 2,
+    explicacion: " La correcta es ajustar los recursos de cómputo según la demanda del negocio porque escalabilidad y pago por uso: la nube permite ajustar los recursos de forma dinámica sin sobreaprovisionamiento"
+  },
+  {
+    enunciado: "l de las siguientes opciones NO es una característica propia de la computación en la nube?",
+    opciones: [
+      "Acceso a los servicios a través de internet",
+      "Aprovisionamiento definido de antemano",
+      "Solo se facturan los recursos utilizados",
+      "Autoservicio bajo demanda para gestionar recursos"
+    ],
+    correcta: 1,
+    explicacion: " La correcta es aprovisionamiento definido de antemano porque en cloud los recursos son elásticos y bajo demanda, no aprovisionados de antemano"
+  },
+  {
+    enunciado: "l es la principal diferencia entre una nube pública, una nube privada y una nube híbrida?",
+    opciones: [
+      "Quién es el propietario y cómo se comparten los recursos",
+      "El número de usuarios que pueden acceder",
+      "El tipo de sistema operativo que utilizan",
+      "El lenguaje de programación de las aplicaciones"
+    ],
+    correcta: 0,
+    explicacion: " La correcta es quién es el propietario y cómo se comparten los recursos porque la diferencia fundamental está en la propiedad y el modelo de compartición de recursos entre el proveedor y la empresa"
+  },
+  {
+    enunciado: "na ventaja real de la nube?",
+    opciones: [
+      "Escala bajo demanda",
+      "Es más barata siempre",
+      "No requiere administración técnica",
+      "Elimina la necesidad de planificar la capacidad"
+    ],
+    correcta: 0,
+    explicacion: " La correcta es escala bajo demanda porque la elasticidad es una de las características fundamentales de la nube: los recursos pueden aumentarse o reducirse automáticamente según la demanda, sin necesidad de planificar capacidad a largo plazo"
+  },
+  {
+    enunciado: "l es la principal ventaja económica de pasar de un modelo on-premise a la nube?",
+    opciones: [
+      "El proveedor asume todos los riesgos de seguridad de la nube",
+      "Se convierte la inversión fija en hardware en un gasto variable por uso",
+      "Se incrementan los costes fijos pero aumenta el rendimiento general del sistema",
+      "Se eliminan por completo todos los gastos de TI al transferirlos al proveedor"
+    ],
+    correcta: 1,
+    explicacion: " La correcta es se convierte la inversión fija en hardware en un gasto variable por uso porque en la nube pasas de comprar servidores por adelantado a pagar solo por lo que consumes, mejorando la agilidad financiera y eliminando la sobreestimación de capacidad. CLASE 3-4: Introducción a la Nube y AWS"
+  },
+  {
+    enunciado: "uál es la principal diferencia entre los modelos SaaS, PaaS e IaaS en computación en la nube?",
+    opciones: [
+      "El tipo de licenciamiento del sistema operativo utilizado",
+      "El rendimiento de las aplicaciones desplegadas",
+      "El nivel de control y gestión que tiene el usuario sobre la infraestructura y el software",
+      "El grado de responsabilidad que asume el proveedor en el mantenimiento del hardware físico"
+    ],
+    correcta: 2,
+    explicacion: " La correcta es el nivel de control y gestión que tiene el usuario sobre la infraestructura y el software porque a más nivel de abstracción (SaaS), menos control tiene el cliente. En IaaS el cliente gestiona más capas; en SaaS, casi ninguna"
+  },
+  {
+    enunciado: "siguientes ejemplos NO está correctamente asociado a su modelo de servicio en la nube?",
+    opciones: [
+      "Amazon AWS como ejemplo de IaaS",
+      "Google Drive como ejemplo de SaaS",
+      "Microsoft Azure como ejemplo de IaaS",
+      "WordPress instalado como ejemplo de SaaS"
+    ],
+    correcta: 3,
+    explicacion: " La correcta es wordPress instalado como ejemplo de SaaS porque wordPress instalado y gestionado por el usuario es una aplicación autogestionada, no SaaS. SaaS implica que el proveedor gestiona todo, incluyendo la aplicación"
+  },
+  {
+    enunciado: "n modelo IaaS (Infrastructure as a Service), ¿qué componentes son responsabilidad del usuario?",
+    opciones: [
+      "Aplicaciones y datos",
+      "Aplicaciones, datos, sistema operativo y middleware",
+      "Virtualización y almacenamiento",
+      "Servidores físicos y red"
+    ],
+    correcta: 1,
+    explicacion: " La correcta es aplicaciones, datos, sistema operativo y middleware porque en IaaS, AWS gestiona el hardware y la virtualización. El cliente es responsable del sistema operativo, middleware, aplicaciones y datos"
+  },
+  {
+    enunciado: "qué situación tiene más sentido utilizar una estrategia multicloud?",
+    opciones: [
+      "Cuando se combinan servicios de varios proveedores para evitar dependencia de uno solo",
+      "Cuando se requiere alta disponibilidad dentro de una misma región usando múltiples cuentas de un único proveedor",
+      "Cuando se utilizan servicios de un único proveedor para simplificar la gestión",
+      "Cuando una empresa quiere consolidar la infraestructura y reducir el número de servidores físicos"
+    ],
+    correcta: 0,
+    explicacion: " La correcta es cuando se combinan servicios de varios proveedores para evitar dependencia de uno solo porque la estrategia multicloud evita el vendor lock-in (dependencia de un único proveedor) y permite elegir los mejores servicios de cada plataforma"
+  },
+  {
+    enunciado: "l de las siguientes opciones es correcta sobre regiones y zonas de disponibilidad?",
+    opciones: [
+      "Las regiones y las Availability Zones son exactamente lo mismo",
+      "Una Availability Zone contiene varias regiones dentro de ella",
+      "Una región está en un único centro de datos físico",
+      "Una región está formada por varias Availability Zones independientes entre sí"
+    ],
+    correcta: 3,
+    explicacion: " La correcta es una región está formada por varias Availability Zones independientes entre sí porque cada región de AWS está compuesta por múltiples zonas de disponibilidad (AZ) separadas físicamente pero interconectadas con alta velocidad"
+  },
+  {
+    enunciado: "maneja datos personales quiere desplegar su aplicación en AWS. ¿Qué criterio puede ser determinante a la hora de elegir una región?",
+    opciones: [
+      "La interfaz de la consola de AWS en ese país",
+      "El tipo de hardware utilizado en los centros de datos",
+      "La legislación y normativas de protección de datos aplicables en esa región",
+      "El número de cuentas de usuario creadas en AWS"
+    ],
+    correcta: 2,
+    explicacion: " La correcta es la legislación y normativas de protección de datos aplicables en esa región porque el cumplimiento legal (como el RGPD en Europa) es un criterio clave al elegir región cuando se manejan datos personales"
+  },
+  {
+    enunciado: "rtante elegir correctamente la región en la nube donde se despliega una aplicación?",
+    opciones: [
+      "Porque mejora la latencia al estar cerca de los usuarios, ayuda a cumplir normativas legales y puede optimizar disponibilidad y costes",
+      "Ninguna de las anteriores",
+      "Porque garantiza automáticamente la seguridad total de los datos y elimina la necesidad de copias de seguridad",
+      "Porque permite usar cualquier región sin impacto en rendimiento, costes o cumplimiento legal"
+    ],
+    correcta: 0,
+    explicacion: " La correcta es porque mejora la latencia al estar cerca de los usuarios, ayuda a cumplir normativas legales y puede optimizar disponibilidad y costes porque los tres criterios principales para elegir región son: latencia (cercanía a usuarios), cumplimiento legal y optimización de costes y disponibilidad"
+  },
+  {
+    enunciado: "afirmación describe mejor la relación entre Región y Availability Zone?",
+    opciones: [
+      "Una región es una AZ con más recursos",
+      "Varias regiones forman una sola AZ",
+      "Una región contiene varias AZ independientes",
+      "Una AZ puede pertenecer a varias regiones"
+    ],
+    correcta: 2,
+    explicacion: " La correcta es una región contiene varias AZ independientes porque cada región de AWS está compuesta por múltiples zonas de disponibilidad (AZ) separadas físicamente. Las AZs de una región están interconectadas con alta velocidad pero son independientes entre sí"
+  },
+  {
+    enunciado: "cipalmente un despliegue en varias Availability Zones?",
+    opciones: [
+      "La velocidad de acceso de las instancias",
+      "La tolerancia a fallos del sistema",
+      "El tiempo de respuesta de la aplicación",
+      "El coste de la infraestructura"
+    ],
+    correcta: 1,
+    explicacion: " La correcta es la tolerancia a fallos del sistema porque distribuir los recursos en varias AZ garantiza que si una zona falla por corte de luz u otro incidente, las demás siguen operativas. Esto mejora la resiliencia y la disponibilidad del sistema. CLASE 5-6: Introducción a AWS"
+  },
+  {
+    enunciado: "uál de las siguientes asociaciones entre un servicio de AWS y su función es correcta?",
+    opciones: [
+      "IAM: servicio para crear máquinas virtuales",
+      "EC2: almacenamiento de objetos para guardar archivos",
+      "S3: servicio de bases de datos relacionales gestionadas",
+      "VPC: red privada donde se despliegan los recursos en la nube"
+    ],
+    correcta: 3,
+    explicacion: " La correcta es vPC: red privada donde se despliegan los recursos en la nube porque vPC (Virtual Private Cloud) es el servicio que define la red privada aislada donde se despliegan los recursos de AWS"
+  },
+  {
+    enunciado: "er de AWS y por qué es importante conocerlo?",
+    opciones: [
+      "Un conjunto de servicios gratuitos disponibles para los usuarios sin límites",
+      "Un servicio que bloquea automáticamente cualquier gasto inesperado en la cuenta",
+      "Un periodo de prueba con límites de uso gratuitos que ayudan a aprender y evitar costes inesperados",
+      "Una herramienta exclusiva para empresas grandes con ventajas a partir de cierto gasto"
+    ],
+    correcta: 2,
+    explicacion: " La correcta es un periodo de prueba con límites de uso gratuitos que ayudan a aprender y evitar costes inesperados porque el Free Tier permite usar servicios de AWS de forma gratuita dentro de unos límites definidos, ideal para aprender y controlar costes al comenzar"
+  },
+  {
+    enunciado: "l es el objetivo principal de la Calculadora de precios de AWS?",
+    opciones: [
+      "Crear y desplegar recursos directamente en AWS",
+      "Aplicar automáticamente descuentos por uso prolongado",
+      "Monitorizar el consumo real y generar facturas mensuales",
+      "Estimar el coste de distintos servicios antes de desplegarlos y comparar configuraciones"
+    ],
+    correcta: 3,
+    explicacion: " La correcta es estimar el coste de distintos servicios antes de desplegarlos y comparar configuraciones porque la AWS Pricing Calculator sirve para estimar costes antes de crear los recursos, permitiendo comparar configuraciones y presupuestar proyectos"
+  },
+  {
+    enunciado: "l de las siguientes limitaciones de la Calculadora de precios de AWS es correcta?",
+    opciones: [
+      "La estimación puede no ser exacta, por lo que a veces es mejor empezar con un uso real y revisar la factura",
+      "No permite estimar más de un servicio a la vez",
+      "No figuran todos los servicios en la calculadora, lo que genera problemas en los presupuestos",
+      "Solo puede usarse con cuentas de pago"
+    ],
+    correcta: 0,
+    explicacion: " La correcta es la estimación puede no ser exacta, por lo que a veces es mejor empezar con un uso real y revisar la factura porque la estimación de la calculadora no siempre coincide exactamente con la factura real, ya que pueden influir factores como el tráfico de red o uso real de recursos"
+  },
+  {
+    enunciado: "ealizar una estimación en la AWS Pricing Calculator, ¿qué combinación de factores suele tener un impacto más alto en el coste final?",
+    opciones: [
+      "Zona de disponibilidad elegida, nombre del recurso y etiquetas aplicadas",
+      "Tipo de servicio, tamaño del recurso, horas de uso y región seleccionada",
+      "Ninguna de las anteriores",
+      "Número de usuarios IAM, políticas de permisos y grupos asignados"
+    ],
+    correcta: 1,
+    explicacion: " La correcta es tipo de servicio, tamaño del recurso, horas de uso y región seleccionada porque el precio depende principalmente del tipo de servicio, el tamaño del recurso, el tiempo de uso y la región seleccionada"
+  },
+  {
+    enunciado: "es Amazon EC2 dentro de los servicios de AWS?",
+    opciones: [
+      "Un servicio para crear y gestionar máquinas virtuales bajo demanda",
+      "Un sistema de almacenamiento de archivos distribuido",
+      "Un servicio de computación serverless donde no es necesario levantar servidores",
+      "Un servicio de bases de datos gestionadas"
+    ],
+    correcta: 0,
+    explicacion: " La correcta es un servicio para crear y gestionar máquinas virtuales bajo demanda porque eC2 (Elastic Compute Cloud) es el servicio de máquinas virtuales de AWS, donde el cliente controla el sistema operativo y la configuración"
+  },
+  {
+    enunciado: "l es la función principal de Amazon S3?",
+    opciones: [
+      "Ejecutar aplicaciones sin necesidad de servidores",
+      "Crear redes privadas virtuales en la nube",
+      "Proporcionar almacenamiento de objetos escalable",
+      "Gestionar usuarios y permisos"
+    ],
+    correcta: 2,
+    explicacion: " La correcta es proporcionar almacenamiento de objetos escalable porque amazon S3 (Simple Storage Service) es el servicio de almacenamiento de objetos de AWS, ideal para guardar archivos, backups y contenido web. CLASE 7-8: Seguridad y AWS IAM"
+  },
+  {
+    enunciado: "ún el modelo de responsabilidad compartida de AWS, ¿qué tarea es responsabilidad del cliente al usar una instancia EC2?",
+    opciones: [
+      "La seguridad física del centro de datos",
+      "La actualización y configuración del sistema operativo de la instancia",
+      "El mantenimiento del hardware del servidor",
+      "La infraestructura de virtualización"
+    ],
+    correcta: 1,
+    explicacion: " La correcta es la actualización y configuración del sistema operativo de la instancia porque el cliente es responsable de configurar y actualizar el sistema operativo. AWS gestiona la seguridad física, el hardware y la virtualización"
+  },
+  {
+    enunciado: "l modelo de responsabilidad compartida de AWS, ¿quién es responsable de la capa de virtualización que permite ejecutar instancias EC2?",
+    opciones: [
+      "El cliente, ya que decide el tipo de instancia y el sistema operativo",
+      "El cliente, porque configura la red y los grupos de seguridad",
+      "Ambos, de forma compartida y configurable",
+      "AWS, ya que gestiona el hipervisor y la infraestructura de virtualización"
+    ],
+    correcta: 3,
+    explicacion: " La correcta es aWS, ya que gestiona el hipervisor y la infraestructura de virtualización porque aWS gestiona el hipervisor y la capa de virtualización. El cliente solo elige el tipo de instancia y el SO, pero no gestiona el hipervisor"
+  },
+  {
+    enunciado: "responsabilidad NO asume AWS en el modelo de responsabilidad compartida?",
+    opciones: [
+      "La configuración del sistema operativo",
+      "El mantenimiento del hardware subyacente",
+      "La seguridad física de los centros de datos",
+      "La infraestructura global de red"
+    ],
+    correcta: 0,
+    explicacion: " La correcta es la configuración del sistema operativo porque en el modelo de responsabilidad compartida, AWS gestiona la infraestructura física y la red. El cliente es responsable de configurar el SO, las aplicaciones, los datos y los accesos IAM"
+  },
+  {
+    enunciado: "es un usuario de IAM en AWS?",
+    opciones: [
+      "Un conjunto de permisos reutilizables",
+      "Un recurso que define permisos sobre otros servicios",
+      "Un mecanismo para conectar cuentas entre regiones",
+      "Una persona o aplicación que puede autenticarse en una cuenta de AWS"
+    ],
+    correcta: 3,
+    explicacion: " La correcta es una persona o aplicación que puede autenticarse en una cuenta de AWS porque un usuario de IAM representa a una persona o aplicación que necesita acceder a la cuenta de AWS con credenciales propias"
+  },
+  {
+    enunciado: "es una política de IAM y en qué formato están escritas normalmente?",
+    opciones: [
+      "Un conjunto de reglas de red escritas en YAML",
+      "Un documento que define permisos sobre recursos y que está escrito en formato JSON",
+      "Un rol que se asigna automáticamente a los servicios de AWS",
+      "Un usuario especial con permisos administrativos"
+    ],
+    correcta: 1,
+    explicacion: " La correcta es un documento que define permisos sobre recursos y que está escrito en formato JSON porque una política de IAM es un documento en formato JSON que define qué acciones se permiten o deniegan sobre qué recursos de AWS"
+  },
+  {
+    enunciado: "empresa quiere que varias aplicaciones en EC2 accedan a Amazon S3 sin usar usuarios ni contraseñas. ¿Cuál es la opción MÁS adecuada en IAM?",
+    opciones: [
+      "Asignar una política directamente al bucket de S3",
+      "Crear un usuario de IAM y compartir sus credenciales",
+      "Utilizar un rol de IAM asociado a la instancia EC2",
+      "Añadir los permisos al usuario root. ß por aquí ->"
+    ],
+    correcta: 2,
+    explicacion: " La correcta es utilizar un rol de IAM asociado a la instancia EC2 porque los roles de IAM permiten acceso seguro entre servicios de AWS sin necesidad de gestionar usuarios ni contraseñas. Es la práctica recomendada para aplicaciones en EC2"
+  },
+  {
+    enunciado: "n el modelo de responsabilidad compartida de AWS, ¿quién es el responsable de gestionar la seguridad de una aplicación y de los datos que utiliza?",
+    opciones: [
+      "AWS, siempre que se utilicen servicios en la nube",
+      "Ambos, pero solo cuando se usan servicios serverless",
+      "El cliente, ya que es responsable de la seguridad en la nube (aplicaciones y datos)",
+      "AWS, ya que la aplicación se ejecuta en su infraestructura"
+    ],
+    correcta: 2,
+    explicacion: " La correcta es el cliente, ya que es responsable de la seguridad en la nube (aplicaciones y datos) porque el cliente es responsable de la seguridad de lo que despliega en la nube: aplicaciones, datos y configuraciones de acceso"
+  },
+  {
+    enunciado: "a cuenta de AWS de un laboratorio, ¿qué acciones podrá realizar el usuario user-2 si solo tiene permisos de lectura sobre EC2?",
+    opciones: [
+      "Ver información de las instancias EC2, pero no modificarlas",
+      "Iniciar y detener instancias EC2",
+      "Administrar usuarios y grupos de IAM",
+      "Acceder a buckets de Amazon S3"
+    ],
+    correcta: 0,
+    explicacion: " La correcta es ver información de las instancias EC2, pero no modificarlas porque un usuario con permisos de solo lectura sobre EC2 únicamente puede consultar información (describir instancias, ver estado), pero no puede iniciar, detener ni modificar recursos"
+  },
+  {
+    enunciado: "tenece simultáneamente a los grupos EC2-Admin y S3-Support. ¿Qué acciones podrá realizar este usuario?",
+    opciones: [
+      "Podrá administrar completamente EC2, S3 e IAM",
+      "Ninguna de las anteriores",
+      "Solo podrá ver información de EC2 y S3, sin realizar cambios",
+      "Podrá iniciar y detener instancias EC2 y leer objetos en Amazon S3"
+    ],
+    correcta: 3,
+    explicacion: " La correcta es podrá iniciar y detener instancias EC2 y leer objetos en Amazon S3 porque en IAM los permisos se suman: el usuario hereda los permisos de todos sus grupos. Tendrá administración completa de EC2 (por EC2-Admin) y lectura en S3 (por S3-Support). CLASE 9-10: Redes y AWS VPC"
+  },
+  {
+    enunciado: "da una dirección IPv4 como 192.0.2.0, ¿cuál de las siguientes afirmaciones es correcta?",
+    opciones: [
+      "El valor decimal máximo que puede tomar uno de los bloques es 512",
+      "Cada uno de los cuatro bloques de la dirección IPv4 se representa con 8 bits",
+      "La dirección IPv4 completa se representa usando 16 bits",
+      "Cada número decimal de la dirección IPv4 se representa usando 4 bits"
+    ],
+    correcta: 1,
+    explicacion: " La correcta es cada uno de los cuatro bloques de la dirección IPv4 se representa con 8 bits porque una dirección IPv4 tiene 32 bits divididos en 4 octetos de 8 bits cada uno. Cada octeto puede valer entre 0 y 255 en decimal"
+  },
+  {
+    enunciado: "ario introducir el protocolo IPv6 frente a IPv4?",
+    opciones: [
+      "Porque IPv6 utiliza un formato de direcciones más legible que IPv4",
+      "Porque IPv4 no permite el uso de direcciones en formato hexadecimal",
+      "Porque IPv6 sustituye completamente a los protocolos de enrutamiento",
+      "Porque el número de direcciones disponibles en IPv4 es insuficiente"
+    ],
+    correcta: 3,
+    explicacion: " La correcta es porque el número de direcciones disponibles en IPv4 es insuficiente porque iPv4 solo permite unos 4.000 millones de direcciones, insuficientes para la cantidad de dispositivos conectados actuales. IPv6 amplía el espacio a 340 sextillones de direcciones"
+  },
+  {
+    enunciado: "rango de direcciones IP representa la red 192.168.1.0/24?",
+    opciones: [
+      "Desde 192.168.1.0 hasta 192.168.1.255",
+      "Desde 192.168.1.0 hasta 192.168.1.24",
+      "Desde 192.168.1.1 hasta 192.168.1.24",
+      "Desde 192.168.0.0 hasta 192.168.255.255"
+    ],
+    correcta: 0,
+    explicacion: " La correcta es desde 192.168.1.0 hasta 192.168.1.255 porque un prefijo /24 tiene 8 bits para hosts: 2^8 = 256 IPs totales, de .0 a .255. La .0 es la dirección de red y la .255 es el broadcast"
+  },
+  {
+    enunciado: "l de las siguientes opciones describe correctamente una función de una puerta de enlace a Internet (Internet Gateway) en una VPC?",
+    opciones: [
+      "Permitir la comunicación privada entre subredes dentro de la misma VPC sin acceso a Internet",
+      "Actuar como destino en las tablas de enrutamiento para el tráfico que debe salir a Internet",
+      "Proporcionar acceso a Internet únicamente para instancias que no tienen direcciones IP públicas",
+      "Ninguna de las anteriores"
+    ],
+    correcta: 1,
+    explicacion: " La correcta es actuar como destino en las tablas de enrutamiento para el tráfico que debe salir a Internet porque el Internet Gateway (IGW) es el componente que permite enrutar tráfico desde la VPC hacia Internet. Actúa como destino (0.0.0.0/0) en la tabla de enrutamiento de las subredes públicas"
+  },
+  {
+    enunciado: "es una VPC (Virtual Private Cloud) en AWS y para qué sirve?",
+    opciones: [
+      "Un servicio para crear máquinas virtuales aisladas dentro de una región de AWS",
+      "Un servicio de almacenamiento privado cifrado para datos sensibles de la empresa",
+      "Una red privada virtual aislada donde se despliegan y conectan los recursos de AWS",
+      "Un sistema de monitorización del tráfico de red entre servicios de AWS"
+    ],
+    correcta: 2,
+    explicacion: " La correcta es una red privada virtual aislada donde se despliegan y conectan los recursos de AWS porque una VPC es una red virtual aislada lógicamente dentro de la nube de AWS. Permite definir rangos de IPs, subredes, tablas de enrutamiento y controlar qué tráfico entra y sale de los recursos"
+  },
+  {
+    enunciado: "ntas direcciones IP contiene una subred con el prefijo /24?",
+    opciones: [
+      "512 en total, con 510 utilizables para hosts",
+      "65.536 direcciones en total para la red",
+      "256 en total, siendo 254 utilizables para hosts",
+      "24 direcciones disponibles para asignar a hosts"
+    ],
+    correcta: 2,
+    explicacion: " La correcta es 256 en total, siendo 254 utilizables para hosts porque un prefijo /24 tiene 8 bits para hosts: 2^8 = 256 IPs totales. Se restan la dirección de red y la de broadcast, quedando 254 utilizables por hosts. CLASE 11-12: AWS VPC - Seguridad"
+  },
+  {
+    enunciado: "ué significa permitir tráfico desde 0.0.0.0/0 en una regla de un grupo de seguridad de AWS?",
+    opciones: [
+      "Que se restringe el acceso a una única subred concreta",
+      "Que solo se permite tráfico desde la red interna de la VPC",
+      "Que únicamente se permite tráfico desde direcciones privadas",
+      "Que se permite tráfico desde cualquier dirección IP"
+    ],
+    correcta: 3,
+    explicacion: " La correcta es que se permite tráfico desde cualquier dirección IP porque 0.0.0.0/0 en notación CIDR representa todas las direcciones IP posibles, es decir, tráfico proveniente de cualquier origen en Internet"
+  },
+  {
+    enunciado: "l de las siguientes afirmaciones es correcta sobre los Security Groups y las Network ACL (NACL) en AWS?",
+    opciones: [
+      "Los Security Groups se aplican a nivel de instancia y las Network ACL a nivel de subred",
+      "Los Security Groups y las Network ACL se aplican exactamente al mismo nivel",
+      "Ninguna de las anteriores",
+      "Las Network ACL se aplican a nivel de instancia y los Security Groups a nivel de subred"
+    ],
+    correcta: 0,
+    explicacion: " La correcta es los Security Groups se aplican a nivel de instancia y las Network ACL a nivel de subred porque los Security Groups actúan como cortafuegos a nivel de instancia. Las NACL actúan a nivel de subred"
+  },
+  {
+    enunciado: "instancia EC2 tiene asociado un grupo de seguridad que no permite tráfico de entrada HTTP (puerto 80). ¿Qué ocurrirá si un usuario intenta acceder a esa instancia desde un navegador web?",
+    opciones: [
+      "La conexión funcionará porque el tráfico de salida está permitido por defecto",
+      "La conexión será rechazada porque el tráfico de entrada no está permitido",
+      "La instancia redirigirá automáticamente la conexión a HTTPS",
+      "El acceso dependerá de la subred en la que esté desplegada la instancia"
+    ],
+    correcta: 1,
+    explicacion: " La correcta es la conexión será rechazada porque el tráfico de entrada no está permitido porque los Security Groups deniegan por defecto todo el tráfico que no esté explícitamente permitido. Si el puerto 80 no está abierto, la conexión se rechaza"
+  },
+  {
+    enunciado: "instancia EC2 tiene asociado un grupo de seguridad que permite tráfico de entrada HTTP (puerto 80), pero NO permite tráfico de entrada HTTPS (puerto 443). ¿Qué ocurrirá si un usuario intenta acceder usando https://?",
+    opciones: [
+      "La conexión será rechazada porque el tráfico al puerto 443 no está permitido",
+      "La conexión funcionará porque el puerto 80 está permitido",
+      "El acceso funcionará solo si la instancia está en una subred pública",
+      "La instancia redirigirá automáticamente la conexión HTTPS al puerto 80"
+    ],
+    correcta: 0,
+    explicacion: " La correcta es la conexión será rechazada porque el tráfico al puerto 443 no está permitido porque el tráfico HTTPS utiliza el puerto 443. Si ese puerto no está permitido en el Security Group, la conexión será bloqueada, independientemente de que el puerto 80 esté abierto"
+  },
+  {
+    enunciado: "es dos instancias EC2 (A y B) en la misma subred. La instancia A debe comunicarse con B por el puerto 3306 (MySQL), pero B no debe ser accesible desde Internet. ¿Cuál es la configuración correcta?",
+    opciones: [
+      "Permitir tráfico entrante al puerto 3306 desde 0.0.0.0/0 en el grupo de seguridad de B",
+      "Configurar una regla de entrada en la tabla de rutas de la VPC para el puerto 3306",
+      "Asignar ambos grupos de seguridad a una subred privada sin reglas de entrada",
+      "Permitir tráfico saliente al puerto 3306 en el grupo de seguridad de A y tráfico entrante desde el grupo de seguridad de A en el grupo de seguridad de B"
+    ],
+    correcta: 3,
+    explicacion: " La correcta es permitir tráfico saliente al puerto 3306 en el grupo de seguridad de A y tráfico entrante desde el grupo de seguridad de A en el grupo de seguridad de B porque se permite salida desde A y entrada en B solo desde el grupo de seguridad de A. Así se restringe el acceso a MySQL únicamente a la instancia A, sin exponerlo a Internet"
+  },
+  {
+    enunciado: "rupo de seguridad de una instancia EC2 tiene una regla de entrada que permite el puerto 443. No se ha configurado ninguna regla de salida. ¿Qué ocurre con el tráfico de respuesta que genera la instancia?",
+    opciones: [
+      "Hay que abrir el puerto 443 también en las reglas de salida",
+      "Sale correctamente porque al configurar de entrada se configura de salida automáticamente",
+      "Se bloquea porque no hay reglas de salida configuradas explícitamente",
+      "El tráfico de salida lo gestionan exclusivamente las ACLs de la subred"
+    ],
+    correcta: 1,
+    explicacion: " La correcta es sale correctamente porque al configurar de entrada se configura de salida automáticamente porque los Security Groups son stateful: si permites tráfico de entrada, la respuesta correspondiente sale automáticamente sin necesidad de configurar una regla de salida. Las NACLs, en cambio, son stateless"
+  },
+  {
+    enunciado: "l es la diferencia clave entre una subred pública y una subred privada en una VPC de AWS?",
+    opciones: [
+      "La subred pública usa IPv6 y la privada solo IPv4",
+      "La subred pública tiene más capacidad de IPs que la privada por defecto",
+      "La subred pública tiene una ruta al Internet Gateway; la privada no tiene acceso directo a internet",
+      "La subred privada no puede contener instancias EC2, solo bases de datos RDS"
+    ],
+    correcta: 2,
+    explicacion: " La correcta es la subred pública tiene una ruta al Internet Gateway; la privada no tiene acceso directo a internet porque la diferencia está en la tabla de enrutamiento: si tiene una ruta 0.0.0.0/0 apuntando al Internet Gateway, es pública. Si no tiene esa ruta, es privada y sus recursos no son alcanzables desde internet"
+  },
+  {
+    enunciado: "empresa despliega un servidor web en EC2 y una base de datos en RDS dentro de una VPC. ¿En qué tipo de subred debe colocarse la base de datos y por qué?",
+    opciones: [
+      "En una subred privada, sin acceso directo desde internet",
+      "En una subred pública, para que el equipo de desarrollo acceda directamente",
+      "En una subred con su propio Internet Gateway para recibir actualizaciones",
+      "En la misma subred que el servidor web para simplificar la configuración de red"
+    ],
+    correcta: 0,
+    explicacion: " La correcta es en una subred privada, sin acceso directo desde internet porque la base de datos debe estar en una subred privada: solo el servidor web debe poder conectarse a ella internamente. Exponer la base de datos a internet supondría un riesgo de seguridad grave"
+  },
+  {
+    enunciado: "de es mejor colocar una base de datos en una VPC?",
+    opciones: [
+      "En la subred pública con security groups",
+      "En una subred privada",
+      "En una subred pública con ACL",
+      "Da igual el tipo de subred si está bien filtrada"
+    ],
+    correcta: 1,
+    explicacion: " La correcta es en una subred privada porque la base de datos no debe ser accesible desde internet. Debe colocarse en una subred privada, donde solo el servidor de aplicaciones pueda conectarse a ella internamente"
+  },
+  {
+    enunciado: "pasa si eliminas la ruta 0.0.0.0/0 de la tabla de enrutamiento asociada a una subred pública?",
+    opciones: [
+      "Cambia de zona de disponibilidad",
+      "La instancia pierde su IP privada",
+      "Se apaga la instancia",
+      "Pierde acceso a Internet"
+    ],
+    correcta: 3,
+    explicacion: " La correcta es pierde acceso a Internet porque la ruta 0.0.0.0/0 → Internet Gateway es la que habilita el acceso a internet. Al eliminarla, la subred deja de ser pública y las instancias pierden la conectividad con internet"
+  },
+  {
+    enunciado: "ocurre si una regla de entrada de un Security Group bloquea un puerto necesario?",
+    opciones: [
+      "El tráfico se redirige a otro puerto",
+      "La regla se aplica solo al tráfico saliente",
+      "La conexión se rechaza",
+      "El tráfico se permite si la instancia inició la conexión"
+    ],
+    correcta: 2,
+    explicacion: " La correcta es la conexión se rechaza porque los Security Groups son stateful: si no hay una regla que permita explícitamente el tráfico entrante en un puerto, la conexión se rechaza directamente. No se redirige ni se reenvía"
+  },
+  {
+    enunciado: "a regla de un grupo de seguridad de AWS aparece como origen la IP 203.0.113.25/32. ¿Qué significa esta notación y qué tráfico permite?",
+    opciones: [
+      "Bloquea el tráfico procedente de esa dirección IP específica",
+      "Permite tráfico únicamente desde esa dirección IP concreta y ninguna otra",
+      "Permite tráfico desde los primeros 32 hosts de la red 203.0.113.0",
+      "Permite tráfico desde todos los hosts en la red 203.0.113.0"
+    ],
+    correcta: 1,
+    explicacion: " La correcta es permite tráfico únicamente desde esa dirección IP concreta y ninguna otra porque el sufijo /32 en CIDR significa que los 32 bits son fijos, identificando exactamente una única dirección IP. Es la forma habitual de permitir acceso a un solo equipo concreto, como la IP de un administrador"
+  },
+  {
+    enunciado: "na VPC tienes una subred cuya tabla de enrutamiento tiene esta regla: destino 0.0.0.0/0 → igw- xxxxxxxx. ¿Qué tipo de subred es esta y qué implica?",
+    opciones: [
+      "Una subred pública, porque el tráfico hacia cualquier IP puede salir a internet a través del IGW",
+      "Una subred de administración, porque usa la ruta por defecto del router interno",
+      "Una subred privada, porque el Internet Gateway controla el tráfico saliente",
+      "Una subred de base de datos, porque redirige todo el tráfico al gateway de datos"
+    ],
+    correcta: 0,
+    explicacion: " La correcta es una subred pública, porque el tráfico hacia cualquier IP puede salir a internet a través del IGW porque cuando una tabla de enrutamiento tiene la ruta 0.0.0.0/0 apuntando a un Internet Gateway (igw-...), la subred es pública. Las instancias con IP pública en esa subred pueden comunicarse con internet. CLASE 12-13: Cómputo y AWS EC2"
+  },
+  {
+    enunciado: "a empresa necesita desplegar un servidor web con Linux en AWS. ¿Cuáles son los elementos imprescindibles al lanzar una instancia EC2?",
+    opciones: [
+      "El sistema operativo, el hostname y la dirección IP pública",
+      "Solo el tipo de instancia y el nombre del servidor",
+      "Solo la AMI y la región donde se va a desplegar",
+      "AMI, tipo de instancia, par de claves y grupo de seguridad"
+    ],
+    correcta: 3,
+    explicacion: " La correcta es aMI, tipo de instancia, par de claves y grupo de seguridad porque al lanzar EC2 se deben seleccionar la AMI (imagen), el tipo de instancia, la configuración de red, el grupo de seguridad y el par de claves para el acceso"
+  },
+  {
+    enunciado: "conjunto de elementos es imprescindible para lanzar una instancia EC2 funcional?",
+    opciones: [
+      "Tipo de instancia y bucket S3",
+      "Tipo de instancia, virtualización y almacenamiento",
+      "AMI, tipo de instancia y red",
+      "Región y base de datos"
+    ],
+    correcta: 2,
+    explicacion: " La correcta es aMI, tipo de instancia y red porque para lanzar una instancia EC2 son imprescindibles la AMI (imagen con SO), el tipo de instancia (CPU/RAM) y la configuración de red. El grupo de seguridad y el par de claves también se necesitan para el acceso"
+  },
+  {
+    enunciado: "es una AMI (Amazon Machine Image) en AWS?",
+    opciones: [
+      "Un servicio para monitorizar el rendimiento de las instancias en tiempo real",
+      "Una plantilla con SO y software preinstalado para lanzar instancias EC2",
+      "Un tipo de almacenamiento en bloque persistente asociado a las instancias",
+      "Un sistema automático de copias de seguridad para instancias EC2"
+    ],
+    correcta: 1,
+    explicacion: " La correcta es una plantilla con SO y software preinstalado para lanzar instancias EC2 porque una AMI es una plantilla que incluye el sistema operativo y el software preconfigurado necesario para arrancar una instancia EC2. Se pueden usar AMIs de AWS, del marketplace o crear las propias"
+  },
+  {
+    enunciado: "es una IP elástica en AWS y cuál es su principal ventaja frente a una IP pública normal?",
+    opciones: [
+      "Una IP dinámica que AWS reasigna automáticamente al crear cada instancia EC2",
+      "Un bloque de IPs reservado para uso exclusivo dentro de una subred privada",
+      "Una IP privada fija dentro de la VPC que nunca cambia aunque la instancia se reinicie",
+      "Una dirección IP pública estática que permanece aunque la instancia se detenga e inicie"
+    ],
+    correcta: 3,
+    explicacion: " La correcta es una dirección IP pública estática que permanece aunque la instancia se detenga e inicie porque una IP pública normal cambia cada vez que la instancia se para y se inicia. Una Elastic IP es una IP pública estática que permanece asociada a tu cuenta hasta que la liberes, aunque la instancia esté parada"
+  },
+  {
+    enunciado: "ocurre con la IP pública al parar una instancia EC2?",
+    opciones: [
+      "Se convierte en una IP privada",
+      "Cambia solo el DNS sin cambiar la IP",
+      "La IP pública puede cambiar",
+      "Se mantiene asociada a la instancia"
+    ],
+    correcta: 2,
+    explicacion: " La correcta es la IP pública puede cambiar porque las IPs públicas dinámicas se liberan al detener la instancia y se reasigna una nueva al reiniciarla. Para mantener una IP fija hay que usar una Elastic IP"
+  },
+  {
+    enunciado: "ocurre con la IP pública al parar una instancia si usa una IP elástica?",
+    opciones: [
+      "Se mantiene asociada a la instancia",
+      "Se convierte en una IP privada",
+      "Cambia solo el DNS sin cambiar la IP",
+      "La IP pública puede cambiar"
+    ],
+    correcta: 0,
+    explicacion: " La correcta es se mantiene asociada a la instancia porque una Elastic IP es una dirección IP pública estática reservada en tu cuenta. Permanece asociada aunque la instancia se detenga e inicie, a diferencia de una IP dinámica normal"
+  },
+  {
+    enunciado: "l de las siguientes afirmaciones sobre EC2 es VERDADERA?",
+    opciones: [
+      "Las instancias EC2 se comparten entre varios clientes",
+      "EC2 permite ejecutar tu propio sistema operativo en la nube",
+      "EC2 elimina la necesidad de administrar el sistema operativo",
+      "Las instancias EC2 siempre tienen IP pública"
+    ],
+    correcta: 1,
+    explicacion: " La correcta es eC2 permite ejecutar tu propio sistema operativo en la nube porque eC2 proporciona máquinas virtuales donde el cliente controla completamente el sistema operativo. Cada instancia es aislada, no compartida, y el cliente es responsable de su administración. CLASE 14-15: EC2 Continuación y Laboratorio"
+  },
+  {
+    enunciado: "administrador quiere crear una copia de seguridad completa de una instancia EC2 en producción para poder restaurarla íntegramente si es necesario. ¿Cuál es la forma más completa de hacerlo?",
+    opciones: [
+      "Crear una AMI personalizada a partir de la instancia, que captura todos sus volúmenes",
+      "Exportar los logs de CloudWatch a S3 como respaldo de la configuración",
+      "Crear un snapshot solo del volumen de datos adicional, excluyendo el volumen raíz",
+      "Copiar los ficheros de configuración manualmente a otro servidor EC2"
+    ],
+    correcta: 0,
+    explicacion: " La correcta es crear una AMI personalizada a partir de la instancia, que captura todos sus volúmenes porque crear una AMI a partir de la instancia incluye todos los volúmenes (sistema operativo, datos, etc.) y permite lanzar una nueva instancia idéntica en cualquier momento. Es la estrategia de backup más completa para EC2"
+  },
+  {
+    enunciado: "posible cambiar el tipo de una instancia EC2 mientras está en ejecución?",
+    opciones: [
+      "Sí, se puede modificar el tipo en cualquier momento sin interrumpir el servicio",
+      "No, el tipo de instancia queda fijo y no puede modificarse una vez creada",
+      "Sí, pero únicamente en instancias con sistema operativo Windows Server",
+      "No, es necesario detener la instancia antes de cambiar su tipo"
+    ],
+    correcta: 3,
+    explicacion: " La correcta es no, es necesario detener la instancia antes de cambiar su tipo porque para cambiar el tipo de instancia (más o menos CPU/RAM) es obligatorio detenerla primero. No se puede modificar en caliente. CLASE 16-17: Laboratorio Windows Server"
+  },
+  {
+    enunciado: "través de qué protocolo y puerto te conectas habitualmente a instancias EC2 con Windows Server?",
+    opciones: [
+      "SSH en el puerto 22, igual que en las instancias Linux",
+      "FTP en el puerto 21, para la transferencia de ficheros del sistema",
+      "RDP en el puerto 3389, el protocolo de escritorio remoto de Windows",
+      "HTTP en el puerto 80, accediendo a través de un navegador web"
+    ],
+    correcta: 2,
+    explicacion: " La correcta es rDP en el puerto 3389, el protocolo de escritorio remoto de Windows porque las instancias Windows se administran mediante RDP (Remote Desktop Protocol) en el puerto 3389, que proporciona una interfaz gráfica remota. SSH se usa para Linux. CLASE 18-19: Almacenamiento - Amazon EBS y S3"
+  },
+  {
+    enunciado: "uándo tiene más sentido usar Amazon S3 en lugar de Amazon EBS para el almacenamiento?",
+    opciones: [
+      "Para guardar archivos estáticos, imágenes o backups accesibles vía HTTP",
+      "Para alojar bases de datos relacionales con alto rendimiento de escritura",
+      "Para conectar el disco directamente a una instancia EC2 activa",
+      "Cuando necesitas almacenamiento de bloque para el sistema operativo"
+    ],
+    correcta: 0,
+    explicacion: " La correcta es para guardar archivos estáticos, imágenes o backups accesibles vía HTTP porque s3 es almacenamiento de objetos ideal para archivos, backups y contenido web accesible mediante URL. EBS es almacenamiento en bloque diseñado para conectarse a instancias EC2"
+  },
+  {
+    enunciado: "es un snapshot en Amazon EBS y para qué se utiliza principalmente?",
+    opciones: [
+      "Un volumen temporal que se elimina automáticamente al detener la instancia",
+      "Una copia puntual de un volumen que se guarda en S3",
+      "Un tipo de volumen de alto rendimiento optimizado para bases de datos",
+      "Una métrica de rendimiento del volumen registrada en tiempo real"
+    ],
+    correcta: 1,
+    explicacion: " La correcta es una copia puntual de un volumen que se guarda en S3 porque un snapshot es una copia incremental del estado de un volumen EBS en un momento dado, almacenada en S3. Permite restaurar el volumen o crear nuevos a partir de ese estado"
+  },
+  {
+    enunciado: "l es una característica fundamental de los nombres de bucket en Amazon S3?",
+    opciones: [
+      "Pueden contener letras mayúsculas y caracteres especiales sin restricciones",
+      "Solo tienen que ser únicos dentro de la misma región de AWS",
+      "Deben ser únicos a nivel mundial en toda la plataforma de AWS",
+      "Se generan automáticamente por AWS y no pueden ser personalizados"
+    ],
+    correcta: 2,
+    explicacion: " La correcta es deben ser únicos a nivel mundial en toda la plataforma de AWS porque los nombres de bucket en S3 son globales: no pueden repetirse en toda la plataforma de AWS, independientemente de la región"
+  },
+  {
+    enunciado: "instancia EC2 tiene un volumen raíz de tipo EBS. ¿Qué ocurre con los datos si la instancia se detiene y se vuelve a iniciar?",
+    opciones: [
+      "Los datos se copian automáticamente a S3 como medida de seguridad",
+      "La instancia no puede reiniciarse sin formatear previamente el volumen",
+      "Los datos se pierden porque EBS es almacenamiento efímero por naturaleza",
+      "Los datos se conservan porque EBS persiste aunque la instancia esté parada"
+    ],
+    correcta: 3,
+    explicacion: " La correcta es los datos se conservan porque EBS persiste aunque la instancia esté parada porque eBS es almacenamiento persistente: los datos se mantienen aunque la instancia se detenga o reinicie. Solo se perderían si se elimina el volumen de forma explícita"
+  },
+  {
+    enunciado: "a qué tipo de caso de uso es más adecuado Amazon EBS?",
+    opciones: [
+      "Distribuir contenido multimedia a usuarios de distintas partes del mundo",
+      "Proporcionar el disco del sistema operativo y datos de una instancia EC2",
+      "Gestionar bases de datos NoSQL sin necesidad de administrar servidores",
+      "Almacenar y servir imágenes, vídeos y archivos estáticos a escala global"
+    ],
+    correcta: 1,
+    explicacion: " La correcta es proporcionar el disco del sistema operativo y datos de una instancia EC2 porque eBS es almacenamiento en bloque: se comporta como un disco duro virtual conectado a una instancia EC2, ideal para sistema operativo, bases de datos y aplicaciones con estado"
+  },
+  {
+    enunciado: "ocurre al hacer público un objeto en S3?",
+    opciones: [
+      "Se desactiva el cifrado del objeto",
+      "El objeto cambia de región",
+      "Se puede acceder al objeto por URL",
+      "Todo el bucket es público"
+    ],
+    correcta: 2,
+    explicacion: " La correcta es se puede acceder al objeto por URL porque al hacer público un objeto en S3 se genera una URL accesible desde internet. Esto afecta solo a ese objeto, no a todo el bucket ni activa o desactiva el cifrado del mismo. CLASE 20-21: Bases de Datos - Amazon RDS"
+  },
+  {
+    enunciado: "ué ventaja principal ofrece la configuración Multi-AZ en Amazon RDS?",
+    opciones: [
+      "Mejora el rendimiento de lectura con instancias en paralelo",
+      "Permite usar diferentes motores de BBDD en la misma instancia",
+      "Reduce costes al compartir la instancia entre varias aplicaciones",
+      "Da alta disponibilidad con failover automático a otra zona"
+    ],
+    correcta: 3,
+    explicacion: " La correcta es da alta disponibilidad con failover automático a otra zona porque multi-AZ mantiene una réplica sincrónica en otra zona de disponibilidad y realiza failover automático si la instancia principal falla, sin intervención manual"
+  },
+  {
+    enunciado: "l es la principal ventaja de usar Amazon RDS frente a instalar la base de datos en una instancia EC2?",
+    opciones: [
+      "Con RDS, AWS gestiona parches, backups y alta disponibilidad por ti",
+      "RDS no permite hacer copias de seguridad automáticas del sistema",
+      "RDS solo soporta MySQL, lo que simplifica la gestión de motores",
+      "EC2 con BBDD es siempre más barato que RDS en cualquier escenario"
+    ],
+    correcta: 0,
+    explicacion: " La correcta es con RDS, AWS gestiona parches, backups y alta disponibilidad por ti porque rDS es un servicio gestionado: AWS se encarga de actualizaciones del motor, backups automáticos, Multi-AZ y otras tareas de administración que el cliente haría manualmente en EC2"
+  },
+  {
+    enunciado: "base de datos Amazon RDS tiene activado Multi-AZ y además tiene réplicas de lectura. ¿Cuál de las siguientes afirmaciones es CORRECTA sobre la diferencia entre ambos mecanismos?",
+    opciones: [
+      "Las réplicas de lectura sirven como destino de failover automático igual que Multi-AZ",
+      "Multi-AZ replica de forma asíncrona; las réplicas de lectura lo hacen de forma síncrona",
+      "Multi-AZ y las réplicas de lectura sirven exactamente para lo mismo; es redundante tener ambas",
+      "Multi-AZ garantiza alta disponibilidad con failover automático; las réplicas escalan el rendimiento de lectura"
+    ],
+    correcta: 3,
+    explicacion: " La correcta es multi-AZ garantiza alta disponibilidad con failover automático; las réplicas escalan el rendimiento de lectura porque multi-AZ replica de forma SÍNCRONA a otra zona para alta disponibilidad (failover automático). Las réplicas de lectura replican de forma ASÍNCRONA y se usan para escalar lecturas. Son mecanismos complementarios con objetivos distintos"
+  },
+  {
+    enunciado: "aplicación tiene muchas consultas de solo lectura que saturan la instancia principal de Amazon RDS. ¿Cuál es la solución más adecuada?",
+    opciones: [
+      "Aumentar el tipo de instancia del servidor de aplicaciones web frontend",
+      "Crear réplicas de lectura de RDS para redirigir las consultas de solo lectura",
+      "Migrar completamente la base de datos a Amazon DynamoDB",
+      "Activar Multi-AZ para que las consultas de lectura se repartan entre zonas"
+    ],
+    correcta: 1,
+    explicacion: " La correcta es crear réplicas de lectura de RDS para redirigir las consultas de solo lectura porque las réplicas de lectura de RDS son copias asíncronas diseñadas para absorber tráfico de solo lectura, descargando la instancia principal. Multi-AZ es para alta disponibilidad, no para escalar lecturas"
+  },
+  {
+    enunciado: "l de los siguientes motores de base de datos NO está disponible de forma nativa en Amazon RDS?",
+    opciones: [
+      "MongoDB",
+      "MySQL",
+      "PostgreSQL",
+      "Oracle"
+    ],
+    correcta: 0,
+    explicacion: " La correcta es mongoDB porque amazon RDS soporta motores relacionales: MySQL, PostgreSQL, MariaDB, Oracle, SQL Server y Amazon Aurora. MongoDB es NoSQL y no está en RDS; AWS ofrece Amazon DocumentDB como alternativa compatible"
+  },
+  {
+    enunciado: "implica que un servicio como RDS sea administrado (managed)?",
+    opciones: [
+      "El usuario no define el motor de base de datos",
+      "El servicio no necesita configuración",
+      "AWS se encarga del sistema y su mantenimiento",
+      "El usuario no accede nunca a la base de datos"
+    ],
+    correcta: 2,
+    explicacion: " La correcta es aWS se encarga del sistema y su mantenimiento porque un servicio gestionado (managed) como RDS significa que AWS se ocupa de la instalación, los parches del motor, los backups automáticos y la alta disponibilidad. El cliente solo gestiona datos y configuración. CLASE 22-23: Serverless - AWS Lambda"
+  },
+  {
+    enunciado: "ué significa que AWS Lambda es un servicio 'serverless'?",
+    opciones: [
+      "Que no puede usarse junto con otros servicios de AWS",
+      "Que el código nunca se ejecuta en servidores físicos reales",
+      "Que el código se ejecuta de forma continua en segundo plano",
+      "Que AWS gestiona toda la infraestructura y solo pagas por las ejecuciones"
+    ],
+    correcta: 3,
+    explicacion: " La correcta es que AWS gestiona toda la infraestructura y solo pagas por las ejecuciones porque serverless significa que no hay que provisionar ni gestionar servidores. AWS lo hace por ti y la facturación es por número de ejecuciones y tiempo de cómputo"
+  },
+  {
+    enunciado: "función Lambda recibe de repente miles de peticiones simultáneas. ¿Cómo responde Lambda ante esta situación?",
+    opciones: [
+      "Lambda agrupa las peticiones en lotes y las procesa secuencialmente en orden de llegada",
+      "Lambda solo procesa una petición a la vez; el resto se descartan sin respuesta",
+      "Lambda escala automáticamente ejecutando múltiples instancias en paralelo hasta el límite de concurrencia",
+      "Lambda delega el exceso de peticiones a EC2 automáticamente si supera su capacidad"
+    ],
+    correcta: 2,
+    explicacion: " La correcta es lambda escala automáticamente ejecutando múltiples instancias en paralelo hasta el límite de concurrencia porque lambda escala horizontalmente de forma automática lanzando instancias paralelas de la función. Hay un límite de concurrencia por región (por defecto 1.000 ejecuciones simultáneas), que se puede ampliar solicitándolo a AWS"
+  },
+  {
+    enunciado: "mpresa quiere apagar automáticamente sus instancias EC2 fuera del horario laboral para reducir costes. ¿Qué combinación de servicios es la más adecuada?",
+    opciones: [
+      "AWS Lambda con un evento cronológico usando una regla horaria de EventBridge",
+      "EC2 Auto Scaling con una política de escalado programado por horario fijo",
+      "AWS Elastic Beanstalk con entornos configurados por turno de trabajo",
+      "Amazon RDS con la opción de mantenimiento automático fuera de horario"
+    ],
+    correcta: 0,
+    explicacion: " La correcta es aWS Lambda con un evento cronológico usando una regla horaria de EventBridge porque la función Lambda llama a la API de EC2 para encender o apagar las instancias a horas concretas, activada por una regla horaria (cron) de Amazon EventBridge. CLASE 24-25: PaaS - AWS Elastic Beanstalk"
+  },
+  {
+    enunciado: "ué gestiona automáticamente AWS Elastic Beanstalk al desplegar una aplicación web?",
+    opciones: [
+      "Las consultas SQL de la aplicación y la optimización de sus índices",
+      "El aprovisionamiento de recursos, balanceo de carga, escalado y monitorización",
+      "Solo los certificados SSL y las reglas del grupo de seguridad asociadas",
+      "Los repositorios de código fuente y el historial de commits de la aplicación"
+    ],
+    correcta: 1,
+    explicacion: " La correcta es el aprovisionamiento de recursos, balanceo de carga, escalado y monitorización porque elastic Beanstalk es un PaaS que abstrae la infraestructura: el desarrollador sube el código y AWS gestiona automáticamente EC2, ELB, Auto Scaling y CloudWatch. CLASE 25-26: BD NoSQL - AWS DynamoDB"
+  },
+  {
+    enunciado: "uál es la principal diferencia entre Amazon DynamoDB y Amazon RDS?",
+    opciones: [
+      "DynamoDB es una base de datos relacional y RDS es un servicio NoSQL",
+      "DynamoDB es NoSQL (clave-valor/documentos) y RDS gestiona BBDD relacionales",
+      "DynamoDB solo puede usarse en aplicaciones serverless con AWS Lambda",
+      "RDS no garantiza alta disponibilidad, mientras que DynamoDB sí lo hace"
+    ],
+    correcta: 1,
+    explicacion: " La correcta es dynamoDB es NoSQL (clave-valor/documentos) y RDS gestiona BBDD relacionales porque dynamoDB es una base de datos NoSQL totalmente gestionada, ideal para acceso por clave con alta velocidad. RDS gestiona motores relacionales como MySQL, PostgreSQL u Oracle. CLASE 27-28: Escalado Automático"
+  },
+  {
+    enunciado: "a aplicación web tiene picos de tráfico muy variables e impredecibles. ¿Qué combinación de servicios AWS permite gestionar la capacidad de forma automática?",
+    opciones: [
+      "EC2 Auto Scaling junto con un balanceador de carga ELB",
+      "Amazon EBS con instantáneas programadas y Amazon CloudFront",
+      "Amazon RDS Multi-AZ y Amazon Route 53 con enrutamiento de latencia",
+      "AWS Lambda con EventBridge y Amazon S3 para el contenido estático"
+    ],
+    correcta: 0,
+    explicacion: " La correcta es eC2 Auto Scaling junto con un balanceador de carga ELB porque eC2 Auto Scaling añade o elimina instancias según la demanda, mientras que el ELB distribuye el tráfico entre ellas automáticamente, garantizando disponibilidad y rendimiento"
+  },
+  {
+    enunciado: "de un balanceador de carga (ELB) de AWS distribuir tráfico entre instancias que están en distintas regiones de AWS?",
+    opciones: [
+      "No, los ELB solo pueden distribuir tráfico dentro de una única subred privada",
+      "Sí, los ELB distribuyen tráfico entre cualquier región de AWS por defecto",
+      "Sí, pero requiere activar la opción Multi-Region en la configuración avanzada",
+      "No, un ELB opera dentro de una región aunque cubre varias zonas de disponibilidad"
+    ],
+    correcta: 3,
+    explicacion: " La correcta es no, un ELB opera dentro de una región aunque cubre varias zonas de disponibilidad porque los ELB son regionales: operan dentro de una sola región de AWS, aunque pueden abarcar varias zonas de disponibilidad. Para balancear entre regiones se usaría Route 53 con políticas de latencia"
+  },
+  {
+    enunciado: "l es la diferencia entre el escalado horizontal y el escalado vertical?",
+    opciones: [
+      "El escalado horizontal aplica solo a BBDD y el vertical solo a servidores web",
+      "El vertical añade más instancias al grupo; el horizontal aumenta CPU y RAM de una instancia",
+      "El horizontal añade más instancias al grupo; el vertical aumenta los recursos de una instancia",
+      "Ambos son equivalentes y solo difieren en la terminología del proveedor cloud"
+    ],
+    correcta: 2,
+    explicacion: " La correcta es el horizontal añade más instancias al grupo; el vertical aumenta los recursos de una instancia porque escalado horizontal (scale out): se añaden más instancias para repartir la carga. Escalado vertical (scale up): se aumenta la CPU/RAM de la instancia existente. CLASE 29-30: Contenedores"
+  },
+  {
+    enunciado: "ué problema principal resuelve Docker en el desarrollo de software?",
+    opciones: [
+      "Empaqueta la app con sus dependencias, resolviendo el 'funciona en mi máquina'",
+      "Proporciona almacenamiento persistente para aplicaciones distribuidas en red",
+      "Permite escalar aplicaciones automáticamente según la demanda del sistema",
+      "Gestiona los permisos y accesos entre los microservicios de forma centralizada"
+    ],
+    correcta: 0,
+    explicacion: " La correcta es empaqueta la app con sus dependencias, resolviendo el 'funciona en mi máquina' porque docker encapsula la aplicación y todas sus dependencias en un contenedor, garantizando que se ejecute de forma idéntica en cualquier entorno: desarrollo, pruebas o producción"
+  },
+  {
+    enunciado: "ocker permite ejecutar contenedores individualmente, ¿qué problema adicional resuelve Kubernetes (o Amazon EKS)?",
+    opciones: [
+      "Almacenar imágenes de contenedores en un registro privado y seguro",
+      "Orquestar múltiples contenedores gestionando despliegue y escalado",
+      "Convertir aplicaciones monolíticas en microservicios de forma automática",
+      "Crear y optimizar imágenes Docker más ligeras y eficientes en recursos"
+    ],
+    correcta: 1,
+    explicacion: " La correcta es orquestar múltiples contenedores gestionando despliegue y escalado porque kubernetes (y EKS en AWS) gestiona la orquestación de contenedores: despliegue, escalado automático, recuperación ante fallos y actualizaciones sin downtime. CLASE 31-32: Arquitectura en la Nube"
+  },
+  {
+    enunciado: "ara qué sirve principalmente Amazon Route 53?",
+    opciones: [
+      "Crear redes privadas virtuales dentro de la infraestructura de AWS",
+      "Monitorizar el rendimiento de instancias y generar alertas automáticas",
+      "Distribuir contenido estático desde ubicaciones edge cercanas al usuario",
+      "Gestionar DNS y enrutar el tráfico hacia los recursos de AWS"
+    ],
+    correcta: 3,
+    explicacion: " La correcta es gestionar DNS y enrutar el tráfico hacia los recursos de AWS porque route 53 es el servicio DNS de AWS. Traduce nombres de dominio a IPs y ofrece distintas políticas de enrutamiento: latencia, geolocalización, failover, ponderado, etc"
+  },
+  {
+    enunciado: "les son los 6 pilares del AWS Well-Architected Framework?",
+    opciones: [
+      "Seguridad, Redundancia, Automatización, Latencia, Costes y Sostenibilidad",
+      "Seguridad, Escalabilidad, Automatización, Rendimiento, Costes y Resiliencia",
+      "Excelencia Operativa, Seguridad, Fiabilidad, Rendimiento, Costes y Sostenibilidad",
+      "Disponibilidad, Seguridad, Escalabilidad, Costes, Monitorización y Elasticidad"
+    ],
+    correcta: 2,
+    explicacion: " La correcta es excelencia Operativa, Seguridad, Fiabilidad, Rendimiento, Costes y Sostenibilidad porque los 6 pilares oficiales son: Excelencia Operativa, Seguridad, Fiabilidad, Eficiencia de Rendimiento, Optimización de Costes y Sostenibilidad. 'Escalabilidad' no es un pilar propio"
+  },
+  {
+    enunciado: "l es la principal ventaja de usar Amazon CloudFront para una aplicación con usuarios repartidos por todo el mundo?",
+    opciones: [
+      "Gestiona los certificados SSL de todos los balanceadores de carga de la cuenta",
+      "Entrega el contenido desde ubicaciones edge cercanas al usuario final",
+      "Escala instancias EC2 automáticamente según la demanda en cada región",
+      "Cifra todos los datos almacenados en S3 de forma completamente automática"
+    ],
+    correcta: 1,
+    explicacion: " La correcta es entrega el contenido desde ubicaciones edge cercanas al usuario final porque cloudFront es una CDN que replica el contenido en ubicaciones edge globales, reduciendo la latencia al servir desde el punto geográficamente más cercano al usuario"
+  },
+  {
+    enunciado: "empresa quiere evaluar si su arquitectura en AWS sigue las mejores prácticas en términos de seguridad, costes y resiliencia. ¿Qué herramienta de AWS utiliza para ello?",
+    opciones: [
+      "AWS Pricing Calculator, para estimar el coste mensual de los servicios",
+      "Amazon CloudWatch, para monitorizar métricas y crear alertas",
+      "AWS Well-Architected Tool, basada en el Well-Architected Framework",
+      "AWS CloudFormation, para desplegar la infraestructura como código"
+    ],
+    correcta: 2,
+    explicacion: " La correcta es AWS Well-Architected Tool, basada en el Well-Architected Framework porque la AWS Well-Architected Tool permite revisar la arquitectura contra los 6 pilares del framework, identificando riesgos y áreas de mejora de forma estructurada"
+  },
+  {
+    enunciado: "Ventaja clave aporta una CDN?",
+    opciones: [
+      "Más almacenamiento",
+      "Más permisos",
+      "Más bases de datos",
+      "Menor latencia al usuario"
+    ],
+    correcta: 3,
+    explicacion: " La correcta es menor latencia al usuario porque una CDN (Content Delivery Network) como Amazon CloudFront distribuye el contenido en ubicaciones edge cercanas al usuario, reduciendo la latencia al servir desde el punto geográficamente más próximo"
+  },
+  {
+    enunciado: "Criterio tiene más sentido usar para repartir tráfico global mediante DNS?",
+    opciones: [
+      "La ubicación del usuario",
+      "El coste de la región",
+      "El tamaño de la instancia",
+      "La hora del servidor"
+    ],
+    correcta: 0,
+    explicacion: " La correcta es la ubicación del usuario porque el enrutamiento de geolocalización en Route 53 dirige el tráfico al recurso más cercano al usuario, minimizando la latencia y permitiendo cumplir requisitos de soberanía de datos por país"
+  }
 
 ];

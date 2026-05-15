@@ -715,17 +715,6 @@ const preguntasFH = [
     explicacion: " La correcta es ATX porque ATX es el formato estándar más habitual en torres de sobremesa. La opción b es incorrecta porque corresponde a otro factor de forma o no es el estándar indicado en la pregunta. La opción c es incorrecta porque corresponde a otro factor de forma o no es el estándar indicado en la pregunta. La opción d es incorrecta porque corresponde a otro factor de forma o no es el estándar indicado en la pregunta."
   },
   {
-    enunciado: "¿Qué componente se describe como el sistema nervioso central y esqueleto del ordenador?",
-    opciones: [
-      "El microprocesador",
-      "La placa base",
-      "La fuente de alimentación",
-      "La memoria RAM"
-    ],
-    correcta: 1,
-    explicacion: " La correcta es La placa base porque la placa base conecta, alimenta y permite comunicar los componentes del ordenador. La opción a es incorrecta porque corresponde a otro factor de forma o no es el estándar indicado en la pregunta. La opción c es incorrecta porque no corresponde con la definición, función o componente que se pregunta. La opción d es incorrecta porque se refiere a otro tipo de memoria con características diferentes."
-  },
-  {
     enunciado: "¿Qué es el zócalo o socket en una placa base?",
     opciones: [
       "El conector de la fuente de alimentación",
@@ -2253,17 +2242,6 @@ const preguntasFH = [
     ],
     correcta: 2,
     explicacion: " La correcta es Ethernet (RJ45) porque es el concepto que responde directamente a lo que se pregunta"
-  },
-  {
-    enunciado: "¿Qué es el 'USB-C alt mode'?",
-    opciones: [
-      "Una forma de conectar discos duros antiguos",
-      "Un modo de ahorro de energía extremo",
-      "Un sistema de seguridad contra virus",
-      "Una función que permite transmitir vídeo (como DisplayPort) por el puerto USB-C"
-    ],
-    correcta: 3,
-    explicacion: " La correcta es Una función que permite transmitir vídeo (como DisplayPort) por el puerto USB-C porque es el concepto que responde directamente a lo que se pregunta"
   },
   {
     enunciado: "¿Por qué las funciones integradas de audio de la placa base pueden quedarse cortas para un profesional?",
