@@ -65,7 +65,7 @@
       const [mostrarResultado, setMostrarResultado] = React.useState(false);
 
       React.useEffect(() => {
-        const nuevas = mezclarArray(preguntasActuales).slice(0, 60);
+        const nuevas = mezclarArray(preguntasActuales).slice(0, 300);
         setPreguntasMezcladas(nuevas);
         setRespuestas(Array(nuevas.length).fill(null));
         setMarcadas(Array(nuevas.length).fill(false));
