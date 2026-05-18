@@ -77,17 +77,6 @@ const preguntasFH = [
     explicacion: " La correcta es Datos e instrucciones porque la arquitectura Von Neumann se basa en CPU, memoria principal, entrada/salida y buses para comunicar los subsistemas. La opción a es incorrecta porque confunde los tipos de bus o deja fuera una parte necesaria de la comunicación. La opción b es incorrecta porque confunde los tipos de bus o deja fuera una parte necesaria de la comunicación. La opción d es incorrecta porque confunde los tipos de bus o deja fuera una parte necesaria de la comunicación."
   },
   {
-    enunciado: "¿Qué tipos de buses existen en un ordenador?",
-    opciones: [
-      "Bus de datos, instrucciones y control",
-      "Bus de datos, direcciones y reloj",
-      "Bus de instrucciones, direcciones y control",
-      "Bus de datos, direcciones y control"
-    ],
-    correcta: 3,
-    explicacion: " La correcta es Bus de datos, direcciones y control porque los buses son las vías de comunicación que transportan datos, direcciones y señales de control entre los componentes. La opción a es incorrecta porque confunde los tipos de bus o deja fuera una parte necesaria de la comunicación. La opción b es incorrecta porque mezcla componentes de la CPU de forma incompleta o incorrecta. La opción c es incorrecta porque confunde los tipos de bus o deja fuera una parte necesaria de la comunicación."
-  },
-  {
     enunciado: "Se le llama Arquitectura de Memoria Unificada a una configuración en la que:",
     opciones: [
       "Tanto la CPU como la GPU acceden a la misma memoria física con la misma prioridad y velocidad",
@@ -506,17 +495,6 @@ const preguntasFH = [
     explicacion: " La correcta es Conjunto de programas e instrucciones que controlan el hardware porque la RAM influye en compatibilidad, estabilidad y rendimiento según generación, velocidad y latencias. La opción a es incorrecta porque no corresponde con la definición, función o componente que se pregunta. La opción c es incorrecta porque no corresponde con la definición, función o componente que se pregunta. La opción d es incorrecta porque no corresponde con la definición, función o componente que se pregunta."
   },
   {
-    enunciado: "¿Qué tipo de software actúa como intermediario entre el hardware y los programas del usuario?",
-    opciones: [
-      "Firmware",
-      "Sistema operativo",
-      "Son correctas b) y c)",
-      "Controlador de dispositivo"
-    ],
-    correcta: 2,
-    explicacion: " La correcta es Son correctas b) y c) porque la RAM influye en compatibilidad, estabilidad y rendimiento según generación, velocidad y latencias. La opción a es incorrecta porque se refiere a otro elemento del arranque o del firmware, no a lo que pregunta el enunciado. La opción b es incorrecta porque no corresponde con la definición, función o componente que se pregunta. La opción d es incorrecta porque confunde los tipos de bus o deja fuera una parte necesaria de la comunicación."
-  },
-  {
     enunciado: "¿Qué mide el ancho de banda?",
     opciones: [
       "La velocidad del Bus de control",
@@ -715,17 +693,6 @@ const preguntasFH = [
     explicacion: " La correcta es ATX porque ATX es el formato estándar más habitual en torres de sobremesa. La opción b es incorrecta porque corresponde a otro factor de forma o no es el estándar indicado en la pregunta. La opción c es incorrecta porque corresponde a otro factor de forma o no es el estándar indicado en la pregunta. La opción d es incorrecta porque corresponde a otro factor de forma o no es el estándar indicado en la pregunta."
   },
   {
-    enunciado: "¿Qué es el zócalo o socket en una placa base?",
-    opciones: [
-      "El conector de la fuente de alimentación",
-      "El puerto para conectar el disco duro",
-      "El lugar donde se instala la CPU",
-      "La ranura para la memoria RAM"
-    ],
-    correcta: 2,
-    explicacion: " La correcta es El lugar donde se instala la CPU porque el socket es el punto físico de la placa donde se instala el procesador y su tipo define la compatibilidad con la CPU. La opción a es incorrecta porque no corresponde con la definición, función o componente que se pregunta. La opción b es incorrecta porque no corresponde con la definición, función o componente que se pregunta. La opción d es incorrecta porque se refiere a otro tipo de memoria con características diferentes."
-  },
-  {
     enunciado: "¿Cuál es la función del chipset en la placa base?",
     opciones: [
       "Almacenar los archivos del usuario",
@@ -735,17 +702,6 @@ const preguntasFH = [
     ],
     correcta: 3,
     explicacion: " La correcta es Gestionar el flujo de datos entre los componentes porque la placa base conecta, alimenta y permite comunicar los componentes del ordenador. La opción a es incorrecta porque no corresponde con la definición, función o componente que se pregunta. La opción b es incorrecta porque no corresponde con la definición, función o componente que se pregunta. La opción c es incorrecta porque no corresponde con la definición, función o componente que se pregunta."
-  },
-  {
-    enunciado: "¿Qué componente permite que la BIOS/UEFI mantenga la configuración de fecha y hora?",
-    opciones: [
-      "La pila CMOS",
-      "El condensador principal",
-      "El regulador de voltaje",
-      "El transistor de arranque"
-    ],
-    correcta: 0,
-    explicacion: " La correcta es La pila CMOS porque la BIOS/UEFI y su configuración pertenecen al arranque básico del equipo y se conservan mediante memoria no volátil o CMOS según el contexto de la pregunta. La opción b es incorrecta porque no corresponde con la definición, función o componente que se pregunta. La opción c es incorrecta porque no corresponde con la definición, función o componente que se pregunta. La opción d es incorrecta porque no corresponde con la definición, función o componente que se pregunta."
   },
   {
     enunciado: "¿Qué interfaz se utiliza comúnmente para conectar unidades de almacenamiento como HDD y SSD de 2.5 pulgadas?",
@@ -781,17 +737,6 @@ const preguntasFH = [
     explicacion: " La correcta es UEFI porque la BIOS/UEFI y su configuración pertenecen al arranque básico del equipo y se conservan mediante memoria no volátil o CMOS según el contexto de la pregunta. La opción a es incorrecta porque se refiere a otro tipo de memoria con características diferentes. La opción b es incorrecta porque no corresponde con la definición, función o componente que se pregunta. La opción c es incorrecta porque corresponde a otro nivel o técnica RAID con un comportamiento distinto."
   },
   {
-    enunciado: "¿Qué función cumple el VRM (Voltage Regulator Module) en la placa base?",
-    opciones: [
-      "Convertir la energía de la fuente al voltaje exacto que necesita la CPU",
-      "Controlar el volumen de los altavoces",
-      "Gestionar la velocidad de los ventiladores de la caja",
-      "Almacenar temporalmente los datos de las aplicaciones"
-    ],
-    correcta: 0,
-    explicacion: " La correcta es Convertir la energía de la fuente al voltaje exacto que necesita la CPU porque la CPU se encarga de interpretar y ejecutar instrucciones usando sus unidades internas y registros. La opción b es incorrecta porque confunde los tipos de bus o deja fuera una parte necesaria de la comunicación. La opción c es incorrecta porque no corresponde con la definición, función o componente que se pregunta. La opción d es incorrecta porque confunde los tipos de bus o deja fuera una parte necesaria de la comunicación."
-  },
-  {
     enunciado: "¿Qué permite hacer el Secure Boot en sistemas UEFI?",
     opciones: [
       "Cifrar los archivos personales del usuario",
@@ -823,17 +768,6 @@ const preguntasFH = [
     ],
     correcta: 3,
     explicacion: " La correcta es Hercios (Hz) porque la CPU se encarga de interpretar y ejecutar instrucciones usando sus unidades internas y registros. La opción a es incorrecta porque no corresponde con la definición, función o componente que se pregunta. La opción b es incorrecta porque no corresponde con la definición, función o componente que se pregunta. La opción c es incorrecta porque no corresponde con la definición, función o componente que se pregunta."
-  },
-  {
-    enunciado: "¿Qué postula la Ley de Moore?",
-    opciones: [
-      "Que el número de transistores en un chip se duplica aproximadamente cada dos años",
-      "Que el precio de los procesadores baja a la mitad cada año",
-      "Que la velocidad de la RAM siempre supera a la de la CPU",
-      "Que los ordenadores serán obsoletos en una década"
-    ],
-    correcta: 0,
-    explicacion: " La correcta es Que el número de transistores en un chip se duplica aproximadamente cada dos años porque POST es la comprobación inicial que verifica hardware básico durante el arranque. La opción b es incorrecta porque no corresponde con la definición, función o componente que se pregunta. La opción c es incorrecta porque se refiere a otro tipo de memoria con características diferentes. La opción d es incorrecta porque no corresponde con la definición, función o componente que se pregunta."
   },
   {
     enunciado: "¿Qué función cumple la memoria caché dentro de la CPU?",
@@ -880,28 +814,6 @@ const preguntasFH = [
     explicacion: " La correcta es El proceso de medir el rendimiento del hardware de forma objetiva mediante pruebas estandarizadas porque el benchmarking mide el rendimiento mediante pruebas comparables y estandarizadas. La opción b es incorrecta porque no corresponde con la definición, función o componente que se pregunta. La opción c es incorrecta porque no corresponde con la definición, función o componente que se pregunta. La opción d es incorrecta porque no corresponde con la definición, función o componente que se pregunta."
   },
   {
-    enunciado: "¿Qué herramienta se menciona como útil para monitorizar información técnica del procesador en tiempo real?",
-    opciones: [
-      "Google Chrome",
-      "HWiNFO",
-      "Microsoft Word",
-      "VLC Player"
-    ],
-    correcta: 1,
-    explicacion: " La correcta es HWiNFO porque la CPU se encarga de interpretar y ejecutar instrucciones usando sus unidades internas y registros. La opción a es incorrecta porque se refiere a otro tipo de memoria con características diferentes. La opción c es incorrecta porque corresponde a otro factor de forma o no es el estándar indicado en la pregunta. La opción d es incorrecta porque no corresponde con la definición, función o componente que se pregunta."
-  },
-  {
-    enunciado: "¿En qué paso del ciclo de instrucción la CPU interpreta la instrucción para saber qué operación realizar?",
-    opciones: [
-      "Recoger (Fetch)",
-      "Ejecutar (Execute)",
-      "Decodificar (Decode)",
-      "Almacenar (Store)"
-    ],
-    correcta: 2,
-    explicacion: " La correcta es Decodificar (Decode) porque la CPU se encarga de interpretar y ejecutar instrucciones usando sus unidades internas y registros. La opción a es incorrecta porque no corresponde con la definición, función o componente que se pregunta. La opción b es incorrecta porque no corresponde con la definición, función o componente que se pregunta. La opción d es incorrecta porque no corresponde con la definición, función o componente que se pregunta."
-  },
-  {
     enunciado: "¿Qué superficie de trabajo se debe evitar para prevenir la acumulación de carga estática?",
     opciones: [
       "Esterillas antiestáticas",
@@ -911,17 +823,6 @@ const preguntasFH = [
     ],
     correcta: 3,
     explicacion: " La correcta es Alfombras y superficies sintéticas porque las superficies sintéticas o alfombras pueden acumular electricidad estática y dañar componentes. La opción a es incorrecta porque no corresponde con la definición, función o componente que se pregunta. La opción b es incorrecta porque no corresponde con la definición, función o componente que se pregunta. La opción c es incorrecta porque no corresponde con la definición, función o componente que se pregunta."
-  },
-  {
-    enunciado: "¿Qué componente se recomienda instalar en la placa base antes de introducirla en la caja?",
-    opciones: [
-      "La CPU, la RAM y el disipador",
-      "La tarjeta gráfica",
-      "La fuente de alimentación",
-      "Los discos duros mecánicos"
-    ],
-    correcta: 0,
-    explicacion: " La correcta es La CPU, la RAM y el disipador porque la CPU se encarga de interpretar y ejecutar instrucciones usando sus unidades internas y registros. La opción b es incorrecta porque confunde el concepto con la tarjeta gráfica, que tiene otra función distinta. La opción c es incorrecta porque no corresponde con la definición, función o componente que se pregunta. La opción d es incorrecta porque no corresponde con la definición, función o componente que se pregunta."
   },
   {
     enunciado: "¿Cómo se llaman los postes metálicos que separan la placa base del chasis para evitar cortocircuitos?",
@@ -1034,28 +935,6 @@ const preguntasFH = [
     explicacion: " La correcta es Permite conectar varios monitores en cadena (daisy chain) porque DisplayPort permite funciones avanzadas como conectar varios monitores en cadena. La opción a es incorrecta porque no corresponde con la definición, función o componente que se pregunta. La opción b es incorrecta porque no corresponde con la definición, función o componente que se pregunta. La opción d es incorrecta porque no corresponde con la definición, función o componente que se pregunta."
   },
   {
-    enunciado: "¿Qué tipo de dispositivo de almacenamiento es mecánico y utiliza platos giratorios?",
-    opciones: [
-      "Tarjeta SD",
-      "SSD (Solid-State Drive)",
-      "Memoria RAM",
-      "HDD (Hard Disk Drive)"
-    ],
-    correcta: 3,
-    explicacion: " La correcta es HDD (Hard Disk Drive) porque un HDD almacena datos en platos magnéticos giratorios, por eso es mecánico. La opción a es incorrecta porque no corresponde con la definición, función o componente que se pregunta. La opción b es incorrecta porque no corresponde con la definición, función o componente que se pregunta. La opción c es incorrecta porque se refiere a otro tipo de memoria con características diferentes."
-  },
-  {
-    enunciado: "¿Qué significa la sigla NAS?",
-    opciones: [
-      "Network Attached Storage",
-      "New Advanced Serial",
-      "National Archive System",
-      "Node Access Storage"
-    ],
-    correcta: 0,
-    explicacion: " La correcta es Network Attached Storage porque NAS significa almacenamiento conectado a la red y permite compartir almacenamiento por red. La opción b es incorrecta porque no corresponde con la definición, función o componente que se pregunta. La opción c es incorrecta porque no corresponde con la definición, función o componente que se pregunta. La opción d es incorrecta porque no corresponde con la definición, función o componente que se pregunta."
-  },
-  {
     enunciado: "¿Qué nivel de RAID realiza un 'espejo' (mirroring) de los datos en tiempo real?",
     opciones: [
       "RAID 0",
@@ -1122,28 +1001,6 @@ const preguntasFH = [
     explicacion: " La correcta es SAI / UPS porque un SAI/UPS mantiene la alimentación durante cortes breves y protege frente a fallos eléctricos. La opción a es incorrecta porque no corresponde con la definición, función o componente que se pregunta. La opción b es incorrecta porque no corresponde con la definición, función o componente que se pregunta. La opción d es incorrecta porque no corresponde con la definición, función o componente que se pregunta."
   },
   {
-    enunciado: "¿Qué técnica lógica permite segmentar redes para mejorar la seguridad?",
-    opciones: [
-      "RAID 5",
-      "Overclocking",
-      "P2V",
-      "VLAN"
-    ],
-    correcta: 3,
-    explicacion: " La correcta es VLAN porque una VLAN segmenta lógicamente una red para separar tráfico y mejorar seguridad. La opción a es incorrecta porque corresponde a otro nivel o técnica RAID con un comportamiento distinto. La opción b es incorrecta porque no corresponde con la definición, función o componente que se pregunta. La opción c es incorrecta porque no corresponde con la definición, función o componente que se pregunta."
-  },
-  {
-    enunciado: "¿Qué diferencia a una imagen de respaldo de una simple copia de archivos?",
-    opciones: [
-      "Es una fotografía exacta de todo el disco, incluyendo SO y aplicaciones",
-      "No permite restaurar el sistema operativo",
-      "Solo guarda documentos de texto y fotos",
-      "Es más lenta de copiar pero ocupa menos espacio"
-    ],
-    correcta: 0,
-    explicacion: " La correcta es Es una fotografía exacta de todo el disco, incluyendo SO y aplicaciones porque una imagen de respaldo copia el estado completo del disco, incluido sistema y aplicaciones. La opción b es incorrecta porque no corresponde con la definición, función o componente que se pregunta. La opción c es incorrecta porque no corresponde con la definición, función o componente que se pregunta. La opción d es incorrecta porque no corresponde con la definición, función o componente que se pregunta."
-  },
-  {
     enunciado: "¿Qué significan las siglas P2V en el contexto de migración de sistemas?",
     opciones: [
       "Power-to-Volume",
@@ -1177,17 +1034,6 @@ const preguntasFH = [
     explicacion: " La correcta es Actúa como un aislante térmico y aumenta la temperatura porque el polvo dificulta la disipación térmica y puede aumentar temperaturas. La opción a es incorrecta porque no corresponde con la definición, función o componente que se pregunta. La opción b es incorrecta porque no corresponde con la definición, función o componente que se pregunta. La opción c es incorrecta porque no corresponde con la definición, función o componente que se pregunta."
   },
   {
-    enunciado: "¿Qué indican los valores S.M.A.R.T. de un disco?",
-    opciones: [
-      "Información sobre la salud y posibles fallos del disco",
-      "La velocidad de descarga de archivos de internet",
-      "El nombre del usuario que creó las carpetas",
-      "La cantidad de colores que puede mostrar el monitor"
-    ],
-    correcta: 0,
-    explicacion: " La correcta es Información sobre la salud y posibles fallos del disco porque el mantenimiento predictivo usa indicadores para anticipar posibles fallos. La opción b es incorrecta porque no corresponde con la definición, función o componente que se pregunta. La opción c es incorrecta porque no corresponde con la definición, función o componente que se pregunta. La opción d es incorrecta porque no corresponde con la definición, función o componente que se pregunta."
-  },
-  {
     enunciado: "¿Qué concepto define el uso de recursos informáticos como servidores o almacenamiento a través de Internet?",
     opciones: [
       "Hardware local",
@@ -1219,28 +1065,6 @@ const preguntasFH = [
     ],
     correcta: 3,
     explicacion: " La correcta es PaaS (Platform as a Service) porque el sistema operativo coordina el hardware y ofrece servicios a las aplicaciones. La opción a es incorrecta porque confunde el modelo de servicio o el tipo de infraestructura. La opción b es incorrecta porque no corresponde con la definición, función o componente que se pregunta. La opción c es incorrecta porque confunde el modelo de servicio o el tipo de infraestructura."
-  },
-  {
-    enunciado: "¿Qué ventaja ofrece el pago por uso en la nube?",
-    opciones: [
-      "Permite escalar recursos según la demanda sin inversión inicial en hardware",
-      "Permite que el PC del usuario sea más rápido",
-      "Hace que el hardware dure para siempre",
-      "Evita tener que usar sistemas operativos"
-    ],
-    correcta: 0,
-    explicacion: " La correcta es Permite escalar recursos según la demanda sin inversión inicial en hardware porque cloud computing permite consumir recursos informáticos por Internet. La opción b es incorrecta porque plantea una ventaja que no se deriva realmente del concepto preguntado. La opción c es incorrecta porque plantea una ventaja que no se deriva realmente del concepto preguntado. La opción d es incorrecta porque plantea una ventaja que no se deriva realmente del concepto preguntado."
-  },
-  {
-    enunciado: "¿En qué década fue propuesta la arquitectura Von Neumann por John von Neumann?",
-    opciones: [
-      "Década de 1930",
-      "Década de 1950",
-      "Década de 1940",
-      "Década de 1960"
-    ],
-    correcta: 2,
-    explicacion: " La correcta es Década de 1940 porque corresponde al dato concreto solicitado en el enunciado"
   },
   {
     enunciado: "¿Cuál fue la idea principal de la arquitectura Von Neumann que revolucionó el diseño de los computadores?",
@@ -1342,17 +1166,6 @@ const preguntasFH = [
     explicacion: " La correcta es Monitor porque es la opción que se ajusta al concepto preguntado"
   },
   {
-    enunciado: "¿Qué camino físico permite la comunicación entre la CPU; la memoria y los periféricos?",
-    opciones: [
-      "Cables de alimentación",
-      "Zócalos",
-      "Buses de datos",
-      "Chipset"
-    ],
-    correcta: 2,
-    explicacion: " La correcta es Buses de datos porque es el concepto que responde directamente a lo que se pregunta"
-  },
-  {
     enunciado: "¿Qué elemento del software se encarga de gestionar el hardware y permitir que las aplicaciones funcionen?",
     opciones: [
       "Hojas de cálculo",
@@ -1373,17 +1186,6 @@ const preguntasFH = [
     ],
     correcta: 2,
     explicacion: " La correcta es Programas que permiten al SO comunicarse con un hardware específico porque es el concepto que responde directamente a lo que se pregunta"
-  },
-  {
-    enunciado: "¿Qué tipo de software se utiliza para tareas específicas como escribir textos o editar fotos?",
-    opciones: [
-      "Firmware",
-      "BIOS",
-      "Software de Aplicación",
-      "Software de Sistema"
-    ],
-    correcta: 2,
-    explicacion: " La correcta es Software de Aplicación porque es el concepto que responde directamente a lo que se pregunta"
   },
   {
     enunciado: "¿Qué define al Software Propietario?",
@@ -1452,17 +1254,6 @@ const preguntasFH = [
     explicacion: " La correcta es Factores de forma porque es la opción que responde correctamente al enunciado"
   },
   {
-    enunciado: "¿Cuál es el factor de forma estándar para torres de sobremesa?",
-    opciones: [
-      "ATX",
-      "Mini-ITX",
-      "BTX",
-      "Micro-ATX"
-    ],
-    correcta: 0,
-    explicacion: " La correcta es ATX porque es la opción que se ajusta al concepto preguntado"
-  },
-  {
     enunciado: "¿Qué característica define al formato Micro-ATX comparado con el ATX?",
     opciones: [
       "Es más pequeño y tiene menos ranuras de expansión",
@@ -1483,17 +1274,6 @@ const preguntasFH = [
     ],
     correcta: 3,
     explicacion: " La correcta es El lugar donde se instala la CPU porque es el concepto que responde directamente a lo que se pregunta"
-  },
-  {
-    enunciado: "¿Cuál es la función del chipset en la placa base?",
-    opciones: [
-      "Procesar los gráficos del sistema",
-      "Almacenar los archivos del usuario",
-      "Transformar la corriente alterna en continua",
-      "Gestionar el flujo de datos entre los componentes"
-    ],
-    correcta: 3,
-    explicacion: " La correcta es Gestionar el flujo de datos entre los componentes porque es la opción que se ajusta al concepto preguntado"
   },
   {
     enunciado: "¿Qué componente permite que la BIOS/UEFI mantenga la configuración de fecha y hora?",
@@ -1518,17 +1298,6 @@ const preguntasFH = [
     explicacion: " La correcta es Para instalar los módulos de memoria RAM porque esa es la función principal indicada por el concepto"
   },
   {
-    enunciado: "¿Qué interfaz se utiliza comúnmente para conectar unidades de almacenamiento como HDD y SSD de 2.5 pulgadas?",
-    opciones: [
-      "SATA",
-      "VGA",
-      "PCIe",
-      "USB 3.0"
-    ],
-    correcta: 0,
-    explicacion: " La correcta es SATA porque es el concepto que responde directamente a lo que se pregunta"
-  },
-  {
     enunciado: "¿Cómo se llama el panel que contiene los conectores externos como USB, Ethernet y audio?",
     opciones: [
       "Bus de datos",
@@ -1549,17 +1318,6 @@ const preguntasFH = [
     ],
     correcta: 0,
     explicacion: " La correcta es Basic Input/Output System porque es el concepto que responde directamente a lo que se pregunta"
-  },
-  {
-    enunciado: "¿Qué es el POST (Power-On Self-Test)?",
-    opciones: [
-      "Un test de velocidad de la conexión a internet",
-      "Un proceso de autodiagnóstico al arrancar el equipo",
-      "Un programa para actualizar los drivers",
-      "Una herramienta para desfragmentar el disco"
-    ],
-    correcta: 1,
-    explicacion: " La correcta es Un proceso de autodiagnóstico al arrancar el equipo porque es el concepto que responde directamente a lo que se pregunta"
   },
   {
     enunciado: "¿Cuál es el sucesor moderno de la BIOS que ofrece una interfaz gráfica y soporte para discos grandes?",
@@ -1628,28 +1386,6 @@ const preguntasFH = [
     explicacion: " La correcta es Convertir la energía de la fuente al voltaje exacto que necesita la CPU porque es el concepto que responde directamente a lo que se pregunta"
   },
   {
-    enunciado: "¿Cuál es el mito falso sobre la monitorización del hardware mencionado en el documento?",
-    opciones: [
-      "Que es necesario tocar los componentes para saber si están calientes",
-      "Que solo los expertos pueden entender las temperaturas",
-      "Que la BIOS no muestra información de los voltajes",
-      "Que las placas modernas se apagan antes de sufrir un daño irreversible"
-    ],
-    correcta: 1,
-    explicacion: " La correcta es Que solo los expertos pueden entender las temperaturas porque es la opción que se ajusta al concepto preguntado"
-  },
-  {
-    enunciado: "¿Qué permite hacer el Secure Boot en sistemas UEFI?",
-    opciones: [
-      "Aumentar la velocidad del procesador mediante overclocking",
-      "Evitar que se conecten periféricos USB desconocidos",
-      "Asegurar que solo se cargue software de confianza al arrancar",
-      "Cifrar los archivos personales del usuario"
-    ],
-    correcta: 2,
-    explicacion: " La correcta es Asegurar que solo se cargue software de confianza al arrancar porque es el concepto que responde directamente a lo que se pregunta"
-  },
-  {
     enunciado: "¿Cuál es el componente considerado el cerebro electrónico que ejecuta las instrucciones y procesa los datos?",
     opciones: [
       "La memoria RAM",
@@ -1661,17 +1397,6 @@ const preguntasFH = [
     explicacion: " La correcta es La Unidad Central de Procesamiento (CPU) porque es la opción que se ajusta al concepto preguntado"
   },
   {
-    enunciado: "¿Cómo se denomina el ciclo constante de tres pasos que realiza la CPU?",
-    opciones: [
-      "Ciclo de instrucción (fetch-decode-execute)",
-      "Ciclo de almacenamiento (save-load-delete)",
-      "Ciclo de energía (on-off-standby)",
-      "Ciclo de red (send-receive-wait)"
-    ],
-    correcta: 0,
-    explicacion: " La correcta es Ciclo de instrucción (fetch-decode-execute) porque es la opción que responde correctamente al enunciado"
-  },
-  {
     enunciado: "¿En qué unidad de medida se expresa la velocidad a la que la CPU repite su ciclo de trabajo?",
     opciones: [
       "Bits por segundo (bps)",
@@ -1681,17 +1406,6 @@ const preguntasFH = [
     ],
     correcta: 3,
     explicacion: " La correcta es Hercios (Hz) porque corresponde al dato concreto solicitado en el enunciado"
-  },
-  {
-    enunciado: "¿Cuál fue el primer microprocesador comercial de la historia?",
-    opciones: [
-      "Motorola 68000",
-      "Intel 4004",
-      "AMD Ryzen 5",
-      "Intel Core i7"
-    ],
-    correcta: 1,
-    explicacion: " La correcta es Intel 4004 porque es la opción que se ajusta al concepto preguntado"
   },
   {
     enunciado: "¿Qué es la litografía en el contexto de la fabricación de CPUs?",
@@ -1727,17 +1441,6 @@ const preguntasFH = [
     explicacion: " La correcta es Permite meter más transistores en el mismo espacio y mejorar la eficiencia energética porque es el concepto que responde directamente a lo que se pregunta"
   },
   {
-    enunciado: "¿Qué función cumple la memoria caché dentro de la CPU?",
-    opciones: [
-      "Almacenar datos que el procesador necesita con frecuencia para evitar ir a la RAM",
-      "Gestionar la conexión a internet de alta velocidad",
-      "Controlar la temperatura de los ventiladores",
-      "Guardar los archivos del sistema operativo permanentemente"
-    ],
-    correcta: 0,
-    explicacion: " La correcta es Almacenar datos que el procesador necesita con frecuencia para evitar ir a la RAM porque es el concepto que responde directamente a lo que se pregunta"
-  },
-  {
     enunciado: "¿Cuál es el nivel de memoria caché más rápido y cercano al núcleo de la CPU?",
     opciones: [
       "Caché L2",
@@ -1760,17 +1463,6 @@ const preguntasFH = [
     explicacion: " La correcta es Es más lenta pero tiene mucha más capacidad y suele ser compartida por todos los núcleos porque es el concepto que responde directamente a lo que se pregunta"
   },
   {
-    enunciado: "¿Qué es el Overclocking?",
-    opciones: [
-      "Aumentar la velocidad de reloj del componente por encima de las especificaciones del fabricante",
-      "Reducir el consumo de energía para que el PC sea silencioso",
-      "Instalar más memoria RAM de la necesaria",
-      "Cambiar la pasta térmica del procesador cada seis meses"
-    ],
-    correcta: 0,
-    explicacion: " La correcta es Aumentar la velocidad de reloj del componente por encima de las especificaciones del fabricante porque es el concepto que responde directamente a lo que se pregunta"
-  },
-  {
     enunciado: "¿Cuál es el principal riesgo asociado al overclocking?",
     opciones: [
       "Que el monitor muestre los colores invertidos",
@@ -1791,17 +1483,6 @@ const preguntasFH = [
     ],
     correcta: 0,
     explicacion: " La correcta es Que tiene varios cerebros independientes dentro del mismo chip físicos para trabajar en paralelo porque es el concepto que responde directamente a lo que se pregunta"
-  },
-  {
-    enunciado: "¿Qué es el benchmarking?",
-    opciones: [
-      "El diseño de la arquitectura interna de los transistores",
-      "El proceso de medir el rendimiento del hardware de forma objetiva mediante pruebas estandarizadas",
-      "La comparación de precios entre diferentes tiendas de informática",
-      "La limpieza física de los ventiladores del procesador"
-    ],
-    correcta: 1,
-    explicacion: " La correcta es El proceso de medir el rendimiento del hardware de forma objetiva mediante pruebas estandarizadas porque es el concepto que responde directamente a lo que se pregunta"
   },
   {
     enunciado: "¿Qué diferencia a un benchmark sintético de uno de mundo real?",
@@ -1892,17 +1573,6 @@ const preguntasFH = [
     explicacion: " La correcta es Pulsera antiestática conectada a masa porque es la opción que se ajusta al concepto preguntado"
   },
   {
-    enunciado: "¿Qué superficie de trabajo se debe evitar para prevenir la acumulación de carga estática?",
-    opciones: [
-      "Esterillas antiestáticas",
-      "Mesas rígidas de madera",
-      "Mesas de metal conectadas a tierra",
-      "Alfombras y superficies sintéticas"
-    ],
-    correcta: 3,
-    explicacion: " La correcta es Alfombras y superficies sintéticas porque es el concepto que responde directamente a lo que se pregunta"
-  },
-  {
     enunciado: "¿Cuál es el tipo de destornillador recomendado para la mayoría de los tornillos de un PC?",
     opciones: [
       "Torx T10",
@@ -1925,17 +1595,6 @@ const preguntasFH = [
     explicacion: " La correcta es La CPU, la RAM y el disipador porque es el concepto que responde directamente a lo que se pregunta"
   },
   {
-    enunciado: "¿Cómo se llaman los postes metálicos que separan la placa base del chasis para evitar cortocircuitos?",
-    opciones: [
-      "Jumpers",
-      "Standoffs (separadores)",
-      "Screws (tornillos)",
-      "Brackets"
-    ],
-    correcta: 1,
-    explicacion: " La correcta es Standoffs (separadores) porque es la opción que responde correctamente al enunciado"
-  },
-  {
     enunciado: "¿Qué pieza debe colocarse en el chasis antes de instalar la placa base para proteger los puertos traseros?",
     opciones: [
       "I/O Shield (backplate)",
@@ -1956,17 +1615,6 @@ const preguntasFH = [
     ],
     correcta: 3,
     explicacion: " La correcta es Aplicar una pequeña cantidad (grano de arroz) en el centro porque es el concepto que responde directamente a lo que se pregunta"
-  },
-  {
-    enunciado: "¿Qué indica la pequeña flecha o triángulo en una esquina de la CPU?",
-    opciones: [
-      "La dirección del flujo de aire",
-      "El voltaje de funcionamiento",
-      "La velocidad máxima del procesador",
-      "La orientación correcta para su colocación en el zócalo"
-    ],
-    correcta: 3,
-    explicacion: " La correcta es La orientación correcta para su colocación en el zócalo porque es el concepto que responde directamente a lo que se pregunta"
   },
   {
     enunciado: "¿Cuál es la función principal de la gestión de cables (cable management)?",
@@ -2011,17 +1659,6 @@ const preguntasFH = [
     ],
     correcta: 0,
     explicacion: " La correcta es Revisar conexiones sueltas y si la fuente está encendida porque es la opción que se ajusta al concepto preguntado"
-  },
-  {
-    enunciado: "¿Qué porcentaje de fallos iniciales se deben, según el documento, a conexiones mal asentadas?",
-    opciones: [
-      "99%",
-      "25%",
-      "50%",
-      "10%"
-    ],
-    correcta: 0,
-    explicacion: " La correcta es 99% porque es el concepto que responde directamente a lo que se pregunta"
   },
   {
     enunciado: "¿Qué simulador se menciona como herramienta pedagógica reconocida para practicar el montaje?",
@@ -2090,17 +1727,6 @@ const preguntasFH = [
     explicacion: " La correcta es Documentar el proceso con fotos y anotar incidencias porque es el concepto que responde directamente a lo que se pregunta"
   },
   {
-    enunciado: "¿Qué componente permite añadir nuevas capacidades o mejorar drásticamente las ya existentes en una placa base?",
-    opciones: [
-      "Carcasa del PC",
-      "Memoria caché L1",
-      "Fuente de alimentación",
-      "Tarjeta de expansión"
-    ],
-    correcta: 3,
-    explicacion: " La correcta es Tarjeta de expansión porque es el concepto que responde directamente a lo que se pregunta"
-  },
-  {
     enunciado: "¿Cuál es la ranura de expansión más utilizada actualmente para conectar tarjetas gráficas y de red?",
     opciones: [
       "PCI Express (PCIe)",
@@ -2134,39 +1760,6 @@ const preguntasFH = [
     explicacion: " La correcta es PCIe x16 porque es el concepto que responde directamente a lo que se pregunta"
   },
   {
-    enunciado: "¿Qué tecnología permite que un puerto USB-C transmita datos de hasta 40 Gbps, vídeo y energía en un solo cable?",
-    opciones: [
-      "SATA 3",
-      "Thunderbolt",
-      "Bluetooth 5.0",
-      "Wi-Fi 6"
-    ],
-    correcta: 1,
-    explicacion: " La correcta es Thunderbolt porque es el concepto que responde directamente a lo que se pregunta"
-  },
-  {
-    enunciado: "¿Cuál es la diferencia principal entre un bus y un protocolo según el documento?",
-    opciones: [
-      "El bus es inalámbrico y el protocolo es por cable",
-      "El bus es el camino físico y el protocolo es el lenguaje que viaja por él",
-      "El bus es software y el protocolo es hardware",
-      "No hay diferencia, son sinónimos"
-    ],
-    correcta: 1,
-    explicacion: " La correcta es El bus es el camino físico y el protocolo es el lenguaje que viaja por él porque es la opción que se ajusta al concepto preguntado"
-  },
-  {
-    enunciado: "¿Qué protocolo de comunicación moderno permite a los SSD aprovechar la velocidad del bus PCIe?",
-    opciones: [
-      "IDE",
-      "SCSI",
-      "Ethernet",
-      "NVMe"
-    ],
-    correcta: 3,
-    explicacion: " La correcta es NVMe porque es el concepto que responde directamente a lo que se pregunta"
-  },
-  {
     enunciado: "¿Qué conector se ha convertido en el estándar universal para casi todos los periféricos modernos como teclados y ratones?",
     opciones: [
       "DVI",
@@ -2176,17 +1769,6 @@ const preguntasFH = [
     ],
     correcta: 2,
     explicacion: " La correcta es USB porque es el concepto que responde directamente a lo que se pregunta"
-  },
-  {
-    enunciado: "¿Qué interfaces son las más comunes para la salida de vídeo digital en la actualidad?",
-    opciones: [
-      "Serial y Paralelo",
-      "VGA y RCA",
-      "HDMI y DisplayPort",
-      "S-Video y Euroconector"
-    ],
-    correcta: 2,
-    explicacion: " La correcta es HDMI y DisplayPort porque es el concepto que responde directamente a lo que se pregunta"
   },
   {
     enunciado: "¿Cuál es un requisito para que un puerto USB-C sea realmente compatible con Thunderbolt?",
@@ -2220,17 +1802,6 @@ const preguntasFH = [
     ],
     correcta: 3,
     explicacion: " La correcta es Edición de vídeo avanzada e Inteligencia Artificial porque esa es la función principal indicada por el concepto"
-  },
-  {
-    enunciado: "¿Qué ventaja ofrece el puerto DisplayPort sobre otros conectores de vídeo?",
-    opciones: [
-      "Es el único que transmite audio",
-      "Solo funciona con tarjetas de sonido",
-      "Permite conectar varios monitores en cadena (daisy chain)",
-      "Es un conector analógico más resistente"
-    ],
-    correcta: 2,
-    explicacion: " La correcta es Permite conectar varios monitores en cadena (daisy chain) porque es el concepto que responde directamente a lo que se pregunta"
   },
   {
     enunciado: "¿Qué puerto se utiliza para la conexión de red por cable?",
@@ -2486,17 +2057,6 @@ const preguntasFH = [
     explicacion: " La correcta es No tienen partes móviles porque es el concepto que responde directamente a lo que se pregunta"
   },
   {
-    enunciado: "¿Qué ocurre en un RAID 5 si fallan dos discos simultáneamente?",
-    opciones: [
-      "Se pierde la información (solo tolera el fallo de un disco)",
-      "La paridad permite reconstruirlos sin problemas",
-      "El sistema sigue funcionando en modo lento",
-      "Los datos se mueven automáticamente a la nube"
-    ],
-    correcta: 0,
-    explicacion: " La correcta es Se pierde la información (solo tolera el fallo de un disco) porque es el concepto que responde directamente a lo que se pregunta"
-  },
-  {
     enunciado: "¿Cuál es el uso recomendado para los discos HDD hoy en día según su precio por GB?",
     opciones: [
       "Instalar el sistema operativo Windows",
@@ -2541,28 +2101,6 @@ const preguntasFH = [
     explicacion: " La correcta es Actuar como motor para servicios compartidos como archivos o impresión porque es el concepto que responde directamente a lo que se pregunta"
   },
   {
-    enunciado: "¿Qué es un Mainframe?",
-    opciones: [
-      "Un software de edición de vídeo profesional",
-      "Un ordenador de alto rendimiento para procesar miles de millones de transacciones",
-      "Una carcasa reforzada para ordenadores de sobremesa",
-      "Un tipo de ordenador portátil para directivos"
-    ],
-    correcta: 1,
-    explicacion: " La correcta es Un ordenador de alto rendimiento para procesar miles de millones de transacciones porque es el concepto que responde directamente a lo que se pregunta"
-  },
-  {
-    enunciado: "¿Qué significan las siglas CPD?",
-    opciones: [
-      "Conexión de Periféricos Directos",
-      "Centro de Proceso de Datos",
-      "Control de Programación Digital",
-      "Central de Procesadores Distribuidos"
-    ],
-    correcta: 1,
-    explicacion: " La correcta es Centro de Proceso de Datos porque es el concepto que responde directamente a lo que se pregunta"
-  },
-  {
     enunciado: "¿Cómo se mide la altura de los equipos en un rack de 19 pulgadas?",
     opciones: [
       "En kilogramos de peso",
@@ -2572,17 +2110,6 @@ const preguntasFH = [
     ],
     correcta: 3,
     explicacion: " La correcta es En unidades U (1,75 pulgadas) porque es la opción que responde correctamente al enunciado"
-  },
-  {
-    enunciado: "¿Cuál es la función de un rack en un CPD?",
-    opciones: [
-      "Enfriar directamente el procesador con agua",
-      "Generar electricidad en caso de apagón",
-      "Almacenar las copias de seguridad en cinta",
-      "Alojar servidores y equipos de red de forma organizada"
-    ],
-    correcta: 3,
-    explicacion: " La correcta es Alojar servidores y equipos de red de forma organizada porque es la opción que se ajusta al concepto preguntado"
   },
   {
     enunciado: "¿En qué consiste la técnica de refrigeración de pasillos fríos y calientes?",
@@ -2596,17 +2123,6 @@ const preguntasFH = [
     explicacion: " La correcta es En orientar los racks para optimizar el flujo de aire térmico porque corresponde al dato concreto solicitado en el enunciado"
   },
   {
-    enunciado: "¿Qué componente es esencial para garantizar la energía ininterrumpida ante un fallo eléctrico corto?",
-    opciones: [
-      "SAI / UPS",
-      "Tarjeta de red",
-      "Monitor LED",
-      "Disco duro SSD"
-    ],
-    correcta: 0,
-    explicacion: " La correcta es SAI / UPS porque es el concepto que responde directamente a lo que se pregunta"
-  },
-  {
     enunciado: "¿Qué dispositivo se utiliza en un CPD para cortes de luz de larga duración?",
     opciones: [
       "Cargadores solares portátiles",
@@ -2616,17 +2132,6 @@ const preguntasFH = [
     ],
     correcta: 2,
     explicacion: " La correcta es Generadores diésel porque es el concepto que responde directamente a lo que se pregunta"
-  },
-  {
-    enunciado: "¿Qué analogía usa el documento para explicar la seguridad física y lógica?",
-    opciones: [
-      "Un piso vacío y sus muebles",
-      "Una biblioteca pública",
-      "Un doble candado",
-      "Un coche y su gasolina"
-    ],
-    correcta: 2,
-    explicacion: " La correcta es Un doble candado porque es el concepto que responde directamente a lo que se pregunta"
   },
   {
     enunciado: "¿Cuál es un ejemplo de medida de seguridad física en un CPD?",
@@ -2651,17 +2156,6 @@ const preguntasFH = [
     explicacion: " La correcta es Porque no evita el robo físico de un disco duro porque es la opción que responde correctamente al enunciado"
   },
   {
-    enunciado: "¿Qué técnica lógica permite segmentar redes para mejorar la seguridad?",
-    opciones: [
-      "RAID 5",
-      "P2V",
-      "VLAN",
-      "Overclocking"
-    ],
-    correcta: 2,
-    explicacion: " La correcta es VLAN porque es el concepto que responde directamente a lo que se pregunta"
-  },
-  {
     enunciado: "¿Cuál es el ancho estándar de un rack empresarial mencionado en el texto?",
     opciones: [
       "24 pulgadas",
@@ -2671,17 +2165,6 @@ const preguntasFH = [
     ],
     correcta: 2,
     explicacion: " La correcta es 19 pulgadas porque es la opción que se ajusta al concepto preguntado"
-  },
-  {
-    enunciado: "¿Qué tipo de memoria, que corrige errores de datos, es típica de servidores pero no de PCs?",
-    opciones: [
-      "Memoria Flash",
-      "Memoria ECC",
-      "Memoria Virtual",
-      "Memoria Caché L1"
-    ],
-    correcta: 1,
-    explicacion: " La correcta es Memoria ECC porque es el concepto que responde directamente a lo que se pregunta"
   },
   {
     enunciado: "¿Qué es un sistema IDS/IPS mencionado en el apartado de seguridad?",
@@ -2781,28 +2264,6 @@ const preguntasFH = [
     ],
     correcta: 2,
     explicacion: " La correcta es Reducir la probabilidad de fallos mediante limpieza y actualizaciones porque es la opción que se ajusta al concepto preguntado"
-  },
-  {
-    enunciado: "¿Qué técnica de mantenimiento utiliza datos como temperaturas y S.M.A.R.T. para anticipar fallos?",
-    opciones: [
-      "Mantenimiento reactivo",
-      "Mantenimiento predictivo",
-      "Mantenimiento manual",
-      "Mantenimiento de software"
-    ],
-    correcta: 1,
-    explicacion: " La correcta es Mantenimiento predictivo porque es el concepto que responde directamente a lo que se pregunta"
-  },
-  {
-    enunciado: "¿Qué efecto negativo tiene el polvo acumulado dentro de un ordenador?",
-    opciones: [
-      "Aumenta la velocidad de los ventiladores",
-      "Mejora la conducción eléctrica de los circuitos",
-      "No tiene ningún efecto relevante si el PC funciona",
-      "Actúa como un aislante térmico y aumenta la temperatura"
-    ],
-    correcta: 3,
-    explicacion: " La correcta es Actúa como un aislante térmico y aumenta la temperatura porque es el concepto que responde directamente a lo que se pregunta"
   },
   {
     enunciado: "¿Qué herramienta se menciona para monitorizar el estado de salud de los discos duros?",
@@ -2957,28 +2418,6 @@ const preguntasFH = [
     ],
     correcta: 2,
     explicacion: " La correcta es IaaS (Infrastructure as a Service) porque es el concepto que responde directamente a lo que se pregunta"
-  },
-  {
-    enunciado: "¿De qué se encarga el proveedor en un modelo IaaS?",
-    opciones: [
-      "De gestionar los datos y permisos de los usuarios finales",
-      "De instalar los parches del sistema operativo del cliente",
-      "De programar el código de la aplicación del cliente",
-      "Del hardware, la red física y el almacenamiento"
-    ],
-    correcta: 3,
-    explicacion: " La correcta es Del hardware, la red física y el almacenamiento porque es la opción que responde correctamente al enunciado"
-  },
-  {
-    enunciado: "¿Qué modelo de nube permite a los desarrolladores centrarse en el código sin gestionar el sistema operativo?",
-    opciones: [
-      "SaaS",
-      "PaaS (Platform as a Service)",
-      "IaaS",
-      "Hardware as a Service"
-    ],
-    correcta: 1,
-    explicacion: " La correcta es PaaS (Platform as a Service) porque es el concepto que responde directamente a lo que se pregunta"
   },
   {
     enunciado: "¿Cuál es el modelo de nube donde el usuario simplemente utiliza la aplicación (como Gmail o Dropbox)?",
