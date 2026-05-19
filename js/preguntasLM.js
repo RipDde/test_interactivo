@@ -6,27 +6,12 @@ const preguntasLM = [
         correcta: 2,
         explicacion: " La correcta es display: grid porque esa propiedad convierte el elemento en un contenedor Grid y permite organizar sus hijos en filas y columnas. display: block solo lo hace un elemento de bloque normal; display: inline lo mantiene en línea; y display: table imita el comportamiento de una tabla, pero no activa CSS Grid."
     },
-
-    {
-        enunciado: "¿Qué define la dirección en Flexbox?",
-        opciones: ["flex-grow", "flex-dir", "display-dir", "flex-direction"],
-        correcta: 3,
-        explicacion: " La correcta es flex-direction porque es la propiedad que indica en qué dirección se colocan los elementos dentro de un contenedor Flexbox, por ejemplo en fila o en columna; flex-grow sirve para hacer que un elemento crezca, y flex-dir y display-dir no son propiedades válidas de CSS."
-    },
-
     {
         enunciado: "Requisito básico de XML válido",
         opciones: ["Etiquetas sin cerrar", "Un único elemento raíz", "Usar solo minúsculas", "No usar atributos"],
         correcta: 1,
         explicacion: " La correcta es Un único elemento raíz porque un documento XML válido y bien formado debe tener un solo elemento principal que contenga al resto. Etiquetas sin cerrar harían el documento incorrecto; usar solo minúsculas no es obligatorio en XML; y sí se pueden usar atributos, por lo que esa opción también es falsa."
     },
-    {
-        enunciado: "¿Para qué sirve un DTD?",
-        opciones: ["Validar XML", "Formatear XML", "Comprimir", "Convertir a JSON"],
-        correcta: 0,
-        explicacion: " La correcta es Validar XML porque un DTD (Document Type Definition) define qué elementos, atributos y estructura son válidos en un documento XML. No sirve para formatear visualmente el XML; no comprime archivos; y tampoco convierte XML a JSON."
-    },
-
     {
         enunciado: "Significado de XSLT",
         opciones: ["XML Standard Language Transforms", "Extensible Stylesheet Language Transformations", "Extensible Language Transforms", "Extensible Language Transformations"],
@@ -40,22 +25,10 @@ const preguntasLM = [
         explicacion: " La correcta es container porque esa es la clase de Bootstrap 5 usada para crear un contenedor con ancho adaptable y márgenes automáticos. box, wrap y layout no son la clase estándar de Bootstrap para este fin."
     },
     {
-        enunciado: "Clase fila en Bootstrap 5",
-        opciones: ["col", "row", "line", "grid"],
-        correcta: 1,
-        explicacion: " La correcta es row porque en Bootstrap 5 esa clase crea una fila dentro del sistema de rejilla. col se usa para columnas; y line y grid no son la clase estándar que define una fila en Bootstrap."
-    },
-    {
         enunciado: "Prefijo para columnas en Bootstrap 5",
         opciones: ["row-", "col-", "grid-", "bs-"],
         correcta: 1,
         explicacion: " La correcta es col- porque ese es el prefijo usado en Bootstrap 5 para definir columnas y sus tamaños, como col-6 o col-md-4. row- se relaciona con filas, no con columnas; y grid- y bs- no son los prefijos estándar para esto."
-    },
-    {
-        enunciado: "Propiedad columnas en Grid",
-        opciones: ["grid-template-rows", "grid-auto-flow", "grid-template-columns", "columns"],
-        correcta: 2,
-        explicacion: " La correcta es grid-template-columns porque esa propiedad define las columnas de un contenedor Grid. grid-template-rows define filas; grid-auto-flow controla cómo se colocan automáticamente los elementos; y columns pertenece a otro contexto de maquetación, no al sistema Grid principal."
     },
     {
         enunciado: "justify-content en Flexbox",
@@ -670,12 +643,6 @@ const preguntasLM = [
         explicacion: " La correcta es <main> porque representa el contenido principal y único del documento. <section> agrupa contenido temático; <header> contiene cabecera o introducción; y <footer> se usa para información final o complementaria."
     },
     {
-        enunciado: "En Flexbox, ¿qué define la dirección del eje principal?",
-        opciones: ["align-content", "justify-items", "align-items", "flex-direction"],
-        correcta: 3,
-        explicacion: " La correcta es flex-direction porque esa propiedad define si los elementos flex se colocan en fila, columna o en orden inverso. align-content y align-items sirven para alineación; y justify-items no es la propiedad estándar que se usa aquí en Flexbox."
-    },
-    {
         enunciado: "Breakpoint de Bootstrap que empieza en ~768 px",
         opciones: ["xxl", "md", "lg", "xl"],
         correcta: 1,
@@ -816,12 +783,6 @@ const preguntasLM = [
         opciones: ["HTML", "CSS", "XSL", "JSON"],
         correcta: 2,
         explicacion: " La correcta es XSL porque los archivos XSL, especialmente usando XSLT, se emplean para transformar XML a otros formatos. HTML es un lenguaje de marcado para páginas; CSS define estilos; y JSON es otro formato de datos, no la hoja de transformación."
-    },
-    {
-        enunciado: "Significado de XSLT",
-        opciones: ["XML Standard", "X Stylesheet Transformations", "Extensible Stylesheet Language Transformations", "X-Mark Template"],
-        correcta: 2,
-        explicacion: " La correcta es Extensible Stylesheet Language Transformations porque, entre las opciones dadas, es la que más se aproxima al significado esperado en clase de XSLT; aunque el nombre exacto completo es Extensible Stylesheet Language Transformations. Las otras opciones son claramente incorrectas o están demasiado incompletas."
     },
     {
         enunciado: "Clase fila en BS5",
@@ -1055,10 +1016,10 @@ const preguntasLM = [
         explicacion: " La correcta es flex-shrink porque controla cuánto puede encogerse un ítem flex si falta espacio. flex-grow controla crecimiento; flex-flow combina direction y wrap; y flex-size no es una propiedad estándar de Flexbox."
     },
     {
-        enunciado: "align-content espacio vertical (pregunta no bien planteada)",
-        opciones: ["stretch", "center", "space-between", "flex-end"],
+        enunciado: "¿Qué propiedad permite distribuir varias líneas o filas dentro de un contenedor cuando sobra espacio en el eje cruzado?",
+        opciones: ["align-items", "justify-content", "align-content", "flex-direction"],
         correcta: 2,
-        explicacion: " La correcta es space-between porque, entre esos valores, reparte el espacio disponible entre líneas en el eje cruzado dejando separación interna. stretch estira; center centra; y flex-end lleva el contenido al final. Aquí se pregunta por el valor que reparte espacio vertical."
+        explicacion: " La correcta es align-content porque permite distribuir el conjunto de líneas o filas dentro del contenedor cuando hay espacio sobrante en el eje cruzado. align-items alinea los elementos individualmente; justify-content alinea en el eje principal; y flex-direction cambia la dirección de los elementos."
     },
     {
         enunciado: "justify-items center Grid",
