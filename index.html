@@ -17,11 +17,11 @@
 
   <link rel="stylesheet" href="style.css" />
 
-  <script src="js/preguntasBD.js"></script>
+  <script src="js/preguntasSASP.js"></script>
   <script src="js/preguntasFH.js"></script>
   <script src="js/preguntasISO.js"></script>
   <script src="js/preguntasIPE.js"></script>
-  <script src="js/preguntasLM.js"></script>
+  <script src="js/preguntasSAD.js"></script>
   <script src="js/preguntasMPO.js"></script>
   <script src="js/preguntasPAR.js"></script>
 
@@ -42,16 +42,16 @@
 
       let preguntasActuales;
 
-      if (asignatura === "BD") {
-        preguntasActuales = preguntasBD;
+      if (asignatura === "SASP") {
+        preguntasActuales = preguntasSASP;
       } else if (asignatura === "FH") {
         preguntasActuales = preguntasFH;
       } else if (asignatura === "ISO") {
         preguntasActuales = preguntasISO;
       } else if (asignatura === "IPE") {
         preguntasActuales = preguntasIPE;
-      } else if (asignatura === "LM") {
-        preguntasActuales = preguntasLM;
+      } else if (asignatura === "SAD") {
+        preguntasActuales = preguntasSAD;
       } else if (asignatura === "MPO") {
         preguntasActuales = preguntasMPO;
       } else if (asignatura === "PAR") {
@@ -112,10 +112,10 @@
 
                 <div className="nav-asignaturas">
                   <button
-                    className={`nav-btn ${asignatura === "BD" ? "nav-btn-active" : ""}`}
-                    onClick={() => setAsignatura("BD")}
+                    className={`nav-btn ${asignatura === "SASP" ? "nav-btn-active" : ""}`}
+                    onClick={() => setAsignatura("SASP")}
                   >
-                    BD
+                    SASP
                   </button>
 
                   <button
@@ -140,10 +140,10 @@
                   </button>
 
                   <button
-                    className={`nav-btn ${asignatura === "LM" ? "nav-btn-active" : ""}`}
-                    onClick={() => setAsignatura("LM")}
+                    className={`nav-btn ${asignatura === "SAD" ? "nav-btn-active" : ""}`}
+                    onClick={() => setAsignatura("SAD")}
                   >
-                    LM
+                    SAD
                   </button>
 
                   <button
