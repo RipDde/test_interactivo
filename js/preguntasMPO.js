@@ -1,4 +1,4 @@
-const preguntasIPE = [
+const preguntasMPO = [
   {
     enunciado: "La siniestralidad laboral es un elemento muy importante a tener en cuenta de cara a proteger la salud de la población. ¿Sabrías decir cuántos accidentes de trabajo hay, aproximadamente, al año?",
     opciones: [

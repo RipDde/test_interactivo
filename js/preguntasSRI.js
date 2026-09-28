@@ -1,4 +1,4 @@
-const preguntasISO = [
+const preguntasSRI = [
 
   /* Preguntas test del repositorio de Jesús */
   /* Virtualización  */

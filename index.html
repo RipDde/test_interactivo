@@ -38,24 +38,24 @@
     }
 
     function TestInteractivo() {
-      const [asignatura, setAsignatura] = React.useState("PAR");
+      const [asignatura, setAsignatura] = React.useState("SRI");
 
       let preguntasActuales;
 
       if (asignatura === "SASP") {
         preguntasActuales = preguntasSASP;
-      } else if (asignatura === "FH") {
-        preguntasActuales = preguntasFH;
-      } else if (asignatura === "ISO") {
-        preguntasActuales = preguntasISO;
+      } else if (asignatura === "ASO") {
+        preguntasActuales = preguntasASO;
+      } else if (asignatura === "MPO") {
+        preguntasActuales = preguntasMPO;
       } else if (asignatura === "IPE") {
         preguntasActuales = preguntasIPE;
       } else if (asignatura === "SAD") {
         preguntasActuales = preguntasSAD;
-      } else if (asignatura === "MPO") {
-        preguntasActuales = preguntasMPO;
-      } else if (asignatura === "PAR") {
-        preguntasActuales = preguntasPAR;
+      } else if (asignatura === "DASP") {
+        preguntasActuales = preguntasDASP;
+      } else if (asignatura === "SRI") {
+        preguntasActuales = preguntasSRI;
       }
 
       const [preguntasMezcladas, setPreguntasMezcladas] = React.useState([]);
@@ -119,17 +119,17 @@
                   </button>
 
                   <button
-                    className={`nav-btn ${asignatura === "FH" ? "nav-btn-active" : ""}`}
-                    onClick={() => setAsignatura("FH")}
+                    className={`nav-btn ${asignatura === "ASO" ? "nav-btn-active" : ""}`}
+                    onClick={() => setAsignatura("ASO")}
                   >
-                    FH
+                    ASO
                   </button>
 
                   <button
-                    className={`nav-btn ${asignatura === "ISO" ? "nav-btn-active" : ""}`}
-                    onClick={() => setAsignatura("ISO")}
+                    className={`nav-btn ${asignatura === "MPO" ? "nav-btn-active" : ""}`}
+                    onClick={() => setAsignatura("MPO")}
                   >
-                    ISO
+                    MPO
                   </button>
 
                   <button
@@ -147,17 +147,17 @@
                   </button>
 
                   <button
-                    className={`nav-btn ${asignatura === "MPO" ? "nav-btn-active" : ""}`}
-                    onClick={() => setAsignatura("MPO")}
+                    className={`nav-btn ${asignatura === "DASP" ? "nav-btn-active" : ""}`}
+                    onClick={() => setAsignatura("DASP")}
                   >
-                    MPO
+                    DASP
                   </button>
 
                   <button
-                    className={`nav-btn ${asignatura === "PAR" ? "nav-btn-active" : ""}`}
-                    onClick={() => setAsignatura("PAR")}
+                    className={`nav-btn ${asignatura === "SRI" ? "nav-btn-active" : ""}`}
+                    onClick={() => setAsignatura("SRI")}
                   >
-                    PAR
+                    SRI
                   </button>
                 </div>
               </div>

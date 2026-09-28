@@ -1,4 +1,4 @@
-const preguntasBD = [
+const preguntasSASP = [
   {
     enunciado: "¿Por qué los sistemas basados en archivos tradicionales generaban problemas en la gestión de la información?",
     opciones: [

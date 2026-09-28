@@ -1,4 +1,4 @@
-const preguntasFH = [
+const preguntasASO = [
   {
     enunciado: "¿Cuál de las siguientes afirmaciones sobre los discos NVMe es correcta?",
     opciones: [

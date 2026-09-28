@@ -1,4 +1,4 @@
-const preguntasPAR = [
+const preguntasDASP = [
     {
         enunciado: "¿Cuál es la capa del modelo OSI responsable de enrutar paquetes entre redes?",
         opciones: ["Enlace de datos", "Red", "Transporte", "Aplicación"],

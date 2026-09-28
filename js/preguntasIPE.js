@@ -1,4 +1,4 @@
-const preguntasMPO = [
+const preguntasIPE = [
   {
     enunciado: "Una empresa quiere migrar sus servidores desde una infraestructura on-premise a la nube, ¿cuál es la principal ventaja de este cambio?",
     opciones: [
