@@ -5,7 +5,7 @@ const preguntasSAD = [
     opciones: ["Redundancia", "Cifrado", "Autenticación", "Compresión"],
     correcta: 0,
     explicacion: "La correcta es Redundancia porque consiste en disponer de sistemas o servidores adicionales capaces de asumir el servicio si uno falla. El cifrado protege la información, la autenticación verifica identidades y la compresión reduce el tamaño de los datos."
-},
+}, 
 
 {
     enunciado: "¿Qué se entiende por un SPOF?",
