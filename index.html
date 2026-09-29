@@ -17,13 +17,14 @@
 
   <link rel="stylesheet" href="style.css" />
 
-  <script src="js/preguntasSASP.js"></script>
-  <script src="js/preguntasASO.js"></script>
-  <script src="js/preguntasISO.js"></script>
-  <script src="js/preguntasIPE.js"></script>
-  <script src="js/preguntasSAD.js"></script>
-  <script src="js/preguntasDASP.js"></script>
-  <script src="js/preguntasSRI.js"></script>
+  <script src="js/preguntasSASP.js"></script> <!-- 1 -->
+  <script src="js/preguntasASO.js"></script> <!-- 2 -->
+  <script src="js/preguntasISO.js"></script> <!-- 3 -->
+  <script src="js/preguntasIPE.js"></script> <!-- 4 -->
+  <script src="js/preguntasSAD.js"></script> <!-- 5 -->
+  <script src="js/preguntasDASP.js"></script> <!-- 6 -->
+  <script src="js/preguntasSRI.js"></script> <!-- 7 -->
+  <script src="js/preguntasIP.js"></script> <!-- 9 -->
 
 </head>
 
@@ -38,7 +39,7 @@
     }
 
     function TestInteractivo() {
-      const [asignatura, setAsignatura] = React.useState("SRI");
+      const [asignatura, setAsignatura] = React.useState("SAD");
 
       let preguntasActuales;
 
@@ -56,6 +57,8 @@
         preguntasActuales = preguntasDASP;
       } else if (asignatura === "SRI") {
         preguntasActuales = preguntasSRI;
+      } else if (asignatura === "INGLÉS") {
+        preguntasActuales = preguntasIP;
       }
 
       const [preguntasMezcladas, setPreguntasMezcladas] = React.useState([]);
@@ -158,6 +161,12 @@
                     onClick={() => setAsignatura("SRI")}
                   >
                     SRI
+                  </button>
+                  <button
+                    className={`nav-btn ${asignatura === "INGLÉS" ? "nav-btn-active" : ""}`}
+                    onClick={() => setAsignatura("INGLÉS")}
+                  >
+                    INGLÉS
                   </button>
                 </div>
               </div>
