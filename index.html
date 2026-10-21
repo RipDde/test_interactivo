@@ -17,16 +17,16 @@
 
   <link rel="stylesheet" href="style.css" />
 
-  <script src="js/preguntasSASP.js"></script> <!-- 1 -->
-  <script src="js/preguntasASO.js"></script> <!-- 2 -->
-  <script src="js/preguntasISO.js"></script> <!-- 3 -->
-  <script src="js/preguntasIPE.js"></script> <!-- 4 -->
-  <script src="js/preguntasSAD.js"></script> <!-- 5 -->
-  <script src="js/preguntasDASP.js"></script> <!-- 6 -->
-  <script src="js/preguntasSRI.js"></script> <!-- 7 -->
-  <!-- <script src="js/preguntasASGD.js"></script> 8 -->
-  <script src="js/preguntasIP.js"></script> <!-- 9 -->
-  <!-- <script src="js/preguntasIAW.js"></script> 10 -->
+  <script src="js/1. preguntasSASP.js"></script> <!-- 1 -->
+  <script src="js/2. preguntasASO.js"></script> <!-- 2 -->
+  <script src="js/3. preguntasMPO.js"></script> <!-- 3 -->
+  <script src="js/4. preguntasIPE.js"></script> <!-- 4 -->
+  <script src="js/5. preguntasSAD.js"></script> <!-- 5 -->
+  <script src="js/6. preguntasDASP.js"></script> <!-- 6 -->
+  <script src="js/7. preguntasSRI.js"></script> <!-- 7 -->
+  <script src="js/8. preguntasASGD.js"></script> <!-- 8 -->
+  <script src="js/9. preguntasINGLÉS.js"></script> <!-- 9 -->
+  <script src="js/10. preguntasIAW.js"></script> <!-- 10 -->
 
 </head>
 
@@ -59,8 +59,12 @@
         preguntasActuales = preguntasDASP;
       } else if (asignatura === "SRI") {
         preguntasActuales = preguntasSRI;
+        } else if (asignatura === "ASGD") {
+        preguntasActuales = preguntasASGD;
       } else if (asignatura === "INGLÉS") {
-        preguntasActuales = preguntasIP;
+        preguntasActuales = preguntasINGLÉS;
+        } else if (asignatura === "IAW") {
+        preguntasActuales = preguntasIAW;
       }
 
       const [preguntasMezcladas, setPreguntasMezcladas] = React.useState([]);
@@ -165,10 +169,22 @@
                     SRI
                   </button>
                   <button
+                    className={`nav-btn ${asignatura === "ASGD" ? "nav-btn-active" : ""}`}
+                    onClick={() => setAsignatura("ASGD")}
+                  >
+                    ASGD
+                  </button>
+                  <button
                     className={`nav-btn ${asignatura === "INGLÉS" ? "nav-btn-active" : ""}`}
                     onClick={() => setAsignatura("INGLÉS")}
                   >
                     INGLÉS
+                  </button>
+                  <button
+                    className={`nav-btn ${asignatura === "IAW" ? "nav-btn-active" : ""}`}
+                    onClick={() => setAsignatura("IAW")}
+                  >
+                    IAW
                   </button>
                 </div>
               </div>
