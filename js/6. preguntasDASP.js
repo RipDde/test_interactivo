@@ -29,5 +29,35 @@ const preguntasDASP = [
     correcta: 0,
     explicacion: "La correcta es Para analizar tendencias y tomar decisiones respaldadas por datos porque almacenar las incidencias en un formato reutilizable permite consultar y comparar registros, detectar problemas recurrentes, identificar tendencias y aplicar mejoras basadas en información objetiva."
 },
+{
+    enunciado: "¿Qué función cumple una API entre Zabbix y GLPI?",
+    opciones: ["Permitir intercambio estructurado de información entre aplicaciones", "Refrigerar los servidores", "Producir electricidad de emergencia", "Imprimir etiquetas de rack"],
+    correcta: 0,
+    explicacion: "La correcta es Permitir intercambio estructurado de información entre aplicaciones porque una API permite que diferentes sistemas, como Zabbix y GLPI, se comuniquen e intercambien datos de forma organizada y automatizada, facilitando la integración de sus funcionalidades."
+},
+{
+    enunciado: "Pasar un inventario en papel a Excel sin cambiar el procedimiento es...",
+    opciones: ["Gemelo digital", "Digitalización de soporte", "Transformación del modelo de negocio", "Convergencia OT obligatoria"],
+    correcta: 1,
+    explicacion: "La correcta es Digitalización de soporte porque únicamente se sustituye el formato físico por uno digital, como una hoja de Excel, sin modificar el procedimiento de trabajo ni introducir automatizaciones o mejoras en el proceso."
+},
+{
+    enunciado: "Que un alta de empleado cree cuenta y asigne permisos automáticamente es...",
+    opciones: ["Realidad virtual", "Digitalización de soporte exclusivamente", "Digitalización de procesos", "Primera revolución industrial"],
+    correcta: 2,
+    explicacion: "La correcta es Digitalización de procesos porque se automatizan tareas que anteriormente requerían intervención manual, como crear cuentas y asignar permisos, integrando diferentes operaciones en un mismo procedimiento y mejorando la eficiencia."
+},
+{
+    enunciado: "Un integrador vende infraestructura gestionada por suscripción en lugar de instalaciones puntuales. ¿Qué nivel ejemplifica?",
+    opciones: ["Transformación digital del modelo de negocio", "Simple escaneo documental", "Una prueba de restauración", "Un servicio DNS"],
+    correcta: 0,
+    explicacion: "La correcta es Transformación digital del modelo de negocio porque la empresa modifica su forma de ofrecer servicios y obtener ingresos, pasando de instalaciones puntuales a un modelo de suscripción con gestión continua de la infraestructura."
+},
+{
+    enunciado: "¿Qué define mejor un sistema ciberfísico?",
+    opciones: ["Interacción entre dispositivos físicos, software y acciones con retroalimentación", "Una hoja de cálculo aislada", "Un archivo PDF estático", "Un ordenador sin sensores"],
+    correcta: 0,
+    explicacion: "La correcta es Interacción entre dispositivos físicos, software y acciones con retroalimentación porque un sistema ciberfísico integra elementos físicos, sensores y programas informáticos para recopilar datos, procesarlos y ejecutar acciones sobre el entorno, utilizando la retroalimentación para ajustar su funcionamiento."
+},
 
 ];

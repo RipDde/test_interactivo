@@ -3,47 +3,31 @@
    Todos los colores están aquí: para cambiar la estética
    basta con tocar estos valores.
    ========================================================= */
+/* Paleta del Pokémon Randomlocke Launcher (fondo azul noche y bloques
+   azul pizarra) con el naranja de siempre como color de acento. */
 :root {
-  --fondo: #f6f6f4;
-  --superficie: #ffffff;
-  --superficie-suave: #f0f0ed;
-  --borde: #e2e2de;
-  --borde-fuerte: #c9c9c4;
-  --texto: #1c1c1a;
-  --texto-suave: #6b6b66;
+  --fondo: #0b1220;
+  --superficie: #1b2c47;
+  --superficie-degradado: linear-gradient(135deg, #1d3549, #1b2c47 55%, #283052);
+  --superficie-suave: #213249;
+  --opcion-fondo: rgba(11, 18, 32, 0.35);
+  --borde: #2c3d52;
+  --borde-fuerte: #38506a;
+  --texto: #eff5fe;
+  --texto-suave: #9cabc2;
 
-  --acento: #1c1c1a;          /* botón principal y selección */
-  --acento-texto: #ffffff;
+  --acento: #ff8a2a;          /* botón principal, selección y detalles */
+  --acento-hover: #ff9a45;
+  --acento-texto: #111111;
 
-  --marcada: #b7791f;
-  --correcta: #2f7d4f;
-  --correcta-fondo: #eaf4ee;
-  --erronea: #b4443a;
-  --erronea-fondo: #f8ebe9;
+  --marcada: #f5c84c;
+  --correcta: #2fbf71;
+  --correcta-fondo: #163a2e;
+  --erronea: #e0525e;
+  --erronea-fondo: #3d1c22;
 
-  --radio: 8px;
+  --radio: 12px;
   --cabecera-alto: 120px;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --fondo: #151515;
-    --superficie: #1d1d1d;
-    --superficie-suave: #252525;
-    --borde: #2c2c2c;
-    --borde-fuerte: #444441;
-    --texto: #ececea;
-    --texto-suave: #9a9a95;
-
-    --acento: #ececea;
-    --acento-texto: #151515;
-
-    --marcada: #d9a443;
-    --correcta: #6cc28f;
-    --correcta-fondo: #1b2a21;
-    --erronea: #e0796f;
-    --erronea-fondo: #2f1e1c;
-  }
 }
 
 /* =========================================================
@@ -161,7 +145,7 @@ button:focus-visible {
    PREGUNTAS
    ========================================================= */
 .card {
-  background: var(--superficie);
+  background: var(--superficie-degradado);
   border: 1px solid var(--borde);
   border-radius: var(--radio);
   padding: 24px;
@@ -233,7 +217,7 @@ button:focus-visible {
   padding: 12px 14px;
   border: 1px solid var(--borde);
   border-radius: var(--radio);
-  background: var(--superficie);
+  background: var(--opcion-fondo);
   text-align: left;
   font-size: 15px;
   transition: border-color 0.15s, background 0.15s;
@@ -358,7 +342,7 @@ button:focus-visible {
 .panel {
   position: sticky;
   top: calc(var(--cabecera-alto) + 16px);
-  background: var(--superficie);
+  background: var(--superficie-degradado);
   border: 1px solid var(--borde);
   border-radius: var(--radio);
   padding: 20px;
@@ -530,7 +514,8 @@ button:focus-visible {
 }
 
 .btn-primario:hover {
-  opacity: 0.85;
+  background: var(--acento-hover);
+  border-color: var(--acento-hover);
 }
 
 .btn-secundario {
@@ -573,13 +558,13 @@ button:focus-visible {
   display: grid;
   place-items: center;
   padding: 16px;
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(5, 9, 16, 0.7);
 }
 
 .modal {
   width: min(360px, 100%);
   padding: 28px;
-  background: var(--superficie);
+  background: var(--superficie-degradado);
   border: 1px solid var(--borde);
   border-radius: 12px;
 }
