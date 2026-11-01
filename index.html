@@ -6,14 +6,15 @@
   <meta charset="UTF-8" />
   <title>Test Interactivo Autocorregible</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
   <link rel="icon" href="./img/imagen_test.png" type="image/png">
 
-  <!-- React y ReactDOM desde CDN -->
-  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <!-- React y ReactDOM desde CDN (versión fija para que no cambie sola) -->
+  <script crossorigin src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
 
   <!-- Babel para permitir JSX en navegadores -->
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.26.4/babel.min.js"></script>
 
   <link rel="stylesheet" href="style.css" />
 
@@ -36,36 +37,46 @@
 
   <script type="text/babel">
 
+    // Para añadir una asignatura: cargar su .js arriba y añadir una línea aquí.
+    // El orden de este objeto es el orden de las pestañas.
+    const ASIGNATURAS = {
+      SASP: preguntasSASP,
+      ASO: preguntasASO,
+      MPO: preguntasMPO,
+      IPE: preguntasIPE,
+      SAD: preguntasSAD,
+      DASP: preguntasDASP,
+      SRI: preguntasSRI,
+      ASGD: preguntasASGD,
+      "INGLÉS": preguntasINGLÉS,
+      IAW: preguntasIAW
+    };
+
+    const PREGUNTAS_POR_TEST = 30;
+
+    // Mezcla de Fisher-Yates: todas las ordenaciones son igual de probables
+    // (sort con Math.random() - 0.5 no lo garantiza).
     function mezclarArray(array) {
-      return [...array].sort(() => Math.random() - 0.5);
+      const copia = [...array];
+      for (let i = copia.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [copia[i], copia[j]] = [copia[j], copia[i]];
+      }
+      return copia;
+    }
+
+    function irAPregunta(i) {
+      const elemento = document.getElementById(`pregunta-${i}`);
+      if (elemento) {
+        elemento.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
     }
 
     function TestInteractivo() {
       const [asignatura, setAsignatura] = React.useState("SAD");
+      const [ronda, setRonda] = React.useState(0);
 
-      let preguntasActuales;
-
-      if (asignatura === "SASP") {
-        preguntasActuales = preguntasSASP;
-      } else if (asignatura === "ASO") {
-        preguntasActuales = preguntasASO;
-      } else if (asignatura === "MPO") {
-        preguntasActuales = preguntasMPO;
-      } else if (asignatura === "IPE") {
-        preguntasActuales = preguntasIPE;
-      } else if (asignatura === "SAD") {
-        preguntasActuales = preguntasSAD;
-      } else if (asignatura === "DASP") {
-        preguntasActuales = preguntasDASP;
-      } else if (asignatura === "SRI") {
-        preguntasActuales = preguntasSRI;
-        } else if (asignatura === "ASGD") {
-        preguntasActuales = preguntasASGD;
-      } else if (asignatura === "INGLÉS") {
-        preguntasActuales = preguntasINGLÉS;
-        } else if (asignatura === "IAW") {
-        preguntasActuales = preguntasIAW;
-      }
+      const preguntasActuales = ASIGNATURAS[asignatura];
 
       const [preguntasMezcladas, setPreguntasMezcladas] = React.useState([]);
       const [respuestas, setRespuestas] = React.useState([]);
@@ -73,28 +84,46 @@
       const [corregido, setCorregido] = React.useState(false);
       const [mostrarResultado, setMostrarResultado] = React.useState(false);
 
+      // Se genera un test nuevo al cambiar de asignatura o al pulsar «Nuevo test».
       React.useEffect(() => {
-        const nuevas = mezclarArray(preguntasActuales).slice(0, 30);
+        const nuevas = mezclarArray(preguntasActuales).slice(0, PREGUNTAS_POR_TEST);
         setPreguntasMezcladas(nuevas);
         setRespuestas(Array(nuevas.length).fill(null));
         setMarcadas(Array(nuevas.length).fill(false));
         setCorregido(false);
         setMostrarResultado(false);
-      }, [asignatura]);
+      }, [asignatura, ronda]);
+
+      // La tecla Esc cierra el resultado.
+      React.useEffect(() => {
+        if (!mostrarResultado) return;
+        const alPulsar = (e) => {
+          if (e.key === "Escape") setMostrarResultado(false);
+        };
+        window.addEventListener("keydown", alPulsar);
+        return () => window.removeEventListener("keydown", alPulsar);
+      }, [mostrarResultado]);
 
       const totalPreguntas = preguntasMezcladas.length;
-      const valorPregunta = 10 / totalPreguntas;
+      const valorPregunta = totalPreguntas > 0 ? 10 / totalPreguntas : 0;
 
       const seleccionar = (pIndex, rIndex) => {
-        const copia = [...respuestas];
-        copia[pIndex] = rIndex;
-        setRespuestas(copia);
+        if (corregido) return;
+        // Se parte de «previas» (el estado más reciente), no de «respuestas»,
+        // para no perder clics rápidos seguidos.
+        setRespuestas(previas => {
+          const copia = [...previas];
+          copia[pIndex] = rIndex;
+          return copia;
+        });
       };
 
       const toggleMarcada = (i) => {
-        const copia = [...marcadas];
-        copia[i] = !copia[i];
-        setMarcadas(copia);
+        setMarcadas(previas => {
+          const copia = [...previas];
+          copia[i] = !copia[i];
+          return copia;
+        });
       };
 
       const aciertos = respuestas.reduce((acc, r, i) => {
@@ -108,127 +137,109 @@
       }, 0);
 
       const noRespondidas = respuestas.filter(r => r === null).length;
+      const respondidas = totalPreguntas - noRespondidas;
 
+      // Cada 3 fallos restan una pregunta acertada.
       const penalizacion = Math.floor(fallos / 3) * valorPregunta;
       const puntaje = Math.max(0, aciertos * valorPregunta - penalizacion);
 
+      const finalizar = () => {
+        if (noRespondidas > 0 &&
+            !window.confirm(`Quedan ${noRespondidas} preguntas sin responder. ¿Finalizar de todos modos?`)) {
+          return;
+        }
+        setCorregido(true);
+        setMostrarResultado(true);
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      };
+
+      const nuevoTest = () => {
+        setRonda(r => r + 1);
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      };
+
       return (
         <>
-          <div className="topbar">
+          <header className="topbar">
             <div className="topbar-content">
-              <div className="topbar-left">
-                <h1 className="logo">TEST INTERACTIVO AUTOCORREGIBLE</h1>
+              <h1 className="logo">Test interactivo</h1>
+              <p className="subtitulo">Autocorregible · {PREGUNTAS_POR_TEST} preguntas al azar por test</p>
 
-                <div className="nav-asignaturas">
+              <nav className="nav-asignaturas" aria-label="Asignaturas">
+                {Object.keys(ASIGNATURAS).map((nombre) => (
                   <button
-                    className={`nav-btn ${asignatura === "SASP" ? "nav-btn-active" : ""}`}
-                    onClick={() => setAsignatura("SASP")}
+                    key={nombre}
+                    type="button"
+                    className={`nav-btn ${asignatura === nombre ? "nav-btn-active" : ""}`}
+                    aria-current={asignatura === nombre ? "page" : undefined}
+                    onClick={() => setAsignatura(nombre)}
                   >
-                    SASP
+                    {nombre}
                   </button>
-
-                  <button
-                    className={`nav-btn ${asignatura === "ASO" ? "nav-btn-active" : ""}`}
-                    onClick={() => setAsignatura("ASO")}
-                  >
-                    ASO
-                  </button>
-
-                  <button
-                    className={`nav-btn ${asignatura === "MPO" ? "nav-btn-active" : ""}`}
-                    onClick={() => setAsignatura("MPO")}
-                  >
-                    MPO
-                  </button>
-
-                  <button
-                    className={`nav-btn ${asignatura === "IPE" ? "nav-btn-active" : ""}`}
-                    onClick={() => setAsignatura("IPE")}
-                  >
-                    IPE
-                  </button>
-
-                  <button
-                    className={`nav-btn ${asignatura === "SAD" ? "nav-btn-active" : ""}`}
-                    onClick={() => setAsignatura("SAD")}
-                  >
-                    SAD
-                  </button>
-
-                  <button
-                    className={`nav-btn ${asignatura === "DASP" ? "nav-btn-active" : ""}`}
-                    onClick={() => setAsignatura("DASP")}
-                  >
-                    DASP
-                  </button>
-
-                  <button
-                    className={`nav-btn ${asignatura === "SRI" ? "nav-btn-active" : ""}`}
-                    onClick={() => setAsignatura("SRI")}
-                  >
-                    SRI
-                  </button>
-                  <button
-                    className={`nav-btn ${asignatura === "ASGD" ? "nav-btn-active" : ""}`}
-                    onClick={() => setAsignatura("ASGD")}
-                  >
-                    ASGD
-                  </button>
-                  <button
-                    className={`nav-btn ${asignatura === "INGLÉS" ? "nav-btn-active" : ""}`}
-                    onClick={() => setAsignatura("INGLÉS")}
-                  >
-                    INGLÉS
-                  </button>
-                  <button
-                    className={`nav-btn ${asignatura === "IAW" ? "nav-btn-active" : ""}`}
-                    onClick={() => setAsignatura("IAW")}
-                  >
-                    IAW
-                  </button>
-                </div>
-              </div>
+                ))}
+              </nav>
             </div>
-          </div>
+          </header>
 
-          <div className="contenido-principal">
+          <main className="contenido-principal">
             <div className="test-container">
+              {totalPreguntas === 0 && (
+                <p className="sin-preguntas">Esta asignatura todavía no tiene preguntas.</p>
+              )}
+
               {preguntasMezcladas.map((p, i) => (
-                <div key={i} id={`pregunta-${i}`} className="card">
+                <section key={i} id={`pregunta-${i}`} className="card">
                   <div className="question-header">
                     <h2 className="question-title">
-                      {i + 1}. {p.enunciado}
+                      <span className="question-num">Pregunta {i + 1} de {totalPreguntas}</span>
+                      {p.enunciado}
                     </h2>
 
                     <button
                       type="button"
                       className={`btn-marcar ${marcadas[i] ? "btn-marcar-activa" : ""}`}
                       onClick={() => toggleMarcada(i)}
-                      title={marcadas[i] ? "Desmarcar pregunta" : "Marcar pregunta"}
+                      title={marcadas[i] ? "Desmarcar pregunta" : "Marcar para revisar"}
+                      aria-label={marcadas[i] ? "Desmarcar pregunta" : "Marcar para revisar"}
+                      aria-pressed={marcadas[i]}
                     >
                       ⚑
                     </button>
                   </div>
 
-                  {p.opciones.map((op, j) => {
-                    const seleccionado = respuestas[i] === j;
-                    const esCorrecta = p.correcta === j;
+                  <div className="opciones">
+                    {p.opciones.map((op, j) => {
+                      const seleccionado = respuestas[i] === j;
+                      const esCorrecta = p.correcta === j;
 
-                    let clases = "answer-btn";
-                    if (seleccionado) clases += " answer-selected";
-                    if (corregido && seleccionado && !esCorrecta) clases += " answer-wrong";
-                    if (corregido && esCorrecta) clases += " answer-correct";
+                      let clases = "answer-btn";
+                      let estado = null;
+                      if (seleccionado) clases += " answer-selected";
+                      if (corregido && seleccionado && !esCorrecta) {
+                        clases += " answer-wrong";
+                        estado = "Tu respuesta";
+                      }
+                      if (corregido && esCorrecta) {
+                        clases += " answer-correct";
+                        estado = "Correcta";
+                      }
 
-                    return (
-                      <button
-                        key={j}
-                        onClick={() => seleccionar(i, j)}
-                        className={clases}
-                      >
-                        {op}
-                      </button>
-                    );
-                  })}
+                      return (
+                        <button
+                          key={j}
+                          type="button"
+                          onClick={() => seleccionar(i, j)}
+                          className={clases}
+                          disabled={corregido}
+                          aria-pressed={seleccionado}
+                        >
+                          <span className="opcion-letra">{String.fromCharCode(65 + j)}</span>
+                          <span className="opcion-texto">{op}</span>
+                          {estado && <span className="opcion-estado">{estado}</span>}
+                        </button>
+                      );
+                    })}
+                  </div>
 
                   {corregido && p.explicacion && (
                     <div className="explicacion">
@@ -236,25 +247,36 @@
                       <p>{p.explicacion}</p>
                     </div>
                   )}
-                </div>
+                </section>
               ))}
+
+              {totalPreguntas > 0 && (
+                <div className="final-lista">
+                  <button
+                    type="button"
+                    className="btn-primario"
+                    onClick={corregido ? nuevoTest : finalizar}
+                  >
+                    {corregido ? "Nuevo test" : "Finalizar test"}
+                  </button>
+                </div>
+              )}
             </div>
 
-            <div className="columna-mapa">
-              <div className="mapa-preguntas">
-                <h3>Mapa de preguntas</h3>
+            <aside className="columna-mapa">
+              <div className="panel">
+                <div className="panel-cabecera">
+                  <h3>Progreso</h3>
+                  <span className="contador">{respondidas} / {totalPreguntas}</span>
+                </div>
+
+                <div className="barra-progreso">
+                  <div style={{ width: `${totalPreguntas ? (respondidas / totalPreguntas) * 100 : 0}%` }} />
+                </div>
 
                 <div className="grid-mapa">
                   {preguntasMezcladas.map((_, i) => {
                     let claseMapa = "item-mapa";
-
-                    if (respuestas[i] !== null) {
-                      claseMapa += " respondida";
-                    }
-
-                    if (marcadas[i]) {
-                      claseMapa += " marcada";
-                    }
 
                     if (corregido) {
                       if (respuestas[i] === null) {
@@ -264,72 +286,120 @@
                       } else {
                         claseMapa += " erronea";
                       }
+                    } else if (respuestas[i] !== null) {
+                      claseMapa += " respondida";
+                    }
+
+                    if (marcadas[i]) {
+                      claseMapa += " marcada";
                     }
 
                     return (
-                      <div
+                      <button
                         key={i}
+                        type="button"
                         className={claseMapa}
-                        onClick={() => {
-                          const elemento = document.getElementById(`pregunta-${i}`);
-                          if (elemento) {
-                            elemento.scrollIntoView({
-                              behavior: "smooth",
-                              block: "start"
-                            });
-                          }
-                        }}
+                        onClick={() => irAPregunta(i)}
+                        aria-label={`Ir a la pregunta ${i + 1}`}
                       >
                         {i + 1}
-                      </div>
+                      </button>
                     );
                   })}
                 </div>
+
+                <ul className="leyenda">
+                  {corregido ? (
+                    <>
+                      <li><i className="l-acertada" />Acierto</li>
+                      <li><i className="l-erronea" />Fallo</li>
+                      <li><i className="l-en-blanco" />En blanco</li>
+                    </>
+                  ) : (
+                    <>
+                      <li><i className="l-respondida" />Respondida</li>
+                      <li><i className="l-marcada" />Marcada</li>
+                    </>
+                  )}
+                </ul>
+
+                {corregido && (
+                  <div className="nota-panel">
+                    <span>Nota</span>
+                    <strong>{puntaje.toFixed(2)}</strong>
+                  </div>
+                )}
+
+                {totalPreguntas > 0 && (
+                  <button
+                    type="button"
+                    className="btn-primario"
+                    onClick={corregido ? nuevoTest : finalizar}
+                  >
+                    {corregido ? "Nuevo test" : "Finalizar"}
+                  </button>
+                )}
+
+                {corregido && (
+                  <button
+                    type="button"
+                    className="btn-secundario"
+                    onClick={() => setMostrarResultado(true)}
+                  >
+                    Ver resultado
+                  </button>
+                )}
+
+                <p className="disponibles">{preguntasActuales.length} preguntas en el banco de {asignatura}</p>
+              </div>
+            </aside>
+          </main>
+
+          {mostrarResultado && (
+            <div
+              className="modal-overlay"
+              onClick={() => setMostrarResultado(false)}
+            >
+              <div
+                className="modal"
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="titulo-resultado"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <h2 id="titulo-resultado">Resultado · {asignatura}</h2>
+                <p className="modal-nota">{puntaje.toFixed(2)} <span>/ 10</span></p>
+
+                <dl className="modal-datos">
+                  <div className="d-acertadas"><dt>Acertadas</dt><dd>{aciertos}</dd></div>
+                  <div className="d-erroneas"><dt>Erróneas</dt><dd>{fallos}</dd></div>
+                  <div><dt>En blanco</dt><dd>{noRespondidas}</dd></div>
+                </dl>
+
+                {penalizacion > 0 && (
+                  <p className="modal-nota-penalizacion">
+                    Penalización: −{penalizacion.toFixed(2)} (cada 3 fallos restan un acierto)
+                  </p>
+                )}
+
+                <button
+                  type="button"
+                  className="btn-primario"
+                  onClick={() => setMostrarResultado(false)}
+                  autoFocus
+                >
+                  Revisar respuestas
+                </button>
+                <button
+                  type="button"
+                  className="btn-secundario"
+                  onClick={nuevoTest}
+                >
+                  Nuevo test
+                </button>
               </div>
             </div>
-          </div>
-
-          <button className="btn-info-preguntas">
-            {preguntasActuales.length} preguntas disponibles
-          </button>
-
-          <div className="result-section">
-            <button
-              className="btn-correct"
-              onClick={() => {
-                setCorregido(true);
-                setMostrarResultado(true);
-                window.scrollTo({
-                  top: 0,
-                  behavior: "smooth"
-                });
-              }}
-            >
-              Finalizar
-            </button>
-
-            {mostrarResultado && (
-              <div
-                className="modal-overlay"
-                onClick={() => setMostrarResultado(false)}
-              >
-                <div className="modal" onClick={(e) => e.stopPropagation()}>
-                  <h2>Resultado final</h2>
-                  <p><strong>Nota:</strong> {puntaje.toFixed(2)} / 10</p>
-                  <p><strong>Acertadas:</strong> {aciertos}</p>
-                  <p><strong>Erróneas:</strong> {fallos}</p>
-                  <p><strong>En blanco:</strong> {noRespondidas}</p>
-
-                  <button
-                    className="btn-close-modal"
-                    onClick={() => setMostrarResultado(false)}
-                  >
-                    Cerrar
-                  </button>
-                </div>
-              </div>
-            )}
-          </div>
+          )}
         </>
       );
     }
@@ -338,7 +408,7 @@
   </script>
 
   <footer>
-    <p>Creado por <b>E.R.</b></p>
+    <p>Creado por E.R.</p>
   </footer>
 </body>
 
