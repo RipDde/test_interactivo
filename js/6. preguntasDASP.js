@@ -224,6 +224,227 @@ const preguntasDASP = [
     correcta: 0,
     explicacion: "La correcta es La temperatura del entorno porque una sonda IoT instalada en un rack permite medir variables físicas del ambiente, como la temperatura y, dependiendo del sensor, también la humedad. Esta información es especialmente importante en los centros de procesamiento de datos (CPD), ya que permite detectar problemas de refrigeración y prevenir el sobrecalentamiento de los servidores."
 },
+{
+    enunciado: "¿En qué caso puede resultar útil blockchain en ASIR?",
+    opciones: [
+        "Controlar un ventilador sin sensores",
+        "Configurar una impresora 3D",
+        "Trazabilidad de retirada de discos entre varias entidades",
+        "Medir la humedad directamente"
+    ],
+    correcta: 2,
+    explicacion: "La correcta es la trazabilidad de retirada de discos entre varias entidades porque blockchain permite mantener un registro compartido, verificable y resistente a modificaciones. Esto facilita que distintas organizaciones, como una empresa, un gestor de residuos y un auditor, puedan comprobar el historial de retirada y destrucción de discos sin depender exclusivamente de una única entidad."
+},
+{
+    enunciado: "¿Cuándo suele ser preferible una base de datos convencional a blockchain?",
+    opciones: [
+        "Cuando hay una sola organización responsable y de confianza",
+        "Siempre que intervienen múltiples organizaciones desconfiadas",
+        "Cuando se requiere consenso descentralizado obligatoriamente",
+        "Cuando no existe ninguna autoridad"
+    ],
+    correcta: 0,
+    explicacion: "La correcta es cuando hay una sola organización responsable y de confianza porque una base de datos convencional permite almacenar, consultar y modificar información de manera más sencilla y eficiente. Blockchain introduce una complejidad adicional para mantener registros compartidos y verificables entre diferentes participantes. Si existe una única entidad de confianza que controla los datos, normalmente no es necesario utilizar blockchain."
+},
+{
+    enunciado: "¿Qué define un gemelo digital?",
+    opciones: [
+        "Una copia física impresa de un teclado",
+        "Una réplica virtual alimentada con datos del sistema real para analizar escenarios",
+        "Una fotografía estática del rack",
+        "Un texto con el inventario de equipos"
+    ],
+    correcta: 1,
+    explicacion: "La correcta es una réplica virtual alimentada con datos del sistema real para analizar escenarios porque un gemelo digital es una representación virtual de un objeto, sistema o proceso real que utiliza datos para reflejar su estado y simular su comportamiento. Esto permite analizar diferentes situaciones, anticipar posibles fallos y mejorar la toma de decisiones sin necesidad de intervenir directamente sobre el sistema físico."
+},
+{
+    enunciado: "¿Cuál es un uso de gemelo digital en un CPD?",
+    opciones: [
+        "Etiquetar únicamente una carpeta",
+        "Generar una contraseña por sorteo",
+        "Simular un fallo de refrigeración antes de que ocurra",
+        "Crear una cuenta de correo"
+    ],
+    correcta: 2,
+    explicacion: "La correcta es simular un fallo de refrigeración antes de que ocurra porque un gemelo digital permite representar virtualmente el funcionamiento de un Centro de Procesamiento de Datos (CPD) y analizar posibles incidencias. Por ejemplo, se puede simular qué sucedería si falla el sistema de refrigeración, estudiar cómo afectaría a la temperatura de los servidores y planificar medidas preventivas para evitar daños o interrupciones del servicio."
+},
+{
+    enunciado: "¿Una maqueta 3D estática es necesariamente un gemelo digital completo?",
+    opciones: [
+        "No, porque puede carecer de datos y relación con el sistema real",
+        "Sí, basta que tenga tres dimensiones",
+        "Sí, si se imprime en colores",
+        "Sí, si tiene una puerta dibujada"
+    ],
+    correcta: 0,
+    explicacion: "La correcta es no, porque puede carecer de datos y relación con el sistema real. Una maqueta 3D estática únicamente representa la apariencia de un objeto o instalación, mientras que un gemelo digital completo incorpora información del sistema real y permite representar su estado y analizar o simular su comportamiento. Por ejemplo, un modelo 3D de un CPD muestra la distribución de los servidores, pero un gemelo digital también puede utilizar datos de temperatura, consumo energético y funcionamiento para detectar problemas y simular situaciones."
+},
+{
+    enunciado: "¿Qué significa que un producto tecnológico se vuelve informativo?",
+    opciones: [
+        "Que ya no puede sufrir incidencias",
+        "Que expone datos de estado, uso y ciclo de vida",
+        "Que deja de necesitar mantenimiento",
+        "Que su precio se vuelve siempre cero"
+    ],
+    correcta: 1,
+    explicacion: "La correcta es que expone datos de estado, uso y ciclo de vida porque un producto tecnológico informativo es capaz de proporcionar información sobre su propio funcionamiento mediante sensores, sistemas de monitorización y telemetría. Esto permite conocer su estado, detectar posibles fallos, analizar su utilización y planificar el mantenimiento. Por ejemplo, un servidor que informa de su temperatura, consumo energético y estado de los discos facilita la supervisión y prevención de incidencias."
+},
+{
+    enunciado: "¿Qué significa servitización en sistemas?",
+    opciones: [
+        "Vender solo tornillos y cables",
+        "No registrar niveles de servicio",
+        "Ofrecer servicios continuos asociados a infraestructura y equipos",
+        "Dejar de prestar soporte"
+    ],
+    correcta: 2,
+    explicacion: "La correcta es ofrecer servicios continuos asociados a infraestructura y equipos porque la servitización consiste en pasar de vender únicamente productos tecnológicos a proporcionar servicios asociados a ellos. Estos servicios pueden incluir mantenimiento, soporte técnico, copias de seguridad, monitorización y garantías de disponibilidad. Por ejemplo, en lugar de comprar un servidor y administrarlo por cuenta propia, una empresa puede contratar un servicio que incluya el servidor, su mantenimiento y la asistencia técnica."
+},
+{
+    enunciado: "¿Cuál es un ejemplo de precio asociado al servicio digital?",
+    opciones: [
+        "Cobro por uso o por nivel de servicio acordado",
+        "Un único precio sin relación con nada y obligatorio",
+        "Cobro exclusivamente por kilogramo de cable",
+        "Precio calculado por número de impresoras 3D"
+    ],
+    correcta: 0,
+    explicacion: "La correcta es cobro por uso o por nivel de servicio acordado porque los servicios digitales pueden establecer sus precios en función de los recursos consumidos, la capacidad contratada o las garantías de servicio. Por ejemplo, un proveedor de almacenamiento en la nube puede cobrar según los gigabytes utilizados, mientras que un servicio de alojamiento de servidores puede establecer diferentes tarifas según la disponibilidad y el soporte garantizados mediante un SLA (Acuerdo de Nivel de Servicio)."
+},
+{
+    enunciado: "¿Qué permite un configurador de servicios?",
+    opciones: [
+        "Elegir capacidad, respaldo y asistencia con condiciones visibles",
+        "Impedir comparar opciones",
+        "Borrar el contrato del cliente",
+        "Hacer automáticamente indistinguibles todas las ofertas"
+    ],
+    correcta: 0,
+    explicacion: "La correcta es elegir capacidad, respaldo y asistencia con condiciones visibles porque un configurador de servicios permite al cliente personalizar una oferta tecnológica según sus necesidades antes de contratarla. Por ejemplo, una empresa puede seleccionar la capacidad de almacenamiento, la frecuencia de las copias de seguridad, el nivel de soporte técnico y las garantías de disponibilidad. De esta manera, puede comparar las diferentes opciones, conocer sus condiciones y contratar únicamente los servicios que necesita."
+},
+{
+    enunciado: "¿Cuándo una THD mejora de verdad la experiencia del cliente?",
+    opciones: [
+        "Cuando las alertas son siempre ignoradas",
+        "Cuando elimina una dificultad observable para el usuario",
+        "Cuando aumenta complejidad sin beneficio",
+        "Cuando el panel jamás se utiliza"
+    ],
+    correcta: 1,
+    explicacion: "La correcta es cuando elimina una dificultad observable para el usuario porque una Tecnología Habilitadora Digital (THD) debe aportar una mejora real y medible en la experiencia del cliente. No basta con incorporar tecnología avanzada, sino que esta debe resolver problemas, facilitar tareas o mejorar la calidad del servicio. Por ejemplo, un sistema de monitorización que detecta incidencias antes de que afecten al usuario mejora la disponibilidad del servicio y reduce las interrupciones."
+},
+{
+    enunciado: "En el plano de negocio, ¿qué aporta el análisis de datos?",
+    opciones: [
+        "La apertura manual de puertas",
+        "La sustitución de toda contabilidad",
+        "Información sobre costes, consumo y decisiones de inversión",
+        "Solo intervención física en racks"
+    ],
+    correcta: 2,
+    explicacion: "La correcta es información sobre costes, consumo y decisiones de inversión porque el análisis de datos permite conocer cómo se utilizan los recursos tecnológicos y cuánto cuesta mantenerlos. Esta información ayuda a las empresas a optimizar gastos, dimensionar correctamente los servicios y decidir cuándo invertir en nuevos equipos o infraestructuras. Por ejemplo, analizar el consumo energético y la utilización de los servidores permite determinar si conviene ampliar la capacidad o mejorar la eficiencia de los equipos existentes."
+},
+{
+    enunciado: "En el plano operativo, ¿qué aporta la automatización?",
+    opciones: [
+        "Ejecución de copias, configuraciones y respuesta a incidencias",
+        "Únicamente campañas publicitarias",
+        "Solo estimación de beneficios futuros",
+        "Solo diseño del logotipo"
+    ],
+    correcta: 0,
+    explicacion: "La correcta es ejecución de copias, configuraciones y respuesta a incidencias porque la automatización permite realizar tareas técnicas de forma programada y siguiendo procedimientos establecidos. En la administración de sistemas se utiliza para ejecutar copias de seguridad, configurar servidores, instalar actualizaciones y responder automáticamente a determinados problemas. Esto reduce el trabajo manual, disminuye los errores humanos y mejora la eficiencia y continuidad de los servicios."
+},
+{
+    enunciado: "¿Qué representa el caso del pico de consumo por las copias?",
+    opciones: [
+        "La convergencia entre telemetría, análisis económico y cambio operativo",
+        "Una prueba exclusiva de diseño gráfico",
+        "Un proceso de impresión 3D",
+        "Una aplicación de blockchain obligatoria"
+    ],
+    correcta: 0,
+    explicacion: "La correcta es la convergencia entre telemetría, análisis económico y cambio operativo porque este caso demuestra cómo diferentes tecnologías y áreas de gestión pueden trabajar conjuntamente para mejorar un servicio. Primero, la telemetría permite detectar un aumento del consumo energético durante las copias de seguridad. Después, el análisis económico ayuda a valorar su impacto en los costes. Finalmente, se modifican los horarios de ejecución de las copias para intentar reducir el consumo o aprovechar tarifas eléctricas más económicas, comprobando posteriormente si se ha conseguido una mejora."
+},
+{
+    enunciado: "¿Qué tipo de empresa presta servicios gestionados?",
+    opciones: [
+        "Una que administra solo su propio correo personal",
+        "Una que supervisa y mantiene infraestructura de clientes con acuerdos de servicio",
+        "Una que vende únicamente papel",
+        "Una que rechaza soporte remoto"
+    ],
+    correcta: 1,
+    explicacion: "La correcta es una que supervisa y mantiene infraestructura de clientes con acuerdos de servicio porque un proveedor de servicios gestionados (MSP) se encarga de administrar, monitorizar y mantener los sistemas informáticos de otras empresas. Estos servicios pueden incluir mantenimiento de servidores, gestión de redes, copias de seguridad, ciberseguridad y soporte técnico. Normalmente se establecen acuerdos de nivel de servicio (SLA) que definen las responsabilidades del proveedor, los tiempos de respuesta y las garantías de disponibilidad."
+},
+{
+    enunciado: "¿Qué servicio se relaciona con continuidad de negocio?",
+    opciones: [
+        "Solo diseño de soportes decorativos",
+        "Eliminar las pruebas de restauración",
+        "Copias verificadas y capacidad de recuperación",
+        "Únicamente elaboración de carteles"
+    ],
+    correcta: 2,
+    explicacion: "La correcta es copias verificadas y capacidad de recuperación porque la continuidad de negocio busca garantizar que una organización pueda mantener o restablecer sus servicios esenciales después de una incidencia. Para conseguirlo, es fundamental realizar copias de seguridad, comprobar periódicamente que pueden restaurarse y disponer de procedimientos de recuperación. Por ejemplo, si un servidor sufre una avería, contar con copias verificadas permite recuperar los datos y restablecer el servicio dentro de los plazos previstos."
+},
+{
+    enunciado: "¿Qué aspecto de una mejora tecnológica debe medirse?",
+    opciones: [
+        "Un indicador antes y después con reglas equivalentes",
+        "Solo el nombre del fabricante",
+        "El número de diapositivas disponibles",
+        "El tamaño del logotipo"
+    ],
+    correcta: 0,
+    explicacion: "La correcta es un indicador antes y después con reglas equivalentes porque para demostrar que una mejora tecnológica realmente funciona es necesario comparar resultados mediante indicadores medibles y utilizando las mismas condiciones de evaluación. Por ejemplo, si se instala un nuevo sistema de almacenamiento, se puede medir el tiempo de acceso a los archivos antes y después de la instalación. De esta manera, es posible comprobar objetivamente si la mejora ha reducido los tiempos de respuesta o aumentado el rendimiento."
+},
+{
+    enunciado: "¿Qué significa MTTR en un contexto de operación?",
+    opciones: [
+        "Memoria temporal de un robot",
+        "Tiempo medio de reparación o recuperación, según su definición operativa",
+        "Tamaño máximo del rack",
+        "Número total de routers"
+    ],
+    correcta: 1,
+    explicacion: "La correcta es tiempo medio de reparación o recuperación porque MTTR (Mean Time To Repair o Mean Time To Recovery, según el contexto) es un indicador que mide el tiempo medio necesario para reparar una avería o restablecer un servicio después de una incidencia. Se calcula dividiendo el tiempo total empleado en las reparaciones o recuperaciones entre el número de incidencias correspondientes. Por ejemplo, si tres averías tardan 2, 3 y 4 horas en resolverse, el MTTR es de 3 horas. Cuanto menor sea este indicador, más rápida será la capacidad de respuesta y recuperación del servicio."
+},
+{
+    enunciado: "¿Qué ventaja ambiental puede tener la virtualización?",
+    opciones: [
+        "Suprimir toda refrigeración necesaria",
+        "Eliminar siempre la electricidad consumida",
+        "Reducir máquinas físicas ociosas mediante consolidación",
+        "Garantizar un impacto ambiental nulo"
+    ],
+    correcta: 2,
+    explicacion: "La correcta es reducir máquinas físicas ociosas mediante consolidación porque la virtualización permite ejecutar varias máquinas virtuales dentro de un mismo servidor físico, aprovechando mejor sus recursos. Esto puede reducir la cantidad de equipos necesarios, el consumo eléctrico y las necesidades de refrigeración. Por ejemplo, en lugar de mantener cinco servidores físicos que utilizan pocos recursos, una empresa puede consolidar sus servicios en uno o varios servidores mediante máquinas virtuales, disminuyendo potencialmente su impacto ambiental."
+},
+{
+    enunciado: "¿Qué impacto ambiental negativo debe contabilizarse?",
+    opciones: [
+        "Energía de centros de datos y refrigeración",
+        "Solo el papel ahorrado",
+        "Únicamente los kilómetros evitados",
+        "Ninguno porque es digital"
+    ],
+    correcta: 0,
+    explicacion: "La correcta es energía de centros de datos y refrigeración porque las tecnologías digitales también generan impactos ambientales, aunque muchos de sus procesos no requieran materiales físicos visibles para el usuario. Los centros de datos consumen electricidad para alimentar servidores, sistemas de almacenamiento, redes y equipos de refrigeración. Además, la fabricación y eliminación de dispositivos electrónicos consume recursos y genera residuos. Por tanto, para evaluar correctamente la sostenibilidad de una solución digital es necesario considerar tanto sus beneficios ambientales como los recursos que consume."
+},
+{
+    enunciado: "¿Qué condición debe cumplir una afirmación ambiental comercial?",
+    opciones: [
+        "Ser veraz y respaldarse en datos demostrables",
+        "Bastar con un eslogan",
+        "No conservar ninguna medición",
+        "Prometer siempre cero emisiones"
+    ],
+    correcta: 0,
+    explicacion: "La correcta es ser veraz y respaldarse en datos demostrables porque las afirmaciones ambientales utilizadas para promocionar productos o servicios deben basarse en información objetiva, verificable y suficientemente documentada. No basta con afirmar que un producto es ecológico o sostenible sin aportar pruebas. Por ejemplo, si una empresa asegura que su nueva infraestructura reduce el consumo energético un 30 %, debe disponer de mediciones que permitan demostrar esa reducción. Esto ayuda a evitar el greenwashing o blanqueo ecológico, que consiste en presentar una imagen ambiental engañosa de un producto o empresa."
+},
+
 
 
 
