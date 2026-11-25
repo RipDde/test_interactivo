@@ -1,4 +1,4 @@
-const preguntasDASP = [
+const preguntasDIGITALICACION = [
     // Unidad 1
     {
     enunciado: "¿Qué tecnología impulsó la primera revolución industrial?",
